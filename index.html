@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Glen Ellyn Fire — Apparatus Study Guides</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 
   /* ═══════ GLOBAL OVERRIDES & SHARED ═══════ */
@@ -1033,6 +1033,266 @@
   letter-spacing: 0.08em;
 }
 .div-back:hover { color: #f5a623; }
+
+/* ═══════ BRUSHTRUCK 62 SCOPED STYLES ═══════ */
+
+/* toolbar */
+.bt62-scope .bt62-toolbar {
+  display: flex; align-items: center; gap: 14px;
+  background: #0a0c12; border-bottom: 1px solid #2a3050;
+  padding: 12px 48px; flex-wrap: wrap; position: sticky; top: 52px; z-index: 90;
+}
+.bt62-scope #bt62Search {
+  flex: 1; min-width: 200px; background: #161a24; border: 1px solid #2a3050;
+  border-radius: 6px; color: #d8dce8; font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px; padding: 8px 14px; outline: none; transition: border-color 0.2s;
+}
+.bt62-scope #bt62Search:focus { border-color: #f5a623; }
+.bt62-scope #bt62Search::placeholder { color: #4a5470; }
+.bt62-scope .bt62-modes { display: flex; gap: 6px; }
+.bt62-scope .bt62-mode {
+  background: #161a24; border: 1px solid #2a3050; border-radius: 5px;
+  color: #8892aa; font-family: 'Oswald', sans-serif; font-size: 12px;
+  font-weight: 600; letter-spacing: 0.06em; padding: 7px 14px;
+  cursor: pointer; transition: all 0.2s; text-transform: uppercase;
+}
+.bt62-scope .bt62-mode:hover { background: #1c2130; color: #d8dce8; }
+.bt62-scope .bt62-mode.active { background: #f5a623; border-color: #f5a623; color: #0a0c12; }
+.bt62-scope .bt62-progress-wrap {
+  width: 120px; height: 4px; background: #2a3050; border-radius: 4px; overflow: hidden;
+}
+.bt62-scope .bt62-progress-bar-inner { height: 100%; background: #f5a623; border-radius: 4px; transition: width 0.4s; }
+.bt62-scope .bt62-progress-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #4a5470; }
+.bt62-scope .bt62-progress-label span { color: #f5a623; font-weight: 700; }
+
+/* quiz mode */
+.bt62-scope.quiz-on .eq-panel.active .eq-what,
+.bt62-scope.quiz-on .eq-panel.active .eq-how,
+.bt62-scope.quiz-on .eq-panel.active .eq-why,
+.bt62-scope.quiz-on .eq-panel.active .eq-extra { filter: blur(5px); cursor: pointer; transition: filter 0.2s; }
+.bt62-scope.quiz-on .eq-panel.active .eq-what:hover,
+.bt62-scope.quiz-on .eq-panel.active .eq-how:hover,
+.bt62-scope.quiz-on .eq-panel.active .eq-why:hover,
+.bt62-scope.quiz-on .eq-panel.active .eq-extra:hover { filter: none; }
+.bt62-scope .bt62-quiz-banner {
+  display: none; background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.25);
+  border-radius: 6px; padding: 10px 48px; font-family: 'Oswald', sans-serif; font-size: 13px;
+  font-weight: 600; color: #f5a623; letter-spacing: 0.06em; text-align: center; margin: 0 48px 16px;
+}
+.bt62-scope.quiz-on .bt62-quiz-banner { display: block; }
+.bt62-scope .bt62-no-results {
+  display: none; text-align: center; padding: 60px 20px; color: #4a5470;
+  font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; text-transform: uppercase;
+}
+
+/* page header */
+.bt62-scope .bt62-page-header { padding: 40px 48px 0; }
+.bt62-scope .bt62-badge {
+  display: inline-block; background: #f5a623; color: #0a0c12;
+  font-family: 'Oswald', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px;
+  border-radius: 3px; margin-bottom: 16px;
+}
+.bt62-scope .bt62-title {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif; font-size: 56px;
+  line-height: 1.0; color: #d8dce8; margin-bottom: 4px;
+}
+.bt62-scope .bt62-title em { color: #f5a623; font-style: normal; }
+.bt62-scope .bt62-subtitle {
+  font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 500;
+  color: #8892aa; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px;
+}
+.bt62-scope .bt62-mentor-note {
+  background: #161a24; border: 1px solid #2a3050; border-left: 3px solid #f5a623;
+  border-radius: 6px; padding: 16px 20px; font-size: 14px; color: #8892aa;
+  line-height: 1.75; font-style: italic; margin-bottom: 32px;
+}
+.bt62-scope .bt62-mentor-note strong { color: #d8dce8; font-style: normal; }
+
+/* section nav strip */
+.bt62-scope .bt62-section-nav {
+  display: flex; gap: 0; background: #0a0c12; border-top: 1px solid #2a3050;
+  border-bottom: 1px solid #2a3050; overflow-x: auto; padding: 0 48px;
+  flex-wrap: nowrap; scrollbar-width: none;
+}
+.bt62-scope .bt62-section-nav a {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600;
+  color: #4a5470; text-decoration: none; padding: 10px 16px; white-space: nowrap;
+  border-bottom: 2px solid transparent; transition: all 0.15s; letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.bt62-scope .bt62-section-nav a:hover { color: #f5a623; border-bottom-color: #f5a623; }
+
+/* main content area */
+.bt62-scope { background: #0f1117; padding-bottom: 80px; }
+
+/* section blocks */
+.bt62-scope .section-block { padding: 0 48px; margin-bottom: 48px; }
+.bt62-scope .section-header {
+  display: flex; align-items: center; gap: 16px; margin: 32px 0 20px;
+  padding-bottom: 14px; border-bottom: 2px solid #f5a623;
+}
+.bt62-scope .section-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: #f5a623;
+  line-height: 1; opacity: 0.2; min-width: 56px;
+}
+.bt62-scope .section-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; color: #f5a623; text-transform: uppercase; margin-bottom: 2px;
+}
+.bt62-scope .section-title {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif; font-size: 32px;
+  font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em;
+  color: #d8dce8; line-height: 1.0;
+}
+.bt62-scope .item-count {
+  margin-left: auto; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: #4a5470; background: #161a24; border: 1px solid #2a3050;
+  border-radius: 20px; padding: 4px 12px; white-space: nowrap;
+}
+
+/* equipment cards */
+.bt62-scope .eq-card {
+  background: #161a24; border: 1px solid #2a3050; border-radius: 8px;
+  margin-bottom: 8px; overflow: hidden; transition: border-color 0.2s;
+}
+.bt62-scope .eq-card:hover { border-color: #4a5470; }
+.bt62-scope .eq-card.open { border-color: #c47d0e; }
+.bt62-scope .eq-header {
+  display: flex; align-items: center; gap: 14px; padding: 14px 18px;
+  cursor: pointer; user-select: none; transition: background 0.15s;
+}
+.bt62-scope .eq-header:hover { background: #1c2130; }
+.bt62-scope .eq-icon { font-size: 18px; min-width: 26px; text-align: center; }
+.bt62-scope .eq-name {
+  font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em; color: #d8dce8; flex: 1;
+}
+.bt62-scope .eq-aka-badge {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #4a5470;
+  background: #13161f; border-radius: 3px; padding: 2px 7px;
+  max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.bt62-scope .eq-toggle { font-size: 11px; color: #4a5470; transition: transform 0.25s, color 0.2s; }
+.bt62-scope .eq-card.open .eq-toggle { transform: rotate(90deg); color: #f5a623; }
+.bt62-scope .eq-body { display: none; padding: 0 18px 18px; border-top: 1px solid #2a3050; }
+.bt62-scope .eq-card.open .eq-body { display: block; }
+
+/* tabs */
+.bt62-scope .eq-tabs {
+  display: flex; gap: 2px; margin: 14px 0 16px; background: #13161f;
+  border-radius: 6px; padding: 3px;
+}
+.bt62-scope .eq-tab {
+  flex: 1; background: transparent; border: none; border-radius: 4px;
+  color: #4a5470; font-family: 'Oswald', sans-serif; font-size: 11px;
+  font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 4px; cursor: pointer; transition: all 0.15s;
+}
+.bt62-scope .eq-tab.active { background: #1c2130; color: #f5a623; }
+.bt62-scope .eq-panel { display: none; }
+.bt62-scope .eq-panel.active { display: block; }
+.bt62-scope .eq-what, .bt62-scope .eq-how, .bt62-scope .eq-why,
+.bt62-scope .eq-extra { font-size: 14px; line-height: 1.8; color: #8892aa; font-family: 'IBM Plex Sans', sans-serif; }
+.bt62-scope .eq-how ol { padding-left: 22px; margin-top: 8px; }
+.bt62-scope .eq-how ol li { margin-bottom: 6px; }
+.bt62-scope .eq-extra-inner { display: flex; flex-direction: column; gap: 10px; }
+.bt62-scope .aka-row {
+  background: #13161f; border-radius: 5px; padding: 10px 14px;
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.bt62-scope .aka-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; color: #f5a623; text-transform: uppercase;
+  white-space: nowrap; margin-top: 2px;
+}
+.bt62-scope .aka-value { font-size: 13px; color: #8892aa; }
+
+/* YouTube links */
+.bt62-scope .yt-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(224,74,47,0.10); border: 1px solid rgba(224,74,47,0.25);
+  border-radius: 5px; color: #e07060; font-family: 'Oswald', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 8px 14px; text-decoration: none; transition: all 0.2s;
+}
+.bt62-scope .yt-link:hover { background: rgba(224,74,47,0.18); color: #f09080; }
+
+/* alerts */
+.bt62-scope .alert {
+  border-radius: 6px; padding: 14px 16px; margin: 14px 0;
+  display: flex; gap: 12px; font-size: 13.5px; line-height: 1.65;
+}
+.bt62-scope .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.bt62-scope .alert-title {
+  font-family: 'Oswald', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px;
+}
+.bt62-scope .alert-body { color: #8892aa; }
+.bt62-scope .alert-body strong { color: #d8dce8; font-weight: 600; }
+.bt62-scope .alert-danger { background: rgba(224,74,47,0.10); border: 1px solid rgba(224,74,47,0.25); }
+.bt62-scope .alert-danger .alert-title { color: #e04a2f; }
+.bt62-scope .alert-warning { background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.25); }
+.bt62-scope .alert-warning .alert-title { color: #f5a623; }
+
+/* search highlight */
+.bt62-scope mark { background: rgba(245,166,35,0.30); color: #d8dce8; border-radius: 2px; padding: 0 2px; }
+
+/* final notes */
+.bt62-scope .final-notes {
+  margin: 32px 48px 0; background: #161a24; border: 1px solid #2a3050;
+  border-radius: 10px; padding: 32px;
+}
+.bt62-scope .final-notes h2 {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif; font-size: 26px;
+  color: #f5a623; margin-bottom: 16px; letter-spacing: 0.04em;
+}
+.bt62-scope .final-notes p { font-size: 14px; color: #8892aa; margin-bottom: 12px; line-height: 1.75; font-family: 'IBM Plex Sans', sans-serif; }
+.bt62-scope .final-notes p strong { color: #d8dce8; }
+.bt62-scope .final-notes p:last-child { font-size: 13px; font-style: italic; margin-bottom: 0; }
+
+
+  /* disclaimer */
+  .home-disclaimer {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #8892aa;
+    max-width: 680px;
+    margin: 0 auto 1.4rem;
+    line-height: 1.7;
+    padding: 14px 20px;
+    background: rgba(245,166,35,0.06);
+    border: 1px solid rgba(245,166,35,0.18);
+    border-left: 3px solid #f5a623;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  /* google doc links on section dividers */
+  .div-doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #f5a623;
+    text-decoration: none;
+    padding: 6px 14px;
+    background: rgba(245,166,35,0.08);
+    border: 1px solid rgba(245,166,35,0.25);
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+    margin-top: 6px;
+  }
+  .div-doc-link:hover {
+    background: rgba(245,166,35,0.18);
+    color: #fff;
+  }
+
 </style>
 </head>
 <body>
@@ -1045,12 +1305,15 @@
   <a href="#engine62-guide" class="nav-link e62">🚒 Engine 62</a>
   <div class="nav-sep"></div>
   <a href="#utility61-guide" class="nav-link u61">🚗 Utility 61</a>
+  <div class="nav-sep"></div>
+  <a href="#brushtruck62-guide" class="nav-link bt62">🔥 Brushtruck 62</a>
 </nav>
 
 <!-- ═══════ LANDING PAGE ═══════ -->
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
-  <div class="home-title">APPARATUS<br><span>STUDY GUIDES</span></div>
+  <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
+  <p class="home-disclaimer"><em>"This document is not source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</em></p>
   <p class="home-sub">Two complete compartment guides in one place. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <div class="guide-cards">
     <a href="#engine62-guide" class="guide-card">
@@ -1081,6 +1344,20 @@
       </div>
       <div class="guide-card-cta">Open Utility 61 Guide →</div>
     </a>
+    <a href="#brushtruck62-guide" class="guide-card bt62">
+      <div class="guide-card-top"></div>
+      <div class="guide-card-body">
+        <div class="guide-card-label">Apparatus Study Guide</div>
+        <div class="guide-card-name">BRUSHTRUCK 62</div>
+        <div class="guide-card-desc">All 8 compartments — front seat through hydrant bag. Equipment cards with what, how, why, and field slang for every piece of gear.</div>
+        <div class="guide-card-meta">
+          <div class="guide-meta-stat"><strong>8</strong>Sections</div>
+          <div class="guide-meta-stat"><strong>44</strong>Equipment Items</div>
+          <div class="guide-meta-stat"><strong>Search</strong>+ Quiz Mode</div>
+        </div>
+      </div>
+      <div class="guide-card-cta">Open Brushtruck 62 Guide →</div>
+    </a>
   </div>
 </section>
 
@@ -1091,6 +1368,7 @@
     <div class="div-sub">Driver's Side · Passenger's Side · Rear · Cab · Top</div>
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
+  <a href="https://docs.google.com/document/d/1dW8aJsXDRE2Rqu5Yo7g34g-5YYiW9M6mszpTycElrNc/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Engine 62</a>
 </div>
 
 <!-- ═══════ ENGINE 62 CONTENT ═══════ -->
@@ -3532,6 +3810,7 @@
     <div class="div-sub">Front Cab · Back Seat · Bed Tools · Bags · ERG Handbook</div>
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
+  <a href="https://docs.google.com/document/d/1KP5aUp1LBCrW2VOvqhBcK6DKArHViVMwG1CN2GgA5-4/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Utility 61</a>
 </div>
 
 <!-- ═══════ UTILITY 61 CONTENT ═══════ -->
@@ -5063,6 +5342,1595 @@
 
 
 </div>
+
+
+<!-- ═══════ BRUSHTRUCK 62 SECTION BREAK ═══════ -->
+<div class="guide-section-divider bt62-divider" id="brushtruck62-guide">
+  <div>
+    <div class="div-label" style="color:#f5a623;">🔥 Brushtruck 62 — Compartment Study Guide</div>
+    <div class="div-sub">Front Seat · Glove Box · Back Seat · Rear Water System · Hand Tools · Hydrant Bag</div>
+  </div>
+  <a href="#home" class="div-back">↑ Back to Home</a>
+  <a href="https://docs.google.com/document/d/1_nxABIDr0i_YAnUPlvn-ro3qhKSlpLNPkQFiF10xWe0/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Brushtruck 62</a>
+</div>
+
+<div id="bt62-guide" class="bt62-scope">
+
+  <!-- BT62 internal search + mode bar -->
+  <div class="bt62-toolbar">
+    <input type="text" id="bt62Search" placeholder="🔍  Search equipment, tools, or nicknames…" autocomplete="off">
+    <div class="bt62-modes">
+      <button class="bt62-mode active" id="bt62Study" onclick="bt62SetMode('study')">📖 Study</button>
+      <button class="bt62-mode" id="bt62Quiz" onclick="bt62SetMode('quiz')">🧠 Quiz</button>
+    </div>
+    <div class="bt62-progress-wrap">
+      <div class="bt62-progress-bar-inner" id="bt62ProgressBar" style="width:0%"></div>
+    </div>
+    <div class="bt62-progress-label">Opened: <span id="bt62Count">0</span>/<span id="bt62Total">0</span></div>
+  </div>
+
+  <div class="bt62-quiz-banner" id="bt62QuizBanner">⚠ QUIZ MODE — Hover over any panel to reveal the answer</div>
+  <div class="bt62-no-results" id="bt62NoResults">No equipment found matching your search.</div>
+
+  <!-- PAGE HEADER -->
+  <div class="bt62-page-header">
+    <div class="bt62-badge">Probationary Firefighter Field Reference</div>
+    <h1 class="bt62-title">Brushtruck <em>62</em></h1>
+    <div class="bt62-subtitle">Compartment-by-Compartment Study Guide</div>
+    <div class="bt62-mentor-note">
+      <strong>Before you start:</strong> You don't memorize the truck — you understand it. When you know <em>why</em> every piece of gear is there and <em>what problem it solves</em>, the whole truck makes sense as a system. Walk up to the rig and physically touch the items as you study. Tactile memory is just as important as book memory.
+    </div>
+  </div>
+
+  <!-- SECTION NAV -->
+  <nav class="bt62-section-nav">
+    <a href="#bt-s1">01 · Front Seat</a>
+    <a href="#bt-s2">02 · Glove Box</a>
+    <a href="#bt-s3">03 · Back Seat</a>
+    <a href="#bt-s4">04 · Container</a>
+    <a href="#bt-s5">05 · Rear Water</a>
+    <a href="#bt-s6">06 · Hand Tools</a>
+    <a href="#bt-s7">07 · Water Pump</a>
+    <a href="#bt-s8">08 · Hydrant Bag</a>
+  </nav>
+
+<div class="section-block" id="bt-s1" data-section="1">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 1</div>
+        <div class="section-title">Front Seat</div>
+      </div>
+      <div class="item-count">1 item</div>
+    </div>
+
+    <!-- Radios -->
+    <div class="eq-card" data-name="radios portable radio handie talkie HT walkie talkie communication">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">📻</div>
+        <div class="eq-name">Radios</div>
+        <div class="eq-aka-badge">Portable / HT / Handie-Talkie</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Battery-powered handheld transceivers that allow voice communication between crew members, command, dispatch, and mutual aid agencies. Programmed with your agency's tactical channels, mutual aid frequencies, and standard ICS channels. At least one radio per seat position is standard on a brush truck.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Power on and confirm full battery charge — this is part of your daily rig check, non-negotiable.</li>
+          <li>Confirm you're on the correct assigned channel before leaving the station.</li>
+          <li>To transmit: press and hold PTT, wait one full second before speaking to prevent clipping your first word.</li>
+          <li>Speak clearly at a normal pace, directly into the mic. Release PTT when finished.</li>
+          <li>Use ICS radio discipline — identify yourself, then your message: <em>"Command from Engine 62 — water supply established."</em></li>
+          <li>Monitor your assigned channel. Never switch channels without notifying your officer.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Radio Discipline</div>
+            <div class="alert-body"><strong>Never key your radio while someone else is transmitting</strong> — this "steps on" their message and can block a critical communication. Wait for the channel to clear. Also: <strong>always verify your channel before operating</strong>. A firefighter who can't reach command is a firefighter in danger.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">The radio is your primary tool for situational awareness, hazard reporting, resource requests, and crew accountability. On a brush fire, conditions change in seconds — a wind shift, a flare-up, a spot fire across a road. Without communication, you are isolated. With it, you are part of a team.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Portable, handie-talkie, HT, brick, walkie-talkie, portable radio</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 2: GLOVE BOX ─── -->
+  <div class="section-block" id="bt-s2" data-section="2">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 2</div>
+        <div class="section-title">Glove Box</div>
+      </div>
+      <div class="item-count">4 items</div>
+    </div>
+
+    <!-- ERG -->
+    <div class="eq-card" data-name="ERG book emergency response guidebook hazmat DOT orange book">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">📗</div>
+        <div class="eq-name">ERG Book</div>
+        <div class="eq-aka-badge">Emergency Response Guidebook</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">The Emergency Response Guidebook — published by the U.S. DOT — is a pocket-sized reference used to identify hazardous materials and determine initial safe response actions. It's organized by UN/NA placard numbers, chemical names, and color-coded guide pages for isolation distances. A new edition is published every four years — always ensure your copy is current.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Identify the 4-digit UN/NA number on the vehicle's placard.</li>
+          <li>Look it up in the yellow (numerical) or blue (alphabetical) index pages.</li>
+          <li>Note the guide number referenced (e.g., Guide 128).</li>
+          <li>Turn to the orange-bordered guide page for that number.</li>
+          <li>Read <strong>Potential Hazards</strong> first — fire/explosion risk and health hazards.</li>
+          <li>Follow the <strong>Public Safety</strong> section for initial isolation distances.</li>
+          <li>For large spills or fires, use the green-bordered Table of Initial Isolation and Protective Action Distances.</li>
+          <li>Relay findings to your officer and dispatch immediately.</li>
+        </ol>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=how+to+use+ERG+emergency+response+guidebook" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: How to Use the ERG
+        </a></div>
+        <div class="eq-panel eq-why">Brush fires don't stay in the wildland — they reach propane tanks, agricultural chemical storage, and vehicles with hazmat placards. Before you get close to anything with a placard, you need to know what you're dealing with. The ERG is your first line of reference when electronic resources aren't available.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Emergency Response Guidebook, DOT guide, hazmat book, orange book</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Bug Spray -->
+    <div class="eq-card" data-name="bug spray insect repellent DEET tick mosquito">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪲</div>
+        <div class="eq-name">Bug Spray</div>
+        <div class="eq-aka-badge">Insect Repellent / DEET</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A commercial DEET-based insect repellent stored in the glove box for use during extended brush fire operations and mop-up in vegetation-heavy areas.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Apply to exposed skin and clothing before entering tall grass, underbrush, or wooded areas.</li>
+          <li>Spray into your hands first before applying near the face — never spray directly at your face.</li>
+          <li>Do not apply inside enclosed vehicles or spaces.</li>
+          <li>Reapply per manufacturer guidance during extended operations.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Wildland firefighting involves extended time in environments where ticks and mosquitoes are active. Tick-borne illnesses like Lyme disease are a genuine occupational hazard for first responders working in the field. This is not an afterthought item.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Insect repellent, DEET spray, tick spray</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Fuel Key -->
+    <div class="eq-card" data-name="fuel key fleet card pump key Glen Ellyn fuel station">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔑</div>
+        <div class="eq-name">Fuel Key</div>
+        <div class="eq-aka-badge">Fleet Card / Pump Key</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A specialized fleet key or card that grants access to the department's fueling station (Glen Ellyn fuel station) for refueling Brushtruck 62's main vehicle tank.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Drive to the designated fuel station.</li>
+          <li>Insert or swipe the key/card to authorize the pump.</li>
+          <li>Fuel the correct tank — <strong>know your fuel type before you pull up to the pump.</strong></li>
+          <li>Log the transaction per department policy.</li>
+          <li>Return the key to the glove box immediately after use.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Fuel Type</div>
+            <div class="alert-body"><strong>Know your fuel type before touching the nozzle.</strong> The truck's main engine likely takes diesel. The portable pump takes gasoline. Putting gasoline in a diesel engine causes catastrophic damage. When in doubt, ask your officer first.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Fleet fuel cards prevent unauthorized use, enable accurate fuel tracking, and grant access to secured pumps. Losing this key is an administrative and operational problem — treat it like your own car keys.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Fleet card, fuel card, pump key</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Water Guides -->
+    <div class="eq-card" data-name="water guides maps sources drafting rural supply pre-survey ponds streams">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🗺️</div>
+        <div class="eq-name">Water Guides / Water Source Maps</div>
+        <div class="eq-aka-badge">Rural Water Supply Maps</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Printed reference maps identifying pre-surveyed natural water sources in your response area — ponds, streams, swimming pools, cisterns, dry hydrants, and other potential drafting locations. May be laminated map sheets or a bound booklet.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>When the tank is running low and no hydrant is available, pull the guide.</li>
+          <li>Identify your current location and reference the nearest marked water source.</li>
+          <li>Relay the location to your officer for routing.</li>
+          <li>Note any access limitations — weight-restricted bridges, narrow lanes, or locked gates that could trap apparatus.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Hydrants don't exist in wildland and rural areas. Knowing where you can draft water is a critical tactical advantage — it's what extends your truck's capability beyond the 250 gallons onboard. These guides represent pre-work your predecessors did so you don't have to figure it out under pressure.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Water source maps, drafting location guide, pre-survey maps, rural water supply maps</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 3: BACK SEAT ─── -->
+  <div class="section-block" id="bt-s3" data-section="3">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 3</div>
+        <div class="section-title">Back Seat</div>
+      </div>
+      <div class="item-count">4 items</div>
+    </div>
+
+    <!-- PFD -->
+    <div class="eq-card" data-name="PFD personal flotation device life jacket vest water safety">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🦺</div>
+        <div class="eq-name">PFD — Personal Flotation Device</div>
+        <div class="eq-aka-badge">Life Jacket / Life Vest</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A Type III or Type V Coast Guard-approved life jacket — foam or inflatable — worn around the torso to maintain buoyancy in water. Keeps a person afloat even if incapacitated.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Pull the PFD over your head and secure all buckles and straps snugly.</li>
+          <li>Fit check: it should not ride up over your chin when you pull upward on the front hem.</li>
+          <li>For inflatable models: confirm the CO₂ cartridge is installed and the armed indicator is green before operating near water.</li>
+          <li>Wear any time you are within arm's reach of an open water source during drafting, vehicle operations near water, or other water-hazard scenarios.</li>
+          <li>Inspect before use: check for tears, missing buckles, and buoyancy integrity.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — "I'm Not Going in the Water"</div>
+            <div class="alert-body">The most dangerous words near any water hazard. <strong>The PFD goes on before the incident, not after you fall in.</strong> Drowning is a documented firefighter line-of-duty fatality category. If your crew is working near a pond, creek, or any open water — PFD goes on. No discussion needed.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Brush fires frequently occur near retention ponds, drainage ditches, rivers, and flooded areas. Firefighters hauling hard suction hose to a drafting point are often working at the water's edge on slippery terrain while fatigued and carrying equipment. A slip can happen in seconds.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Life jacket, life vest, flotation device, PFD</span></div>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=how+to+fit+inspect+Type+III+PFD+life+jacket" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+            Watch: Fitting and Inspecting a PFD
+          </a>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Hot Stick -->
+    <div class="eq-card" data-name="hot stick voltage detector electrical safety rod power line energized">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">⚡</div>
+        <div class="eq-name">Hot Stick</div>
+        <div class="eq-aka-badge">Voltage Detector / Electrical Safety Rod</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">An insulated fiberglass pole (4–6 feet) used to safely probe areas near potential electrical hazards without direct contact. Some versions include an audible/visual voltage detection indicator. Allows firefighters to test whether vegetation, fencing, or debris near a power line is energized before touching it.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Extend the hot stick to its full working length.</li>
+          <li>Approach the suspected hazard from the side — keep your body as far from the hazard as the stick allows.</li>
+          <li>If voltage-detecting model: hold near (not touching) the suspected conductor and watch/listen for the indicator.</li>
+          <li>If probing only: use the tip to touch debris near lines — never grab or pull potentially energized material.</li>
+          <li><strong>Never use a wet hot stick</strong> — moisture compromises electrical insulation.</li>
+          <li>If voltage is detected or you're unsure: back off, establish a hazard perimeter, notify your IC, and contact the utility company.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — Step Potential</div>
+            <div class="alert-body"><strong>Assume every downed power line is live.</strong> Current can energize the ground around a downed line — a phenomenon called "step potential." Stay a minimum of one full span (pole-to-pole distance) away. The hot stick reduces risk; it does not eliminate it.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Brush fires regularly down power lines and energize surrounding areas — fences, trees, soil, and standing water can all carry current. You cannot tell if something is energized by looking at it. The hot stick creates a safe buffer between you and potential electrocution.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Voltage detector, proximity tester, electrical safety rod, lineman's stick</span></div>
+          <a class="yt-link" href="https://www.youtube.com/results?search_query=hot+stick+electrical+safety+first+responder+downed+power+line" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+            Watch: Hot Stick and Electrical Safety
+          </a>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Box Light -->
+    <div class="eq-card" data-name="box light flashlight scene light lantern night operations visibility">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔦</div>
+        <div class="eq-name">Box Light (Large Flashlight)</div>
+        <div class="eq-aka-badge">Scene Light / Hand Lantern</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A high-powered, rechargeable handheld flashlight — lantern or box-style — with significantly higher lumen output than a personal flashlight. Designed to illuminate large areas during nighttime or reduced-visibility operations.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Confirm full battery charge at the start of every shift.</li>
+          <li>At night or in smoke-reduced visibility, deploy to illuminate work areas, staging zones, or access routes.</li>
+          <li>Can be set down as a scene light while you work hands-free.</li>
+          <li>Return to back seat and place on charger (if docking-style) at end of shift.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Brush fires don't stop at sunset, and wildland environments have zero ambient light. Mop-up operations, overhaul, and crew accountability all require reliable illumination. The box light supplements personal headlamps with broader scene coverage.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Scene light, hand lantern, big flashlight, spot lantern, flood light</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Hose Bag -->
+    <div class="eq-card" data-name="hose bag forestry wildland hose bag deployment 1 inch">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🎒</div>
+        <div class="eq-name">Hose Bag</div>
+        <div class="eq-aka-badge">Forestry Hose Bag / Deployment Bag</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A canvas or nylon bag pre-loaded with folded 1-inch forestry hose for rapid deployment. Allows one firefighter to carry a significant hose load without tangling or premature unrolling.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Shoulder or carry the bag to your deployment position.</li>
+          <li>Connect the male end to your water source (pump outlet, inline valve, or wye).</li>
+          <li>Walk toward the fire edge while a partner holds the source connection.</li>
+          <li>Open the bag and allow hose to feed out as you advance.</li>
+          <li>Attach your nozzle to the female end once fully deployed.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Pre-packed hose bags allow rapid, tangle-free deployment through brush terrain where dragging a rolled hose through vegetation would be slow and inefficient. Speed matters in initial brush fire attack — the faster water goes on fire, the smaller the fire stays.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Forestry hose bag, pre-connected line, deployment bag, wildland hose bag</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 4: BACK CONTAINER ─── -->
+  <div class="section-block" id="bt-s4" data-section="4">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 4</div>
+        <div class="section-title">Container in Back Seat</div>
+      </div>
+      <div class="item-count">9 items</div>
+    </div>
+
+    <!-- Small 1" hose -->
+    <div class="eq-card" data-name="small 1 inch hose forestry one inch wildland backup line">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🌀</div>
+        <div class="eq-name">Small 1″ Hose</div>
+        <div class="eq-aka-badge">Forestry Line / Wildland Hose</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A section of 1-inch diameter single-jacket forestry hose — lighter and more flexible than structural attack hose. Standard NST threaded couplings. This is a backup section stored in the container, separate from the reel.</div>
+        <div class="eq-panel eq-how">Connect to the pump's 1-inch discharge or an inline valve. Use for spot extinguishment, mop-up, or as an extension when the main hose reel line can't reach. Can also be handed off to a second crew working a separate flank.</div>
+        <div class="eq-panel eq-why">Fires don't cooperate with fixed hose lengths. A backup section means extra reach, a secondary line, or flexibility to hand off to another crew without giving up your primary line.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Forestry line, one-inch line, wildland hose, booster hose</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Safety Vest -->
+    <div class="eq-card" data-name="safety vest hi-vis high visibility reflective ANSI traffic roadside vest">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🟡</div>
+        <div class="eq-name">Safety Vest</div>
+        <div class="eq-aka-badge">Hi-Vis Vest / Reflective Vest</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A Class II or III ANSI-compliant high-visibility vest — bright orange or lime green with retro-reflective striping — worn over PPE to make firefighters visible to vehicle traffic. Non-structural; visual protection only.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Pull over your head and secure any side straps or zipper.</li>
+          <li>Wear any time you are operating within or adjacent to active traffic lanes, on a roadway shoulder, or where vehicle traffic is present.</li>
+          <li>At night, retro-reflective strips become even more critical — don't skip it after dark.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — "We'll Only Be a Minute"</div>
+            <div class="alert-body"><strong>There is no operation short enough to skip the vest near traffic.</strong> Fatal line-of-duty deaths have occurred in under 60 seconds of roadside exposure. It takes 5 seconds to put on. There is no excuse.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Firefighters are struck and killed by vehicles at emergency scenes every year. Drivers in emergencies do not slow down adequately, and dark turnout gear blends into night. The vest makes you visible from hundreds of feet away.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Hi-vis vest, traffic vest, reflective vest, ANSI vest, safety vest</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Maps -->
+    <div class="eq-card" data-name="maps street district aerial navigation paper backup GPS">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🗺️</div>
+        <div class="eq-name">Maps</div>
+        <div class="eq-aka-badge">Street Map / Response District Map</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Printed street, aerial, or tactical maps of your response district — possibly laminated. May include hydrant maps, response boundaries, and mutual aid overlaps.</div>
+        <div class="eq-panel eq-how">When GPS fails, the map is your navigation backup. Also use to brief incoming mutual aid crews on access routes, establish staging areas, and communicate geographic reference points to units that don't know your district.</div>
+        <div class="eq-panel eq-why">GPS dead zones exist. Cell towers go down. Batteries die. Paper maps never lose signal. On a large incident with multiple access routes and incoming mutual aid, a physical map is the fastest way to communicate geography to everyone simultaneously.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Street map, Thomas Guide, district map, response map, area map</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Duct Tape -->
+    <div class="eq-card" data-name="duct tape duck tape 100 mph tape riggers field repair utility">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🟫</div>
+        <div class="eq-name">Duct Tape</div>
+        <div class="eq-aka-badge">100-MPH Tape / Rigger's Tape</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Heavy-duty cloth-backed pressure-sensitive adhesive tape — one of the most versatile field tools in any kit.</div>
+        <div class="eq-panel eq-how">Temporary repair of leaking hose, securing loose equipment, marking hazards, labeling gear, temporarily repairing torn PPE, sealing openings, and hundreds of other field applications. On long extended-attack operations, field improvisation is a survival skill.</div>
+        <div class="eq-panel eq-why">Equipment fails in the field. Duct tape buys time. A leaking hose coupling that can't be immediately swapped can be temporarily wrapped to reduce flow loss. The moment you need it and don't have it, you'll never skip packing it again.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Duck tape, 100-mph tape, rigger's tape, gaffer tape</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Caution Tape -->
+    <div class="eq-card" data-name="caution tape barrier scene tape hazard perimeter yellow black">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">⚠️</div>
+        <div class="eq-name">Caution Tape</div>
+        <div class="eq-aka-badge">Barrier Tape / Scene Tape</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Brightly colored (yellow/black) polyethylene barrier tape printed with "CAUTION" or "DO NOT ENTER." Visual warning only — not a physical barrier.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Attach one end to a fixed anchor point (tree, post, door handle).</li>
+          <li>Walk the perimeter of the hazard zone, unspooling as you go.</li>
+          <li>Tie off at regular intervals to maintain taut lines.</li>
+          <li>Keep at a visible height — roughly waist-to-chest level.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Establishes visual hazard perimeters for unprotected bystanders, marks unstable ground, defines fire lines, identifies electrical hazard zones, and restricts civilian access — without requiring a firefighter to stand there indefinitely.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Barrier tape, police tape, scene tape, hazard tape</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Garbage Bags -->
+    <div class="eq-card" data-name="garbage bags trash bags contractor heavy duty overhaul debris containment">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🗑️</div>
+        <div class="eq-name">Garbage Bags</div>
+        <div class="eq-aka-badge">Contractor Bags / Heavy-Duty Bags</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Heavy-duty plastic bags — typically contractor-grade, 3-mil or heavier — carried in quantity for field use.</div>
+        <div class="eq-panel eq-how">Collect fire debris and contaminated materials during overhaul. Bag compromised PPE. Improvise waterproofing for electronics or documents. Contain sharps or biological hazard materials. Manage scene waste during extended operations.</div>
+        <div class="eq-panel eq-why">Overhaul generates waste. Proper disposal of contaminated materials is both an environmental requirement and a secondary exposure safeguard. On a multi-hour operation, organized waste management keeps the work area safe.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Trash bags, contractor bags, heavy-duty bags, debris bags</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Pub Ed -->
+    <div class="eq-card" data-name="public education stickers pub ed fire prevention community outreach materials">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">📚</div>
+        <div class="eq-name">Pub Ed — Public Education Materials</div>
+        <div class="eq-aka-badge">Fire Prevention / Community Outreach</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Pre-printed educational materials — stickers, magnets, or card stock — intended for distribution during non-emergency community contacts. May include fire prevention tips, emergency numbers, smoke alarm reminders, and department contact information.</div>
+        <div class="eq-panel eq-how">Distribute to homeowners, bystanders, or members of the public during non-emergency contacts, public events, or fire prevention moments that arise naturally during and after incidents.</div>
+        <div class="eq-panel eq-why">Fire prevention is the best fire protection. Every sticker handed to a homeowner is a potential reminder to test their smoke alarm, clear brush, or call before burning. Community trust and prevention are core parts of the job.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Fire prevention materials, PubEd, community education, public outreach, prevention stickers</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Strap -->
+    <div class="eq-card" data-name="strap utility tie down ratchet cam lashing webbing">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪢</div>
+        <div class="eq-name">Strap (Utility / Tie-Down)</div>
+        <div class="eq-aka-badge">Tie-Down / Ratchet Strap</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A nylon or polyester webbing strap — typically 1–2 inches wide — with a ratchet mechanism or cam buckle for securing loads during transport or field use.</div>
+        <div class="eq-panel eq-how">Use to secure equipment during transport, lash hose to brush for anchoring, secure debris during overhaul, or improvise a drag handle. Release ratchet straps by pulling the release lever; rewind neatly for next use.</div>
+        <div class="eq-panel eq-why">Equipment that shifts in a moving truck is a safety hazard. Straps keep your load organized and your compartment ready for the next call.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Tie-down strap, ratchet strap, cam strap, lashing, webbing strap</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Towel -->
+    <div class="eq-card" data-name="towel utility cloth shop rag wipe clean dry fittings">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🧻</div>
+        <div class="eq-name">Towel</div>
+        <div class="eq-aka-badge">Utility Towel / Shop Rag</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A heavy-duty utility cloth or shop-style towel for operational use. Not for personal hygiene — this is a work towel.</div>
+        <div class="eq-panel eq-how">Wipe down tools after use, clean pump connections, dry hose fittings before coupling, or use as an improvisational pad or wrap.</div>
+        <div class="eq-panel eq-why">Dirt and debris on hose threads prevent solid coupling and damage gaskets. Keeping couplings clean and dry ensures watertight connections under pressure. Small thing, big consequences when it fails mid-operation.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Utility towel, shop rag, work towel</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 5: REAR — WATER ─── -->
+  <div class="section-block" id="bt-s5" data-section="5">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 5</div>
+        <div class="section-title">Rear of Vehicle — Water System</div>
+      </div>
+      <div class="item-count">10 items</div>
+    </div>
+
+    <!-- 250-gallon tank -->
+    <div class="eq-card" data-name="250 gallon water tank onboard booster tank mobile attack supply">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">💧</div>
+        <div class="eq-name">250-Gallon Water Tank</div>
+        <div class="eq-aka-badge">Booster Tank / Onboard Water</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A truck-mounted poly or fiberglass tank holding 250 gallons — the onboard supply that makes Brushtruck 62 a mobile attack unit. At 25–30 GPM through a 1-inch line, 250 gallons gives you roughly 8–10 minutes of continuous water. Plan accordingly.</div>
+        <div class="eq-panel eq-how">The tank feeds the onboard pump. Check and confirm full at the start of every shift. Fill via the tank fill inlet on the pump panel or rear access. Monitor your level during operations — communicate it to your officer at 50% and again at 25%.
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Never Surprise Your Officer</div>
+            <div class="alert-body"><strong>Never let the tank run dry without warning.</strong> Call it out: "IC, we're at half tank" at 125 gallons. "IC, quarter tank" at ~60 gallons. A dry truck with a crew in the field is a life-safety event. When the pump cavitates (runs without water), impeller damage follows fast.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Provides immediate water supply without needing a hydrant — this is what makes initial brush fire attack possible in areas with zero water infrastructure. It's your autonomy as a mobile unit.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Booster tank, onboard water, water tank, tank water, portable tank</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- 1" Hose Reel -->
+    <div class="eq-card" data-name="1 inch hose reel 200 feet booster reel wildland attack initial">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🎡</div>
+        <div class="eq-name">1″ Hose Reel (200 Feet)</div>
+        <div class="eq-aka-badge">Booster Reel / Wildland Attack Line</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A motorized or manual reel mounted to the truck storing 200 feet of 1-inch booster/forestry hose in a continuous coil. Always connected to the pump — allows extension and retraction without removing from the truck. The truck can drive with the hose deployed.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Open the reel discharge valve on the pump panel.</li>
+          <li>Pull the nozzle end from the reel and walk toward the fire.</li>
+          <li>Hose unspools from the reel as you advance.</li>
+          <li>When finished: close nozzle, bleed residual pressure, then rewind the reel (motorized: use reel motor switch; manual: use the crank handle).</li>
+          <li>Lay hose flat and even on the reel — crossed or bunched hose jams the reel.</li>
+        </ol>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=brush+truck+hose+reel+wildland+deployment" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Hose Reel Deployment
+        </a></div>
+        <div class="eq-panel eq-why">Your primary initial attack tool. Fast, always connected, and allows progressive hose lays — extending hose as the truck repositions without disconnecting anything. Truck to water on fire in under 60 seconds.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Booster reel, reel line, 1-inch reel, wildland attack line, hose reel</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Reel handle -->
+    <div class="eq-card" data-name="handle hose reel crank manual rewind winding backup motor">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔧</div>
+        <div class="eq-name">Handle for Hose Reel</div>
+        <div class="eq-aka-badge">Reel Crank / Manual Winding Handle</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A detachable crank handle used to manually rewind the hose reel when the motorized drive is unavailable or has failed.</div>
+        <div class="eq-panel eq-how">Insert into the reel's drive socket and crank in the winding direction (typically clockwise facing the reel). Maintain even tension on the hose as you crank to prevent bunching. Store in its designated bracket when not in use.</div>
+        <div class="eq-panel eq-why">If the motorized reel motor fails, you still need to recover 200 feet of hose without leaving it on the ground. The manual handle is your backup — don't leave it behind at the station.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Reel crank, winding handle, manual reel handle</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Hard Suction -->
+    <div class="eq-card" data-name="hard suction hose black rigid drafting 12 foot natural water source pond creek">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪣</div>
+        <div class="eq-name">Hard Suction Hose (2 × 12′ Black)</div>
+        <div class="eq-aka-badge">Hard Suction / Drafting Hose</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Rigid, wire-reinforced PVC hose that does NOT collapse under negative pressure — unlike standard attack hose. Allows the pump to draw from a static source below pump level. Each of 2 sections is 12 feet; combined reach is 24 feet. Black and noticeably stiffer than fire hose.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Connect the two sections together — hand tight plus a quarter-turn with a spanner.</li>
+          <li>Attach the metal strainer to the source end (the end going into the water).</li>
+          <li>Thread the pump end into the pump's suction intake (2½-inch or larger inlet).</li>
+          <li>Lower the strainer end into the water — fully submerged, ideally 2+ feet under the surface to prevent vortexing.</li>
+          <li>Prime the pump and begin drafting.</li>
+          <li>After use: flush both sections, inspect for cracks, and store in their designated brackets.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — Air Leaks Kill Drafting Operations</div>
+            <div class="alert-body"><strong>Every connection must be airtight.</strong> A single loose coupling introduces air into the suction line, destroys your prime, and you have no water. Feel and listen for air leaks at every joint. Never run the pump at high RPM without water in the suction line — pump damage occurs fast when running dry.</div>
+          </div>
+        </div>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=fire+truck+hard+suction+hose+drafting+operations" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Drafting with Hard Suction Hose
+        </a></div>
+        <div class="eq-panel eq-why">With this equipment, your truck can draw from any nearby pond, creek, or swimming pool — essentially unlimited water supply. Without it, you are limited to 250 gallons. It's the difference between sustained attack and retreat.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Hard suction, suction hose, drafting hose, rigid suction, hard sleeve</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Metal Strainer -->
+    <div class="eq-card" data-name="metal filter strainer suction hose drafting basket screen pump protection debris">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🕸️</div>
+        <div class="eq-name">Metal Filter / Strainer for Suction Hose</div>
+        <div class="eq-aka-badge">Suction Strainer / Basket Strainer / Draft Strainer</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A dome-shaped or cylindrical metal screen that attaches to the source (water) end of the hard suction hose and sits inside the water source during drafting operations.</div>
+        <div class="eq-panel eq-how">Thread or snap onto the end of the hard suction hose before inserting into the water. Submerge at least 2 feet below the surface. After use: remove, rinse clean, and inspect for dents or torn screen material.</div>
+        <div class="eq-panel eq-why">Natural water sources contain leaves, sticks, sediment, algae, and aquatic life. Without the strainer, any of this material can enter the pump, clog impellers, damage seals, and destroy a pump worth thousands of dollars. The strainer is cheap insurance — don't draft without it.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Suction strainer, foot valve, draft strainer, basket strainer, pump strainer</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Wheel Chock -->
+    <div class="eq-card" data-name="wheel chock metal block parking slope grade rollaway safety OSHA">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🧱</div>
+        <div class="eq-name">Metal Wheel Chock (1)</div>
+        <div class="eq-aka-badge">Chock Block / Wheel Block</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A wedge-shaped block placed under a tire to prevent vehicle movement when parked on a grade or during pump operations.</div>
+        <div class="eq-panel eq-how">Place firmly against the downhill side of a rear tire before engaging the pump or leaving the vehicle unattended on any slope. Position diagonally so the vehicle can't roll forward or backward.
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Build the Habit Now</div>
+            <div class="alert-body"><strong>Chocking the wheel before leaving the cab is a habit you build now.</strong> At a brush fire on a hillside, a rolling apparatus could kill someone. Drop the chock first, every time, before anything else — even before the radio. OSHA requires it. More importantly, lives depend on it.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">During pump operations, the engine is running and the drivetrain is engaged. If the truck starts rolling on a slope, it can injure crew members working near hose connections or run into the fire itself. Two seconds to drop the chock can save a life.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Chock block, wheel block, parking wedge, tire chock</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Gas Can -->
+    <div class="eq-card" data-name="gas can fuel plastic gasoline portable pump jerry can refuel">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">⛽</div>
+        <div class="eq-name">Plastic Gas Can (Pump Fuel)</div>
+        <div class="eq-aka-badge">Jerry Can / Portable Fuel Container</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A red or yellow portable gas can containing unleaded gasoline — fuel for the portable water pump's gasoline engine. This is NOT for the truck's main engine (which is likely diesel).</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Shut down and allow the portable pump to cool slightly before refueling.</li>
+          <li>Use the plastic funnel (stored with tools) to avoid spills.</li>
+          <li>Fill to the marked fill line — never overfill.</li>
+          <li>Replace the cap securely before restarting.</li>
+          <li>Store upright in its bracket, away from ignition sources.</li>
+          <li>Check fuel level during every rig check.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — No Open Flames During Fueling</div>
+            <div class="alert-body"><strong>Refuel only with the pump off and cooled for at least 2 minutes.</strong> Gasoline vapors ignite from exhaust components, hot engine surfaces, and static electricity. No smoking. Keep ignition sources away. Always use the funnel — spilling fuel near a hot engine is how fires start at the truck.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">The portable pump is only useful if it has fuel. Running out of gas during an active drafting operation is a completely preventable failure. Check it every shift. Carry extra.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Gas can, jerry can, fuel can, portable fuel container</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- 2.5" hose -->
+    <div class="eq-card" data-name="2.5 inch hose two and a half supply relay 50 feet roll">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🌀</div>
+        <div class="eq-name">2½″ Hose Roll (50 Feet)</div>
+        <div class="eq-aka-badge">Two-and-a-Half / Supply Hose</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A 50-foot roll of 2½-inch diameter woven-jacket fire hose — larger-diameter supply and relay hose. Significantly heavier and stiffer than forestry hose. Can flow 250+ GPM depending on pressure.</div>
+        <div class="eq-panel eq-how">Deploy as a supply line from a hydrant to your pump, or as a relay line between two apparatus. Connect male end to the water source, female end to your pump intake. Tighten couplings with the large spanner.</div>
+        <div class="eq-panel eq-why">When you need to move large volumes of water — supplying your brush truck from a hydrant, establishing a relay, or connecting to an engine company — the 2½-inch line moves it. The 1-inch line doesn't have the volume for these applications.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Two-and-a-half inch, two-and-a-half line, big line, relay hose, supply hose, 2½</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- 3" hose -->
+    <div class="eq-card" data-name="3 inch hose three inch supply large diameter LDH 50 feet">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🌀</div>
+        <div class="eq-name">3″ Hose (50 Feet)</div>
+        <div class="eq-aka-badge">Three-Inch / Large-Diameter Supply Hose</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A 50-foot roll of 3-inch woven-jacket fire hose — high-volume supply hose. Even higher flow capacity than 2½-inch at the same pressure. May have Storz or threaded couplings.</div>
+        <div class="eq-panel eq-how">Same deployment as 2½-inch hose but with higher flow capacity. Typically used as a supply line from a hydrant to a pumper, or as a dump site fill line for portable tanks. The 3-inch line flows significantly more water than 2½-inch at equivalent pressure.</div>
+        <div class="eq-panel eq-why">In high-demand situations — a structure threatened by brush fire, an engine company needing water supply — the 3-inch line gets high-volume water where it's needed fast. It's the highway for water delivery.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Three-inch, LDH (if Storz-equipped), supply line, big line</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- 1.5" cross lay -->
+    <div class="eq-card" data-name="1.5 inch hose cross lay 150 feet inch and a half attack line">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🌀</div>
+        <div class="eq-name">1½″ Hose on Cross Lay (~150 Feet)</div>
+        <div class="eq-aka-badge">Inch-and-a-Half / Cross-Lay Attack Line</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Approximately 150 feet of 1½-inch diameter attack hose pre-loaded on a cross-lay bed — a compartment allowing deployment from either side of the truck. Heavier and more durable than 1-inch forestry hose; designed for medium-duty attack applications and flowing roughly 95–125 GPM.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Pull from the side of the cross-lay closest to your attack point.</li>
+          <li>Walk the load toward the fire while a partner makes the pump connection.</li>
+          <li>Advance the line and open the nozzle at the attack point.</li>
+          <li>After use: wash, drain, and reload flat on the cross-lay bed.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Bridges the gap between the 1-inch reel (fast and light, limited flow) and the 2½-inch supply line (high volume, awkward to advance). The 1½-inch gives enough flow for a structural exposure or heavier brush fire while remaining manageable for 1–2 firefighters.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">One-and-a-half inch, inch-and-a-half, attack line, cross-lay line, 1½</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Fog Nozzle -->
+    <div class="eq-card" data-name="fog nozzle combination adjustable straight stream pattern TFT Akron nozzle">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">💦</div>
+        <div class="eq-name">Fog Nozzle</div>
+        <div class="eq-aka-badge">Combination Nozzle / Adjustable Fog Nozzle</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A variable-pattern nozzle adjustable from straight (solid) stream to wide fog — multiple settings in between. Fog pattern breaks water into fine droplets, dramatically increasing surface area and cooling capacity. Design pressure typically 100 PSI; flow 30–250 GPM depending on size and setting.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li><strong>Straight stream</strong>: maximum reach and penetration. Use for heavy fuels or reaching flame from distance.</li>
+          <li><strong>Narrow fog (30°)</strong>: combination of reach and cooling. Good general attack pattern.</li>
+          <li><strong>Wide fog (60–90°)</strong>: maximum cooling and heat shielding. Use for exposure protection, vapor suppression, or defensive withdrawal.</li>
+          <li>To shut off: rotate the bail or handle to closed position. Never leave a charged hose unattended with an open nozzle.</li>
+        </ol>
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Fog Patterns in Wind</div>
+            <div class="alert-body"><strong>Wide fog in high-wind conditions will deflect your water and can push heat back at you.</strong> In windy brush fire conditions, use a tighter pattern or straight stream for better control over where your water actually goes. Read the wind before you set your pattern.</div>
+          </div>
+        </div>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=fog+nozzle+patterns+techniques+firefighter+demonstration" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Fog Nozzle Patterns and Techniques
+        </a></div>
+        <div class="eq-panel eq-why">Fire behavior in brush is unpredictable. The fog nozzle gives you tactical flexibility in a single tool — attack flame, cool exposures, and protect yourself without swapping tips. The wide fog pattern also cools embers in the air and reduces re-ignition during mop-up.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Combination nozzle, adjustable fog nozzle, fog tip, TFT nozzle, Akron nozzle</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 6: REAR — HAND TOOLS ─── -->
+  <div class="section-block" id="bt-s6" data-section="6">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 6</div>
+        <div class="section-title">Rear of Vehicle — Hand Tools</div>
+      </div>
+      <div class="item-count">6 items</div>
+    </div>
+
+    <!-- Brush Paddles -->
+    <div class="eq-card" data-name="brush paddles swatter flapper wildland fire paddle grass smothering">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪶</div>
+        <div class="eq-name">Brush Paddles (3 Total)</div>
+        <div class="eq-aka-badge">Fire Swatter / Flapper / Beater</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A flat rubber or woven-fiber paddle on a long wooden handle — used to beat out flames in light fuels. Looks unsophisticated; works exceptionally well in the right conditions. Three are carried to allow crew teamwork.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Approach from the side — <strong>never from downwind or directly ahead of the flame front.</strong></li>
+          <li>Strike with a firm, flat-angle downward slap, dragging the paddle slightly toward you — this smothers the fire by cutting oxygen and pushing burning fuel together.</li>
+          <li>Work in short strokes, moving parallel to the fire edge (not perpendicular into it).</li>
+          <li>Rest the paddle periodically — rubber paddles melt or tear with continuous flame contact.</li>
+          <li>Two firefighters working in tandem (leap-frog smothering) suppress a line faster than one working alone.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — Wind and Fire Behavior</div>
+            <div class="alert-body"><strong>Never position yourself ahead of or downwind of the flame front.</strong> Fire spreads fastest with the wind. If it jumps over you, you are trapped. Always work from the black (burned area) or from the flanks. Always maintain an escape route.</div>
+          </div>
+        </div>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=fire+paddle+swatter+grass+fire+firefighter+technique" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Brush Paddle Technique
+        </a></div>
+        <div class="eq-panel eq-why">In light, fine fuels — grass, hay, weeds — water is often unnecessary and slower than direct suppression. A paddle knocks down a grass fire edge faster than deploying a hose. No water supply needed, no setup time — pick it up and go.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Fire swatter, flapper, beater, brush flap, wildland paddle, fire flap</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Pike Poles -->
+    <div class="eq-card" data-name="pike pole hook overhaul pull apart embers mop up rubbish hook ceiling hook">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪝</div>
+        <div class="eq-name">Pike Poles (2 Total)</div>
+        <div class="eq-aka-badge">Pike / Hook / Overhaul Hook</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A long wooden or fiberglass pole with a sharp metal hook at the end — the hook has a pointed tip and a curved "pike" protruding from the side. One of the oldest tools in the fire service. Typically 6, 8, or 10 feet long.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Use the point to probe, push, or pull burning or smoldering material.</li>
+          <li>Use the hook to pull burning debris apart, exposing hot spots to air and water.</li>
+          <li>During overhaul: hook and pull burning logs, stumps, or brush piles to separate fuel and expose embers.</li>
+          <li><strong>Never use near energized electrical equipment</strong> — wooden handles offer some insulation but are NOT rated for electrical work.</li>
+          <li>Work at arm's length — the tool exists to keep your body away from the heat.</li>
+        </ol>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=pike+pole+overhaul+firefighter+technique" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Pike Pole Use and Overhaul
+        </a></div>
+        <div class="eq-panel eq-why">Overhaul after a brush fire requires breaking apart heavy fuels — root masses, logs, thick brush — to ensure no smoldering spots can reignite. You cannot do this safely with your hands. The pike pole keeps you out of direct heat.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Pike, hook, rubbish hook, ceiling hook (structural), overhaul hook</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- New York Pole -->
+    <div class="eq-card" data-name="New York pole hook roof rake heavy duty NY hook roofing tool">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪝</div>
+        <div class="eq-name">New York Pole / Roof Rake (1)</div>
+        <div class="eq-aka-badge">NY Hook / New York Hook / Heavy Hook</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A heavy-duty version of the pike pole — typically 10–12 feet with a more substantial, wider hook profile. Originally designed for pulling apart roof sections in structural firefighting; equally useful in the wildland-urban interface for moving large debris, pulling fence rails, or dislodging heavy burning material.</div>
+        <div class="eq-panel eq-how">Same technique as the standard pike pole but designed for heavier material and greater reach. The wider hook catches larger debris. Use where the standard pike pole isn't heavy or long enough for the job — heavy root balls, fence lines, structural debris.</div>
+        <div class="eq-panel eq-why">When the standard pike pole isn't enough, the New York pole steps up. Greater leverage, greater mechanical advantage, greater reach on heavy material. At the wildland-urban interface, you encounter structures — and this tool handles the heavy end of debris work.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">New York hook, NY hook, roofing hook, heavy hook, roof rake</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Bolt Cutters -->
+    <div class="eq-card" data-name="bolt cutters fence wire chain lock cut access gate padlock">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">✂️</div>
+        <div class="eq-name">Bolt Cutters</div>
+        <div class="eq-aka-badge">Fence Cutters / Chain Cutters</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Heavy-duty compound-action cutting tool with hardened steel jaws, designed to cut padlocks, chain link, wire, fence cable, and small rebar. Typically 24–36 inches long with cushion-grip handles.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Open the jaws fully.</li>
+          <li>Position material to be cut as deep in the jaw as possible — cutting near the pivot provides maximum mechanical advantage.</li>
+          <li>Apply firm, even pressure on both handles simultaneously.</li>
+          <li>Keep fingers and face clear of the jaw line.</li>
+          <li>After use: wipe clean and store in the designated bracket.</li>
+        </ol>
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Document What You Cut</div>
+            <div class="alert-body"><strong>Cutting a lock or fence has legal implications.</strong> Always document it — notify your officer, note the location in the incident report, and if possible note the owner's contact information for department follow-up. Cut first if life safety requires it, but never forget to document.</div>
+          </div>
+        </div></div>
+        <div class="eq-panel eq-why">Brush fires don't respect property lines, and rural landowners lock everything. Fence lines block access roads, locked gates prevent apparatus entry to fields and pastures, and wire on the ground creates tire hazards. Bolt cutters get you through all of it fast.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Bolt cutters, fence cutters, wire cutters, chain cutters</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Halligan -->
+    <div class="eq-card" data-name="Halligan hallagan bar tool forcible entry pry bar irons adze pick fork">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">⚙️</div>
+        <div class="eq-name">Halligan Tool ("Hallagan Tool")</div>
+        <div class="eq-aka-badge">Halligan Bar / The Bar / Irons</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A multi-purpose forcible entry tool — a steel bar (~30 inches, 8–10 lbs) with three working ends: an adze (horizontal wedge blade), a pick, and a fork (two-tine wedge). Often paired with a flathead axe — this combination is called "the irons." Note: often spelled "Hallagan" in the field — both are understood.</div>
+        <div class="eq-panel eq-how">
+          <strong>Fork/Adze end:</strong> Insert between a door and frame at the latch to pry the door open.<br><br>
+          <strong>Pick end:</strong> Drive into wood or soil for purchase; break padlocks; penetrate materials.<br><br>
+          <strong>Adze:</strong> Chop, pry, dig, breach.<br><br>
+          In the brush context: pry open shed doors, break padlocked gates, dig fire lines, or pry apart debris at the wildland-urban interface.
+        <div class="alert alert-warning">
+          <div class="alert-icon">⚠️</div>
+          <div class="alert-content">
+            <div class="alert-title">Rookie Alert — Know Your Ends Before the Incident</div>
+            <div class="alert-body"><strong>Every Halligan is forged — the pick and fork are specific orientations.</strong> Learn which end does what before the call. When paired with a flathead axe (the irons): the fork is married to the door gap and the axe drives it. Practice this before you need it. Fumbling at a burning building is not the time to learn.</div>
+          </div>
+        </div>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=halligan+bar+forcible+entry+firefighter+basics" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Halligan Bar Forcible Entry
+        </a></div>
+        <div class="eq-panel eq-why">At the wildland-urban interface, locked doors become life-safety problems during evacuations or when fire threatens occupants. The Halligan is the most versatile hand tool in the fire service for rapid entry. No firefighter should be unfamiliar with it.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Halligan bar, hooligan tool, pry bar, the bar, irons (paired with axe), Hallagan bar</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Plastic Funnel -->
+    <div class="eq-card" data-name="plastic funnel fuel pour gasoline pump fill spill prevention">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🫙</div>
+        <div class="eq-name">Plastic Funnel</div>
+        <div class="eq-aka-badge">Fuel Funnel / Pouring Funnel</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A standard wide-mouth plastic funnel (6–8 inches across at the top) used to direct gasoline from the gas can into the portable pump's fuel tank without spilling.</div>
+        <div class="eq-panel eq-how">Insert the spout into the pump's fuel tank opening. Pour gasoline from the gas can through the funnel slowly to avoid overflow. Remove and wipe down after use. Store in its bracket.</div>
+        <div class="eq-panel eq-why">Spilling gasoline near a running engine or hot exhaust components is a fire and burn injury hazard. The funnel eliminates that risk. Simple tool, important function — and the one most likely to be skipped "just this once" by someone in a hurry.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Fuel funnel, pouring funnel</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 7: WATER PUMP ─── -->
+  <div class="section-block" id="bt-s7" data-section="7">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 7</div>
+        <div class="section-title">Water Pump</div>
+      </div>
+      <div class="item-count">1 item</div>
+    </div>
+
+    <div class="eq-card" data-name="portable water pump gasoline centrifugal drafting 2.5 inch inlet 1.5 outlet Honda trash pump">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">⚙️</div>
+        <div class="eq-name">Portable Water Pump — 2½″ Inlet / 1½″ Outlet</div>
+        <div class="eq-aka-badge">Gas Pump / Honda Pump / Drafting Pump</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A small, gasoline-powered centrifugal pump — self-contained with its own engine (separate from the truck's engine), 2½-inch suction intake, and 1½-inch discharge outlet. Designed to draft water from natural sources when the truck's onboard pump is not optimally positioned, or to supplement supply at remote locations.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Position the pump as close to water level as practical — centrifugal pumps have a lift limit (typically 10–25 feet).</li>
+          <li>Connect hard suction hose with metal strainer to the <strong>2½-inch inlet</strong>.</li>
+          <li>Connect attack or supply hose to the <strong>1½-inch outlet</strong>.</li>
+          <li>Check fuel level and oil level per manufacturer markings.</li>
+          <li><strong>Cold start:</strong> choke on → pull starter cord firmly → advance choke as engine warms → set operating throttle.</li>
+          <li>Prime the pump if required (primer bulb or manual priming pump on some models).</li>
+          <li>Confirm water flowing at discharge before advancing throttle fully.</li>
+          <li><strong>Shutdown:</strong> reduce throttle → move choke to off/run → shut off fuel valve → allow to cool before moving.</li>
+        </ol>
+        <div class="alert alert-danger">
+          <div class="alert-icon">⚡</div>
+          <div class="alert-content">
+            <div class="alert-title">Critical Safety — Inlet/Outlet Are Not Interchangeable</div>
+            <div class="alert-body"><strong>The 2½-inch is the inlet (suction side). The 1½-inch is the outlet (discharge side).</strong> Flow goes one direction through a centrifugal pump. Connecting to the wrong port gives you zero water. Also: <strong>never run the pump dry</strong> — if prime is lost, shut down immediately and re-prime before restarting. Impeller damage occurs rapidly without water.</div>
+          </div>
+        </div>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=portable+fire+pump+drafting+setup+operation" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Portable Fire Pump Operations
+        </a></div>
+        <div class="eq-panel eq-why">Gives you a remote water supply capability — position the pump at a pond or creek while the truck stays on the road or in a defensible position. Also serves as a backup if the truck's main pump has issues. In rural firefighting, the ability to draft from any available source is critical to sustained operations.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Portable pump, gas pump, Honda pump (brand-generic), trash pump, drafting pump</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SECTION 8: HYDRANT BAG ─── -->
+  <div class="section-block" id="bt-s8" data-section="8">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <div class="section-title-wrap">
+        <div class="section-label">Section 8</div>
+        <div class="section-title">Hydrant Bag</div>
+      </div>
+      <div class="item-count">9 items</div>
+    </div>
+
+    <!-- Gate Valve -->
+    <div class="eq-card" data-name="gate valve hydrant assist valve HAV flow control water supply">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🚰</div>
+        <div class="eq-name">Gate Valve</div>
+        <div class="eq-aka-badge">Hydrant Gate / Auxiliary Valve / HAV</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A large-diameter valve installed between a hydrant outlet and your supply line, giving you local on/off flow control without shutting down the entire hydrant.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Connect the gate valve directly to the hydrant outlet <em>before</em> opening the hydrant.</li>
+          <li>Open the hydrant fully — hydrants are designed for full open or full closed; never throttle at the stem.</li>
+          <li>Control flow using the gate valve's handwheel.</li>
+          <li>When done: close gate valve first, then close hydrant, then bleed the line.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Without a gate valve, your only flow control is the hydrant itself — repeatedly opening and closing damages the seat. The gate valve maintains full hydrant pressure while you independently manage flow to your lines. Essential for tanker fill operations and multi-hose setups.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Hydrant gate, gate valve, auxiliary valve, hydrant assist valve (HAV)</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Garden Hose -->
+    <div class="eq-card" data-name="1 inch garden hose flush hydrant sediment light duty water">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🪣</div>
+        <div class="eq-name">1″ Garden Hose</div>
+        <div class="eq-aka-badge">Garden Hose / Flush Hose</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Standard residential garden hose with standard garden-hose threaded fittings — smaller diameter, lower pressure than fire hose.</div>
+        <div class="eq-panel eq-how">Used to flush hydrants before connecting supply lines — hydrants accumulate sediment you don't want entering your pump. Also used for light-duty applications: washing down equipment, filling water coolers, or supplying a water source for hand tool cleanup.</div>
+        <div class="eq-panel eq-why">Hydrant flushing before connection is standard procedure that's easy to skip and costly if you don't. Sediment in a pump is expensive damage. The garden hose makes flushing quick and simple.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Garden hose, flush hose</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Hydrant Wrench -->
+    <div class="eq-card" data-name="hydrant wrench key pentagon wrench operating nut open close hydrant">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔩</div>
+        <div class="eq-name">Hydrant Wrench</div>
+        <div class="eq-aka-badge">Hydrant Key / Pentagon Wrench</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A specialized wrench designed to fit the pentagonal (5-sided) operating nut on a fire hydrant — the bolt on top that opens and closes the main valve.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Place the wrench socket over the operating nut.</li>
+          <li><strong>Open counterclockwise</strong> in most US jurisdictions — "lefty loosey."</li>
+          <li>Open fully — hydrants are designed for full-open operation.</li>
+          <li>Close clockwise until fully seated.</li>
+          <li>Never use excessive force — hydrant stems can break, causing uncontrolled water release.</li>
+        </ol>
+        <a class="yt-link" href="https://www.youtube.com/results?search_query=how+to+open+fire+hydrant+hydrant+wrench+firefighter" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f87171"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          Watch: Opening a Fire Hydrant
+        </a></div>
+        <div class="eq-panel eq-why">Most fire hydrants cannot be opened without this wrench — they're intentionally designed to resist unauthorized opening. Without it, you have zero hydrant water supply.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Hydrant key, pentagon wrench, hydrant valve key, fire hydrant wrench</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Small Spanner -->
+    <div class="eq-card" data-name="small spanner wrench 1 3/4 hose coupling lug tighten gas shut off">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔧</div>
+        <div class="eq-name">Small Spanner Wrench (1¾″ Hose / Gas Shut-Off)</div>
+        <div class="eq-aka-badge">Spanner / Hose Wrench / Coupling Wrench</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A flat, open-ended wrench with a pin or lug that engages the lugs on a hose coupling — used to tighten or loosen 1¾-inch hose connections. The slot end can also operate a gas meter shut-off valve.</div>
+        <div class="eq-panel eq-how">Insert the pin into a lug hole on the coupling and use the wrench as a lever to rotate the coupling tight. For gas meter shut-off: insert the wrench slot over the valve and rotate 90 degrees to shut off. Always tighten in the closing direction, loosen in the opening direction — know your coupling orientation before applying force.</div>
+        <div class="eq-panel eq-why">Hose couplings tightened only by hand often won't hold pressure — or after flowing water, can't be uncoupled without a tool. The spanner ensures proper coupling torque and allows uncoupling under residual pressure. The gas shut-off function adds utility at wildland-urban interface incidents.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Spanner, hose wrench, coupling wrench, lug wrench (fire service context)</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Large Spanner -->
+    <div class="eq-card" data-name="large spanner wrench 5 inch LDH large diameter hose storz coupling">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔧</div>
+        <div class="eq-name">Large Spanner Wrench (5″ Hose / LDH)</div>
+        <div class="eq-aka-badge">Large Spanner / LDH Spanner / 5-Inch Spanner</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Same design as the small spanner but sized for large-diameter hose (LDH) couplings — 5-inch Storz or threaded connections. These couplings are heavy and require significantly more torque to tighten properly.</div>
+        <div class="eq-panel eq-how">Same technique as the small spanner — insert pin in lug, use as a lever. With 5-inch hose you may need two-handed force and a wide stance to generate enough torque. Always verify couplings are tight before flowing.</div>
+        <div class="eq-panel eq-why">Large-diameter hose couplings carry extremely high water volumes and pressures — they cannot be adequately tightened or loosened by hand. An improperly seated LDH coupling can fail catastrophically under pressure. The large spanner is the only practical tool for these connections.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Large spanner, LDH spanner, 5-inch spanner, big spanner</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Storz Adapters -->
+    <div class="eq-card" data-name="Storz adapter steamer to Storz hydrant connector sexless coupling LDH adaptor A B C D E F">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔗</div>
+        <div class="eq-name">Storz Adapters — A through F (Hydrant Bag)</div>
+        <div class="eq-aka-badge">Storz Adapter / LDH Adapter / Hydrant Adapter</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">A set of labeled connection adapters that allow Storz (sexless, quarter-turn) couplings to interface with threaded NST couplings of various sizes, and vice versa. Storz couplings have no male/female distinction — they are symmetrical and connect with a quarter-turn:
+          <br><br>
+          <strong>A — Steamer to Storz:</strong> Converts hydrant's large 4½-inch NST steamer outlet to Storz coupling.<br>
+          <strong>B — Storz Male (top) / Storz Female:</strong> 2½-inch Storz male and female adapters for connecting Storz hose to threaded connections.<br>
+          <strong>C — 2½-inch Hose Adapter:</strong> In-line adapter for 2½-inch connection interoperability.<br>
+          <strong>D — 1½-inch Hose Adapter:</strong> In-line adapter for 1½-inch connection interoperability.<br>
+          <strong>E — Fire Hose Wrench:</strong> Spanner for coupling operations.<br>
+          <strong>F — Double-Ended Spanner:</strong> One end fits Storz, the other fits 2½-inch — two tools in one.
+        </div>
+        <div class="eq-panel eq-how"><ol>
+          <li><strong>Adapter A (Steamer to Storz):</strong> Thread the female NST side onto the hydrant's steamer port — hand tight plus a quarter-turn with spanner. Connect your Storz supply hose to the Storz side with a quarter-turn. Open hydrant.</li>
+          <li><strong>Adapters B–D:</strong> Select the correct gender for your connection need. Attach Storz side with a quarter-turn; thread hose coupling with a spanner.</li>
+          <li><strong>Adapter F (Double-Ended Spanner):</strong> Use the appropriate end for your coupling type as a lever to apply torque.</li>
+          <li>After use: flush all adapters, inspect for damaged threads or Storz ears, store in the labeled hydrant bag slots.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Modern apparatus uses Storz for LDH; older hydrants use threaded outlets. Mutual aid agencies use different standards. These adapters are the universal translation kit — without them, mismatched couplings mean zero water supply regardless of what's available. Know which adapter solves which problem before you need it.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Storz adapter, steamer cap adapter, LDH adapter, hydrant adapter, sexless adapter</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Pipe Wrench -->
+    <div class="eq-card" data-name="pipe wrench Stillson adjustable jaw grip round irregular fittings">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🔧</div>
+        <div class="eq-name">Pipe Wrench</div>
+        <div class="eq-aka-badge">Stillson Wrench / Adjustable Pipe Wrench</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">An adjustable, serrated-jaw wrench designed to grip and turn pipes, threaded couplings, and round objects. The jaw tightens when torque is applied — the harder you turn, the tighter it grips.</div>
+        <div class="eq-panel eq-how"><ol>
+          <li>Adjust the jaw opening to just larger than the fitting you need to grip.</li>
+          <li>Place the jaw so that applying torque will cause it to tighten onto the fitting (the serrations grip better in the tightening direction).</li>
+          <li>Apply steady pressure — avoid jerking or hammering, which damages fittings.</li>
+          <li>After use: open the jaw fully before storing — storing under tension damages the adjusting mechanism.</li>
+        </ol></div>
+        <div class="eq-panel eq-why">Some hydrant connections, rusty fittings, or improvised supply configurations have round or irregular surfaces that standard spanners can't grip. The pipe wrench gets purchase where other tools can't. It's the problem-solver in the hydrant bag.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Stillson wrench, pipe wrench, monkey wrench (loosely)</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <!-- Electrical tape -->
+    <div class="eq-card" data-name="electrical tape black vinyl tape label mark hydrant bag tool identify">
+      <div class="eq-header" onclick="toggleCard(this)">
+        <div class="eq-icon">🖤</div>
+        <div class="eq-name">Black Electrical Tape</div>
+        <div class="eq-aka-badge">Electrical Tape / Black Tape / Vinyl Tape</div>
+        <div class="eq-toggle">▶</div>
+      </div>
+      <div class="eq-body">
+        <div class="eq-tabs">
+          <button class="eq-tab active" onclick="switchTab(this,'what')">What</button>
+          <button class="eq-tab" onclick="switchTab(this,'how')">How to Use</button>
+          <button class="eq-tab" onclick="switchTab(this,'why')">Why</button>
+          <button class="eq-tab" onclick="switchTab(this,'extra')">Also Known As</button>
+        </div>
+        <div class="eq-panel active eq-what">Vinyl insulating tape rated for low-voltage electrical applications, stored in the hydrant bag for field utility use.</div>
+        <div class="eq-panel eq-how">Use to mark or label hose connections and adapters for quick identification in the field, wrap handles on wrenches for improved grip, or temporarily secure small parts against loss in the bag.</div>
+        <div class="eq-panel eq-why">In a bag full of similar-looking adapters in dim light, a piece of tape can distinguish "connected" from "ready," or identify which side of an adapter is inlet vs. outlet. Small tool, prevents confusion at critical moments.</div>
+        <div class="eq-panel eq-extra"><div class="eq-extra-inner">
+          <div class="aka-row"><span class="aka-label">Also Known As</span><span class="aka-value">Electrical tape, black tape, vinyl tape, marking tape</span></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FINAL NOTES ─── -->
+  <div class="final-notes">
+    <h2>🔥 Final Notes from Your Mentor</h2>
+    <p>You made it through the whole truck. That's no small thing.</p>
+    <p><strong>The truck is a system.</strong> Water moves from tank → pump → hose → nozzle. Supply moves from hydrant → adapters → pump. Overhaul moves from tools → fire edge → mop-up. When you understand the system, you can improvise when something doesn't go according to plan — and something never goes according to plan.</p>
+    <p><strong>Know the "why" better than the "what."</strong> Anyone can memorize a list of tools. The firefighter who knows why the suction strainer goes 2 feet under, why you never run the pump dry, and why the wheel chock matters on a slope — that firefighter makes better decisions under pressure.</p>
+    <p><strong>Do your rig check every single shift.</strong> Not because someone is watching, but because the moment you skip it is often the moment something's missing. The compartment check is your pre-flight. Pilots don't skip the pre-flight because the last flight went fine.</p>
+    <p><strong>Ask questions at the tailboard.</strong> Every senior firefighter on your crew has a story about each piece of equipment on this truck — a time they needed it, a time it failed, a time they wished they had it. Those stories are worth more than any study guide. Ask for them.</p>
+    <p><em>Study guide prepared for Brushtruck 62 probationary firefighter orientation. Verify all hose lengths, tank capacities, and equipment specifications against your department's current SOPs and apparatus specifications — inventories may change, and your rig is the final authority.</em></p>
+  </div>
+
+</div><!-- /bt62-scope -->
+
+
+
+<script>
+// ══ BRUSHTRUCK 62 — Interactive Equipment Cards ══
+
+function toggleCard(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+  bt62UpdateProgress();
+}
+
+function switchTab(btn, panel) {
+  const body = btn.closest('.eq-body');
+  body.querySelectorAll('.eq-tab').forEach(t => t.classList.remove('active'));
+  body.querySelectorAll('.eq-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  body.querySelector('.eq-' + panel).classList.add('active');
+}
+
+function bt62SetMode(mode) {
+  const scope = document.getElementById('bt62-guide');
+  document.querySelectorAll('.bt62-mode').forEach(b => b.classList.remove('active'));
+  if (mode === 'quiz') {
+    scope.classList.add('quiz-on');
+    document.getElementById('bt62Quiz').classList.add('active');
+  } else {
+    scope.classList.remove('quiz-on');
+    document.getElementById('bt62Study').classList.add('active');
+  }
+}
+
+function bt62UpdateProgress() {
+  const cards = document.querySelectorAll('#bt62-guide .eq-card');
+  const opened = document.querySelectorAll('#bt62-guide .eq-card.open');
+  const total = document.getElementById('bt62Total');
+  const count = document.getElementById('bt62Count');
+  const bar   = document.getElementById('bt62ProgressBar');
+  if (total) total.textContent = cards.length;
+  if (count) count.textContent = opened.length;
+  if (bar)   bar.style.width = cards.length ? (opened.length / cards.length * 100) + '%' : '0%';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  bt62UpdateProgress();
+
+  var search = document.getElementById('bt62Search');
+  if (!search) return;
+  var noResults = document.getElementById('bt62NoResults');
+
+  search.addEventListener('input', function() {
+    var q = search.value.toLowerCase().trim();
+    var visible = 0;
+    document.querySelectorAll('#bt62-guide .eq-card').forEach(function(card) {
+      var data = (card.dataset.name || '').toLowerCase();
+      var name = (card.querySelector('.eq-name') ? card.querySelector('.eq-name').textContent : '').toLowerCase();
+      var match = !q || data.includes(q) || name.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) { visible++; if (q) card.classList.add('open'); }
+    });
+    document.querySelectorAll('#bt62-guide .section-block').forEach(function(sec) {
+      var any = Array.from(sec.querySelectorAll('.eq-card')).some(function(c) { return c.style.display !== 'none'; });
+      sec.style.display = any ? '' : 'none';
+    });
+    if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+    bt62UpdateProgress();
+  });
+
+  // Smooth scroll for BT62 section nav
+  document.querySelectorAll('.bt62-section-nav a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
