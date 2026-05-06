@@ -3172,6 +3172,270 @@
 .guide-card.medic62 .guide-card-cta { color:#8B2A6B; }
 .site-nav a.nav-link.medic62:hover { border-bottom-color:#8B2A6B; }
 
+
+.guide-card.scba .guide-card-top { background:#1A8C9E; }
+.guide-card.scba .guide-meta-stat strong { color:#1A8C9E; }
+.guide-card.scba .guide-card-cta { color:#1A8C9E; }
+.guide-card.scba:hover { border-color:#1A8C9E; }
+.site-nav a.nav-link.scba:hover { border-bottom-color:#1A8C9E; }
+
+/* ═══════════════════════════════════════════════
+   SCBA SCOPED STYLES
+═══════════════════════════════════════════════ */
+#scba-guide-content {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #d8dce8;
+  background: #0f1117;
+}
+#scba-guide-content .scba-wrapper { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+#scba-guide-content .scba-header {
+  background: linear-gradient(135deg, #001f24 0%, #0f1117 50%, #08161a 100%);
+  border-bottom: 3px solid #1A8C9E;
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+#scba-guide-content .scba-header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(-55deg, transparent, transparent 12px, rgba(26,140,158,0.04) 12px, rgba(26,140,158,0.04) 13px);
+}
+#scba-guide-content .scba-badge {
+  display: inline-block;
+  background: #1A8C9E;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  padding: 0.25em 0.8em;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+#scba-guide-content h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: #f0f2fa;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+#scba-guide-content h1 span { color: #1A8C9E; }
+#scba-guide-content .scba-subtitle {
+  font-style: italic;
+  color: #7a8099;
+  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  font-weight: 300;
+}
+#scba-guide-content .lede {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  border-left: 3px solid #1A8C9E;
+  padding: 1rem 1.4rem;
+  margin: 1.6rem 0 2rem;
+  color: #c8ccd8;
+  background: #181c26;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+#scba-guide-content .scba-toc {
+  background: #181c26;
+  border: 1px solid #2a3050;
+  padding: 1.4rem 1.8rem;
+  margin: 1.4rem 0 2rem;
+}
+#scba-guide-content .scba-toc h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1A8C9E;
+  margin-bottom: 0.8rem;
+}
+#scba-guide-content .scba-toc ol { padding-left: 1.4rem; margin: 0; }
+#scba-guide-content .scba-toc li { padding: 0.3rem 0; }
+#scba-guide-content .scba-toc a {
+  color: #d8dce8;
+  text-decoration: none;
+  font-family: 'IBM Plex Sans', 'Source Serif 4', sans-serif;
+  font-size: 0.95rem;
+}
+#scba-guide-content .scba-toc a:hover { color: #1A8C9E; text-decoration: underline; }
+#scba-guide-content h2.scba-section {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #1e2333;
+  color: #f0f2fa;
+  border-left: 6px solid #1A8C9E;
+  padding: 0.9rem 1.2rem;
+  margin: 3rem 0 0.8rem;
+  font-size: 1.5rem;
+}
+#scba-guide-content h3.scba-sub {
+  font-family: 'Oswald', sans-serif;
+  border-left: 4px solid #e04a2f;
+  padding-left: 0.9rem;
+  margin-top: 1.6rem;
+  color: #f0f2fa;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+#scba-guide-content h4.scba-h4 {
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  color: #1A8C9E;
+}
+#scba-guide-content p { margin: 0.8rem 0; color: #c8ccd8; }
+#scba-guide-content strong { color: #f5d97e; }
+#scba-guide-content em { color: #d8dce8; }
+
+#scba-guide-content .scba-callout {
+  margin: 1.2rem 0;
+  padding: 1rem 1.3rem;
+  border-left: 5px solid;
+  font-size: 0.98rem;
+  background: #181c26;
+}
+#scba-guide-content .scba-callout.critical {
+  border-color: #D9291A;
+  background: rgba(217,41,26,0.08);
+}
+#scba-guide-content .scba-callout.warn {
+  border-color: #E07B20;
+  background: rgba(224,123,32,0.08);
+}
+#scba-guide-content .scba-callout.note {
+  border-color: #6b8cde;
+  background: rgba(107,140,222,0.08);
+}
+#scba-guide-content .scba-callout.spec {
+  border-color: #2a9d87;
+  background: rgba(42,157,135,0.08);
+}
+#scba-guide-content .scba-callout strong.label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  margin-bottom: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f0f2fa;
+}
+#scba-guide-content .scba-callout.critical strong.label { color: #ff6a59; }
+#scba-guide-content .scba-callout.warn strong.label { color: #f5a623; }
+#scba-guide-content .scba-callout.note strong.label { color: #8eaaee; }
+#scba-guide-content .scba-callout.spec strong.label { color: #5dd3bb; }
+#scba-guide-content .scba-callout ul { margin: 0.4rem 0 0 1.2rem; padding: 0; }
+#scba-guide-content .scba-callout li { margin-bottom: 0.5rem; color: #d8dce8; }
+
+#scba-guide-content table.scba-specs {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.6rem;
+  font-size: 0.95rem;
+  background: #181c26;
+}
+#scba-guide-content table.scba-specs th, #scba-guide-content table.scba-specs td {
+  border: 1px solid #2a3050;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  color: #d8dce8;
+}
+#scba-guide-content table.scba-specs th {
+  background: #1A8C9E;
+  color: #0a0c12;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+#scba-guide-content ul.scba-parts { margin: 0; padding: 0; list-style: none; }
+#scba-guide-content ul.scba-parts li {
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed #2a3050;
+  color: #c8ccd8;
+}
+#scba-guide-content ul.scba-parts li:last-child { border-bottom: none; }
+#scba-guide-content ul.scba-parts .name {
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  color: #1A8C9E;
+  letter-spacing: 0.03em;
+}
+#scba-guide-content ul.scba-parts .nick {
+  color: #7a8099;
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+#scba-guide-content hr.scba-scene {
+  border: none;
+  text-align: center;
+  margin: 3rem 0 2rem;
+  color: #2a3050;
+}
+#scba-guide-content hr.scba-scene::after { content: "■   ■   ■"; letter-spacing: 0.5em; color: #1A8C9E; }
+
+#scba-guide-content .scba-voice {
+  background: #181c26;
+  border: 1px solid #2a3050;
+  border-left: 4px solid #1A8C9E;
+  padding: 1rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 1.02rem;
+  color: #d8dce8;
+}
+
+#scba-guide-content .scba-back-top {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #1A8C9E;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #1A8C9E;
+  border-radius: 2px;
+}
+#scba-guide-content .scba-back-top:hover { background: #1A8C9E; color: #0a0c12; }
+
+#scba-guide-content .scba-footer {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #2a3050;
+  font-size: 0.85rem;
+  color: #7a8099;
+  font-style: italic;
+}
+
+#scba-guide-content .scba-doc-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(26,140,158,0.15);
+  border: 1px solid #1A8C9E;
+  color: #5dd3bb;
+  padding: 0.5rem 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+#scba-guide-content .scba-doc-link:hover { background: #1A8C9E; color: #0a0c12; }
+
 </style>
 </head>
 <body>
@@ -3202,6 +3466,8 @@
   <a href="#squad61-guide" class="nav-link squad61">🚑 Squad 61</a>
   <div class="nav-sep"></div>
   <a href="#medic62-guide" class="nav-link medic62">❤️‍🩹 Medic 62</a>
+  <div class="nav-sep"></div>
+  <a href="#scba-guide" class="nav-link scba">🫁 SCBA</a>
 </nav>
 
 <!-- ═══════ LANDING PAGE ═══════ -->
@@ -3356,6 +3622,20 @@
         </div>
       </div>
       <div class="guide-card-cta">Coming Soon →</div>
+    </a>
+    <a href="#scba-guide" class="guide-card scba">
+      <div class="guide-card-top"></div>
+      <div class="guide-card-body">
+        <div class="guide-card-label">Equipment Study Guide</div>
+        <div class="guide-card-name">SCBA</div>
+        <div class="guide-card-desc">MSA G1 Self-Contained Breathing Apparatus — cylinder, harness, regulator, facepiece, HUD, ICM, power module, alarms, buddy breather, and RIT pack. The lifeline on your back.</div>
+        <div class="guide-card-meta">
+          <div class="guide-meta-stat"><strong>10</strong>Sections</div>
+          <div class="guide-meta-stat"><strong>50+</strong>Parts &amp; Specs</div>
+          <div class="guide-meta-stat"><strong>MSA</strong>G1 Platform</div>
+        </div>
+      </div>
+      <div class="guide-card-cta">Open SCBA Guide →</div>
     </a>
   </div>
 </section>
@@ -14996,6 +15276,396 @@ if (searchInput) {
     <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#8B2A6B; margin-bottom:12px;">🔧 Coming Soon</div>
     <p style="font-family:'Source Serif 4',Georgia,serif; font-size:16px; color:#5A5248; line-height:1.7;">This compartment study guide is under development. Equipment cards, rig check checklists, and interactive study tools for <strong>MEDIC 62</strong> will appear here.</p>
     <p style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A7F74; margin-top:16px;">Check back soon · Glen Ellyn Fire Department</p>
+  </div>
+</div>
+
+
+<!-- ═══════ SCBA SECTION BREAK ═══════ -->
+<div class="guide-section-divider scba" id="scba-guide" style="border-top:3px solid #1A8C9E;">
+  <div>
+    <div class="div-label" style="color:#1A8C9E;">🫁 SCBA — Equipment Study Guide</div>
+    <div class="div-sub">MSA G1 Self-Contained Breathing Apparatus · Treat it like a vehicle. It carries you when nothing else can.</div>
+  </div>
+  <a href="#home" class="div-back">↑ Back to Home</a>
+  <a href="https://docs.google.com/document/d/1Wjcp2CxOPc5KsUkYc5S8lE9qSm6PpH0n79jC1Zh89nk/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more visual aids</a>
+</div>
+
+<!-- ═══════ SCBA CONTENT ═══════ -->
+<div id="scba-guide-content">
+
+  <header class="scba-header">
+    <div class="scba-badge">MSA G1 Platform</div>
+    <h1>SCBA <span>Study Guide</span></h1>
+    <div class="scba-subtitle">Cylinder · Harness · Regulator · Facepiece · HUD · ICM · Power Module · Alarms · Buddy Breather · RIT Pack</div>
+  </header>
+
+  <div class="scba-wrapper">
+
+  <p class="lede">Listen up. This is your lifeline. Not your radio, not your hood, not your boots — <em>this</em>. The day comes you're crawling through black smoke and the only thing standing between you and a lungful of cyanide is the rig on your back. So we're going to go through it piece by piece, and you're going to know it cold. Not "kind of." Cold.</p>
+
+  <nav class="scba-toc" id="scba-top">
+    <h4>What we're covering</h4>
+    <ol>
+      <li><a href="#scba-cylinder">The Cylinder (Bottle / Tank)</a></li>
+      <li><a href="#scba-harness">The Harness &amp; Carrier Assembly</a></li>
+      <li><a href="#scba-regulator">The Second-Stage Regulator</a></li>
+      <li><a href="#scba-facepiece">The Facepiece (Mask)</a></li>
+      <li><a href="#scba-hud">The HUD (Heads-Up Display)</a></li>
+      <li><a href="#scba-icm">The Control Module (ICM)</a></li>
+      <li><a href="#scba-power">The Power Module</a></li>
+      <li><a href="#scba-alarms">PASS &amp; Bell Alarms</a></li>
+      <li><a href="#scba-buddy">The Buddy Breather (EBSS)</a></li>
+      <li><a href="#scba-rit">The RIT Pack</a></li>
+    </ol>
+  </nav>
+
+  <div class="scba-callout note">
+    <strong class="label">Source Note</strong>
+    This guide is built from the SCBA notes you handed me, dated December 2025, on the MSA G1. Manufacturer specs change. Department SOPs change. <strong>If your instructor or your department's SOP says something different than what's on this page, theirs wins. Every time.</strong>
+    <br><br>
+    <a class="scba-doc-link" href="https://docs.google.com/document/d/1Wjcp2CxOPc5KsUkYc5S8lE9qSm6PpH0n79jC1Zh89nk/edit?usp=sharing" target="_blank" rel="noopener">📄 Click here for more visual aids</a>
+  </div>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-cylinder">1. The Cylinder</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>This is your air supply. The whole reason you can walk into a place that would kill an unprotected person in two breaths. It's an aluminum core wrapped in carbon fiber and epoxy resin — light, strong, and full of breathing air at pressures that will absolutely hurt you if you treat it like a gym bag.</p>
+
+  <p>You charge it to about 4,800 psi while it's filling because the air heats up under compression. Once it cools, it settles to your service pressure of <strong>4,500 psi</strong>. That's your starting point. Everything from there is countdown.</p>
+
+  <div class="scba-callout spec">
+    <strong class="label">Key Numbers — Memorize These</strong>
+    Service pressure: <strong>4,500 psi</strong> (filled to ~4,800 hot) &nbsp;|&nbsp;
+    High-pressure release valve: blows at <strong>5,600 psi</strong> &nbsp;|&nbsp;
+    Burst disc: <strong>7,000 psi</strong> &nbsp;|&nbsp;
+    Bells deploy at <strong>1,500 psi (~1,575 spec)</strong> — that's your ⅓ point &nbsp;|&nbsp;
+    Hydrostatic test: <strong>every 5 years</strong>
+  </div>
+
+  <h4 class="scba-h4">Parts of the cylinder assembly</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Aluminum tank, carbon fiber wrap, epoxy resin shell</span> — Aluminum is the pressure vessel. Carbon fiber is the muscle that holds the pressure in. Epoxy is the skin. <strong>If you ever see bare aluminum showing through the carbon fiber, the bottle is done.</strong> Out of service. MSA can repair carbon fiber, but they can't repair an aluminum vessel that's been compromised. You don't repair it on the apparatus floor. You don't tape it. You red-tag it.</li>
+    <li><span class="name">Cylinder valve coupling nut</span> <span class="nick">(a.k.a. "the nut," "hand-tight nut")</span> — How you couple the bottle to the harness. Hand-tight is the rule. You don't put a wrench on it. The dovetail in the harness mates with this and the nut snugs it home.</li>
+    <li><span class="name">Dovetail connection</span> — The mechanical fit that holds the bottle to the back plate. The nut is the lock; the dovetail is the rail it slides into.</li>
+    <li><span class="name">Air valve (on/off)</span> <span class="nick">(a.k.a. "the bottle valve," "main valve," "knob")</span> — The hand wheel you crank to turn the bottle on. Turn it ALL the way open, then back it off a quarter turn. (More on why in a minute.)</li>
+    <li><span class="name">Pressure gauge (cylinder)</span> — The little face on the bottle itself. Direct read of bottle pressure. This is the gauge you read <em>before</em> you don the rig.</li>
+    <li><span class="name">High-pressure hose (off the cylinder)</span> — Carries 4,500 psi air to the splitter, which feeds both the second-stage regulator and the ICM/PASS. <strong>Rated for 4,500 psi.</strong></li>
+    <li><span class="name">High-pressure release valve</span> — Safety valve. Blows at 5,600 psi to relieve overpressure before things get exciting.</li>
+    <li><span class="name">Burst disc</span> — Last-ditch safety. A sacrificial disc that ruptures at 7,000 psi to vent the bottle catastrophically rather than letting the bottle itself fail catastrophically. If a burst disc goes, you'll know — it sounds like a small bomb.</li>
+    <li><span class="name">URC — Universal RIT Connector</span> <span class="nick">(a.k.a. "UAC," "RIC connector," "fill port")</span> — The fitting a RIT team uses to dump air into your bottle from outside. Universal — meaning a Scott RIT pack can refill an MSA bottle through it. That's the whole point.</li>
+  </ul>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Cylinder</strong>
+    <ul>
+    <li><strong>Carrying the bottle by the valve.</strong> The valve is not a handle. You bang the valve on a tailboard, you've just earned yourself a bottle that's possibly out of service and an officer who is not happy. Carry by the body of the bottle or by the harness handles.</li>
+    <li><strong>Cracking the valve open and closing it.</strong> Old habit from old SCBAs. On the G1, you open it <em>fully</em>, then back it off a quarter turn. Cracking it open chokes your air supply when you suck hard, and that's exactly when you don't want to be choked.</li>
+    <li><strong>Ignoring the hydro date.</strong> Five years. Not "around five." Read the stamp. An expired bottle is not a usable bottle, and rolling out with one is on you.</li>
+    <li><strong>Dropping a bottle and putting it back in service.</strong> Carbon fiber damage isn't always visible. If a bottle takes a serious hit, it gets inspected, period. People have been killed by composite cylinders that failed under pressure after impact damage. This is not the corner you cut.</li>
+    <li><strong>Confusing the burst disc and the relief valve.</strong> Relief valve resets. Burst disc does not — once it's blown, the bottle is empty and the disc gets replaced.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-harness">2. The Harness &amp; Carrier Assembly</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The harness is what gets the bottle on your back and keeps it there when you're crawling, falling, getting dragged, or being hauled out a window by your partner. It's not just straps. The back plate is essentially the chassis of the whole SCBA — it houses the power module, the battery, and the pressure reducer that drops 4,500 psi down to about 110 psi for the regulator to work with.</p>
+
+  <h4 class="scba-h4">Parts of the harness</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Back plate</span> <span class="nick">(a.k.a. "frame," "chassis")</span> — Houses the power module, battery module, and pressure reducer. This is the brain and the spine of the SCBA.</li>
+    <li><span class="name">Cylinder band</span> <span class="nick">(a.k.a. "bottle strap," "retention strap")</span> — Holds the bottle to the back plate. Combined with the dovetail and coupling nut.</li>
+    <li><span class="name">Shoulder pads</span> — Padding on the shoulder straps. Don't overlook these — a worn-out pad means you're going to feel that bottle on your collarbone for the rest of the shift.</li>
+    <li><span class="name">Adjustable pull straps</span> — The straps you grab and yank to tighten the rig down on your shoulders. Pull DOWN and OUT, not back.</li>
+    <li><span class="name">Lumbar pad</span> — Adjustable to <strong>3 positions</strong>. This is what transfers the weight of the bottle from your shoulders to your hips. Get the right setting for your torso. A wrong lumbar setting will wreck your back over a 24-hour shift.</li>
+    <li><span class="name">Waist belt</span> <span class="nick">(a.k.a. "hip belt")</span> — Connects to the lumbar pad. The belt is what actually carries the load. Snug it tight before you tighten the shoulder straps.</li>
+    <li><span class="name">Waist belt buckle</span> — Big plastic buckle. <strong>It also contains the tool to open the battery holder.</strong> That's not a gimmick — it's there because the tool is always with the rig and never lost in a drawer.</li>
+    <li><span class="name">Top handle</span> — The handle on the top of the harness. Rated to <strong>1,000 lbs</strong>. This is your drag handle for a downed-firefighter rescue.</li>
+    <li><span class="name">Side handles</span> — Rated to <strong>500 lbs each</strong>. For lifting and dragging.</li>
+    <li><span class="name">Regulator keeper</span> <span class="nick">(a.k.a. "reg holster," "park")</span> — The clip on the harness that holds the second-stage regulator when it's not on your facepiece. Use it. A regulator banging around on the deck gets damaged.</li>
+    <li><span class="name">Chest strap</span> — Across your chest, between the shoulder straps. Keeps the harness from spreading off your shoulders.</li>
+  </ul>
+
+  <div class="scba-callout warn">
+    <strong class="label">A Word on Load Order</strong>
+    Belt first, then shoulders, then chest. If you tighten shoulders first, the bottle hangs off your traps and your hips do nothing. Do it right and the bottle rides on your hips like a backpack should.
+  </div>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Harness</strong>
+    <ul>
+    <li><strong>Loose straps.</strong> A sloppy harness shifts when you move, throws your balance, and bangs equipment. Worse — in a Mayday, your partner needs to grab a handle and drag you, and that handle better be where it should be.</li>
+    <li><strong>Not knowing the handle ratings.</strong> The top handle is the rescue handle. 1,000 lbs. The side handles are 500 lbs each. If you're hauling a 250-lb firefighter through a window, you grab the top.</li>
+    <li><strong>Forgetting the buckle has a tool in it.</strong> Comes up on practical exams. Comes up when you need to swap a battery. Don't be the probie who's hunting around the apparatus floor for a screwdriver.</li>
+    <li><strong>Hanging the regulator off the hose instead of the keeper.</strong> The hose isn't a strap. It's a pressurized line. Treat it that way.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-regulator">3. The Second-Stage Regulator</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>This is the small black device that connects to your facepiece. It takes the ~110 psi coming from the pressure reducer on the back plate and brings it down to <strong>1.5 mm of water column above atmospheric pressure</strong> — which is barely above ambient (atmospheric is 14.7 psi at sea level). That tiny positive pressure is what keeps smoke and contaminants from leaking <em>into</em> your mask if your seal isn't perfect.</p>
+
+  <p>It hooks to the facepiece with a <strong>push-to-connect (PTC)</strong> fitting. You shove it on, you hear it click, you're breathing.</p>
+
+  <h4 class="scba-h4">Parts of the regulator</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Main valve</span> — The valve that opens and gives you air. <strong>Turns on automatically the first time you take a deep inhalation.</strong> You don't push a button. You don't flip a switch. You breathe, and it opens.</li>
+    <li><span class="name">Shut-off tabs</span> — The two tabs on opposing sides of the regulator body. Squeeze them at the same time and you do two things: you shut off the main valve, AND you release the regulator from the facepiece. One motion.</li>
+    <li><span class="name">By-pass valve</span> <span class="nick">(a.k.a. "purge valve," "red knob," "the red one")</span> — The red one. Red means red. When you turn it, it dumps a continuous flow of higher-pressure air directly into your facepiece. <strong>This is your backup if the main valve fails.</strong> It's an emergency air supply, not a "my mask is fogging" toy. It will eat your bottle fast.</li>
+    <li><span class="name">Microphone</span> — Located in the bottom of the regulator. Picks up your voice and feeds it to the speaker module so people can actually understand you under air.</li>
+    <li><span class="name">Push-to-connect (PTC) fitting</span> — The connector that mates the regulator to the facepiece. Fixed position, locks in. You'll feel and hear the click.</li>
+  </ul>
+
+  <div class="scba-callout note">
+    <strong class="label">Why Positive Pressure Matters</strong>
+    The whole game is keeping air pressure inside your mask higher than the air outside. If your seal breaks for a half-second — a strap shifts, you turn your head wrong against your hood — air rushes <em>out</em> of your mask, not <em>in</em>. Smoke does not get to your face. That is the entire engineering miracle of a positive-pressure SCBA. Don't ever defeat it.
+  </div>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Regulator</strong>
+    <ul>
+    <li><strong>Hitting the bypass to clear fog.</strong> The bypass blasts air at full bottle pressure. You will burn through air at a frightening rate. Use the bypass only for an actual main-valve failure or to clear water/contaminant from the mask in an emergency.</li>
+    <li><strong>Yanking the regulator off without squeezing both tabs.</strong> You'll either fight it, damage the PTC, or get a face full of pressurized air. Two tabs, opposing sides, squeeze together.</li>
+    <li><strong>Not parking the regulator in the keeper.</strong> A regulator dragging on the floor takes a beating, picks up debris, and on the next call you're trying to mate a dirty PTC to your mask. Park it.</li>
+    <li><strong>Not knowing your bypass works until you need it.</strong> Test it during your morning check, not in a hallway full of smoke.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-facepiece">4. The Facepiece</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The mask. The single most important piece of PPE on your body in an IDLH atmosphere. If the mask doesn't seal, the bottle on your back is just dead weight. Doesn't matter how much air you have. If it leaks, you're breathing the same poison as everyone else in the building.</p>
+
+  <p>The lens is a single-piece polycarbonate with a scratch- and heat-resistant coating, rated for a <strong>500-degree</strong> environment and giving you a wide field of view.</p>
+
+  <h4 class="scba-h4">Parts of the facepiece</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Facepiece lens</span> <span class="nick">(a.k.a. "the lens," "the visor")</span> — Single-piece polycarbonate. Wide field of view. 500°F rating. Inspect it every shift for scratches, cracks, heat distortion. A scratched lens reduces visibility, period — and a heat-damaged lens can fail without warning.</li>
+    <li><span class="name">Face seal / skirt</span> <span class="nick">(a.k.a. "the skirt," "the seal")</span> — Soft rubber or silicone. This is what forms the airtight seal against your skin. <strong>Skin contact only.</strong> Hood, mask straps, eyeglass arms, beard stubble — anything that crosses the seal breaks it.</li>
+    <li><span class="name">Head harness / head straps</span> <span class="nick">(a.k.a. "spider," "spider straps," "five-point harness")</span> — Five-point harness in rubber or fabric. You go bottom straps first (the lower two), then temple straps, then top. Tighten symmetrically. Crooked harness = crooked mask = leaks.</li>
+    <li><span class="name">Speaking diaphragm / voice amplifier port</span> — The disc that lets your voice transmit out. On the G1, this also interfaces with the <strong>EVA (Electronic Voice Amplifier)</strong>.</li>
+    <li><span class="name">Nose cup (inner mask)</span> — The small mask inside the mask. Reduces the dead air space, directs your exhalation through the exhalation valve, and dramatically reduces lens fogging by keeping warm wet breath off the lens. Don't pop it out trying to "clean" the mask.</li>
+    <li><span class="name">Inhalation valves</span> — One-way valves that let air flow <em>in</em> from the regulator and maintain that positive pressure inside the mask.</li>
+    <li><span class="name">Exhalation valve</span> — One-way valve that lets your exhaled air out and prevents backflow. If this gets gummed up or stuck, you'll feel it — you can't push your breath out and CO₂ builds up fast.</li>
+    <li><span class="name">Regulator receiver / connection port</span> <span class="nick">(a.k.a. "reg port")</span> — Where the second-stage regulator clicks in. Has the locking mechanism that secures the PTC.</li>
+    <li><span class="name">HUD (Heads-Up Display)</span> — LED indicators inside the mask that show air supply, alarms, and system status without you having to look at the gauge. (Full breakdown in the next section.)</li>
+    <li><span class="name">Facepiece seal retainer / frame</span> — The rigid structure that holds the lens to the skirt and keeps the whole assembly from collapsing or distorting.</li>
+  </ul>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Facepiece</strong>
+    <ul>
+    <li><strong>Bad seal because of facial hair.</strong> Stubble breaks the seal. Period. NFPA and OSHA are clear on this. There's a reason your department has a shaving policy and it's not aesthetics — it's that stubble lets contaminated air in and you breathe it. Firefighters have died because of facial hair under SCBAs. Keep your face clean where the seal sits.</li>
+    <li><strong>Hood hair, eyeglass arms, mask straps under the seal.</strong> The skirt seals to skin, not to fabric, hair, or plastic. Sweep your hood back, get hair out of the way, use the mask-mounted eyeglass kit.</li>
+    <li><strong>Tightening top straps first.</strong> Pulls the mask up and away from your chin, opens the bottom seal. Bottom straps first. Always.</li>
+    <li><strong>Skipping the seal check.</strong> Inhale sharp with the regulator off — the mask should suck to your face and stay there. If it leaks, find out now, not at the front door of a working fire.</li>
+    <li><strong>Storing the mask loose in a turnout coat or compartment.</strong> Lens scratches. Skirt deformation. Find your designated mask bag and use it.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-hud">5. The HUD (Heads-Up Display)</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>Inside your mask, you'll see colored LEDs across your field of view. Left side, right side, with a gold diaphragm in the center. That's your HUD. It tells you what's going on with your air and your alarms <em>without</em> you having to fish your gauge out of your shoulder strap.</p>
+
+  <div class="scba-callout note">
+    <strong class="label">HUD Layout — Memorize It</strong>
+    <strong>Left side = alarms.</strong> &nbsp; <strong>Right side = air supply.</strong> &nbsp; <strong>Center (gold) = the diaphragm.</strong>
+  </div>
+
+  <p>Pushing the green button on the control module activates the HUD. So you don't have to wait for a low-air alarm to see your status — you can flash it on demand.</p>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — HUD</strong>
+    <ul>
+    <li><strong>Treating the HUD as your only gauge.</strong> It's a quick reference. Your analog gauge on the shoulder strap is your truth. Cross-check.</li>
+    <li><strong>Ignoring the alarm side.</strong> If the left side is lighting up, something is telling you something. Don't dismiss it because the right side still says you have air.</li>
+    <li><strong>Forgetting which side is which under stress.</strong> Drill it now. In smoke, in the dark, sweating, with adrenaline up — you should not be trying to remember if red on the left means low air or low battery.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-icm">6. The Control Module (ICM)</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The ICM — Integrated Control Module — is the little device with a screen and buttons that lives on your left shoulder strap. It is the interface between you and the SCBA, and it doubles as your <strong>PASS</strong> (Personal Alert Safety System). It's fed by a high-pressure hose, so it always knows what your bottle pressure actually is.</p>
+
+  <h4 class="scba-h4">Parts of the ICM</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Analog gauge</span> <span class="nick">(a.k.a. "needle gauge," "the dial")</span> — Mechanical needle showing bottle pressure. Full bottle pressure is fed to it so the read is accurate.</li>
+    <li><span class="name">LCD (digital display)</span> — Shows you cylinder pressure, battery status, time remaining, and active alarms. Time-remaining is calculated based on your current breathing rate, not just a static estimate.</li>
+    <li><span class="name">Red ALARM button</span> <span class="nick">(a.k.a. "panic button," "manual PASS")</span> — <strong>Manually activates the PASS alarm.</strong> If you're pinned, lost, or down and need to scream for help with 100 dB of piezo, you mash this button. It is your distress signal.</li>
+    <li><span class="name">Reset / Green buttons</span> <span class="nick">(a.k.a. "the green buttons")</span> — <strong>Located on BOTH sides of the control module.</strong> Used to silence and reset the integrated PASS. Also turns the control module off after the air pressure has been bled out. <strong>Two-button press is intentional</strong> — it prevents accidental shut-off.</li>
+    <li><span class="name">Bleeder / bypass valve</span> <span class="nick">(a.k.a. "bleed valve")</span> — The little valve you crack open to bleed pressure out of the system after you've shut the bottle off. You watch the digital display drop and then double-click the green buttons to shut the ICM down.</li>
+  </ul>
+
+  <div class="scba-callout warn">
+    <strong class="label">Shutdown Sequence — Don't Botch This</strong>
+    1. Close the bottle valve. &nbsp; 2. Open the bleeder to vent the high-pressure system. &nbsp; 3. Once pressure is gone, double-click the green buttons to shut off the ICM/PASS.
+    <br><br>
+    If you skip step 2, you've trapped 4,500 psi in the hoses and seals — bad for the equipment. If you skip step 3, the PASS is going to start screaming on the apparatus floor in a few minutes when motion stops.
+  </div>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — ICM</strong>
+    <ul>
+    <li><strong>Setting the PASS off in quarters and panicking.</strong> If your PASS goes full alarm in the firehouse, don't slap it. Find the green buttons, press both, and reset. Slapping won't work — the full alarm requires a manual reset.</li>
+    <li><strong>Forgetting the green buttons are on BOTH sides.</strong> You can reach across with one hand. You don't need two.</li>
+    <li><strong>Not bleeding pressure before shutdown.</strong> The system holds pressure. You need to vent it through the bleeder, not just close the bottle and walk away.</li>
+    <li><strong>Ignoring the digital time-remaining number.</strong> It's a real number based on how hard you're sucking air. If it drops fast, it's because <em>you're</em> drinking air fast. Slow your breathing.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-power">7. The Power Module</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The power module is the brain's power supply. It's mounted on the back plate. It powers the control module, the regulator electronics, and the speaker module. It's also the part of the SCBA that emits the actual <strong>audible PASS alarm</strong> through dual piezo speakers — <strong>100 dB at 3 meters</strong>. Loud enough that a search team will hear you through a wall.</p>
+
+  <h4 class="scba-h4">Parts &amp; features</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Rechargeable lithium-ion batteries</span> — Take about <strong>6 hours to recharge</strong>. When the battery is replaced, the system runs an automatic system check on power-up. <strong>Beeps every 10 seconds when batteries need replacement or recharge</strong> — that's your "feed me" warning. Don't ignore it.</li>
+    <li><span class="name">Dual piezo speakers / Piezo Emitters</span> <span class="nick">(a.k.a. "PASS speakers," "screamers")</span> — Produce the audible PASS tone. 100 dB at 3 meters. There's one on each side of the back plate.</li>
+    <li><span class="name">Buddy lights (4)</span> <span class="nick">(a.k.a. "PASS alarm lights," "indicator lights")</span> — Four LEDs visible from outside the SCBA. They tell teammates your status from a distance — bottle pressure quartile, alarm condition. They turn YOU into a status indicator.</li>
+    <li><span class="name">UAC LED light</span> — An LED that <strong>illuminates the UAC (URC) connection during a low-air alarm</strong>. So when a RIT team is reaching for your fill port in zero visibility, there is literally a light pointing at the connection. That's not luck — that's design.</li>
+    <li><span class="name">Battery housing</span> — Opened with the tool built into the waist belt buckle. Battery slides out, fresh one in, system runs its self-check.</li>
+  </ul>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Power Module</strong>
+    <ul>
+    <li><strong>Ignoring the 10-second battery beep.</strong> Means your battery is dying. Means in a few minutes you may lose your control module, your HUD, your PASS audible. Swap the battery. Don't ride a low battery into a working call.</li>
+    <li><strong>Not putting a freshly charged battery on after use.</strong> The next person on that rig might be you, or might be someone else. Either way, the SCBA goes back in the bracket fully ready.</li>
+    <li><strong>Not knowing the buddy lights mean something to your team.</strong> When you walk into the room and your captain glances at your back, those four LEDs are telling him your air status from across the room. Know what color means what for your department.</li>
+    <li><strong>Assuming the UAC light is a flashlight.</strong> It's specifically the low-air-alarm UAC indicator. If it's lit, you're in low-air alarm. That is not a small thing.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-alarms">8. PASS &amp; Bell Alarms</h2>
+  <h3 class="scba-sub">What they are &amp; what they do</h3>
+
+  <p>You have two independent alarm systems on this rig. One is electronic. One is mechanical. The redundancy is on purpose — if the electronics fail, the mechanical one still tells the world you're in trouble.</p>
+
+  <h4 class="scba-h4">PASS — Personal Alert Safety System</h4>
+  <p>Motion-activated electronic alarm. If you stop moving for a set period, the SCBA assumes you might be down. It progresses through <strong>4 levels</strong>:</p>
+
+  <table class="scba-specs">
+    <tr><th>Stage</th><th>What happens</th></tr>
+    <tr><td>Level 1</td><td>Pre-alarm starts at <strong>15–20 seconds</strong> of no motion. Soft chirp. Move and it resets.</td></tr>
+    <tr><td>Level 2 &amp; 3</td><td>Escalating alerts as time passes without motion.</td></tr>
+    <tr><td>Level 4 (Full Alarm)</td><td>Triggers after <strong>30 seconds</strong> of no motion. <strong>Cannot be reset by movement.</strong> Requires manual reset by clicking the green buttons.</td></tr>
+  </table>
+
+  <p>You can also <strong>manually trigger the PASS</strong> at any moment by pushing the red ALARM button on the ICM. That's your panic button. If you're trapped, lost, pinned, hurt — you make this thing scream.</p>
+
+  <h4 class="scba-h4">Bells</h4>
+  <p>The mechanical low-air alarm. <strong>Powered by air remaining in the tank itself</strong> — no electronics, no battery. As air depletes, the bell rings slower. It's old-school, it's mechanical, and it works when nothing else does.</p>
+
+  <div class="scba-callout spec">
+    <strong class="label">Bell Activation</strong>
+    Bells deploy at <strong>1,500 psi (1,575 spec)</strong> — that's your <strong>⅓ point</strong>. <strong>Adding air stops the bells.</strong> They are a "you should already be heading out" signal, not an "uh-oh" signal.
+  </div>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Alarms</strong>
+    <ul>
+    <li><strong>Treating the bells as a "now I should think about leaving" alert.</strong> The bells are LATE. By the time the bells ring, you should already be on your way out. The rule on the job is "out of the building before the bells." Plan your air. Watch your gauge.</li>
+    <li><strong>Letting your PASS go to full alarm by accident.</strong> You stop to take notes, hold a hose line, do the size-up — and your PASS goes off. Now everyone on the fire ground thinks you're down. Move occasionally. Or hit the green buttons to reset proactively.</li>
+    <li><strong>Not knowing the manual PASS.</strong> The red button is your last call for help. If you can press one button before you go down, that's the one.</li>
+    <li><strong>Forgetting full alarm requires manual reset.</strong> Once you cross 30 seconds, shaking the rig won't fix it. Green buttons, both sides. Period.</li>
+    <li><strong>Not knowing the difference between bells and PASS in the dark.</strong> Bells are mechanical, slow, ringing. PASS is electronic, piercing, escalating. They mean different things. Know them by ear.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-buddy">9. Buddy Breather (EBSS)</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The Buddy Breather is an <strong>Emergency Breathing Support System</strong>. It lets you share air with a partner whose air is gone, whose mask failed, or who is otherwise in trouble. There's a male end and a female end on the system. You connect, and the air flows from the higher-pressure bottle to the lower-pressure one — <strong>but it equalizes the demand, it does not fill the empty bottle</strong>.</p>
+
+  <h4 class="scba-h4">Key facts about the Buddy Breather</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Male and female ends</span> — Mate together to connect two SCBAs.</li>
+    <li><span class="name">Proprietary connection</span> — <strong>MSA to MSA only.</strong> Same maker. Same model family. You cannot Buddy Breather an MSA to a Scott. That's what the URC is for.</li>
+    <li><span class="name">Daisy-chainable</span> — You can connect more than two firefighters in a chain if needed.</li>
+    <li><span class="name">Air pulls from the higher-pressure tank</span> — Both firefighters then breathe from that supply. The lower bottle does NOT get topped up.</li>
+    <li><span class="name">110 psi at the connection</span> — That's why it can't fill a tank. The pressure at the buddy line is regulator-pressure, not bottle-pressure.</li>
+    <li><span class="name">3-foot (39-inch) hose</span> — Once both ends are deployed and connected, you have <strong>6+ feet of working distance</strong> between you and your partner. Enough to move together but not enough to be sloppy.</li>
+  </ul>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — Buddy Breather</strong>
+    <ul>
+    <li><strong>Thinking the Buddy Breather "fills" your partner's tank.</strong> It doesn't. It shares a single supply between two breathers. Both of you are now drinking from one bottle. Plan your egress accordingly — you have less time, not more.</li>
+    <li><strong>Trying to use it across brands.</strong> Proprietary. MSA-to-MSA. If your downed firefighter is on a different brand, the Buddy Breather isn't your tool — coordinated egress and the URC for RIT refill is.</li>
+    <li><strong>Deploying it without a clear plan to exit.</strong> You're now tethered to your partner by a 3-foot hose. Trip hazards, snag points, separation under stress. Communicate. Move together. Get out.</li>
+    <li><strong>Not practicing the connection.</strong> First time you fumble for the male end shouldn't be in zero visibility with someone gasping next to you.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <!-- ============================== -->
+  <h2 class="scba-section" id="scba-rit">10. The RIT Pack</h2>
+  <h3 class="scba-sub">What it is &amp; what it does</h3>
+
+  <p>The RIT Pack is a dedicated air supply that the Rapid Intervention Team brings to a downed firefighter. Unlike the Buddy Breather, the RIT pack uses the <strong>Universal RIT Connector (URC)</strong> — meaning it works regardless of brand. MSA pack, Scott bottle, no problem. That's the whole reason it exists.</p>
+
+  <h4 class="scba-h4">Key facts about the RIT Pack</h4>
+  <ul class="scba-parts">
+    <li><span class="name">Universal connection (URC/UAC)</span> — Works across manufacturers. Cross-brand compatible by design.</li>
+    <li><span class="name">Tops up an air tank</span> — Unlike the Buddy Breather, this one actually transfers air <em>into</em> the downed firefighter's bottle.</li>
+    <li><span class="name">Tank pressure: 6,000 psi</span> — Higher than your service pressure of 4,500 psi. That's deliberate — the higher source pressure lets it actually push air across into a partially full bottle.</li>
+    <li><span class="name">Partial fill, not full</span> — At 6,000 psi, the RIT pack will only <strong>partially fill</strong> a bottle. The goal is to give the downed firefighter enough air to get out, not to bring them back to a full bottle.</li>
+    <li><span class="name">Spare facepiece (size medium)</span> — Stored in the RIT pack <strong>for use only if the downed firefighter's facepiece is cracked or damaged</strong>. Not a comfort swap. Not because they don't like theirs. Damaged-only.</li>
+  </ul>
+
+  <div class="scba-callout critical">
+    <strong class="label">Rookie Mistakes — RIT Pack</strong>
+    <ul>
+    <li><strong>Confusing RIT pack with Buddy Breather.</strong> Buddy Breather shares your air. RIT pack delivers fresh air from a dedicated supply. Different tools. Different jobs.</li>
+    <li><strong>Swapping facepieces unnecessarily.</strong> The medium in the RIT pack is for damaged facepieces only. If the downed firefighter's mask is intact, you keep them in their own seal. Their mask is fitted to their face — yours might not be.</li>
+    <li><strong>Not checking the RIT bottle pressure on shift check.</strong> It's at 6,000 psi when ready. If it's not, your RIT capability is degraded. Don't assume the off-going crew checked it. Verify yourself.</li>
+    <li><strong>Forgetting that the UAC light on the SCBA points right at the connection.</strong> When you're the RIT and you're locating a downed firefighter's fill port in smoke, that LED is your friend.</li>
+    </ul>
+  </div>
+  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+
+  <hr class="scba-scene">
+
+  <h2 class="scba-section">Final Word</h2>
+  <div class="scba-voice">
+    <p>Probie, here's the truth. Anyone can list parts. Anyone can pass a written test. What separates the firefighter who comes home from the one who doesn't, sometimes, is whether the SCBA is muscle memory.</p>
+
+    <p>You should be able to don this rig in the dark. You should know, without looking, which strap is which. You should hear a bell vs a PASS and know which is which without thinking. You should feel a low battery beep and reach for the buckle tool without breaking stride. You should know your bypass works because you tested it this morning, not because you read about it in a book.</p>
+
+    <p>Your bottle is not unlimited. Your air is not unlimited. The fire does not care that you're tired or that your gauge is hard to read or that you forgot to check your hydro date. <strong>Your SCBA is the difference between making it home and being a name on a wall.</strong> Treat it like that. Every shift. Every call. Every time you pick it up.</p>
+
+    <p>And when you're a senior guy someday and a probie hands you a study guide like this — you stop, you read it, and you take the time to teach the next one the way someone took the time to teach you.</p>
+
+    <p style="text-align:right;">— Stay sharp. Stay alive.</p>
+  </div>
+
+  <div class="scba-footer">
+    Compiled from your SCBA notes (December 2025) on the MSA G1 platform. Department SOPs and current MSA technical manuals override anything herein. Specifications, alarm thresholds, and reset procedures should be verified against your department's current SOP and MSA's current G1 documentation before practical use.
+  </div>
+
+  <p style="margin-top:1.4rem;"><a href="#home" class="scba-back-top">↑ Back to Home</a></p>
+
   </div>
 </div>
 
