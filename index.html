@@ -3474,7 +3474,7 @@
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 5/22/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 5/23/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eight apparatus study guides + three coming soon. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -15364,21 +15364,1766 @@ if (searchInput) {
 <div class="guide-section-divider" id="tower62-guide" style="border-top:3px solid #1A4B8C;">
   <div>
     <div class="div-label" style="color:#1A4B8C;">🏗️ Tower 62 — Compartment Study Guide</div>
-    <div class="div-sub">Aerial platform operations · Compartments coming soon</div>
+    <div class="div-sub">Aerial platform · Bucket · Master stream · Hose · Ladders · Forcible entry</div>
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
 </div>
 
+<!-- ═══════ TOWER 62 SCOPED STYLES ═══════ -->
+<style>
+#t62-guide {
+  --t62-blue:#1A4B8C; --t62-dark:#0F2F5C; --t62-gold:#D4A017;
+  --t62-cream:#F5F0E8; --t62-paper:#EDE8DC;
+  --t62-ink:#1A1612; --t62-slate:#2C2825; --t62-mid:#5A5248;
+  --t62-muted:#8A7F74; --t62-border:#C8BFB0;
+  font-family:'Source Serif 4',Georgia,serif; background:#F5F0E8; color:#1A1612; font-size:16px; line-height:1.7;
+}
+#t62-guide .layout { display:flex; max-width:1400px; margin:0 auto; min-height:calc(100vh - 52px); }
+#t62-sidebar { width:280px; flex-shrink:0; background:#2C2825; position:sticky; top:52px; height:calc(100vh - 52px); overflow-y:auto; padding:20px 0 40px; }
+#t62-sidebar::-webkit-scrollbar { width:4px; }
+#t62-sidebar::-webkit-scrollbar-thumb { background:#5A5248; border-radius:2px; }
+#t62-guide .nav-section-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#8A7F74; padding:16px 20px 6px; }
+#t62-sidebar .nav-link { display:block; padding:8px 20px; color:#C8BFB0; text-decoration:none; font-family:'Oswald',sans-serif; font-size:14px; border-left:3px solid transparent; transition:all .15s; }
+#t62-sidebar .nav-link:hover { color:#fff; border-left-color:#1A4B8C; background:rgba(255,255,255,.05); padding-left:24px; }
+#t62-guide .nav-divider { border:none; border-top:1px solid rgba(255,255,255,.08); margin:8px 20px; }
+#t62-guide .comp-section { margin-bottom:56px; }
+#t62-guide .section-header { display:flex; align-items:center; gap:16px; margin-bottom:28px; padding-bottom:16px; border-bottom:3px solid #1A4B8C; }
+#t62-guide .section-icon { width:48px; height:48px; background:#1A4B8C; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px; color:#fff; }
+#t62-guide .section-header h2 { font-family:'Oswald',sans-serif; font-size:28px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#2C2825 !important; }
+#t62-guide .section-header .sub { font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; letter-spacing:1px; margin-top:3px; }
+#t62-guide .equip-card { background:#fff; border:1px solid #C8BFB0; border-radius:10px; margin-bottom:18px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.06); transition:box-shadow .2s; }
+#t62-guide .equip-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); }
+#t62-guide .card-header { display:flex; align-items:flex-start; gap:14px; padding:16px 20px 12px; cursor:pointer; user-select:none; background:#faf9f7; border-bottom:1px solid transparent; transition:background .15s; }
+#t62-guide .card-header:hover { background:#EDE8DC; }
+#t62-guide .card-header.open { border-bottom-color:#C8BFB0; background:#EDE8DC; }
+#t62-guide .card-number { font-family:'JetBrains Mono',monospace; font-size:11px; color:#5A5248 !important; background:#EDE8DC; border:1px solid #C8BFB0; border-radius:4px; padding:2px 7px; white-space:nowrap; margin-top:3px; flex-shrink:0; }
+#t62-guide .card-title { font-family:'Oswald',sans-serif; font-size:18px; font-weight:500; color:#2C2825 !important; flex:1; line-height:1.3; }
+#t62-guide .card-aka { font-family:'JetBrains Mono',monospace; font-size:11px; color:#5A5248 !important; display:block; margin-top:2px; }
+#t62-guide .toggle-btn { width:28px; height:28px; border-radius:50%; background:#F5F0E8; border:1px solid #C8BFB0; display:flex; align-items:center; justify-content:center; font-size:14px; color:#5A5248; flex-shrink:0; transition:background .15s,transform .2s; margin-top:2px; }
+#t62-guide .card-header.open .toggle-btn { background:#1A4B8C; border-color:#1A4B8C; color:#fff; transform:rotate(45deg); }
+#t62-guide .card-body { display:none; padding:20px 20px 22px; }
+#t62-guide .card-body.visible { display:block; }
+#t62-guide .entry-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+#t62-guide .entry-block { background:#F5F0E8; border-radius:8px; padding:14px 16px; border:1px solid #C8BFB0; }
+#t62-guide .entry-block.full { grid-column:1 / -1; }
+#t62-guide .entry-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#1A4B8C !important; font-weight:500; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+#t62-guide .card-body p, #t62-guide .card-body li, #t62-guide .entry-block p, #t62-guide .entry-block li { color:#1A1612 !important; font-size:14.5px; line-height:1.65; }
+#t62-guide .callout { border-radius:8px; padding:14px 16px; margin:12px 0 6px; display:flex; gap:12px; align-items:flex-start; font-size:14px; line-height:1.6; }
+#t62-guide .callout-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+#t62-guide .callout-content strong { display:block; font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; margin-bottom:3px; }
+#t62-guide .callout.warn { background:#FFF4E0; border:1px solid #D4A017; border-left:4px solid #D4A017; color:#5A3A00 !important; }
+#t62-guide .callout.warn .callout-content strong { color:#7A4A00 !important; }
+#t62-guide .callout.danger { background:#FBE4E4; border:1px solid #8B1A1A; border-left:4px solid #8B1A1A; color:#5A1A1A !important; }
+#t62-guide .callout.danger .callout-content strong { color:#7A1A1A !important; }
+#t62-guide .callout.tip { background:#E4ECF5; border:1px solid #1A4B8C; border-left:4px solid #1A4B8C; color:#0F2F5C !important; }
+#t62-guide .callout.tip .callout-content strong { color:#0F2F5C !important; }
+#t62-guide .callout.safe { background:#E8F4E8; border:1px solid #3A7A3A; border-left:4px solid #3A7A3A; color:#1A3A1A !important; }
+#t62-guide .callout.safe .callout-content strong { color:#1A5A1A !important; }
+#t62-guide .search-hidden { display:none !important; }
+@media (max-width:900px) {
+  #t62-guide .layout { flex-direction:column; }
+  #t62-sidebar { display:none; width:100% !important; height:auto !important; position:relative !important; top:auto !important; }
+  #t62-sidebar.mob-open { display:block; }
+  #t62-guide #t62-main { padding:20px 16px 60px !important; max-width:100% !important; }
+  #t62-guide .entry-grid { grid-template-columns:1fr !important; }
+}
+@media (max-width:640px) {
+  #t62-guide .card-title { font-size:15px !important; }
+  #t62-guide .section-header h2 { font-size:20px !important; }
+}
+</style>
+
 <!-- ═══════ TOWER 62 CONTENT ═══════ -->
-<div id="tower62-guide" style="background:#F5F0E8; min-height:60vh; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:24px; padding:60px 40px; text-align:center;">
-  <div style="font-size:64px;">🏗️</div>
-  <h2 style="font-family:'Oswald',sans-serif; font-size:36px; font-weight:700; letter-spacing:3px; color:#2C2825; text-transform:uppercase;">TOWER 62</h2>
-  <div style="background:#fff; border:2px dashed #1A4B8C; border-radius:16px; padding:32px 48px; max-width:560px;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#1A4B8C; margin-bottom:12px;">🔧 Coming Soon</div>
-    <p style="font-family:'Source Serif 4',Georgia,serif; font-size:16px; color:#5A5248; line-height:1.7;">This compartment study guide is under development. Equipment cards, rig check checklists, and interactive study tools for <strong>TOWER 62</strong> will appear here.</p>
-    <p style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A7F74; margin-top:16px;">Check back soon · Glen Ellyn Fire Department</p>
-  </div>
+<div id="t62-guide">
+<div style="background:#0F2F5C; border-bottom:2px solid #1A4B8C; padding:12px 24px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; position:sticky; top:52px; z-index:90;">
+  <input type="search" id="t62-search" placeholder="Search Tower 62 equipment, tools, nicknames…" autocomplete="off"
+    style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
+           border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
+  <a href="https://docs.google.com/document/d/1Eyz7RJ8fFo6_x4tUaqbzZOUQlaVM6LVLDHoW0cOwV-I/edit?usp=sharing" target="_blank" rel="noopener"
+     style="background:#1A4B8C; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+    📋 Tower 62 Inventory &amp; Photos
+  </a>
+  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#A8B8D0; white-space:nowrap;">🏗️ TOWER 62 · AERIAL PLATFORM</span>
 </div>
+<div class="layout">
+<nav id="t62-sidebar">
+  <div class="nav-section-label">Driver's Side</div>
+  <a class="nav-link" href="#t62-ds-front">DS Front Compartment</a>
+  <a class="nav-link" href="#t62-crosslay">Crosslays</a>
+  <a class="nav-link" href="#t62-ds-frontmid">DS Front-Middle</a>
+  <a class="nav-link" href="#t62-ds-rearmid">DS Rear-Middle</a>
+  <a class="nav-link" href="#t62-ds-rear-air">DS Rear — Air &amp; RIT</a>
+  <a class="nav-link" href="#t62-ds-rear-gen">DS Rear — Generator</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Rear &amp; Aerial Stowage</div>
+  <a class="nav-link" href="#t62-rear-engine">Rear Engine Comp (Ladders)</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Officer's Side</div>
+  <a class="nav-link" href="#t62-os-rear">OS Rear Compartment</a>
+  <a class="nav-link" href="#t62-os-rearmid">OS Rear-Middle</a>
+  <a class="nav-link" href="#t62-os-middle">OS Middle — Irons</a>
+  <a class="nav-link" href="#t62-os-frontmid">OS Front-Middle — Heavy Tools</a>
+  <a class="nav-link" href="#t62-os-frontmid2">OS Front 2-Middle — Salvage</a>
+  <a class="nav-link" href="#t62-os-front">OS Front — Extinguishers</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Cab, Top, Bucket</div>
+  <a class="nav-link" href="#t62-cab">Inside Cab</a>
+  <a class="nav-link" href="#t62-top">Top of Tower</a>
+  <a class="nav-link" href="#t62-coffin">Coffin Compartment</a>
+  <a class="nav-link" href="#t62-bucket">Bucket Contents</a>
+  <a class="nav-link" href="#t62-bucket-comp">Bucket Compartment</a>
+</nav>
+<main id="t62-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - 280px); overflow-x:hidden;">
+  <div class="intro-banner" style="background:linear-gradient(135deg,#0F2F5C 0%,#1A4B8C 100%);
+       border-radius:12px; border-left:5px solid #D4A017; padding:28px 32px; margin-bottom:40px;">
+    <h3 style="font-family:'Oswald',sans-serif; font-size:20px; letter-spacing:2px; text-transform:uppercase; color:#D4A017; margin-bottom:12px;">🏗️ Tower 62 — Compartment Study Guide</h3>
+    <p style="font-size:15px; line-height:1.7; color:#D8E0EC;">Tower 62 is the aerial platform — the bucket truck. Think of it as an engine company AND a truck company stitched onto one chassis: it pumps water, it carries hose, it carries ladders and irons, and on top of all that, it puts a steel platform 100 feet in the air with a master stream nozzle on it. That's a lot of capability in one rig. That's also a lot of equipment to know.</p>
+    <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> When Tower 62 rolls, it's because the fire is big, the building is tall, or somebody is trapped where ground crews can't reach. The aerial saves lives in ways nothing else on the fleet can. But it also weighs around 70,000 pounds, has outriggers that crush bystanders' feet, and a bucket that will kill the operator if they don't know what they're doing. Walk every compartment. Open every door. Understand every piece. Then climb the stick.</p>
+  </div>
+  <!-- ══════════════ DRIVER'S SIDE FRONT COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-ds-front">
+    <div class="section-header">
+      <div class="section-icon">🚰</div>
+      <div><h2>Driver's Side Front Compartment</h2><div class="sub">25 ft of 5" LDH</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSF-01</span>
+        <div><div class="card-title">25 ft of 5" LDH</div><span class="card-aka">AKA: Five-inch, supply line section, LDH jumper, "the 25-footer"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 25-foot section of 5-inch Large Diameter Hose. Short and stubby on purpose — used to bridge from the rig's intake to a nearby hydrant or supply line when a full 100-foot section would just bunch up. Tower 62 is a pumper too; it needs water to feed the deck gun and the bucket nozzle, and that water has to get from a hydrant or a supply rig into our intake.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>5-inch hose body:</strong> Double-jacket woven cover, rubber liner.</li><li><strong>Storz couplings (both ends):</strong> Quarter-turn quick-connect — line up the lugs, push, twist.</li><li><strong>Female swivel / male nipple:</strong> On 5" Storz both ends are sexless — either end mates to any other Storz coupling.</li><li><strong>Storz locking clip / Kochek lock:</strong> Spring-loaded retainer that prevents an accidental quarter-turn release under pressure.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"LDH" (Large Diameter Hose — the umbrella term), "five-inch," "supply hose," "soft suction" (older slang, technically incorrect), "the 25-footer," "jumper line."</p></div>
+        <div class="callout danger"><span class="callout-icon">💥</span><div class="callout-content"><strong>Rookie Mistake — Storz Coupling Not Fully Locked</strong>A 5" line under pump pressure that isn't fully seated and locked can blow apart under load. The coupling becomes a 12-pound projectile, the line whips like a python on PCP, and anybody in line with it gets hurt. Push the couplings together, rotate the quarter-turn until you feel BOTH lugs seat, then push the Kochek lock. Two checks before you charge the line. Every time.</div></div>
+        <div class="callout warn"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Heavy When Charged — Light When Dry</strong>A charged 5" line holds roughly 1.7 gallons per foot. A 25-footer charged is 40+ pounds of water alone, plus the hose. Don't drag a charged LDH section around like a dry one. Plan the layout BEFORE you charge.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ CROSSLAYS ══════════════ -->
+  <section class="comp-section" id="t62-crosslay">
+    <div class="section-header">
+      <div class="section-icon">🧵</div>
+      <div><h2>Crosslays</h2><div class="sub">Front · Center · Rear · 200 ft each, preconnected attack lines</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CL-01</span>
+        <div><div class="card-title">Center Crosslay — 1¾" × 200 ft with Fog Nozzle</div><span class="card-aka">AKA: 1¾, attack line, "the center crosslay," "the inch and three quarter"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>200 feet of 1¾-inch attack hose, preconnected to a discharge on the pump panel, flaked in the crosslay bed so you can grab it and walk it off. The bread-and-butter fire-attack line. A trained interior crew can flow 150–185 GPM through this on a normal residential or commercial structure fire. Fast deployment, fast water, that's the whole point of a preconnected crosslay.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>200 ft of 1¾" double-jacket hose:</strong> Pre-folded in a triple-layer or flat lay in the crosslay tray.</li><li><strong>NST or NH coupling at the engine end:</strong> Preconnected to a discharge.</li><li><strong>Fog nozzle on the discharge end:</strong> Adjustable flow and pattern (straight stream → wide fog).</li><li><strong>Folds + finish loops:</strong> The way it's loaded matters — the hose flakes out clean if loaded clean.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Crosslay," "preconnect," "attack line," "1¾," "the inch and three quarter," "the speedlay" (some departments).</p></div>
+        <div class="callout danger"><span class="callout-icon">🔥</span><div class="callout-content"><strong>Rookie Mistake — Pulling Without a Plan</strong>The probie who yanks the crosslay free and starts walking without knowing where the fire is, where the door is, and whether the line will reach — that's the probie who's twenty feet short, twisted around a corner, and getting yelled at while the fire grows. Eyes on the building first, eyes on the door, then pull. Walk a straight line to the entry point with the bundle on your shoulder. Don't drop the nozzle.</div></div>
+        <div class="callout warn"><span class="callout-icon">🔄</span><div class="callout-content"><strong>Repack Properly After Use</strong>A crosslay loaded sloppy will not deploy clean next time. After overhaul, the load goes back the way the company teaches it — flat, triple, minuteman, whatever your SOP says. Bad load on Tuesday is a tangled line on Wednesday.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CL-02</span>
+        <div><div class="card-title">Rear Crosslay — 1¾" × 200 ft with Fog Nozzle</div><span class="card-aka">AKA: Rear crosslay, second 1¾, backup attack line, "the rear preconnect"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A second 1¾" preconnected attack line, identical to the center crosslay, loaded in a separate tray. Two reasons it exists: <strong>(1)</strong> a second crew can deploy a backup line for fire attack or to cover the first crew's retreat, and <strong>(2)</strong> if the first crosslay gets burned through, kinked beyond use, or just plain run out of building, you've got a second one ready to fly.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>200 ft of 1¾" hose</strong> — same construction as the center.</li><li><strong>Fog nozzle.</strong></li><li><strong>Preconnected to its own discharge on the pump.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Backup line," "second line," "rear preconnect," "the rear crosslay."</p></div>
+        <div class="callout warn"><span class="callout-icon">🆘</span><div class="callout-content"><strong>Rookie Mistake — Treating the Backup Line Like a Spare</strong>The backup line is NOT for "later." When the first attack crew is inside, the backup line gets stretched and CHARGED at the door, ready to go. If a Mayday happens or the first line ruptures, you don't have time to start pulling hose. Stretch it dry, get a charge, hold the door.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CL-03</span>
+        <div><div class="card-title">Front Crosslay — 2½" × 200 ft with Smoothbore Nozzle</div><span class="card-aka">AKA: Two-and-a-half, big line, smoothbore line, "the deuce-and-a-half"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>200 feet of 2½-inch attack line with a smoothbore (solid-tip) nozzle. This is the heavy hitter. Used for advanced fire, commercial buildings, large open areas, defensive operations, and any time the 1¾ isn't moving enough water. A 2½ smoothbore can flow 250–325 GPM and reach further than fog patterns. Penetrates deep into the fire body.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>200 ft of 2½" double-jacket hose.</strong></li><li><strong>2½" couplings — preconnected to discharge.</strong></li><li><strong>Smoothbore (solid-tip) nozzle:</strong> No moving parts in the stream-shaping. A stacked tip set (often 1⅛", 1¼", 1⅜") or a fixed tip — the orifice diameter sets the GPM at a given nozzle pressure.</li><li><strong>Shutoff/ball valve:</strong> Opens and closes the flow.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"2½," "deuce-and-a-half," "deuce," "big line," "two-and-a-half," "smoothbore line," "the front crosslay."</p></div>
+        <div class="callout danger"><span class="callout-icon">💪</span><div class="callout-content"><strong>Rookie Mistake — Solo Operating a 2½</strong>A flowing 2½" line at 250 GPM has serious nozzle reaction — 75 to 100+ pounds of force trying to push the nozzleman backwards. ONE firefighter cannot reasonably hold a 2½ in attack position for long. Standard operation is two firefighters minimum on the nozzle, three if you can spare them. Probies who think they can muscle a 2½ alone get knocked over, the nozzle wraps them up, and the crew behind them gets soaked.</div></div>
+        <div class="callout warn"><span class="callout-icon">🎯</span><div class="callout-content"><strong>Smoothbore = Solid Stream Only</strong>Unlike a fog nozzle, a smoothbore gives you ONE pattern — a tight solid stream. No fog, no wide. If you need a wide spray to protect from radiant heat, this isn't your tool. Pick the right line for the job.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ DRIVER'S SIDE FRONT MIDDLE COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-ds-frontmid">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <div><h2>Driver's Side Front Middle Compartment</h2><div class="sub">Water Supply Fittings · Adapters · High-Rise · Hydrant Bag · K-12 Blades</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-01</span>
+        <div><div class="card-title">Gated Wye</div><span class="card-aka">AKA: Wye, gated wye, water thief (different — see below), "the wye"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A Y-shaped fitting that splits one larger supply line into two smaller discharge lines, each with its own gate (shutoff valve). Common configuration: one 2½" inlet → two 1½" or 1¾" outlets. Used for stretching attack lines off a larger supply line, supplying multiple crews from one supply, or feeding two 1¾ lines from a single 2½ stretched up a stairwell.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Inlet (single, larger):</strong> Female swivel, receives the supply line.</li><li><strong>Two outlets (smaller):</strong> Male threads, feed the attack lines.</li><li><strong>Two ball valves / gate handles:</strong> Open/close each outlet independently — that's what "gated" means.</li><li><strong>Body:</strong> Cast aluminum or brass.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Wye," "gated wye." Note: a "Water Thief" is a different tool — it has one larger outlet that passes through PLUS gated smaller outlets, used for adding lines without breaking the supply.</p></div>
+        <div class="callout warn"><span class="callout-icon">🚿</span><div class="callout-content"><strong>Rookie Mistake — Opening Both Gates With Only One Line Attached</strong>If you open a gate on an outlet that has no hose attached, you've just charged a free-flowing 2½" hole and water blasts everywhere — usually right into the lap of whoever's standing there. Verify hose is connected and the receiving crew is ready BEFORE you open the gate. Open slow.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-02</span>
+        <div><div class="card-title">Storz Connectors</div><span class="card-aka">AKA: Storz, quarter-turn couplings, "the Storz"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Sexless quarter-turn couplings — both halves are identical, no male/female distinction. Line up the lugs, push them together, twist a quarter turn, locked. Used everywhere on LDH (Large Diameter Hose), hydrant connections, and fast-deploy fittings. Faster than threaded couplings and won't cross-thread on you.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Coupling body:</strong> Aluminum (most common) or brass.</li><li><strong>Two lugs (cams):</strong> The hooked tabs that engage the matching slots.</li><li><strong>Rubber gasket / O-ring:</strong> Seats between the two faces — pre-shift, check the gasket. No gasket = leak under pressure.</li><li><strong>Locking clip (Kochek lock or similar):</strong> Prevents accidental quarter-turn release.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Storz" (universal), "quarter-turn couplings," "cam-and-groove couplings" (technically a different design but related family).</p></div>
+        <div class="callout danger"><span class="callout-icon">🪢</span><div class="callout-content"><strong>Rookie Mistake — Forgetting the Gasket</strong>A Storz coupling without its rubber gasket will not seal. Under pressure it sprays a high-pressure jet of water sideways. The gasket lives in the female face; if it's missing, cracked, or dirty, you replace or clean it BEFORE you charge the line. Carry spare gaskets on rig check.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-03</span>
+        <div><div class="card-title">Female / Female Adapters</div><span class="card-aka">AKA: Double female, F/F, "the double female"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An adapter with female threads on both ends. Used to join two male-ended hoses together when you've crossed your couplings, or to mate two male-threaded discharges. Looks pointless until you need one — and then you really, really need one.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Body:</strong> Short brass or aluminum sleeve.</li><li><strong>Two female swivels:</strong> Each end mates to a male thread.</li><li><strong>Two rubber gaskets:</strong> Inside each female end.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Double female," "F-to-F," "F/F."</p></div>
+        <div class="callout warn"><span class="callout-icon">🔧</span><div class="callout-content"><strong>Rookie Mistake — Cross-Threading</strong>NST and NH are NOT the same thread pattern as IPT or NPT. Forcing a female swivel onto wrong threads ruins both. Hand-tight first. If it doesn't spin on smoothly, stop. Wrong fitting. Find the right adapter.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-04</span>
+        <div><div class="card-title">Male-to-Male Adapter</div><span class="card-aka">AKA: Double male, M/M, "the double male"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An adapter with male threads on both ends. Used to join two female-ended hoses together — same logic as the double female, opposite gender. Lives in the kit because the day you need one is the day your couplings won't connect any other way.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Body:</strong> Short brass or aluminum sleeve.</li><li><strong>Two male threaded ends.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Double male," "M-to-M," "M/M."</p></div>
+        <div class="callout tip"><span class="callout-icon">🧠</span><div class="callout-content"><strong>Carry Both, Use Either</strong>Double-male and double-female adapters belong in the same kit and the same compartment. If you're reaching for one, there's a 50/50 chance you actually need the other. Pull both, identify which fits.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-05</span>
+        <div><div class="card-title">Storz Reducer</div><span class="card-aka">AKA: Reducer, step-down, "the Storz reducer"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An adapter that steps a larger Storz coupling DOWN to a smaller threaded coupling — typically a 5" Storz on one side, 2½" NH male thread on the other. Lets you take a 5" LDH supply and feed it into a 2½" intake or discharge. Critical when you're working from a 5"-supplied scene but the closest connection is sized for a smaller line.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Storz half:</strong> Standard Storz coupling, larger size.</li><li><strong>Threaded half:</strong> Smaller-diameter NH thread (typically male).</li><li><strong>Gasket on the Storz side.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Reducer," "Storz-to-NH reducer," "step-down adapter."</p></div>
+        <div class="callout warn"><span class="callout-icon">💧</span><div class="callout-content"><strong>Rookie Mistake — Reducing Then Maxing Flow</strong>Just because the adapter physically fits doesn't mean the smaller hose downstream can handle the supply pressure. Reducing from 5" to 2½" creates a chokepoint. Verify your pump pressure and your downstream line's rating. A 2½" line behind a reducer is still rated for 2½" pressure, not 5".</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-06</span>
+        <div><div class="card-title">Intake Cap with Chain</div><span class="card-aka">AKA: Intake cap, suction cap, blind cap, "the cap"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The threaded or Storz cap that closes off the pump's large intake when it's not in use. The chain keeps the cap tethered to the pump so it doesn't disappear when somebody pulls it off in a hurry. Without a cap, debris, dirt, and bugs get into the intake and end up in the pump.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cap body:</strong> Storz or threaded to match the intake.</li><li><strong>Pull lugs / handle:</strong> Two lugs for a spanner wrench to break it loose if it's seized.</li><li><strong>Tether chain:</strong> Bolted to the cap, anchored to the pump body.</li><li><strong>Gasket:</strong> Same as any coupling — seal it.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Intake cap," "suction cap," "blind cap," "stinger cap" (older), "the cap."</p></div>
+        <div class="callout warn"><span class="callout-icon">⛓️</span><div class="callout-content"><strong>Rookie Mistake — Cap Bouncing Around Loose</strong>If the cap is off and dangling on its chain while the rig moves, it bangs against the pump panel and damages the threads. Removed cap = secured in the compartment, OR seated back on the intake hand-tight. Don't leave it swinging.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-07</span>
+        <div><div class="card-title">Angled Connectors</div><span class="card-aka">AKA: 30° elbow, 45° elbow, angled adapter, "the elbow"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bent/angled couplings that redirect hose flow without forcing the hose itself to bend sharply. Used at hydrants where the supply line geometry would otherwise kink the hose, or at intakes that face an awkward direction. A smooth-flow angled fitting keeps friction loss reasonable; a kinked hose adds dramatic friction loss and can rupture under pump pressure.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Angled metal body (typically 30° or 45°).</strong></li><li><strong>Storz or threaded ends.</strong></li><li><strong>Gasket.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Angled adapter," "elbow," "30° connector," "45° connector," "deflector."</p></div>
+        <div class="callout tip"><span class="callout-icon">📐</span><div class="callout-content"><strong>Rookie Mistake — Forgetting It Exists</strong>Probies pull on a kinked hose for ten minutes trying to make it lay flat when one elbow fitting would have solved the problem in thirty seconds. Look at the geometry. If the hose is fighting the connection, ASK if there's an angled adapter — there usually is.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-08</span>
+        <div><div class="card-title">High-Rise Pack — 150 ft 1¾" + Gated Wye, Shoulder-Carry</div><span class="card-aka">AKA: High-rise pack, hi-rise bundle, "the high-rise"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A pre-built bundle of 150 feet of 1¾" hose with a gated wye, packed in a shoulder-strap carry bag so a crew can sling it on, climb a stairwell, and drop into a high-rise standpipe connection. The gated wye lets you split off attack lines after you reach the fire floor. Standpipe operations in a high-rise are exhausting and slow; the pack is built so one firefighter can carry it up many flights without dropping pieces.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>150 ft of 1¾" hose:</strong> Packed in a folded/snake load for fast deployment.</li><li><strong>Gated wye:</strong> Splits 2½ into two 1¾.</li><li><strong>Shoulder-carry bag:</strong> Padded strap, top opening, designed for one-shoulder carry up stairs.</li><li><strong>Nozzle (often packed separately or attached).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"High-rise pack," "high-rise bundle," "hi-rise," "standpipe pack," "Cleveland load" (the loading pattern, sometimes).</p></div>
+        <div class="callout danger"><span class="callout-icon">🏢</span><div class="callout-content"><strong>Rookie Mistake — Standpipe Outlet Pressure Failure</strong>High-rise standpipes do NOT always deliver good pressure. Some are dead, some are partially closed, some are reduced-flow design. Probies who hook up to a standpipe and assume "water is water" can find themselves at the door with a flaccid, useless line. Have a backup plan — pumping the standpipe from outside if needed, and know the building's standpipe class.</div></div>
+        <div class="callout warn"><span class="callout-icon">🦴</span><div class="callout-content"><strong>Carry With the Right Shoulder for the Stairs</strong>Right-hand stairs vs left-hand stairs determines which shoulder the pack rides on — you don't want the bundle smacking the wall on every flight. Plan the carry before you start climbing.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-09</span>
+        <div><div class="card-title">High-Rise Bag — 2½" Section, Pressuremeter T, Elbow, Vise Grips</div><span class="card-aka">AKA: Standpipe kit, hi-rise tool bag, "the standpipe bag"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A second bag dedicated to standpipe operations — but instead of hose, it carries the tools you need to connect to a standpipe outlet, measure pressure, and improvise around broken equipment. The Pressuremeter T is the centerpiece. You connect it inline, you see exactly what pressure the standpipe is actually delivering.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Short section of 2½" hose:</strong> For the standpipe-to-wye stretch.</li><li><strong>Pressuremeter T (in-line gauge T-fitting):</strong> A T-shaped fitting with a pressure gauge — installs inline so you can read real pressure mid-stretch.</li><li><strong>Elbow connector:</strong> For redirecting flow at the outlet.</li><li><strong>Vise grips:</strong> Standpipes have stuck handles, broken caps, mangled threads. Vise grips solve roughly half of those problems.</li><li><strong>Bag itself:</strong> Carry-strap or backpack-style.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Standpipe bag," "hi-rise tool bag," "standpipe kit," "the T-bag" (informal — refers to the Pressuremeter T).</p></div>
+        <div class="callout warn"><span class="callout-icon">📊</span><div class="callout-content"><strong>Rookie Mistake — Skipping the Pressure Read</strong>If you connect to a standpipe and DON'T install the pressuremeter T, you don't actually know what you're working with. The gauge tells you whether you've got 75 psi (marginal) or 150 psi (good) at the outlet. Without that data, you're guessing. Slow down, install the T, read the number, then stretch.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-10</span>
+        <div><div class="card-title">2× Fog Nozzles</div><span class="card-aka">AKA: Fog nozzles, combination nozzles, automatic nozzles, "the fogs"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Spare/swappable fog nozzles. A fog nozzle has adjustable flow (gallons per minute) and adjustable pattern from straight stream to wide fog. Versatile — handles interior attack, exterior cooling, exposure protection, and hydraulic ventilation. Replaces a damaged nozzle, gets put on a stretched line that wasn't preconnected, fits a high-rise wye.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Inlet coupling (female swivel):</strong> Connects to the hose.</li><li><strong>Shutoff valve / ball valve:</strong> Lever handle on top, opens and closes the flow.</li><li><strong>Flow selector ring (some models):</strong> Sets GPM (95 / 125 / 150 / 185 / 200).</li><li><strong>Pattern adjustment:</strong> Twist the front bumper — straight stream → narrow fog → wide fog.</li><li><strong>Front bumper:</strong> The rubber-coated outer ring at the tip.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Fog nozzle," "combination nozzle," "automatic nozzle" (specific type), "TFT" (brand), "Akron" (brand), "the fog."</p></div>
+        <div class="callout warn"><span class="callout-icon">🌀</span><div class="callout-content"><strong>Rookie Mistake — Wide Fog Inside the Structure</strong>Wide-fog pattern inside a burning structure entrains hot products of combustion and can push fire onto crews behind you (the "smoke explosion" phenomenon). Interior attack = straight stream or narrow fog, generally. Wide fog is for exterior cooling or hydraulic ventilation. Know your tactic before you twist the bumper.</div></div>
+        <div class="callout warn"><span class="callout-icon">🚿</span><div class="callout-content"><strong>Open and Close SLOWLY</strong>Snapping the bail open creates water hammer that can rupture hose or damage the nozzle. Open the bail in a smooth, deliberate motion. Same on close.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-11</span>
+        <div><div class="card-title">Hydrant Bag — Wrench · Spanners · Mallet · Gate Valve · Storz · LDH Rope</div><span class="card-aka">AKA: Hydrant kit, hydrant bag, "the hydrant tools"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A self-contained bag holding every tool needed to make a connection to a fire hydrant. The hydrant person grabs this and steps off the rig before the apparatus pulls forward to lay supply. Built so one firefighter can deploy the bag, find the hydrant, open it, and connect — alone if necessary.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (inside the bag)</div><ul><li><strong>Hydrant wrench:</strong> The pentagonal-socket wrench for the operating nut on top of the hydrant.</li><li><strong>Spanners:</strong> Wrenches to break loose threaded caps and tighten connections.</li><li><strong>Rubber mallet:</strong> For tapping a stuck cap free, or seating a Storz home.</li><li><strong>In-line gate valve:</strong> Installs on a hydrant outlet so the hydrant person can shut down ONE supply line without closing the whole hydrant.</li><li><strong>Storz connectors:</strong> Adapt the hydrant's NST/NH threads to Storz LDH.</li><li><strong>LDH rope:</strong> Used to tie off the LDH supply to the hydrant or secure the hose during deployment.</li><li><strong>The bag itself:</strong> Wear-resistant, designed to throw onto pavement at the curb.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Hydrant bag," "hydrant kit," "FDC bag" (when used for FDC connections), "stretch bag."</p></div>
+        <div class="callout danger"><span class="callout-icon">🚒</span><div class="callout-content"><strong>Rookie Mistake — Hydrant Person Forgets the Bag</strong>Probie jumps off, runs to the hydrant, and realizes the bag is still on the rig that's now pulling away. Now there's no wrench, no Storz adapter, and no water. The hydrant bag goes WITH the hydrant person the moment the rig starts the lay. Drill this until it's muscle memory.</div></div>
+        <div class="callout warn"><span class="callout-icon">🔓</span><div class="callout-content"><strong>Open the Hydrant SLOWLY and ALL THE WAY</strong>Hydrants that are partially open create cavitation and damage the valve. Half-open is worse than fully closed. Crack it slow to flush debris, then OPEN ALL THE WAY. Listen for the water column to flow. Then connect.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSFM-12</span>
+        <div><div class="card-title">K-12 Blades</div><span class="card-aka">AKA: K-12 blades, rescue saw blades, abrasive discs, "the spare blades"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Spare cutting discs for the K-12 (rotary cut-off) saw. Different blades for different materials. Stored separately from the saw so when one wears out, gets glazed over, or shatters, the operator can swap in a fresh blade without taking the saw out of service.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts &amp; types</div><ul><li><strong>Abrasive composite blade (for steel/iron):</strong> Black, wears down with use. Designed for ferrous metal.</li><li><strong>Masonry/diamond blade (for concrete/brick):</strong> Diamond-segmented edge. Do NOT use on metal.</li><li><strong>Maximum RPM marking:</strong> Stamped on the blade. Respect it.</li><li><strong>Arbor hole / mounting hub:</strong> Standardized to fit the K-12.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"K-12 blades," "rescue blades," "abrasive discs," "cutoff discs," "carbide" (specific type), "diamond blade" (specific type).</p></div>
+        <div class="callout danger"><span class="callout-icon">💀</span><div class="callout-content"><strong>Rookie Mistake — Wrong Blade for the Material</strong>Putting a masonry diamond blade on metal will shatter at 5,000 RPM and send shrapnel into your femoral. Putting an abrasive on concrete glazes it useless in seconds. CHECK THE BLADE BEFORE EVERY CUT. The blade is labeled — read it. If you don't know, ASK before pulling the trigger.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ DRIVER'S SIDE REAR MIDDLE COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-ds-rearmid">
+    <div class="section-header">
+      <div class="section-icon">🪚</div>
+      <div><h2>Driver's Side Rear Middle Compartment</h2><div class="sub">Sawzall · Grinder · Chainsaw · K-12</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRM-01</span>
+        <div><div class="card-title">DeWalt Sawzall</div><span class="card-aka">AKA: Sawzall, recip saw, reciprocating saw, "the Sawzall"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A handheld reciprocating saw — push/pull blade action. DeWalt is the brand on this rig, the whole tool family is called "Sawzall" after the Milwaukee original. Cuts almost anything with the right blade: wood, metal, drywall, copper pipe, vehicle pillars. Most versatile cutting tool in the compartment. Used heavily in extrication, overhaul, and forcible entry on bolted/screwed assemblies.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blade:</strong> Wood blades have coarse, large teeth. Metal blades have many fine teeth. Bi-metal blades cut nail-embedded wood.</li><li><strong>Blade clamp / quick-release:</strong> Twist to open, drop the blade in, twist to lock.</li><li><strong>Shoe (front foot):</strong> Press against the workpiece to reduce blade chatter.</li><li><strong>Variable speed trigger.</strong></li><li><strong>Battery (DeWalt platform):</strong> Verify charge on rig check.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Sawzall" (Milwaukee brand-as-generic), "recip saw," "reciprocating saw," "tiger saw" (older term), "hognose."</p></div>
+        <div class="callout warn"><span class="callout-icon">⚙️</span><div class="callout-content"><strong>Rookie Mistake — Wrong Blade, Wasted Cut</strong>Wood blade on metal stalls in two seconds. Metal blade on wood walks off the line. Choose deliberately. Spare blades live with the saw — don't return one in the wrong slot.</div></div>
+        <div class="callout warn"><span class="callout-icon">🧱</span><div class="callout-content"><strong>Hidden Wires &amp; Pipes</strong>Recip saws happily cut through electrical wires, gas lines, brake lines, hydraulic lines, and people. Know what's on the other side of the wall, the door, or the seat before you plunge.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRM-02</span>
+        <div><div class="card-title">Angle Grinder</div><span class="card-aka">AKA: Grinder, side grinder, 4½ grinder, "the grinder"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A handheld grinder running a small (4½") abrasive or cutting wheel. Used for precision metal cutting where the K-12 is too big or too aggressive — cutting a stuck bolt, slicing rebar, cutting a lock shackle, grinding burrs off cut metal. More controlled than the K-12 in tight spaces.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cutting/grinding disc:</strong> Match disc to job — thin = cutting, thick = grinding.</li><li><strong>Wheel guard:</strong> Positioned to deflect sparks AWAY. Never remove it.</li><li><strong>Side handle:</strong> Two-hand operation, always.</li><li><strong>Spindle lock button:</strong> Press to change discs — NEVER while running.</li><li><strong>Trigger / paddle switch.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Grinder," "angle grinder," "4½ grinder," "side grinder," "disc grinder."</p></div>
+        <div class="callout danger"><span class="callout-icon">💥</span><div class="callout-content"><strong>Rookie Mistake — Removing the Guard</strong>Grinder wheels shatter at 11,000 RPM. Probie removes the guard "for clearance," wheel disintegrates, shrapnel goes into the femoral. The guard never comes off. Period. If you can't fit with the guard, switch to a smaller wheel or a different tool.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRM-03</span>
+        <div><div class="card-title">Chainsaw with Roof Guide</div><span class="card-aka">AKA: Vent saw, roof saw, ventilation saw, "the chainsaw"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A gas-powered chainsaw fitted with a ROOF GUIDE accessory — a depth-gauge attachment that prevents the saw from cutting too deep into a roof. Used for vertical ventilation cuts on wood-decked roofs. The roof guide rides on the roof surface and limits how far the chain plunges, so you cut through the deck but NOT the joists/rafters below.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Bar &amp; carbide chain:</strong> Carbide-tipped chain shrugs off roofing nails and shingles that would dull standard chain in seconds.</li><li><strong>Roof guide attachment:</strong> Mounted on the bar; rides on the roof surface to limit cut depth.</li><li><strong>Sprocket, oiler, bar oil reservoir.</strong></li><li><strong>Two-stroke engine + fuel mix tank.</strong></li><li><strong>Chain brake.</strong></li><li><strong>Front/rear handles, kickback guard.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Roof saw," "vent saw," "Stihl" (brand-as-generic), "ventilation saw," "depth-stop saw."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪵</span><div class="callout-content"><strong>Rookie Mistake — Cutting the Joist</strong>The roof guide is THERE so you cut the decking but NOT the structural member. Without the guide (or with it set wrong), you cut through a rafter and weaken the very surface you're standing on. People have fallen through their own vent holes. Verify the guide is installed and set correctly BEFORE you climb.</div></div>
+        <div class="callout danger"><span class="callout-icon">↪️</span><div class="callout-content"><strong>Plan Your Retreat Path</strong>Cut so your escape route is always UPHILL of the cut and OPPOSITE side from where the hole opens. Don't cut around yourself onto a peninsula of decking that breaks free.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRM-04</span>
+        <div><div class="card-title">K-12 Rotary Saw</div><span class="card-aka">AKA: K-12, K-saw, rescue saw, cut-off saw, "the K-12"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The gas-powered rotary cut-off saw. Spinning 12–14" abrasive or diamond disc at violent RPM. Cuts steel, masonry, concrete, rebar, metal-decked roofs. The workhorse for forcible entry on commercial roll-up doors, cutting locks/bars, and ventilation cuts in metal decks. The K-12 makes a LOT of noise, throws a LOT of sparks, and demands respect.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blade (abrasive composite OR diamond):</strong> Match to the material. Spares stored in DSFM compartment.</li><li><strong>Blade guard (rotating):</strong> Set to deflect debris AWAY from operator and patient.</li><li><strong>Two-stroke engine:</strong> Requires premixed fuel.</li><li><strong>Pull start, throttle, choke.</strong></li><li><strong>Two-hand grip + belly guard.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"K-12" (model name, used generically), "K-saw," "cut-off saw," "rescue saw," "partner saw," "Stihl" (different brand, same job), "quickie saw."</p></div>
+        <div class="callout danger"><span class="callout-icon">🔥</span><div class="callout-content"><strong>Rookie Mistake — Cutting Without a Charged Line Standing By</strong>The K-12 throws sparks 20 feet. Cutting near fuel, in a fuel-soaked structure, or in any atmosphere that COULD ignite, demands a charged hose line and a spotter watching the spark path. Always. If a fire flashes from your sparks, the hose line is the only thing between the crew and a really bad day.</div></div>
+        <div class="callout warn"><span class="callout-icon">⛽</span><div class="callout-content"><strong>Two-Stroke Fuel Only</strong>Plain pump gas without oil = seized engine. Fuel cans are labeled. Don't guess.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ DRIVER'S SIDE REAR — AIR & RIT ══════════════ -->
+  <section class="comp-section" id="t62-ds-rear-air">
+    <div class="section-header">
+      <div class="section-icon">🫁</div>
+      <div><h2>Driver's Side Rear Compartment — Air &amp; RIT</h2><div class="sub">3 SCBAs · RIT Pack · RASP Rope Line</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRA-01</span>
+        <div><div class="card-title">3× SCBAs</div><span class="card-aka">AKA: Airpacks, SCBA, bottles, "the packs"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Three complete Self-Contained Breathing Apparatus sets — cylinder, harness, regulator, facepiece, the works. Tower 62 is a multi-role rig; in addition to the SCBAs each crew member wears, these spare/standby sets are available for the platform operator, an additional firefighter staging on the deck, or a quick swap during long-duration operations. See the dedicated SCBA Equipment Study Guide for full anatomy and operation.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (summary — see SCBA guide for detail)</div><ul><li><strong>Cylinder (4500 psi composite).</strong></li><li><strong>Harness &amp; carrier assembly.</strong></li><li><strong>Second-stage regulator.</strong></li><li><strong>Facepiece.</strong></li><li><strong>HUD, ICM, power module.</strong></li><li><strong>PASS alarm.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Airpack," "SCBA," "bottle" (specifically the cylinder), "the pack," "MSA G1" (Glen Ellyn's platform).</p></div>
+        <div class="callout danger"><span class="callout-icon">📊</span><div class="callout-content"><strong>Rookie Mistake — Spare Pack at Half-Pressure</strong>A spare SCBA on a rig that's been sitting for a week loses pressure to a slow leak nobody noticed. The firefighter who grabs it during a working fire has 30 minutes of air on the gauge but 12 minutes of breathing time. Check ALL bottle pressures at rig check. Anything below 90% of service pressure (~4050 psi) gets flagged and either refilled or swapped.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRA-02</span>
+        <div><div class="card-title">RIT Pack</div><span class="card-aka">AKA: RIT pack, RIT bag, FAST pack, downed firefighter pack, "the RIT"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The Rapid Intervention Team air pack — a dedicated, ready-to-deploy SCBA assembly carried specifically for rescuing a downed firefighter. When a Mayday comes over the radio, this is what we grab. Includes a full cylinder, transfill hose to supply or refill a trapped firefighter's pack, a spare mask, and a drag harness.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>SCBA cylinder — full pressure.</strong></li><li><strong>Regulator / first stage.</strong></li><li><strong>Transfill hose (UAC — Universal Air Coupling):</strong> Connects to a downed firefighter's SCBA.</li><li><strong>Spare facepiece.</strong></li><li><strong>Carry handle &amp; drag harness.</strong></li><li><strong>Distinctively colored bag</strong> so it's never confused with a regular SCBA.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"RIT pack," "RIT bag," "FAST pack" (Firefighter Assist &amp; Search Team), "rescue bottle," "downed firefighter pack," "Mayday pack."</p></div>
+        <div class="callout danger"><span class="callout-icon">🆘</span><div class="callout-content"><strong>Rookie Mistake — Touching the RIT Pack for Routine Work</strong>The RIT pack is NOT a backup SCBA. NOT for refilling your own bottle. NOT for the second crew. It is locked, loaded, and untouched UNTIL a firefighter goes down. If the RIT pack gets borrowed for routine use and then a Mayday comes in, somebody dies because of it. Walk past it. Use the regular SCBAs.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRA-03</span>
+        <div><div class="card-title">RASP Rope Line</div><span class="card-aka">AKA: RASP rope, bailout rope, escape line, "the bailout"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A Rapid Ascent / Self-Rescue / Personal escape rope line. Designed for firefighter self-rescue when interior conditions deteriorate and exit through the door isn't an option — go out the window, anchor the rope, and rappel/descend to the ground. Glen Ellyn carries the RASP system; other departments may use different brand systems with the same function. Used in extremis when the building is killing you.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (typical RASP / bailout kit)</div><ul><li><strong>Bailout rope (typically 30–50 ft of fire-rated escape rope):</strong> Heat-resistant aramid (Technora/Kevlar) or specialized escape rope.</li><li><strong>Anchor hook (escape anchor, e.g. Crosby hook):</strong> Bites onto window sill, door frame, or structural element.</li><li><strong>Descent control / brake device:</strong> Friction device that controls descent rate.</li><li><strong>Carrying bag / pouch:</strong> Worn on the firefighter, accessible by feel.</li><li><strong>Connection point on bunker gear / harness.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Bailout system," "personal escape rope," "self-rescue rope," "RASP" (specific brand/product), "FF escape rope," "the bailout."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪟</span><div class="callout-content"><strong>Rookie Mistake — Treating Bailout as Theoretical</strong>The bailout rope is a "last 30 seconds of your life" tool. Firefighters who have NEVER trained with it, never practiced anchor placement, never gone out a window in PPE on the line — that's the firefighter who freezes when the moment comes. Train with this tool. Don't touch it in real life if you haven't trained on it.</div></div>
+        <div class="callout warn"><span class="callout-icon">📐</span><div class="callout-content"><strong>Anchor Selection Matters</strong>A window sill that looks solid may be made of soft pine or rotten wood. Confirm the anchor will take 2× your weight as a minimum. Sill, door frame, A/C bracket, structural beam — different anchors, different reliability.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ DRIVER'S SIDE REAR — GENERATOR ══════════════ -->
+  <section class="comp-section" id="t62-ds-rear-gen">
+    <div class="section-header">
+      <div class="section-icon">🔌</div>
+      <div><h2>Driver's Side Rear Compartment — Power &amp; Climbing</h2><div class="sub">30A Generator · 200 ft Cable · Cords · Plug Adapters · Fan · Road Salt · Tower Climbing Harness</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-01</span>
+        <div><div class="card-title">30 Amp Generator</div><span class="card-aka">AKA: Generator, genny, portable power, "the genny"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A portable gas-powered 30-amp generator. Provides 120/240V AC power on scene — runs scene lights, the wet vac, smoke ejectors, electric tools, the submersible pump, anything that needs an outlet. Tower 62 has multiple power sources but the portable generator is the one you can carry away from the rig to wherever the work is happening.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Engine (typically Honda or Briggs):</strong> Pull-start or electric-start small engine.</li><li><strong>Fuel tank:</strong> Gasoline, check level pre-shift.</li><li><strong>Oil reservoir:</strong> Check level pre-shift — low oil shuts it down.</li><li><strong>Outlets:</strong> Twist-lock 30A and standard duplex 120V.</li><li><strong>Circuit breakers:</strong> Reset if a load trips them.</li><li><strong>Ground lug:</strong> Attaches a ground rod if SOP requires.</li><li><strong>Frame &amp; carry handles.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Generator," "genny," "portable genny," "Honda" (brand-as-generic), "the genny."</p></div>
+        <div class="callout danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Rookie Mistake — Generator Running in an Enclosed Space</strong>Gas generators produce CO. A generator running inside a basement, garage, or enclosed structure kills the people inside in minutes. Always run the generator OUTSIDE, in the open, downwind of the work area. If you're using it during a structure fire, position so its exhaust isn't going INTO the building.</div></div>
+        <div class="callout warn"><span class="callout-icon">⛽</span><div class="callout-content"><strong>Refuel Cold</strong>Hot engine + gasoline = fire. Shut the generator down, let it cool a minute, then refuel. Spilling gas on a hot exhaust manifold ignites.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-02</span>
+        <div><div class="card-title">200 ft Electrical Cable</div><span class="card-aka">AKA: Power cord, extension cable, "the long cord"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 200-foot heavy-gauge electrical cable for getting power from the generator (or the rig's inverter) to remote work areas. 200 feet is a long stretch — that's the cable you reach for when the scene is across a yard, into a basement, or down a hallway away from the truck.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Heavy-gauge conductor (10 or 12 AWG):</strong> Thicker than household extension cords.</li><li><strong>Outer jacket:</strong> Abrasion- and weather-resistant.</li><li><strong>Twist-lock connector at one end:</strong> 30A locking plug.</li><li><strong>Standard duplex (or pigtail) at the other end (sometimes).</strong></li><li><strong>Reel or cable box:</strong> For deployment/retrieval without tangles.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Extension cord," "power cord," "feeder cable," "shore cord," "200-footer."</p></div>
+        <div class="callout danger"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Damaged Cable in Water</strong>A cable with a cut or worn jacket lying in standing water at a flooded-basement call is a death trap. Inspect cable BEFORE deployment. Any nicks, melted spots, or exposed conductor — OUT OF SERVICE. Trips on a frayed cable have ended firefighters' lives.</div></div>
+        <div class="callout warn"><span class="callout-icon">🪢</span><div class="callout-content"><strong>Don't Coil Hot Cable</strong>A coiled cable carrying high amperage builds heat. Lay the cable in long sweeping loops, not tight coils, especially when running near maximum amperage. And NEVER coil it while energized.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-03</span>
+        <div><div class="card-title">Extension Cords</div><span class="card-aka">AKA: Drop cords, jumper cords, "the extension cords"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Shorter heavy-duty extension cords (typically 25, 50, or 100 ft) used to chain power from the long 200-ft feeder out to individual tools and lights. Multiple cords let you split power to multiple work areas.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Heavy-gauge cord (typically 12 AWG).</strong></li><li><strong>Three-prong grounded plug + socket.</strong></li><li><strong>Strain relief at the connectors.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Drop cord," "jumper cord," "extension cord," "12-gauge cord."</p></div>
+        <div class="callout warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Daisy-Chaining Too Far</strong>Voltage drops over distance. Chaining 200 ft of feeder + 100 ft of extension + 50 ft of extension = serious voltage drop at the tool. Underpowered tools run hot and fail. Keep total run lengths reasonable, and use heavier-gauge cords for longer runs.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-04</span>
+        <div><div class="card-title">Plug Adapters</div><span class="card-aka">AKA: Adapters, pigtails, twist-lock adapters, "the adapters"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Adapter pigtails that convert between plug types — twist-lock 30A to standard 120V duplex, NEMA L5-30 to standard 5-15, and so on. Lets tools designed for one plug standard work with generators or outlets designed for another.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Source plug:</strong> Twist-lock or other industrial-style.</li><li><strong>Target socket:</strong> Standard household three-prong.</li><li><strong>Short cord between them (pigtail).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Pigtail adapter," "twist-lock adapter," "plug adapter," "L5-30 adapter."</p></div>
+        <div class="callout warn"><span class="callout-icon">🔌</span><div class="callout-content"><strong>Rookie Mistake — Adapter Mismatch = Wrong Voltage</strong>An adapter that physically fits doesn't mean the voltage matches. Plugging a 120V tool into a 240V outlet via adapter ruins the tool and creates a fire hazard. Verify voltage before connecting.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-05</span>
+        <div><div class="card-title">Fan</div><span class="card-aka">AKA: Smoke ejector, ventilation fan, PPV (depending on type), "the fan"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An electric ventilation fan. Depending on the model on this rig, it functions as either a Positive Pressure Ventilation (PPV) fan — pushing fresh air INTO a structure to drive smoke OUT through a planned exhaust opening — or as a smoke ejector pulling air OUT. Used during overhaul and during coordinated attack ventilation.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Frame / housing:</strong> Steel cage with protective mesh.</li><li><strong>Fan blade.</strong></li><li><strong>Electric motor + power cord.</strong></li><li><strong>Mounting feet or hangers (window hangers if smoke ejector).</strong></li><li><strong>Tilt adjustment:</strong> Aim the airflow.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"PPV fan," "ventilation fan," "smoke ejector" (different — see below), "blower."</p></div>
+        <div class="callout danger"><span class="callout-icon">🌬️</span><div class="callout-content"><strong>Rookie Mistake — Uncoordinated Ventilation</strong>Pushing or pulling air into a structure without knowing where the fire is and where the exhaust opening is can drive flames into uninvolved areas, push fire ONTO the attack crew, or feed a hidden smoldering fire and cause a flashover. Ventilation is COORDINATED — the attack crew agrees on timing, the IC approves, the exhaust opening is opened FIRST. Don't fire up the fan and start blowing.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-06</span>
+        <div><div class="card-title">Road Salt</div><span class="card-aka">AKA: Salt, ice melt, traction salt, "the salt"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bagged road salt for winter operations. Spread on icy patches at scenes to give crews traction and prevent slip-and-falls. Also melts thin ice over time. Lives on the rig year-round in Midwest fleets because winter weather doesn't ask permission.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Ice melt," "rock salt," "traction salt," "calcium chloride."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">❄️</span><div class="callout-content"><strong>Rookie Mistake — Salting Late</strong>First five minutes on a winter MVA scene: salt the working area BEFORE crews start moving heavy gear. Slip-and-fall injuries on the fireground are a leading cause of lost work time.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">DSRG-07</span>
+        <div><div class="card-title">Safety Harness for Tower Climbing</div><span class="card-aka">AKA: Tower harness, climbing harness, ladder harness, fall-arrest harness, "the harness"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A full-body fall-arrest safety harness used when working ON the aerial — climbing the bedladder, working at heights on the ladder rungs, or doing rescues that require leaving the bucket. The harness clips into a tether that connects to a structural anchor. If a firefighter falls, the harness catches them before they hit the ground.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Shoulder straps + sub-pelvic strap:</strong> Full body, NOT just a waist belt.</li><li><strong>D-rings (dorsal and chest):</strong> Anchor attachment points.</li><li><strong>Adjustable straps + buckles:</strong> Fit the harness snugly over bunker gear.</li><li><strong>Lanyard / tether (typically separate):</strong> Connects harness to anchor.</li><li><strong>Carabiner / connector (locking):</strong> Anchor-side connection.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Tower harness," "climbing harness," "fall-arrest harness," "ladder belt" (older, different design — waist only, NOT acceptable for fall arrest).</p></div>
+        <div class="callout danger"><span class="callout-icon">🪜</span><div class="callout-content"><strong>Rookie Mistake — Climbing the Stick Without It</strong>Tower 62's ladder goes way up. People DO fall off aerial ladders, especially at the tip and on icy rungs. The harness is mandatory when leaving the bucket, leaving the bed, or climbing the ladder. "I'm only going up to the third rung" — that's how dead firefighters start sentences.</div></div>
+        <div class="callout warn"><span class="callout-icon">🧷</span><div class="callout-content"><strong>Inspect Before EVERY Use</strong>Webbing wears, stitching unravels, hardware corrodes. Look at every strap and buckle BEFORE you wear it. Any visible damage or "I don't know what that is" — out of service, swap to a different harness.</div></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ══════════════ REAR ENGINE COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-rear-engine">
+    <div class="section-header">
+      <div class="section-icon">🪜</div>
+      <div><h2>Rear Engine Compartment</h2><div class="sub">Big-bore Hose · Ladders · Pike Poles · NY Hooks · Folding Ladders · Ceiling Poles</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-01</span>
+        <div><div class="card-title">3" Hose</div><span class="card-aka">AKA: Three-inch, supply line, "the 3-inch"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>3-inch diameter hose — bigger than attack hose, smaller than LDH supply. Used as a supply line for longer stretches where 2½ would have too much friction loss, or as a feeder line to a portable monitor / deck gun. Tower 62 carries lengths for water supply versatility.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>3" double-jacket hose.</strong></li><li><strong>NH-thread couplings (typically 2½ NH on 3" hose).</strong></li><li><strong>Carrying loops where loaded.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"3-inch," "three-inch," "supply line," "intermediate hose."</p></div>
+        <div class="callout warn"><span class="callout-icon">💧</span><div class="callout-content"><strong>Rookie Mistake — Confusing 3" with 2½"</strong>The couplings look similar; the hose diameter is the giveaway. Mixing them up at a complicated water-supply layout creates friction loss calculations that the engineer didn't plan for. Read the size stenciled on the hose body.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-02</span>
+        <div><div class="card-title">5" Hose</div><span class="card-aka">AKA: Five-inch, LDH, supply hose, "the big line"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>5-inch Large Diameter Hose (LDH). The primary water-supply hose from hydrant to pumper, or pumper to pumper in a relay. Moves a LOT of water with much less friction loss than smaller hose. Tower 62 carries several lengths to extend supply when needed. See the 25-ft jumper section (DSF-01) for coupling details.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>5" hose body.</strong></li><li><strong>Storz couplings, both ends.</strong></li><li><strong>Locking clips.</strong></li><li><strong>Carrying straps for off-loading bundles.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Five-inch," "LDH," "Large Diameter Hose," "supply hose," "soft suction" (outdated).</p></div>
+        <div class="callout danger"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Rookie Mistake — Underestimating Charged 5" Weight</strong>5" hose holds ~1.7 GALLONS per running foot — about 14 lb per foot when charged. A 100-ft length holds 170 gallons and weighs 1,400 lb. You don't move charged 5". Plan the layout, charge ONCE in the right position. Moving charged LDH causes injuries.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-03</span>
+        <div><div class="card-title">2× 35 ft, 2-Section Extension Ladders</div><span class="card-aka">AKA: 35-foot extension, 2-section extension, "the 35"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two extension ladders, 35 feet each at full extension, 2-section construction (a base/bed section + a fly section). Used to access second and third stories of residential and commercial buildings, place on the side of a structure for window access or ventilation work, or use as a personnel ladder during operations. 35 ft is the standard reach for residential second-story access.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Beds (base) section:</strong> The wider, lower section. Sits on the ground.</li><li><strong>Fly section:</strong> The narrower, upper section that extends up.</li><li><strong>Rungs:</strong> Cross-pieces between the rails.</li><li><strong>Halyard:</strong> The rope (or chain) used to raise the fly section.</li><li><strong>Pulley:</strong> Rope feeds through pulley at top of bed section.</li><li><strong>Pawl / dog locks:</strong> Spring-loaded hooks that engage rungs and LOCK the fly in extended position. CRITICAL.</li><li><strong>Butt / spurs (feet):</strong> Metal feet at the bottom — bite into ground.</li><li><strong>Tip:</strong> The top of the fly section.</li><li><strong>Rails / beams:</strong> The two long vertical structural members.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Extension ladder," "two-section," "35," "the 35-footer," "two-fly" (less accurate — this is single-fly two-section).</p></div>
+        <div class="callout danger"><span class="callout-icon">🦴</span><div class="callout-content"><strong>Rookie Mistake — Pawls (Dogs) Not Engaged</strong>You extend the ladder, the pawls drop into the rungs with a click. If you climb without verifying BOTH pawls are seated on rungs, the fly section comes back down on you. Probies have fallen off ladders and broken backs because they trusted the halyard tension instead of the dogs. After every extension, look up — both pawls visible, both seated. Then climb.</div></div>
+        <div class="callout warn"><span class="callout-icon">📐</span><div class="callout-content"><strong>75° Climbing Angle</strong>The classic rule: foot of the ladder out from the wall by ¼ of the ladder's working length. Too steep = tip-over backwards. Too shallow = ladder slides out at the foot. Practice the angle until you can set it without thinking.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-04</span>
+        <div><div class="card-title">28 ft, 2-Section Extension Ladder</div><span class="card-aka">AKA: 28-foot extension, residential extension, "the 28"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 28-foot 2-section extension ladder. Shorter than the 35, deploys faster, reaches second-story windows on most residential structures. The go-to ladder for shorter-reach jobs where the 35 is overkill. Same construction and parts as the 35-foot ladder.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"28-footer," "the 28," "two-section 28," "residential extension." Same parts as REAR-03 above.</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Rookie Mistake — Grabbing the Wrong Length</strong>Probies grab the heavier 35 when the 28 would do — wears the crew out, takes longer to deploy. Look at the building. Match the ladder to the job. The lieutenant calling for "a ladder" may have a specific one in mind — ASK.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-05</span>
+        <div><div class="card-title">2× 20 ft Roof Ladders</div><span class="card-aka">AKA: Roof ladder, hook ladder, "the 20-foot roof"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A straight (single-section) 20-foot ladder with retractable HOOKS at the tip. Used during vertical ventilation: lean the ladder against the eave, climb up, flip the hooks open at the top, and the hooks GRAB the ridge of the roof. The ladder now anchors itself to the roof, the firefighter walks UP the ladder onto the roof surface, and the ladder doesn't slide off while they're working.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Two rails + rungs:</strong> Same as any ladder.</li><li><strong>Retractable hooks at the tip:</strong> Spring-loaded or manually-flipped. Folded flat when stored; flipped open when in use.</li><li><strong>Butt spurs (bottom feet).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Roof ladder," "hook ladder," "ventilation ladder," "the 20-footer."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪝</span><div class="callout-content"><strong>Rookie Mistake — Climbing Before Hooks Are Set</strong>You bring the ladder up, but you don't flip the hooks open and verify they're SEATED over the ridge before you commit weight to it. The ladder slides down the slope, takes you with it, you go off the edge of the roof. The hooks must be visible, locked over the ridge, and tested before you climb beyond the eave.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-06</span>
+        <div><div class="card-title">16 ft Roof Ladder</div><span class="card-aka">AKA: 16-foot roof, short roof ladder, "the 16"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A shorter roof ladder, 16 feet, for steeper or smaller roofs where the 20-footer is too long. Same hook-and-anchor concept. Used on smaller residential roofs or when the 20s are in use elsewhere.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"16-footer," "the 16," "short roof," "short hook ladder." Same parts as REAR-05.</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">📏</span><div class="callout-content"><strong>Match Ladder to Roof Pitch</strong>Short ladder on a long slope = you're working from the bottom edge with no reach to the ridge. Pick the ladder that puts the hooks AT the ridge with the firefighter able to work above the eave.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-07</span>
+        <div><div class="card-title">12 ft Pike Pole</div><span class="card-aka">AKA: 12-foot hook, long pike, NY hook (specific design), "the 12"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The longest pike pole on this rig. Twelve feet of reach. Used for pulling ceilings in higher commercial spaces, reaching attic spaces, breaching upper-floor windows from below, and checking for fire extension high overhead. Big leverage, big reach, big risk of contacting overhead electrical service drops.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Hook head:</strong> Pike point + curved hook + sometimes a flat scraping blade.</li><li><strong>Ferrule:</strong> Metal sleeve between head and handle.</li><li><strong>Long fiberglass handle (12 ft):</strong> Non-conductive (if fiberglass) — important.</li><li><strong>Butt cap / D-grip.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"12-foot pike," "long hook," "ceiling hook," "the 12," "NY hook" (specific design pattern).</p></div>
+        <div class="callout danger"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Power Line Contact</strong>Twelve-foot poles reach service drops, telephone lines, and overhead electrical. Even fiberglass conducts when wet. Look UP before any long-pole swing. Probies have been electrocuted by a single careless raising motion.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-08</span>
+        <div><div class="card-title">10 ft Pike Pole</div><span class="card-aka">AKA: 10-foot hook, "the 10"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Ten-foot pike pole. Slightly shorter than the 12 — useful in residential ceilings where 12 is overkill but 8 doesn't quite reach. Same anatomy as the 12. Pull ceilings, check for extension, breach drywall.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"10-foot pike," "the 10." Same parts as the 12-foot.</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Look UP First — Same Rule</strong>Any long pole near overhead electrical: look UP. Always.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-09</span>
+        <div><div class="card-title">2× 8 ft Pike Poles</div><span class="card-aka">AKA: 8-foot hook, standard pike, "the 8"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Eight-foot pike poles — the most common length for residential overhaul work. Easy to maneuver in standard-height rooms, reaches average ceilings, doesn't get in the way like the longer poles. Two on the rig so two firefighters can pull ceilings simultaneously.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Eight-foot pike," "standard pike," "the 8." Same parts as longer poles.</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🩹</span><div class="callout-content"><strong>Pull Diagonally, Not Straight Down</strong>Hook into ceiling, then sweep AWAY from your body and head. Material falls. Stand to the side of where it'll land.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-10</span>
+        <div><div class="card-title">2× 6 ft Pike Poles</div><span class="card-aka">AKA: 6-foot hook, short pike, "the 6"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Six-foot pike poles for tight spaces — hallways, smaller rooms, closets, where the 8-foot is too long. Two of them for paired ceiling-pull work in cramped quarters.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Six-foot pike," "short pike," "the 6."</p></div>
+        </div>
+        <div class="callout tip"><span class="callout-icon">📏</span><div class="callout-content"><strong>Pick the Length That Fits</strong>Wrong-length pike in a small room means swinging into walls and crew. Match the pike to the space. Two firefighters with 6-foot poles work tight quarters far better than one with a 12.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-11</span>
+        <div><div class="card-title">2× 10 ft Folding Ladders</div><span class="card-aka">AKA: Attic ladder, folding ladder, A-frame ladder, "the folding 10"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>10-foot folding (a.k.a. "attic" or "scuttle") ladders that collapse to a compact form for storage. Used to access attic scuttle holes, drop into basements through stairwells, and any place where a rigid extension ladder won't fit. Light enough for a single firefighter to deploy.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Folded sections:</strong> Hinged segments that fold flat.</li><li><strong>Locking hinges:</strong> Snap into the rigid position. Verify locked before climbing.</li><li><strong>Rungs and rails.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Attic ladder," "scuttle ladder," "folding ladder," "compact ladder," "the folding 10."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪺</span><div class="callout-content"><strong>Rookie Mistake — Climbing Without Verifying Hinges Locked</strong>The folding hinge has a positive lock. If you climb without confirming the lock engaged, the ladder folds under you. Push down on each hinge after deployment — it should not move. Then climb.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-12</span>
+        <div><div class="card-title">5× New York Hooks</div><span class="card-aka">AKA: NY hook, San Francisco hook, plaster hook, "the NY"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The NY hook is a specific pike-pole head design with a curved, blade-edged hook + a piercing pike. Designed in New York for breaching the heavy plaster-and-lath ceilings common in older NY tenement construction. The blade slices through plaster, the pike anchors into the wood lath, and a sharp pull brings the whole assembly down. Five on the rig means a full crew can pull ceilings simultaneously.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Curved blade hook:</strong> Sharper than a standard pike-pole hook — designed to CUT.</li><li><strong>Pike point.</strong></li><li><strong>Handle (varies, often fiberglass).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"NY hook," "New York hook," "plaster hook," "San Francisco hook" (similar design), "Boston rake" (related).</p></div>
+        <div class="callout warn"><span class="callout-icon">✂️</span><div class="callout-content"><strong>Rookie Mistake — Treating It Like a Standard Pike</strong>The NY hook is SHARPER than a standard pike. The blade can slice gear, gloves, and skin if mishandled. Store with the head protected and never carry it with the blade pointing toward yourself or a crewmate.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">REAR-13</span>
+        <div><div class="card-title">2× Ceiling Poles</div><span class="card-aka">AKA: Ceiling hook, drywall hook, pole hook, "the ceiling poles"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two additional pole-style hooks specifically configured for ceiling work — drywall pull, fire-extension checks, gentle prying. Different head design from the NY hooks (less aggressive blade, more pulling-curve). Two firefighters can pair on ceilings without taking the NYs out of service.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Drywall hook," "ceiling hook," "ceiling pole."</p></div>
+        </div>
+        <div class="callout tip"><span class="callout-icon">🧱</span><div class="callout-content"><strong>Modern vs. Old Construction</strong>Modern drywall = light material, comes down easy. Old plaster-and-lath = takes the NY hook and significant force. Match the tool to the ceiling type. Don't burn out on a drywall ceiling using the NY hook when a ceiling pole would work twice as fast.</div></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ══════════════ OFFICERS SIDE REAR ══════════════ -->
+  <section class="comp-section" id="t62-os-rear">
+    <div class="section-header">
+      <div class="section-icon">🔌</div>
+      <div><h2>Officer's Side Rear Compartment</h2><div class="sub">Road Sand · Fan · 30A Generator · 200 ft Cord · Cords · Adapters</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-01</span>
+        <div><div class="card-title">Road Sand</div><span class="card-aka">AKA: Sand, traction sand, absorbent sand, "the sand"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bagged sand for traction and small-spill absorption. Differs from salt — sand doesn't melt ice but provides immediate grip on slick surfaces and absorbs small fluid spills. Used at MVAs in winter, on slick decking, and as a backup absorbent when oil-dry runs short.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Traction sand," "road sand," "absorbent sand."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">❄️</span><div class="callout-content"><strong>Sand vs. Salt</strong>Sand = immediate traction, no melting. Salt = slower-acting, melts ice. Both have a job; don't substitute one for the other. Sand on a frozen-over scene gives you walking surface FAST.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-02</span>
+        <div><div class="card-title">Fan (Officer's Side)</div><span class="card-aka">AKA: Second fan, backup ventilation fan, "the OS fan"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A second electric ventilation fan. Same construction and use as the driver's side fan (DSRG-05). Two fans on the rig means two compartment fans can be deployed — one PPV at the entry, one ejector pulling smoke from a far window — and you have redundancy if one fails. See DSRG-05 for full parts breakdown.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Fan," "PPV fan," "ventilation fan," "smoke ejector" (depending on type), "blower."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🔄</span><div class="callout-content"><strong>Two-Fan Coordinated Ventilation</strong>Two fans aimed at the same opening = airflow conflict. Two fans set up as INTAKE + EXHAUST = coordinated airflow. Plan the airflow pattern BEFORE starting either fan.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-03</span>
+        <div><div class="card-title">30 Amp Generator (Officer's Side)</div><span class="card-aka">AKA: Second genny, backup generator, "the OS genny"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A second portable 30-amp generator. Same as DSRG-01 — gives Tower 62 two independent portable power sources so two work zones can have power simultaneously, and if one generator fails, the other keeps the scene running. See DSRG-01 for full parts breakdown.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Genny," "second generator," "backup power."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Same Rule — Outside Only</strong>Both generators are gas-powered. CO production is a deadly hazard in any enclosed space. NEVER run a generator inside, in a basement, in a garage, or with exhaust pointed at the working crew.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-04</span>
+        <div><div class="card-title">200 ft Power Cord</div><span class="card-aka">AKA: Long cord, 200-footer, feeder cable, "the OS long cord"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A second 200-foot heavy-gauge power cord. Same as DSRG-02. With two long cords and two generators, the truck can power TWO independent work zones 200 feet apart from the rig — very useful at sprawling commercial scenes or large structure fires.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Power cord," "200-footer," "feeder cable."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🪢</span><div class="callout-content"><strong>Reel It In Properly</strong>200-ft cords tangle if dumped back in the compartment. Coil onto a reel, or do figure-8 coils into the cable box. Twisted-tangle cords are useless when speed matters next time.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-05</span>
+        <div><div class="card-title">Extension Cords (Officer's Side)</div><span class="card-aka">AKA: Drop cords, jumpers, "the extension cords"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Second set of shorter heavy-duty extension cords. Same as DSRG-03. Chains power from the long 200-ft feeder out to individual lights and tools.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Drop cord," "jumper," "extension cord."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Voltage Drop Reminder</strong>Long chains of extension cord drop voltage at the tool. Use heavier gauge for longer runs.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSR-06</span>
+        <div><div class="card-title">Plug Adapters (Officer's Side)</div><span class="card-aka">AKA: Adapters, pigtails, "the OS adapters"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Backup set of plug-style adapter pigtails. Same as DSRG-04. Convert between twist-lock 30A and standard 120V duplex.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Pigtail," "adapter," "L5-30 adapter."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🔌</span><div class="callout-content"><strong>Verify Voltage Match Before Plugging In</strong>Adapter that physically fits ≠ correct voltage.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICERS SIDE REAR MIDDLE ══════════════ -->
+  <section class="comp-section" id="t62-os-rearmid">
+    <div class="section-header">
+      <div class="section-icon">🌀</div>
+      <div><h2>Officer's Side Rear Middle Compartment</h2><div class="sub">DeWalt Powered Fan · 3 Bags Utility Rope</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSRM-01</span>
+        <div><div class="card-title">DeWalt Powered Fan</div><span class="card-aka">AKA: DeWalt fan, battery fan, cordless fan, "the DeWalt"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A battery-powered DeWalt fan. Differs from the larger gas/electric ventilation fans — this is smaller, portable, and runs off the cordless tool battery platform. Used for small-area ventilation, personal cooling at rehab, drying out gear, or moving air in a confined space where dragging a generator and cord is impractical.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Fan housing &amp; blade.</strong></li><li><strong>DeWalt 20V battery slot:</strong> Shares batteries with the cordless tool platform.</li><li><strong>Speed switch (typically multi-speed).</strong></li><li><strong>Tilt/rotate base.</strong></li><li><strong>USB power output (some models):</strong> Charge a phone or radio off the fan battery.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"DeWalt fan," "battery fan," "cordless fan," "jobsite fan."</p></div>
+        <div class="callout warn"><span class="callout-icon">🔋</span><div class="callout-content"><strong>Rookie Mistake — Borrowing the Tool Batteries</strong>If the DeWalt fan is using the only fully-charged battery on the rig, you've taken cordless power away from the cordless tools. Plan battery rotation — fan runs on one pack, swap-in spares stay charged for tools.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSRM-02</span>
+        <div><div class="card-title">3× Bags Utility Rope</div><span class="card-aka">AKA: Utility rope, rope bags, "the utility ropes"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Three bags of utility rope. NOT life-safety rated — utility rope is for hauling tools up to a working position, tying off equipment, lashing, securing, dragging hose lines, and any general-purpose rope use that doesn't involve supporting a human body. Pre-bagged means deploy-fast: pull out, throw the bag, rope feeds out clean.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Rope:</strong> Synthetic (typically polypropylene or nylon), various diameters.</li><li><strong>Bag:</strong> Stuff sack with drawstring closure.</li><li><strong>Working end secured at the top of the bag</strong> so it doesn't disappear into the coil.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Utility line," "utility rope," "tag line," "haul line," "the ropes."</p></div>
+        <div class="callout danger"><span class="callout-icon">🆘</span><div class="callout-content"><strong>Rookie Mistake — Using Utility Rope for Life Safety</strong>Utility rope is NOT rated for human body weight in rescue operations. Using it to lower a victim, lower a firefighter, or for any rope rescue = catastrophic failure waiting to happen. Life-safety rope (kernmantle, NFPA-rated) is a different product. Know which is which BEFORE the moment of crisis.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICERS SIDE MIDDLE — IRONS ══════════════ -->
+  <section class="comp-section" id="t62-os-middle">
+    <div class="section-header">
+      <div class="section-icon">🪓</div>
+      <div><h2>Officer's Side Middle Compartment — The Irons</h2><div class="sub">Axes · Halligans · Sledges · Shovels · K-tool · Bolt Cutters</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-01</span>
+        <div><div class="card-title">2× Flat Head Axes</div><span class="card-aka">AKA: Flat axe, FH axe, marrying axe, "the flat-head"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two fire-service axes with one cutting bit and one flat striking face. The cutting edge chops; the flat poll drives a Halligan. Marries with the Halligan to form "the irons" — the most basic forcible-entry set in the American fire service. Two on the rig means a full crew can pair multiple sets.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cutting bit / edge:</strong> SHARP. Keep it sharp.</li><li><strong>Flat poll / striking face:</strong> Hardened steel.</li><li><strong>Head / cheek.</strong></li><li><strong>Handle:</strong> Fiberglass or hickory.</li><li><strong>Grip end / swell.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Flat-head axe," "FH axe," "marrying axe," "irons axe," "fireman's axe."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪓</span><div class="callout-content"><strong>Rookie Mistake — Dull Axe Deflects</strong>Dull edge glances off the target and into your leg. Sharp edges bite where you swing. Sharpen between calls. A dull axe is a dangerous axe.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-02</span>
+        <div><div class="card-title">2× Halligans</div><span class="card-aka">AKA: Halligan bar, hooligan tool, the bar, "the Halligan"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two Halligan bars — the most iconic forcible-entry tool in the American fire service. One-piece forged bar with an adze (chisel), a pointed pick, and a forked claw at the ends. Forces doors, windows, locks, padlocks, gas valves, manholes, just about anything that doesn't want to open. Marries with the flat-head axe to make "the irons." Two on this rig means two crews can each have a complete set.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Adze end:</strong> Wide curved blade for prying doors at the lock side.</li><li><strong>Pick:</strong> Sharp point 90° to the adze — drives into locks and tight spots.</li><li><strong>Fork / claw:</strong> Two-pronged forked end opposite — pulls hardware, pries at hinges.</li><li><strong>Shaft / throat / shoulder:</strong> The bar between the heads — your lever and grip surface.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Halligan bar," "the bar," "hooligan tool," "Pro-Bar."</p></div>
+        <div class="callout danger"><span class="callout-icon">🚪</span><div class="callout-content"><strong>Rookie Mistake — Forcing the Wrong Way</strong>Most American residential doors swing INWARD. You drive the adze between door and jamb on the lock side and force AGAINST the swing. Forcing outward on an inward-opening door wastes time and bends metal without opening anything. Know which way the door swings BEFORE you commit. Hinges visible = outward swing. No hinges = inward.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-03</span>
+        <div><div class="card-title">2× Pick Axes</div><span class="card-aka">AKA: Pickhead axe, PH axe, fire axe, truckie's axe</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Axes with a cutting bit on one side and a sharp PICK on the other. The pick punctures and pulls; great for hooking sheet metal, prying roof decking, overhauling, and pulling ceilings. Cutting bit chops like a flat-head. Two on the rig.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cutting bit.</strong></li><li><strong>Pick point.</strong></li><li><strong>Head / cheek.</strong></li><li><strong>Handle.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Pickhead axe," "PH axe," "pick axe," "truckies' axe," "fire axe."</p></div>
+        <div class="callout danger"><span class="callout-icon">🎯</span><div class="callout-content"><strong>Rookie Mistake — Pick End Unsheathed</strong>The pick is sharp. Probies clipping it to their gear with the pick exposed have stabbed themselves and crewmates. Sheath it. Store it pick-down. Mind the pick every time you set it down.</div></div>
+        <div class="callout danger"><span class="callout-icon">⛔</span><div class="callout-content"><strong>NEVER Strike a Halligan with the Pick</strong>The pick is brittle. Strike a Halligan with the FLAT-HEAD only. A snapped pick becomes a projectile.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-04</span>
+        <div><div class="card-title">2× Sledgehammers</div><span class="card-aka">AKA: Sledge, mule, persuader, "the sledge"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Heavy two-handed striking hammers. 8 or 10 lb typical. Drive Halligans into stubborn doors, break masonry, pulverize locks. Slower swing than an axe but vastly more striking energy. Two on the rig so two sets of irons can work in parallel.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Head:</strong> Heavy steel block, two flat striking faces.</li><li><strong>Handle:</strong> Long fiberglass or wood haft.</li><li><strong>Grip:</strong> Textured at the swinging end.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Sledge," "mule," "persuader," "the big hammer."</p></div>
+        <div class="callout danger"><span class="callout-icon">🦵</span><div class="callout-content"><strong>Rookie Mistake — Striker Positioning</strong>When two firefighters work the irons together, the Halligan operator's head is right next to the striker's swing. Miss-strikes happen. Striker stands offset; Halligan operator's face turned AWAY. Helmets and visors DOWN.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-05</span>
+        <div><div class="card-title">2× Shovels</div><span class="card-aka">AKA: Spades, scoops, "the shovels"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Standard shovels for scooping saturated absorbent, moving debris, clearing snow at scene access, digging out stuck wheels, and any task where you need to move material by hand. Two on the rig — square-point and round-point typical.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Spade" (pointed), "scoop" (flat), "snow shovel."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Sparks on Hazmat Absorbent</strong>Steel shovels strike asphalt and rock = sparks. Sparks + fuel-soaked absorbent = ignition. Use the non-sparking shovel in the spill kit if you're shoveling flammable absorbent.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-06</span>
+        <div><div class="card-title">K Tool</div><span class="card-aka">AKA: K-tool, lock-pulling tool, "the K"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A small forged-steel tool designed specifically to pull the cylindrical lock mechanism out of a residential door. The K-tool's teeth bite into the lock face; you set the Halligan's adze into the K-tool's slot; the Halligan provides leverage; the lock cylinder pulls out cleanly. Faster and quieter than smashing the door — and it leaves the door reasonably intact for the homeowner afterward.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>K-shaped body:</strong> Hardened steel.</li><li><strong>Lock-biting teeth:</strong> Grip the lock face when forced in.</li><li><strong>Slot:</strong> Accepts the Halligan adze.</li><li><strong>Often carried with a related "A-tool" or "R-tool"</strong> for difficult locks.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"K-tool," "lock-pulling tool," "K-puller," "the K."</p></div>
+        <div class="callout warn"><span class="callout-icon">🔑</span><div class="callout-content"><strong>Rookie Mistake — Using the K-Tool on a Deadbolt Throw</strong>The K-tool pulls the lock CYLINDER. It doesn't help if the deadbolt is thrown into the strike plate. Read the lock — if the bolt is extended, the K-tool pull doesn't open the door, you still need to defeat the bolt mechanism. Train on the actual technique before relying on it in real-time.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSM-07</span>
+        <div><div class="card-title">Bolt Cutters</div><span class="card-aka">AKA: Bolt cutters, padlock cutters, "the cutters"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Standard heavy-duty bolt cutters. Long compound-leverage handles, hardened steel jaws. Cuts padlocks, chains, fencing, rebar (up to a point), and bolted connections. Faster than a saw for soft steel padlock shackles and chain. Doesn't throw sparks.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Hardened cutting jaws:</strong> Look for chipping or rolling — that's the failure mode.</li><li><strong>Pivot pin.</strong></li><li><strong>Compound leverage linkage:</strong> Multiplies hand force.</li><li><strong>Long handles with grips.</strong></li><li><strong>Adjustment bolt (some models):</strong> Sets jaw alignment.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Bolt cutters," "padlock cutters," "chain cutters," "the cutters."</p></div>
+        <div class="callout warn"><span class="callout-icon">🔗</span><div class="callout-content"><strong>Rookie Mistake — Cutting Hardened Shackles</strong>Bolt cutters work on softer steel padlock shackles. Hardened-steel padlocks (American Lock 700 series, similar) will damage the jaws before they cut. If the shackle is case-hardened, switch to a saw with the right blade. Don't ruin the cutters trying to brute-force a hardened lock.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICERS SIDE FRONT MIDDLE — HEAVY TOOLS ══════════════ -->
+  <section class="comp-section" id="t62-os-frontmid">
+    <div class="section-header">
+      <div class="section-icon">⚒️</div>
+      <div><h2>Officer's Side Front Middle Compartment — Heavy Tools</h2><div class="sub">Closet Pikes · Fire Maul · Pig Axe · Pry Bars · Large Bolt Cutters · Scene Light</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-01</span>
+        <div><div class="card-title">2× Closet Pikes (D-Handle)</div><span class="card-aka">AKA: Closet hook, drywall hook, D-handle pike, "the closet pikes"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Short-handled pike poles built for tight quarters — closets, bathrooms, hallways. D-HANDLE grip on the butt end (the D-shaped loop) gives you a positive grip when pulling DOWN on the hook. Used to pull ceilings and check for fire extension where a 6 or 8-footer can't swing.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Pike + hook head.</strong></li><li><strong>Short handle (typically 2–4 ft).</strong></li><li><strong>D-handle:</strong> The looped grip at the butt end.</li><li><strong>Ferrule.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Closet hook," "drywall hook," "D-handle pike," "short hook," "Boston rake" (similar design).</p></div>
+        <div class="callout warn"><span class="callout-icon">⛓️</span><div class="callout-content"><strong>Rookie Mistake — Pulling Straight Down on Your Spine</strong>Pull diagonally, rotate hips, not back. D-handle is short — your face is close to whatever falls. Stand to the side of the pull.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-02</span>
+        <div><div class="card-title">Fire Maul (Sledge with Wedge)</div><span class="card-aka">AKA: Maul, wedge maul, splitting maul, "the maul"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A heavy hammer with a sledge face on ONE side and a wedge (axe-like blade) on the other. The sledge drives a Halligan or breaches walls; the wedge end splits wood and pries. More versatile than a plain sledge for forcible entry — the wedge bites into door edges and helps pry them open.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Sledge face (one side of head).</strong></li><li><strong>Wedge / splitting blade (other side).</strong></li><li><strong>Head / cheek.</strong></li><li><strong>Handle.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Fire maul," "maul," "splitting maul," "wedge maul," "Pulaski" (related fire-service tool, slightly different)."</p></div>
+        <div class="callout warn"><span class="callout-icon">⚒️</span><div class="callout-content"><strong>Rookie Mistake — Wrong End Forward</strong>Two-faced tools demand attention. Striking with the wedge when you wanted the sledge can chip the wedge or glance off. Know which face you're swinging EVERY time.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-03</span>
+        <div><div class="card-title">Pig Axe (Flat-Head with Pick)</div><span class="card-aka">AKA: Pig, pig tool, pick-axe combo, "the pig"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A specialty axe with a flat-head striking face on one side and a pick on the other. Combines functions of a flat-head axe (driving Halligans, breaching) with a pick axe (puncturing, prying, ripping sheet metal). Less common than the standard FH or PH axes; this design has its devotees in older urban fire service. Useful when you only want to carry ONE tool but need both functions.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Flat-head striking face.</strong></li><li><strong>Pick point on opposite side.</strong></li><li><strong>Head / cheek.</strong></li><li><strong>Handle.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Pig," "pig axe," "pick-and-poll axe," "pick-flat combo."</p></div>
+        <div class="callout warn"><span class="callout-icon">🐷</span><div class="callout-content"><strong>Rookie Mistake — Don't Strike the Pick End on a Halligan</strong>The pick is brittle. Only the flat face strikes the Halligan. Same rule as the pick-head axe.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-04</span>
+        <div><div class="card-title">Pry Bar</div><span class="card-aka">AKA: Crowbar, wrecking bar, "the pry bar"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A standard pry bar — typically 18–24 inches of forged steel with a flat chisel end and a hooked nail-pulling claw at the other. Used for prying open doors, popping windows, removing trim, lifting heavy objects a small distance. Smaller than a Halligan but easier to get into tight spaces.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Chisel / pry end:</strong> Slightly bent, for getting purchase under edges.</li><li><strong>Claw end:</strong> V-notched for pulling nails.</li><li><strong>Shaft:</strong> Hex or round forged steel.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Crowbar," "wrecking bar," "claw bar," "pry bar."</p></div>
+        <div class="callout warn"><span class="callout-icon">🩺</span><div class="callout-content"><strong>Rookie Mistake — Wrong Tool for the Job</strong>Pry bar is GREAT for trim, small panels, light forcible entry. NOT a Halligan substitute on a heavy commercial door. Match the tool to the size of the job.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-05</span>
+        <div><div class="card-title">Long Pry Bar</div><span class="card-aka">AKA: Long crowbar, demolition bar, "the long pry"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An extended pry bar (typically 36–60 inches). More leverage than the standard pry bar — handles bigger jobs: removing heavy nailed-on boards, prying open jammed truck cabs, levering large objects. Long handles = more force at the working end, but less control in tight spaces.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Long crowbar," "demolition bar," "wrecker," "the long pry."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">💪</span><div class="callout-content"><strong>Rookie Mistake — Overloading the Bar</strong>Long bars give massive mechanical advantage. Use too much force on something that won't move and the bar bends, the fulcrum slips, or the bar snaps. Steady pressure, not panic-yanking. If it doesn't move, change the angle or switch tools.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-06</span>
+        <div><div class="card-title">Large Bolt Cutters</div><span class="card-aka">AKA: Big bolt cutters, heavy cutters, 48-inch cutters, "the big cutters"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Larger bolt cutters than the standard pair in the Irons compartment. 36 or 48 inches of handle length. The extra leverage cuts heavier chain, larger padlock shackles, and thicker rebar. Two-handed operation; sometimes a two-person operation on the heaviest stock.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Big bolt cutters," "heavy bolt cutters," "48-inch cutters," "the big ones."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🩸</span><div class="callout-content"><strong>Rookie Mistake — Standing Where the Cut Piece Will Fly</strong>A chain link cut under tension releases stored energy. The cut end can swing or fly. Stand offset, anticipate where the cut piece will go, and keep your face turned away.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM-07</span>
+        <div><div class="card-title">Large Light (Scene Lighting)</div><span class="card-aka">AKA: Scene light, work light, flood light, "the big light"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A large portable scene-lighting fixture — typically a multi-head telescoping work light or a high-output LED floodlight. Set it up to illuminate the work area at night incidents, overhaul scenes, extrications, or any scene where the rig-mounted lights don't reach. Runs off generator/inverter power.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Light head(s):</strong> Multiple LED or halogen heads for area coverage.</li><li><strong>Telescoping stand or tripod base.</strong></li><li><strong>Power cord with grounded plug.</strong></li><li><strong>Switches per head.</strong></li><li><strong>Aiming joints.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Scene light," "work light," "flood light," "Akron" (related portable scene light), "tower light" (different — refers to the rig-mounted boom)."</p></div>
+        <div class="callout warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Tripping Crew on the Cord</strong>Light cords across a working scene cause falls. Route cords against walls, tape them down across walking paths, or run them over the work area instead of through it.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICERS SIDE FRONT 2 MIDDLE — SALVAGE ══════════════ -->
+  <section class="comp-section" id="t62-os-frontmid2">
+    <div class="section-header">
+      <div class="section-icon">🧹</div>
+      <div><h2>Officer's Side Front 2 Middle Compartment — Salvage</h2><div class="sub">Tarps · Wet Vac · Portable Lights · Tool Box</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM2-01</span>
+        <div><div class="card-title">Tarps</div><span class="card-aka">AKA: Salvage covers, salvage tarps, "the tarps"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Heavy waterproof covers used to protect victim property from water damage during suppression and overhaul. Throw tarps over furniture, electronics, family photos BEFORE water hits them. Also used as ground covers for tool layout, patient packaging, and extrication staging. Note: the source document writes "Traps" — this is the salvage covers.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Tarp body:</strong> Vinyl or coated canvas, waterproof.</li><li><strong>Grommets at corners and edges.</strong></li><li><strong>Hemmed reinforced edges.</strong></li><li><strong>Folded for fast deployment.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Salvage covers," "salvage tarps," "covers," "ground cover." (The document's "Traps" is a typo for "Tarps.")</p></div>
+        <div class="callout warn"><span class="callout-icon">💧</span><div class="callout-content"><strong>Rookie Mistake — Deploying Too Late</strong>Best time to throw salvage covers is BEFORE the engine company opens the line. Train yourself to anticipate water — second you see flame, eyes start looking for what to cover.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM2-02</span>
+        <div><div class="card-title">Wet Vac</div><span class="card-aka">AKA: Shop vac, wet/dry vac, water vac, "the wet vac"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A heavy-duty wet/dry vacuum used for water mitigation — pulling standing water out of basements after burst pipes, fire suppression runoff, or flooded structures. Salvage and customer-service tool — the faster water leaves the structure, the less secondary damage.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Tank / canister:</strong> Holds water — empty before it stalls the motor.</li><li><strong>Motor head / lid:</strong> Contains the motor and float shutoff.</li><li><strong>Hose, wands, attachments.</strong></li><li><strong>Float ball / shutoff:</strong> Prevents water from entering the motor.</li><li><strong>Power cord.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Shop vac," "wet/dry vac," "water vac."</p></div>
+        <div class="callout warn"><span class="callout-icon">🛢️</span><div class="callout-content"><strong>Rookie Mistake — Vacuuming Hazmat</strong>Wet vac is for water. NOT fuel, oil, sewage, or unknown chemicals. Smell and look first.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM2-03</span>
+        <div><div class="card-title">Portable Lights</div><span class="card-aka">AKA: Hand lights, work lights, portable scene lights, "the portables"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Smaller portable lights — handheld or compact stand-mount lights. Used for individual task lighting (overhaul work in a single room, illuminating a specific tool area, helping read information at night). Less coverage than the big scene light; faster to deploy.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Portable lights," "hand lights," "task lights," "work lights."</p></div>
+        </div>
+        <div class="callout tip"><span class="callout-icon">🔦</span><div class="callout-content"><strong>Charge State Matters</strong>If they're rechargeable, verify they take a charge and hold it. Portable lights that die after ten minutes are useless when you needed two hours.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSFM2-04</span>
+        <div><div class="card-title">Tool Box</div><span class="card-aka">AKA: Tools, hand tools, mechanical kit, "the toolbox"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A general-purpose toolbox containing pliers, screwdrivers, hammer, channel locks, vise grips, tape measure, utility knife, and the everyday mechanical tools that don't have a dedicated home elsewhere. The Squad and the Tower both turn into mobile workshops more often than people realize — a Phillips screwdriver solves problems the spreaders can't.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (typical contents)</div><ul><li><strong>Pliers (needle-nose, lineman's, slip-joint).</strong></li><li><strong>Channel locks.</strong></li><li><strong>Vise grips.</strong></li><li><strong>Screwdrivers (Phillips, slotted).</strong></li><li><strong>Tape measure.</strong></li><li><strong>Utility knife.</strong></li><li><strong>Hammer.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Toolbox," "general tools," "hand tools."</p></div>
+        <div class="callout warn"><span class="callout-icon">🧹</span><div class="callout-content"><strong>Rookie Mistake — Tools Don't Walk Home With You</strong>Standard pliers and screwdrivers walk off easily. They stay on the rig. Take ten extra seconds at end-of-call to return each tool to the box. The next crew is counting on you.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICERS SIDE FRONT — EXTINGUISHERS ══════════════ -->
+  <section class="comp-section" id="t62-os-front">
+    <div class="section-header">
+      <div class="section-icon">🧯</div>
+      <div><h2>Officer's Side Front Compartment — Extinguishers &amp; Hoist</h2><div class="sub">Hose Hoist · Silver Bullet · Pump Can · CO2 · ABC</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSF-01</span>
+        <div><div class="card-title">Hose Hoist</div><span class="card-aka">AKA: Hoist rope, hose rope, hauling rope, "the hoist"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A rope and bag used for hoisting hose lines (and other equipment) up to upper floors or to the aerial bucket. The rope is dropped/lowered from the upper position; the crew at ground level ties on the hose end with a hoisting knot, then the upper crew pulls the line up. Standard truck-company technique for taking a working line up the side of a building when the ladder/stairwell isn't the right path.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Rope:</strong> Strong enough to support a charged hose line.</li><li><strong>Bag:</strong> So the rope deploys clean without tangles.</li><li><strong>Often paired with a specific hoist knot</strong> (clove hitch + half hitch is common).</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Hoist rope," "hose rope," "hauling rope," "tagline" (related).</p></div>
+        <div class="callout danger"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Rookie Mistake — Hoisting With a Sloppy Knot</strong>A bad knot drops a charged hose line on whoever is below. The hoist knot must be tied right and verified. If you don't know the knot cold, ASK before you hoist. Charged lines weigh hundreds of pounds; failure is catastrophic.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSF-02</span>
+        <div><div class="card-title">Silver Bullet — Pressurized Water Extinguisher</div><span class="card-aka">AKA: Silver bullet, water can, pressurized water, "the can"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 2½-gallon pressurized water extinguisher in a shiny stainless-steel canister. The "Silver Bullet" nickname comes from the polished finish. Class A only — used for small incipient fires of ordinary combustibles (wood, paper, cloth, garbage). Carry it ahead of the hose line on small/contained fires, into small structures where stretching a line is overkill, or use it during overhaul to hit small spots.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Stainless cylinder body.</strong></li><li><strong>Pressure gauge:</strong> Green zone good, red zone service.</li><li><strong>Pull pin + tamper seal:</strong> Pin pulls; seal must be intact pre-shift.</li><li><strong>Discharge lever / trigger handle.</strong></li><li><strong>Discharge hose &amp; nozzle.</strong></li><li><strong>Carry handle.</strong></li><li><strong>Refill cap.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Silver bullet," "water can," "pressurized water extinguisher," "2½ gallon," "the can," "PWE."</p></div>
+        <div class="callout danger"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Using Water on a Class C Fire</strong>The Silver Bullet is water — Class A ONLY. Water on energized electrical equipment is a conduction path to YOU. Water on a Class B (flammable liquid) spreads the fuel. If the fire is anything but ordinary combustibles, switch to CO2 or ABC.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSF-03</span>
+        <div><div class="card-title">Pump Can</div><span class="card-aka">AKA: Pump tank, garden sprayer, water pump, "the pump can"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A manual hand-pump water sprayer — like a heavy-duty garden sprayer. Operator pumps the handle to pressurize the can, then sprays water through a wand. Lower capacity than the Silver Bullet but mechanically simpler — won't leak pressure if the gauge fails. Used for small grass/brush fires, mop-up after extinguishment, and wetting down overhaul areas.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Tank (smaller than Silver Bullet, typically 1–2 gal).</strong></li><li><strong>Pump handle on top:</strong> Pump to pressurize.</li><li><strong>Wand / spray nozzle.</strong></li><li><strong>Trigger or thumb-valve.</strong></li><li><strong>Shoulder strap.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Pump tank," "Indian pump" (older term, refers to similar shoulder-pack design), "back pump," "pump can."</p></div>
+        <div class="callout warn"><span class="callout-icon">💪</span><div class="callout-content"><strong>Rookie Mistake — Trying to Pressurize While Spraying</strong>Some pump cans require you to pump first, then spray. Trying to do both at once produces a weak intermittent stream and tires you out. Pump fully, spray fully, repeat.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSF-04</span>
+        <div><div class="card-title">CO2 Extinguisher</div><span class="card-aka">AKA: CO2 can, CO2 extinguisher, "the CO2"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A carbon-dioxide extinguisher — pressurized liquid CO2 in a heavy steel cylinder. Discharges as a cold cloud/snow that smothers the fire by displacing oxygen. Class B and Class C — flammable liquids and ENERGIZED electrical. Big advantage: no residue. Leaves no chemical mess on electrical equipment. Big disadvantage: short range (3–8 feet) and the cold can frostbite skin.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Heavy steel cylinder (CO2 is stored at high pressure).</strong></li><li><strong>Pull pin + tamper seal.</strong></li><li><strong>Discharge horn (the flared funnel at the end):</strong> Directs the CO2 cloud. GET COLD — frost forms instantly.</li><li><strong>Squeeze handle / trigger.</strong></li><li><strong>Carry handle.</strong></li><li><strong>No pressure gauge on most CO2 units</strong> — they're WEIGHED instead. Pre-shift: check the weight against the date-of-fill stamp.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"CO2," "CO2 can," "snow can," "BC extinguisher" (Class rating)."</p></div>
+        <div class="callout danger"><span class="callout-icon">🧊</span><div class="callout-content"><strong>Rookie Mistake — Bare Hand on the Horn</strong>The discharge horn gets COLD — instant frostbite cold. Hold the carry handle, never the horn. Probies who grab the horn for "better aim" leave skin behind.</div></div>
+        <div class="callout warn"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Weigh Don't Read</strong>CO2 extinguishers don't have a gauge. They're verified by weight — full vs. tare weight stamped on the cylinder. Weigh during annual service. A leaking CO2 can looks fine but has no agent.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">OSF-05</span>
+        <div><div class="card-title">ABC Extinguisher</div><span class="card-aka">AKA: ABC, dry chem, multi-purpose, "the ABC"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An ABC dry chemical extinguisher — monoammonium phosphate powder propelled by nitrogen. Rated for Class A (ordinary combustibles), B (flammable liquids), and C (electrical). Most versatile of the portable extinguishers — covers nearly any common fire type. Big disadvantage: leaves a sticky corrosive residue that ruins electrical equipment and is hard to clean.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cylinder body (typically red, painted steel).</strong></li><li><strong>Pressure gauge:</strong> Green zone good.</li><li><strong>Pull pin + tamper seal.</strong></li><li><strong>Discharge handle.</strong></li><li><strong>Discharge hose + nozzle.</strong></li><li><strong>Carry handle.</strong></li><li><strong>Class label (A, B, C ratings + capacity).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"ABC," "dry chem," "DC," "multi-purpose extinguisher," "Purple-K" (different chemistry — that's K-powder, BC only)."</p></div>
+        <div class="callout tip"><span class="callout-icon">🅿️</span><div class="callout-content"><strong>P.A.S.S. Technique</strong>Pull pin · Aim at the base of the fire · Squeeze the handle · Sweep side to side. Aim at the BASE — flames don't ignite, the FUEL ignites. If you're spraying flames instead of fuel, you're wasting agent.</div></div>
+        <div class="callout warn"><span class="callout-icon">🧹</span><div class="callout-content"><strong>Residue Cleanup</strong>ABC dry chem ruins electronics, leaves a corrosive film on metal, and is messy. If you have a choice on a Class C fire with valuable electronics, use CO2 instead.</div></div>
+      </div>
+    </div>
+
+  </section>
+  <!-- ══════════════ INSIDE CAB ══════════════ -->
+  <section class="comp-section" id="t62-cab">
+    <div class="section-header">
+      <div class="section-icon">🚐</div>
+      <div><h2>Inside Cab Compartment</h2><div class="sub">Caution Tape · Batteries · Water · AED · Sterile/PPE Box · Spare Mask</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-01</span>
+        <div><div class="card-title">Caution Tape</div><span class="card-aka">AKA: Yellow tape, scene tape, fire-line tape, "the tape"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Standard plastic warning tape — yellow with "CAUTION" or red with "FIRE LINE — DO NOT CROSS." Used for scene perimeter control, keeping the public off the operating area, marking hazards (downed wires, unstable structures), and segmenting hot/warm/cold zones at hazmat or technical-rescue scenes.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Yellow tape," "caution tape," "scene tape," "fire-line tape," "bunting" (older)."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🚧</span><div class="callout-content"><strong>Rookie Mistake — Putting It Up Too Late</strong>Crowds gather fast. By the time you decide to set a perimeter, civilians are already inside the line. Set the tape EARLY and FAR OUT. Easier to shrink a perimeter than to push the public back.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-02</span>
+        <div><div class="card-title">Spare Batteries</div><span class="card-aka">AKA: Spares, backup batteries, "the spares"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Reserve batteries for radios, flashlights, the gas detector, headlamps, and other portable electronics. Stocked in the cab so a crew member doesn't have to leave their post to find power when their handheld dies.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Spares," "extras," "backup batteries."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">🔋</span><div class="callout-content"><strong>Rookie Mistake — Old Spares Sitting at Zero</strong>A spare that's been on the shelf six months has self-discharged. Pre-shift: verify spares are charged. A dead spare is a useless spare.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-03</span>
+        <div><div class="card-title">Water Bottles</div><span class="card-aka">AKA: Water, hydration, "the bottles"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Sealed bottled water for crew hydration. On long calls, especially summer fire operations, dehydration is a real and disabling threat. Cardiac events on the fireground are the leading cause of LODD (Line of Duty Death) for firefighters — heat stress is a major contributor. Drink water. Often. Don't be a hero about it.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Water," "hydration," "bottles."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">💧</span><div class="callout-content"><strong>Rookie Mistake — Refusing Water</strong>Probies who think they need to "tough it out" without water are the probies who collapse in rehab. Drink BEFORE you're thirsty, during work cycles, and AT rehab. Hydration is a tactical advantage, not a weakness.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-04</span>
+        <div><div class="card-title">AED — Automated External Defibrillator</div><span class="card-aka">AKA: AED, defib, shock box, "the AED"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An automated external defibrillator. Apply the pads to the patient's chest, the AED analyzes the rhythm, advises shock if V-fib or pulseless V-tach, and delivers the shock when you press the button. EVERY cardiac arrest gets the AED until ALS arrives. Survival drops 7–10% for every minute of delay between collapse and shock — SPEED matters.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Main unit.</strong></li><li><strong>Defibrillation pads (adult &amp; pediatric):</strong> Verify in-date.</li><li><strong>Battery:</strong> Sealed with expiration date.</li><li><strong>Status indicator (green ready / red service):</strong> Verified at every rig check.</li><li><strong>Speaker:</strong> Voice prompts.</li><li><strong>Pediatric switch (some units):</strong> Reduces energy for kids under 8 / 25 kg.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"AED," "defib," "shock box," "Zoll," "LIFEPAK," "Philips" (brands)."</p></div>
+        <div class="callout danger"><span class="callout-icon">⏱️</span><div class="callout-content"><strong>Rookie Mistake — Hesitating</strong>The moment cardiac arrest is confirmed, AED comes out, pads go on. Don't wait for the medic. Don't worry about looking foolish if the device says "no shock advised." EVERY MINUTE without defibrillation in a shockable rhythm costs the patient 7–10% chance of survival. MOVE.</div></div>
+        <div class="callout danger"><span class="callout-icon">💧</span><div class="callout-content"><strong>Dry the Chest First</strong>Wet chest = electrical path across the surface instead of through the heart, AND it can shock bystanders. Towel the patient dry — sweat, water, blood, vomit. Hair too thick? Razor with the AED. Bare and DRY.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-05</span>
+        <div><div class="card-title">Clear Plastic Box — Sterile Gloves, N95, Eye Pro, Gowns, Bio Bags</div><span class="card-aka">AKA: PPE box, sterile box, BSI box, EMS PPE</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A clear plastic bin holding BSI (Body Substance Isolation) and respiratory-PPE supplies for EMS calls and any incident with body-fluid exposure risk. Built so contents are visible without opening — saves time when you need to grab gloves and a mask before stepping out.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (contents)</div><ul><li><strong>Extra sterile (or non-sterile exam) nitrile gloves:</strong> Multiple sizes.</li><li><strong>N95 particulate masks:</strong> Sized small/medium/large.</li><li><strong>Eye protection:</strong> Wraparound safety glasses or goggles.</li><li><strong>Disposable gowns:</strong> For full-coverage isolation.</li><li><strong>Bio bags:</strong> Red bio-waste bags for contaminated material disposal.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"PPE box," "BSI box," "EMS box," "sterile box," "iso box."</p></div>
+        <div class="callout danger"><span class="callout-icon">🦠</span><div class="callout-content"><strong>Rookie Mistake — Skipping PPE Because the Call "Looks Routine"</strong>You don't know what infections the patient has. Hepatitis B, HIV, TB, COVID — none of them announce themselves at the door. Gloves on EVERY patient contact. Mask on respiratory complaints. Don't gamble with the next 30 years of your career.</div></div>
+        <div class="callout warn"><span class="callout-icon">🧔</span><div class="callout-content"><strong>N95 Requires Clean-Shaven Skin</strong>Beard stubble breaks the seal. Just like your SCBA. Both straps, pinched nose clip, inhale-test.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">CAB-06</span>
+        <div><div class="card-title">Extra SCBA Mask — Size M</div><span class="card-aka">AKA: Spare facepiece, M mask, swap mask, "the spare M"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A spare SCBA facepiece, size Medium. Used for swap-out if a primary mask is damaged, contaminated, or fails seal-check; OR if a crew member needs a Medium and didn't get one assigned. Glen Ellyn standard SCBA platform is MSA G1 — the spare must match.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts (see SCBA Study Guide for detail)</div><ul><li><strong>Facepiece body (rubber/silicone).</strong></li><li><strong>Lens (polycarbonate).</strong></li><li><strong>Inhalation valve.</strong></li><li><strong>Exhalation valve.</strong></li><li><strong>Head harness with five-point adjustment.</strong></li><li><strong>Regulator connection port.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Spare mask," "spare facepiece," "M mask," "MSA G1 mask."</p></div>
+        <div class="callout warn"><span class="callout-icon">📏</span><div class="callout-content"><strong>Rookie Mistake — Forcing a Bad Fit</strong>If you're a size Large or Small and the only spare is Medium, your seal will fail and you'll be sucking smoke. Mask size is fitted to YOU. Spare Medium is for someone who is Medium. If you're sized differently, your individual mask stays with you.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ TOP OF TOWER ══════════════ -->
+  <section class="comp-section" id="t62-top">
+    <div class="section-header">
+      <div class="section-icon">🪜</div>
+      <div><h2>Top of Tower</h2><div class="sub">NY Hook · Double-Hook Roof Ladder</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">TOP-01</span>
+        <div><div class="card-title">New York Hook (Top of Tower)</div><span class="card-aka">AKA: NY hook, top-mounted hook, "the topside hook"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An NY hook mounted on top of the tower — accessible from the rear hose bed and the bucket. Placed up top so a firefighter doesn't have to descend to the side compartment when they need a hook in the bucket or on the bedladder. Same construction as the rear-compartment NY hooks (REAR-12) but positioned for fast access from aloft.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"NY hook," "topside hook," "ridge hook" (informal)."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">⚓</span><div class="callout-content"><strong>Rookie Mistake — Hook Not Secured for Travel</strong>A loose hook on top of the tower can shift, fall, or strike crew during transit. Verify it's clipped/strapped in BEFORE the rig moves. Tools falling off moving fire apparatus are a recurring hazard.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">TOP-02</span>
+        <div><div class="card-title">Roof Ladder with Hooks on Both Ends</div><span class="card-aka">AKA: Double-hook roof ladder, two-hook ladder, "the double-hook"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A roof ladder with retractable HOOKS on BOTH ends. Most roof ladders have hooks only at the tip; this one is built so it can be used in either orientation OR locked into specialized positions like a bridge across a gap, or extended from the bucket onto a roof surface to provide a stable working platform. Particularly useful for tower work where the bucket is positioned next to a roof and the firefighter steps from bucket onto the ladder onto the roof.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Two rails + rungs.</strong></li><li><strong>Retractable hooks at BOTH ends:</strong> Either end can grip a ridge.</li><li><strong>Butt spurs at both ends or center-mount (varies).</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Double-hook roof ladder," "two-hook ladder," "bridging ladder" (when used to bridge gaps)."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪝</span><div class="callout-content"><strong>Rookie Mistake — Hooks Not Set on the Working End</strong>Both ends have hooks — you have to deliberately set the hooks on whichever end is anchoring. Probies have flipped this ladder and forgotten to engage the working-end hooks because they assumed it was set. CHECK both ends every time before climbing or transferring weight.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ COFFIN COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-coffin">
+    <div class="section-header">
+      <div class="section-icon">🚑</div>
+      <div><h2>Coffin Compartment</h2><div class="sub">Stokes Basket</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">COF-01</span>
+        <div><div class="card-title">Stokes Basket</div><span class="card-aka">AKA: Stokes, rescue basket, basket litter, "the Stokes"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A rigid basket-style patient litter — wire-cage or rotomolded plastic. Used for moving patients over rough terrain, through tight spaces, up/down rope rescue, off rooftops, out of basements, AND — critically for the Tower — for lowering patients FROM the bucket to the ground via the aerial. The Stokes locks into the bucket so a patient can be packaged, lifted, and brought down without a separate rope rescue rig.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Basket / shell:</strong> Wire-cage or plastic rotomold.</li><li><strong>Rails / runners:</strong> Reinforced frame the rescuers grip.</li><li><strong>Tie-down straps / spider:</strong> Multi-point harness over patient.</li><li><strong>Bridle / lift attachment points:</strong> Rated for rope rigging.</li><li><strong>Foot plate:</strong> Solid end so the patient doesn't slide out.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Stokes," "Stokes basket," "rescue basket," "basket litter," "Junkin basket."</p></div>
+        <div class="callout danger"><span class="callout-icon">🪦</span><div class="callout-content"><strong>Rookie Mistake — Loose Patient Straps</strong>A patient not strapped firmly will slide when the Stokes tilts during lifting or rope work. People have died falling out of Stokes baskets. Cross-strap pattern, snug, foot stop. If patient is unconscious, check twice.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ BUCKET CONTENTS ══════════════ -->
+  <section class="comp-section" id="t62-bucket">
+    <div class="section-header">
+      <div class="section-icon">🪣</div>
+      <div><h2>Bucket Contents</h2><div class="sub">Pick Axe · Master Stream Nozzle · Halligan</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKT-01</span>
+        <div><div class="card-title">Pick Axe (Bucket)</div><span class="card-aka">AKA: Bucket axe, aloft pickhead, "the bucket pick"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A pickhead axe carried IN the bucket, ready to use from aloft. Used to chop through roof decking, breach upper-floor windows, pry sheathing, and any task requiring an axe at height. Lives in the bucket so the operator doesn't have to lower the bucket and grab one from the ground compartment.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Bucket axe," "aloft axe," "PH axe (bucket)." Same parts as OSM-03."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">⬇️</span><div class="callout-content"><strong>Rookie Mistake — Dropping Tools From the Bucket</strong>A pick axe falling 80 feet hits the ground with lethal force. EVERY tool in the bucket is secured — clip, strap, or held with two hands. Probies who set tools down loosely on the floor of the bucket eventually knock one over the edge. Look down before you swing.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKT-02</span>
+        <div><div class="card-title">Master Stream Nozzle</div><span class="card-aka">AKA: Master stream, bucket nozzle, deluge nozzle, "the master stream"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The high-volume nozzle attached to the bucket's plumbed waterway. Pumped water comes UP the tower's internal waterway to the bucket; the master stream nozzle is what's on the outlet. Flows are typically 500–1,000+ GPM depending on the system. Used for elevated stream attack on upper floors, ventilation cooling, defensive operations from above, and flooding a large open area faster than ground monitors can. The aerial nozzle is what makes Tower 62 a TOWER and not just a really tall ladder.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Inlet coupling:</strong> Connects to the bucket's internal waterway outlet.</li><li><strong>Smoothbore tip or fog head:</strong> Stacked tips (1¼, 1⅜, 1½, 1¾, 2 inch) for smoothbore; rotating barrel for fog.</li><li><strong>Pattern adjustment (fog version):</strong> Straight stream to wide fog.</li><li><strong>Pivot ball / swivel:</strong> Aim the stream from inside the bucket.</li><li><strong>Operator handle / aim lever.</strong></li><li><strong>Shutoff valve in the bucket waterway:</strong> The bucket operator can shut it off without involving the engineer.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Master stream," "bucket nozzle," "elevated stream," "deluge nozzle," "Stang nozzle" (brand)."</p></div>
+        <div class="callout danger"><span class="callout-icon">💨</span><div class="callout-content"><strong>Rookie Mistake — Opening to Full Flow Suddenly</strong>500+ GPM of water hitting a wide-open nozzle at full pressure produces enormous nozzle reaction. The bucket is moving. The operator needs to brace, the engineer needs to coordinate the ramp-up of pressure, and the aim needs to be SET before you open the bail. Slow, deliberate, controlled. Don't snap open at full pump pressure.</div></div>
+        <div class="callout danger"><span class="callout-icon">🏠</span><div class="callout-content"><strong>Coordinate With Interior Crews</strong>Pushing 1,000 GPM through a window at interior crews will steam-burn them and push fire onto them. Master streams are EXTERIOR / DEFENSIVE operations, OR coordinated with confirmed interior evacuation. Engine company OUT before tower goes IN.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKT-03</span>
+        <div><div class="card-title">Halligan (Bucket)</div><span class="card-aka">AKA: Bucket Halligan, aloft Halligan, "the bucket bar"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A Halligan bar carried IN the bucket. Used for breaching windows, prying open upper-floor entry points, removing screens or storm windows from aloft, and any forcible-entry work that needs to happen at height without descending. See OSM-02 for full Halligan anatomy and use.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Bucket Halligan," "aloft Halligan," "the bucket bar."</p></div>
+        </div>
+        <div class="callout danger"><span class="callout-icon">⬇️</span><div class="callout-content"><strong>Same Rule — Don't Drop It</strong>A Halligan over the side of the bucket falling 80 feet kills whoever's underneath. Secure it, hold it with both hands during use, look down before any motion.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ BUCKET COMPARTMENT ══════════════ -->
+  <section class="comp-section" id="t62-bucket-comp">
+    <div class="section-header">
+      <div class="section-icon">🧰</div>
+      <div><h2>Bucket Compartment</h2><div class="sub">1¾ Hoses · 5 ft Jumper · Fog Nozzle · Ladder Brackets · Air Hoses</div></div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKC-01</span>
+        <div><div class="card-title">2× 50 ft Lengths of 1¾" Hose</div><span class="card-aka">AKA: Bucket attack lines, aloft hose, "the bucket hoses"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two 50-foot sections of 1¾" attack hose, stored in or near the bucket. When the operator needs to stretch a smaller attack line FROM the bucket — into an upper-floor window, off the side for short reach — these are pre-positioned. Lighter, more maneuverable than running a fresh line off the rig and up. Two sections = up to 100 ft of effective reach.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>50 ft of 1¾" double-jacket hose × 2.</strong></li><li><strong>NH-thread couplings.</strong></li><li><strong>Bagged or coiled for fast stretch from the bucket.</strong></li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Aloft hose," "bucket attack lines," "the 50s."</p></div>
+        <div class="callout warn"><span class="callout-icon">🪜</span><div class="callout-content"><strong>Rookie Mistake — Stretching Without Securing</strong>Hose stretched from a bucket can pull on the bucket as it gets weight or kinks. Anchor the hose to the bucket frame before stretching out. Don't let the hose swing the bucket.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKC-02</span>
+        <div><div class="card-title">5 ft 1¾" Hose Jumper</div><span class="card-aka">AKA: 5-foot section, jumper, "the short 1¾"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 5-foot jumper section of 1¾" hose. Bridges connections between the bucket waterway outlet and an attack hose, or between two hoses where a short flexible link is needed. Saves you from having to swap a full 50-ft section in for a small geometry problem.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Jumper," "5-footer," "short section."</p></div>
+        </div>
+        <div class="callout tip"><span class="callout-icon">🧠</span><div class="callout-content"><strong>Right Tool for Tight Connections</strong>Short jumpers solve geometry problems faster than reconfiguring whole stretches. Carry the awareness that it exists.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKC-03</span>
+        <div><div class="card-title">Fog Nozzle (Bucket)</div><span class="card-aka">AKA: Bucket nozzle, aloft fog, "the bucket fog"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A standard fog nozzle stored in the bucket for use on the 1¾ attack lines stretched from up top. Lets the operator put precise patterns into upper-floor windows or sweep cooling fog over an exposure. See DSFM-10 for full fog nozzle anatomy.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Bucket nozzle," "aloft nozzle," "the fog."</p></div>
+        </div>
+        <div class="callout warn"><span class="callout-icon">🌀</span><div class="callout-content"><strong>Indoor Wide Fog Reminder</strong>Wide fog INSIDE a burning structure pushes fire on interior crews. Tower attack with fog patterns into windows must be coordinated. STRAIGHT STREAM for direct attack; fog only for cooling exposures and ventilation.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKC-04</span>
+        <div><div class="card-title">Brackets to Attach Ladder to Bucket</div><span class="card-aka">AKA: Ladder brackets, bucket-to-ladder mounts, ladder hangers, "the ladder brackets"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Hardware brackets that mount a ladder (typically a roof ladder, like TOP-02) to the side of the bucket. This lets the bucket operator carry a ladder up to a roof, deploy it from the bucket, and use it as an extension of the platform. Critical for rescues and roof operations where the bucket can't get directly to the working point but a short ladder bridges the gap.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Mounting brackets:</strong> Bolted or quick-release attachment to bucket frame.</li><li><strong>Cradles / hooks:</strong> Hold the ladder rails in place.</li><li><strong>Locking pins or straps:</strong> Secure the ladder against shifting during bucket movement.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Ladder brackets," "bucket brackets," "ladder mounts," "ladder hangers."</p></div>
+        <div class="callout danger"><span class="callout-icon">⬇️</span><div class="callout-content"><strong>Rookie Mistake — Ladder Falls From Bucket</strong>A ladder dropping from the bucket on the way up takes out anybody underneath. Mounting brackets must be FULLY ENGAGED and locking pins/straps verified before the bucket moves. Visual confirmation, two-person check on heavy ladders.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <span class="card-number">BKC-05</span>
+        <div><div class="card-title">Air Hoses — Direct Connection to Tower Air Supply</div><span class="card-aka">AKA: SAR lines, supplied-air hoses, air-line hoses, "the bucket air"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Air hoses that connect directly from the tower's onboard breathing-air supply to a firefighter's airpack — effectively a Supplied-Air Respirator (SAR) configuration. Lets a firefighter work in a smoke or contaminated atmosphere from the bucket WITHOUT depleting their SCBA cylinder, because air is being supplied from the rig. Particularly useful for long-duration master-stream operations from the bucket where the firefighter would otherwise burn through bottles fast.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Air supply hose:</strong> Low-pressure breathing-air rated, color-coded.</li><li><strong>Quick-disconnect fittings:</strong> Connect at the tower air panel and at the user's SCBA.</li><li><strong>Tower-mounted air outlet panel:</strong> Where the hose plugs in on the rig.</li><li><strong>Reducer / pressure regulator:</strong> Steps cascade pressure down to breathing-air working pressure.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"SAR line," "supplied-air line," "air hose," "bucket air," "airline" (industrial term)."</p></div>
+        <div class="callout danger"><span class="callout-icon">🫁</span><div class="callout-content"><strong>Rookie Mistake — Air Hose Snags Without Backup Bottle</strong>If the supplied-air hose gets cut, kinks, or the rig's supply fails, the firefighter has NO air. SAR systems used in IDLH atmospheres REQUIRE an SCBA escape cylinder on the user. The bucket air is a comfort-of-operation system, not a sole source of breathing air. Wear your SCBA, breathe the rig's air, but have your bottle ready if the supply line fails.</div></div>
+        <div class="callout warn"><span class="callout-icon">📏</span><div class="callout-content"><strong>Maximum Hose Length</strong>NIOSH limits SAR hose length (typically 300 ft). Read the system documentation. Going too far from the rig with the supplied-air hose creates pressure drop and possible breathing problems.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+</div>
+</div>
+
+<script>
+// ══ TOWER 62 GUIDE SCRIPT ══
+(function() {
+window.t62Toggle = function(header) {
+  var body = header.nextElementSibling;
+  var isOpen = header.classList.contains('open');
+  header.classList.toggle('open', !isOpen);
+  body.classList.toggle('visible', !isOpen);
+};
+var searchInput = document.getElementById('t62-search');
+if (searchInput) {
+  searchInput.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    document.querySelectorAll('#t62-guide .equip-card').forEach(function(card) {
+      var match = !q || card.textContent.toLowerCase().includes(q);
+      card.classList.toggle('search-hidden', !match);
+      if (match && q) {
+        var h = card.querySelector('.card-header');
+        var b = card.querySelector('.card-body');
+        if (h) h.classList.add('open');
+        if (b) b.classList.add('visible');
+      }
+    });
+  });
+}
+})();
+</script>
+
 
 
 <!-- ═══════ SNORKEL 61 SECTION BREAK ═══════ -->
