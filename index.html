@@ -269,16 +269,16 @@
   }
   #e62-guide h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 700;
-    color: var(--text-bright);
+    color: #1A1612;
     letter-spacing: 0.03em;
     line-height: 1.1;
   }
-  #e62-guide h1 span { color: var(--accent); }
+  #e62-guide h1 span { color: #C8202D; }
   #e62-guide .subtitle {
     font-style: italic;
-    color: var(--text-muted);
+    color: #5A5248;
     font-size: 1.05rem;
     margin-top: 0.6rem;
     font-weight: 300;
@@ -291,7 +291,7 @@
     border-radius: 4px;
     padding: 0.4rem 1rem;
     font-size: 0.85rem;
-    color: #f08070;
+    color: #8B1A1A;
     font-family: 'JetBrains Mono', monospace;
   }
 
@@ -421,10 +421,18 @@
   
 /* ── ENGINE 62 SCOPED STYLES (rebuilt) ── */
 #e62-guide .layout { display:flex; max-width:1400px; margin:0 auto; min-height:calc(100vh - 52px); }
+#e62-sidebar { width:260px; flex-shrink:0; background:#1F1C18; color:#C8BFB0; position:sticky; top:52px; height:calc(100vh - 52px); overflow-y:auto; padding:20px 0 40px; }
+#e62-sidebar::-webkit-scrollbar { width:4px; }
+#e62-sidebar::-webkit-scrollbar-track { background:#1F1C18; }
+#e62-sidebar::-webkit-scrollbar-thumb { background:#5A5248; border-radius:2px; }
+#e62-main { flex:1; padding:32px 48px; max-width:calc(1400px - 260px); overflow-x:hidden; background:#F5F0E8; }
 #e62-sidebar .nav-link { display:block; padding:8px 20px; color:#C8BFB0; text-decoration:none; font-family:'Oswald',sans-serif; font-size:14px; border-left:3px solid transparent; transition:all .15s; }
 #e62-sidebar .nav-link:hover { color:#fff; border-left-color:#C8202D; padding-left:24px; }
 #e62-sidebar .nav-section-label { color:#8A7F74; font-family:'Oswald',sans-serif; font-size:10px; letter-spacing:2px; text-transform:uppercase; padding:12px 20px 4px; }
 #e62-guide .section-header { display:flex; align-items:center; gap:16px; margin-bottom:28px; padding-bottom:16px; border-bottom:3px solid #C8202D; }
+#e62-guide .section-info h2 { font-family:'Oswald',sans-serif; font-size:28px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#2C2825; line-height:1.1; }
+#e62-guide .section-info .section-sub { font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; letter-spacing:1px; margin-top:3px; }
+#e62-guide .section-number { color:#C8202D; font-family:'Oswald',sans-serif; font-size:2.5rem; font-weight:700; line-height:1; min-width:2.5rem; text-align:right; }
 #e62-guide .section-icon { width:48px; height:48px; background:#C8202D; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:3px 3px 0 #8B1A1A; }
 #e62-guide .equip-card { background:#fff; border:1px solid #C8BFB0; border-radius:8px; margin-bottom:12px; overflow:hidden; }
 #e62-guide .card-header { display:flex; align-items:flex-start; gap:14px; padding:16px 20px 12px; cursor:pointer; user-select:none; background:#faf9f7; border-bottom:1px solid transparent; transition:background .15s; }
@@ -457,6 +465,10 @@
 #e62-guide .callout-tip .callout-content { color:#0F2F5C !important; }
 #e62-guide .callout-safe .callout-content { color:#1A3A1A !important; }
 #e62-guide .search-hidden { display:none !important; }
+#e62-guide .intro-banner { border-radius:12px; padding:28px 32px; margin-bottom:40px; color:#F5F0E8; }
+#e62-guide .intro-banner h3 { font-family:'Oswald',sans-serif; font-size:20px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px; }
+#e62-guide .intro-banner p { font-size:15px; line-height:1.7; color:#D8CFC4; }
+#e62-guide .intro-banner a { color:#D4A017; font-weight:600; }
 @media (max-width:700px) {
   #e62-guide .entry-grid { grid-template-columns:1fr; }
   #e62-guide .card-body { padding:14px 14px 18px; }
@@ -3563,7 +3575,7 @@
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 5/25/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 5/26/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eight apparatus study guides + three coming soon. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -3786,20 +3798,11 @@
 </nav>
 
 <main id="e62-main">
-
-
-
-  <h1>ENGINE <span>62</span><br>COMPARTMENT STUDY GUIDE</h1>
-  <div class="subtitle">Every tool. Every shelf. Every compartment — explained like a mentor, not a manual.</div>
-  <div class="update-note">⚑ Always verify against the actual rig before your shift</div>
-</div>
-
-
-
-  <div class="intro-banner" style="background:linear-gradient(135deg,#1a0a00 0%,#1a1025 100%); border-left:5px solid var(--accent);">
-    <h3 style="color:var(--accent);">📚 Engine 62 — Compartment Study Guide</h3>
-    <p>This guide covers every piece of equipment on Engine 62, organized exactly the way you'd walk the rig during a compartment check — front hose bays first, then Driver's side (Comps 1–3), rear, Officer's side (Comps 5–7), cab, and top. Each entry tells you <strong>what the tool is, how to use it, why it's on the rig,</strong> and <strong>what else people call it</strong> — because nothing is more embarrassing than a Lieutenant calling for a tool and you not knowing it by that name.</p>
+  <div class="intro-banner" style="background:linear-gradient(135deg,#1A0800 0%,#2A0A0A 100%); border-left:5px solid #C8202D;">
+    <h3 style="color:#D4A017;">🚒 Engine 62 — Compartment Study Guide</h3>
+    <p>This guide covers every piece of equipment on Engine 62, organized exactly the way you'd walk the rig — front hose bays first, then Driver's side (Comps 1–3), rear, Officer's side (Comps 5–7), cab, and top. Each entry tells you <strong>what the tool is, how to use it, why it's on the rig,</strong> and <strong>what else people call it</strong> — because nothing is more embarrassing than a Lieutenant calling for a tool and you not knowing it by that name.</p>
     <p>When you see a <strong style="color:#f06040">⚠ CRITICAL SAFETY</strong> or <strong style="color:#f06040">🔰 ROOKIE MISTAKE</strong> box, read it twice. Those are the things veterans have watched new folks mess up, and the ones that matter most on test day and on the fireground.</p>
+    <p style="margin-top:10px;"><a href="https://docs.google.com/document/d/1dW8aJsXDRE2Rqu5Yo7g34g-5YYiW9M6mszpTycElrNc/edit?usp=sharing" target="_blank" style="color:#D4A017; font-weight:600;">📷 Click Here for more details and photos of Engine 62</a></p>
   </div>
 
 <!-- ====================================================
@@ -9348,7 +9351,6 @@ if (searchInput) {
   <hr class="nav-divider">
   <div class="nav-section-label">Quick Reference</div>
   <a class="nav-link" href="#diff61-62">E61 vs. E62 Differences</a>
-  <a class="nav-link" href="#checklist">Shift Rig Check Checklist</a>
   <a class="nav-link" href="#whereisit">Where Is It? Location Guide</a>
   <a class="nav-link" href="#e61specific">E61-Specific Items ⭐</a>
 </nav>
@@ -11334,361 +11336,6 @@ if (searchInput) {
   </section>
 
   <!-- ════════════════════════════════════ -->
-  <!-- SECTION: RIG CHECK CHECKLIST -->
-  <!-- ════════════════════════════════════ -->
-  <section class="comp-section" id="e61-checklist">
-    <div class="section-header">
-      <div class="section-icon">✅</div>
-      <div>
-        <h2>Shift Rig Check — Checklist</h2>
-        <div class="sub">Walk it every shift · Sign off on it · Own your rig</div>
-      </div>
-    </div>
-
-    <div class="callout callout-tip">
-      <span class="callout-icon">💡</span>
-      <div class="callout-content">
-        <strong>Why This Checklist Exists</strong>
-        Your company officer is responsible for rig readiness, but every crew member is accountable. If you find something wrong, say something immediately. A missing item discovered on-scene is infinitely worse than one found in the bay. Use this checklist as your mental walk of the rig — compartment by compartment, every shift.
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Driver's Side — Cabin &amp; Hose Bed</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Trash line (100 ft 1¾") — preconnected &amp; seated</li>
-              <li>30 ft of 5" — Storz to steamer coupled</li>
-              <li>Hydrant wrench alongside 5" section</li>
-              <li>(2) 1¾" crosslays (200 ft) — fog nozzles attached</li>
-              <li>2½" crosslay (200 ft) — smooth bore nozzle attached</li>
-              <li>Rear Left bay — 600 ft 3" + 150 ft 2½" skid load</li>
-              <li>Rear Middle bay — 1,000 ft 5"</li>
-              <li>Rear Right bay — 600 ft 3" + 150 ft 1¾" skid load</li>
-              <li>Blitz Fire 300 ft 3" — preconnected &amp; nozzle on</li>
-              <li>High Rise 150 ft 1¾" — preconnected</li>
-              <li>High Rise Pack — present (static), all 5 fittings present</li>
-              <li>(2) Backboards — in rear, both present</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 1 — Engineer's</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>1" green garden hose — present on top shelf</li>
-              <li>Black tool box — all contents present (grease, screwdrivers, pliers, carb cleaner, food-grade silicone, heat gun, lube stick, Storz connectors, nozzle, flags)</li>
-              <li>Airpack — full cylinder (≥90%), mask sealed, harness intact, PASS armed</li>
-              <li>(2) Double-ended spanners — middle shelf</li>
-              <li>(2) Gated Wyes 2½"→1½" — operable</li>
-              <li>(2) Fog nozzles — bale moves freely</li>
-              <li>(2) Small reducers — present</li>
-              <li>1 reducer 1¾"→1" — present</li>
-              <li>1 steamer-to-Storz — present</li>
-              <li>1 smooth bore nozzle — present</li>
-              <li>1 nozzle w/ yellow fog tip — present</li>
-              <li>(6) 2½" connectors (2 F2F, 2 M2M, 2 CFD) — present</li>
-              <li>(6) 1¾" connectors (2 F2F, 2 M2M, 2 CFD) — present</li>
-              <li>(4) 2½"F→1¾"M reducers — present</li>
-              <li>1 cap for 1¾" — present</li>
-              <li>Hydrant bag — all contents (2 wrenches, 2 steamer-Storz, 2 spanners, 2 wedges, gate valve, Storz→1¾"F, 3 double-ended spanners, rubber mallet, pipe wrench, rope)</li>
-              <li>25 ft of 5" hose — bottom shelf present</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 2 — Hand Tools</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Closet pike pole — mounted &amp; present</li>
-              <li>Maul — secured</li>
-              <li>Halligan — secured</li>
-              <li>Flat head axe — secured (set with Halligan)</li>
-              <li>Medium bolt cutter w/ barbed wire hook — inside swinging door</li>
-              <li>Large bolt cutter — inside swinging door</li>
-              <li>Captain's/Officer's tool pry axe — inside swinging door</li>
-              <li>Manhole cover remover — inside swinging door</li>
-              <li>K-tool in leather case — inside swinging door</li>
-              <li>(3) Air tanks outside Comp. 2 — all ≥90% full</li>
-              <li>Driver's side over-wheel: Pry axe (Officer's tool) — confirm present (E61 ONLY)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 3 — Rescue / Ventilation / Air Bags</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Cellar nozzle on cellar pipe — top shelf, present</li>
-              <li>(2) Portable work lights — middle shelf, CHARGED</li>
-              <li>Small step ladder — bottom shelf, present</li>
-              <li>Ventilation fan — bottom shelf, PLUGGED IN &amp; charged</li>
-              <li>Yellow air bag control box — bottom shelf, present &amp; functional</li>
-              <li>(3) Air bags — bottom shelf, all present, no visible damage</li>
-              <li>Cribbing — bottom shelf, full set present</li>
-              <li>Transformer nozzles — present</li>
-            </ul>
-          </div>
-        </div>
-        <div class="callout callout-warn">
-          <span class="callout-icon">⚠️</span>
-          <div class="callout-content"><strong>Fan Must Be Plugged In</strong>The document explicitly calls this out. If the ventilation fan isn't plugged in after a call, it won't be charged for the next one. This is the #1 missed item on this compartment check.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Rear Middle — Extrication</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>(6) Hurst batteries — upper shelf, ALL FULLY CHARGED</li>
-              <li>Battery-to-AC connector — upper shelf, present ⭐</li>
-              <li>Hydraulic Ram — middle shelf, present</li>
-              <li>Quick Kick ram support — middle shelf, present</li>
-              <li>Reciprocating saw — middle shelf, blade present, charged battery</li>
-              <li>Window punch — middle shelf, present &amp; functional</li>
-              <li>(2) Double-ended spanners — middle shelf, present</li>
-              <li>Hurst Rescue Cutter — bottom shelf, test cycle operable</li>
-              <li>Hurst Rescue Spreader — bottom shelf, test cycle operable</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Rear Left — Hooks &amp; Ladders</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>NY Hook 6 ft — present, tip sharp</li>
-              <li>NY Hook 8 ft — present, tip sharp</li>
-              <li>Attic ladder 10 ft — present, locks engage</li>
-              <li>Ground ladder 24 ft — mounted above, halyard intact</li>
-              <li>Extension ladder 14 ft — mounted above, halyard intact</li>
-              <li>(2) Backboards — present</li>
-              <li>(2) Pike poles 6 &amp; 8 ft — mounted above compartments</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 5 — Officer Forcible Entry</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Flat head axe — top shelf</li>
-              <li>Halligan — top shelf</li>
-              <li>Crowbar — top shelf</li>
-              <li>Pick head axe / fire axe — top shelf</li>
-              <li>100 ft utility rope — middle shelf (confirm length)</li>
-              <li>Pig drain cover — middle shelf, present</li>
-              <li>RASP 200 ft search rope — middle shelf, packed, knots/beads intact</li>
-              <li>Red bag — bottom shelf (4 PFDs + 1 throw preserver)</li>
-              <li>W-Tool — bottom shelf, present</li>
-              <li>Tool box — bottom shelf (verify voltage tester ⭐ present &amp; functional; all other tools present)</li>
-              <li>Officer side rear: crowbar present (E61 specific)</li>
-              <li>Officer side rear: 2 shovels (spade + flat) present (E61 specific)</li>
-              <li>Officer side rear: Pig drain cover present (E61 specific)</li>
-              <li>Officer side middle: ice cleats for boots present (E61 specific)</li>
-              <li>Hacksaw in tool box confirmed (E61 specific)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 6 — Water Rescue</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Water helmet — present</li>
-              <li>PFD — present, no damage to straps/buckles</li>
-              <li>Mustang suit — present, zipper functional</li>
-              <li>Rope throw bag — present, rope packed</li>
-              <li>Life safety ring — present</li>
-              <li>Strap w/ 3 carabiners — present, biners open/close freely</li>
-              <li>Ice spikes — present (worn around neck in ice ops)</li>
-              <li>Ice cleats — present</li>
-              <li>(4) Air bottles under compartment — all ≥90% full (2 per side)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Compartment 7 — Extinguishers</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Silver bullet (pressurized water) — pressure gauge green, pin present</li>
-              <li>ABC dry chemical — gauge green, pin present, no hose cracks</li>
-              <li>CO₂ extinguisher — weight check (hefts heavy), horn intact, pin present</li>
-              <li>Class K extinguisher — gauge green, pin present</li>
-              <li>Fire blanket (EV) — bottom shelf, present, packaging intact</li>
-              <li>Oil dry — bottom shelf, supply adequate</li>
-            </ul>
-          </div>
-        </div>
-        <div class="callout callout-warn">
-          <span class="callout-icon">⚠️</span>
-          <div class="callout-content"><strong>CO₂ — Gauge Check Isn't Enough</strong>CO₂ extinguishers lose charge through the cylinder walls over time, and the gauge reads "full" even when they're partially empty. The only reliable check for a CO₂ cylinder is a weight comparison to the full weight stamped on the cylinder neck. Know that weight.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Inside Cab — Full Inventory</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Top Shelf</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Binoculars — present</li>
-              <li>Blue LOTO bag — present, contents verified</li>
-              <li>Pet O₂ mask set — present</li>
-              <li>(2) Extra SCBA masks — present, sizes confirmed</li>
-              <li>After Fire Survey clipboard — present, forms stocked</li>
-              <li>Patient clipboards — present</li>
-              <li>Fire tape — present</li>
-              <li>Caution tape — present</li>
-              <li>Red biohazard bags — present, supply adequate</li>
-              <li>Camera — present, battery charged, memory available</li>
-              <li>FIU investigation box — present</li>
-              <li>PR box (stickers) — present</li>
-            </ul>
-          </div>
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Middle Shelf</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Red jump bag ("First In") — present, restocked</li>
-              <li>Green airway bag — present, BVM functional, suction operable</li>
-              <li>Dark blue collar bag — present, collar sizes complete</li>
-              <li>Small orange suction bag — present, unit charges/powers on</li>
-              <li>AED (ZOLL) — present, POWERED ON &amp; ready, pads present &amp; in-date</li>
-            </ul>
-          </div>
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Third Shelf</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>4-gas monitor — present, bump-tested, fully charged</li>
-              <li>Gas Trac (methane meter) — present, bump-tested, charged</li>
-              <li>HCN sensor — present, bump-tested, charged (separate item from Gas Trac)</li>
-              <li>CO₂ meter — present, charged</li>
-              <li>Hot Stick — present, battery functional</li>
-              <li>Contractor bags — supply present</li>
-              <li>Fire Wipes — supply present, not expired</li>
-            </ul>
-          </div>
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Bottom Shelf + General Cab</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Flood light — present, charged/functional</li>
-              <li>Wipes — supply present</li>
-              <li>Hot Feet warmers — supply present</li>
-              <li>Blankets — supply present</li>
-              <li>Contractor bags (bottom) — present</li>
-              <li>Vests (under seats) — all 4 present</li>
-              <li>Water (hydration) — present</li>
-              <li>(4) Radios — present, ALL FULLY CHARGED, all keys up on primary channel</li>
-              <li>Elevator key — present &amp; secured</li>
-              <li>Knox box key — present &amp; secured</li>
-              <li>ERG — present, current edition</li>
-              <li>Accountability name board — present, all crew tags on board</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Top of Engine</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label"><span class="icon">📋</span>Check Each Item</div>
-            <ul style="columns:2; column-gap:24px;">
-              <li>Snow shovel — secured</li>
-              <li>1" garden hose — coiled &amp; present</li>
-              <li>Traffic cones — full set present</li>
-              <li>Fire swatter — present</li>
-              <li>Manifold for fire gun — present &amp; connected</li>
-              <li>Dawn soap + brush in bucket — bucket present, soap supply adequate</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
 
   <!-- ════════════════════════════════════ -->
   <!-- SECTION: QUICK REFERENCE — WHERE IS IT? -->
@@ -12124,42 +11771,11 @@ searchInput.addEventListener('input', function() {
     <div class="callout callout-tip">
       <span class="callout-icon">💡</span>
       <div class="callout-content">
-        <strong>Hose Load Record Clipboard</strong>
+        <strong>Hose Card Clipboard</strong>
         E60 tracks every individual hose section by ID number on a clipboard. Sections marked <strong>"T"</strong> have passed their annual service test. During rig check, confirm the clipboard matches what's actually loaded. If a section was swapped, the record must be updated. See the <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold);">E60 Photos &amp; Details doc</a> for the current clipboard photo.
       </div>
     </div>
 
-    <div class="callout callout-warn">
-      <span class="callout-icon">⚠️</span>
-      <div class="callout-content">
-        <strong>E60-Specific — No Front Intake</strong>
-        Engine 60 has <strong>no front intake connection</strong>. If you're used to rigs with a front suction port for nurse tanker operations, that option does not exist on E60. All water supply connections are made at the pump panel and rear intake ports only. Don't waste time looking for a front suction connection — it isn't there.
-      </div>
-    </div>
-
-    <div class="callout callout-tip">
-      <span class="callout-icon">💡</span>
-      <div class="callout-content">
-        <strong>Hose Load Record — Clipboard in Cab</strong>
-        E60 carries a <strong>Hose Load Record clipboard</strong> tracking every individual hose section by ID number. Each section (e.g., D-64, B-129, G-199) has a length and a "T" marking if it was tested that year. During rig check, verify the clipboard matches the actual hose loads. If a section was replaced, the record must be updated. The record is your paper trail for hose testing compliance. See the <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold);">E60 Photos &amp; Details doc</a> for the current clipboard photo.
-      </div>
-    </div>
-
-
-    <div class="callout callout-warn">
-      <span class="callout-icon">⚠️</span>
-      <div class="callout-content">
-        <strong>E60-Specific — No Front Intake</strong>
-        Engine 60 has <strong>no front intake connection</strong>. If you're used to rigs with a front suction port, that option does not exist on E60. All water supply connections are made at the pump panel and rear intake ports only. Don't waste time looking for a front suction — it isn't there.
-      </div>
-    </div>
-    <div class="callout callout-tip">
-      <span class="callout-icon">💡</span>
-      <div class="callout-content">
-        <strong>Hose Load Record — Clipboard in Cab</strong>
-        E60 carries a <strong>Hose Load Record clipboard</strong> tracking every hose section by ID number. Each section has a length and a "T" marking if tested that year. During rig check, verify the clipboard matches the actual hose loads. See the <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold);">E60 Photos &amp; Details doc</a> for the current clipboard photo.
-      </div>
-    </div>
     <div class="equip-card">
       <div class="card-header" onclick="e60ToggleCard(this)">
         <div><div class="card-title">100 ft Trash Line — Preconnected</div><span class="card-aka">AKA: Minute-man line, bump line, quick attack</span></div>
@@ -13121,13 +12737,13 @@ searchInput.addEventListener('input', function() {
     <div class="subsection"><div class="subsection-title">Ladders — Middle Rear Compartment & Top</div></div>
     <div class="equip-card">
       <div class="card-header" onclick="e60ToggleCard(this)">
-        <div><div class="card-title">Hose Load Record — Clipboard</div><span class="card-aka">AKA: Hose record, load record, hose inventory clipboard, hose test record</span></div>
+        <div><div class="card-title">Hose Card — Clipboard</div><span class="card-aka">AKA: Hose Card, load record, hose inventory, hose test record</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
           <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A physical clipboard mounted in the cab (or rear compartment area) tracking every individual hose section on E60 by its unique ID number, length, location on the rig, and annual service test status. Sections marked with <strong>"T"</strong> have been tested in the current year. The record is a legal compliance document and a tool for accurate accountability during rig checks.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>NFPA 1962 requires fire hose to be service-tested annually. The Hose Load Record is E60's evidence of compliance — it shows which sections have been tested and which are due. If a section is swapped out or replaced (damaged, failed test), the record must be updated immediately. During a rig check, comparing the clipboard to the actual hose loads confirms that every section is accounted for and in its correct position.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>NFPA 1962 requires fire hose to be service-tested annually. The Hose Card is E60's evidence of compliance — it shows which sections have been tested and which are due. If a section is swapped out or replaced (damaged, failed test), the record must be updated immediately. During a rig check, comparing the clipboard to the actual hose loads confirms that every section is accounted for and in its correct position.</p></div>
           <div class="entry-block full"><div class="entry-label"><span class="icon">🗂️</span>E60 Hose Section Layout</div>
             <table class="hose-table">
               <thead><tr><th>Location</th><th>Key Sections</th><th>Totals</th><th>Notes</th></tr></thead>
@@ -13146,7 +12762,7 @@ searchInput.addEventListener('input', function() {
           </div>
         </div>
         <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>T = Tested This Year</strong>Sections marked "T" on the clipboard have passed their annual service test. Any section without a "T" is either due for testing or has failed. During your rig check, you don't need to memorize every ID — but you should know where the clipboard is and be able to verify that the hose loads match the record. If something doesn't add up, flag it to your company officer before going available.</div></div>
-        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Update the Record When Hose Changes</strong>If any hose section is swapped, removed for repair, or replaced after a failure, the Hose Load Record must be updated that shift. Operating with an out-of-date record means you can't confirm testing compliance — and it can mean a different section is in a position than expected, which matters during a midnight supply lay.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Update the Record When Hose Changes</strong>If any hose section is swapped, removed for repair, or replaced after a failure, the Hose Card must be updated that shift. Operating with an out-of-date record means you can't confirm testing compliance — and it can mean a different section is in a position than expected, which matters during a midnight supply lay.</div></div>
         <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" class="video-link" style="background:#1A6BC8;">📋 View E60 Hose Record Photo</a>
       </div>
     </div>
@@ -13282,19 +12898,11 @@ searchInput.addEventListener('input', function() {
       <div><h2>Cab Compartment</h2><div class="sub">AED · Gas monitors · TIC · OB kit · Medic bag · Comms</div></div>
     </div>
     <div class="subsection"><div class="subsection-title">Medical & Patient Care</div></div>
-    <div class="callout callout-warn">
-      <span class="callout-icon">⚠️</span>
-      <div class="callout-content">
-        <strong>E60-Specific — No Front Intake</strong>
-        Engine 60 has <strong>no front intake connection</strong>. If you're used to rigs with a front suction port for nurse tanker operations, that option does not exist on E60. All water supply connections are made at the pump panel and rear intake ports only. Don't waste time looking for a front suction connection — it isn't there.
-      </div>
-    </div>
-
     <div class="callout callout-tip">
       <span class="callout-icon">💡</span>
       <div class="callout-content">
-        <strong>Hose Load Record — Clipboard in Cab</strong>
-        E60 carries a <strong>Hose Load Record clipboard</strong> tracking every individual hose section by ID number. Each section (e.g., D-64, B-129, G-199) has a length and a "T" marking if it was tested that year. During rig check, verify the clipboard matches the actual hose loads. If a section was replaced, the record must be updated. The record is your paper trail for hose testing compliance. See the <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold);">E60 Photos &amp; Details doc</a> for the current clipboard photo.
+        <strong>Hose Card — Clipboard in Cab</strong>
+        E60 carries a <strong>Hose Card clipboard</strong> tracking every individual hose section by ID number. Each section (e.g., D-64, B-129, G-199) has a length and a "T" marking if it was tested that year. During rig check, verify the clipboard matches the actual hose loads. If a section was replaced, the record must be updated. The record is your paper trail for hose testing compliance. See the <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold);">E60 Photos &amp; Details doc</a> for the current clipboard photo.
       </div>
     </div>
 
@@ -13664,7 +13272,7 @@ searchInput.addEventListener('input', function() {
       <div class="card-body">
         <div class="entry-grid">
           <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Check Each Item</div><ul style="columns:2; column-gap:24px;">
-<li>Hose Load Record clipboard — present, current, matches loaded hose sections</li>
+<li>Hose Card clipboard — present, current, matches loaded hose sections</li>
               <li>"T" markings verify annual testing compliance</li>
               <li>10 ft folding ladder — present, locks engage</li>
 <li>24 ft extension ladder — present, halyard intact</li>
@@ -13742,7 +13350,7 @@ searchInput.addEventListener('input', function() {
             <tr><td>Ram support</td><td><strong>Ram Jam + braces</strong></td><td>Quick Kick ram support (E61)</td></tr>
             <tr><td>Front intake</td><td><strong>NO front intake connection</strong></td><td>E61/E62 have front suction ports</td></tr>
             <tr><td>Front intake port</td><td><strong>None — E60 has no front intake</strong></td><td>E61/E62 have front suction ports</td></tr>
-            <tr><td>Hose tracking</td><td><strong>Hose Load Record clipboard</strong> with individual section IDs</td><td>Not a standard feature on all engines</td></tr>
+            <tr><td>Hose tracking</td><td><strong>Hose Card clipboard</strong> with individual section IDs</td><td>Not a standard feature on all engines</td></tr>
           </tbody>
         </table>
       </div>
@@ -15867,7 +15475,7 @@ if (searchInput) {
 <div class="layout">
 <nav id="t62-sidebar">
   <div class="nav-section-label">Driver's Side</div>
-  <a class="nav-link" href="#t62-ds-front">DS Front Compartment</a>
+  <a class="nav-link" href="#t62-ds-front">Engineers Compartment</a>
   <a class="nav-link" href="#t62-crosslay">Crosslays</a>
   <a class="nav-link" href="#t62-ds-frontmid">DS Front-Middle</a>
   <a class="nav-link" href="#t62-ds-rearmid">DS Rear-Middle</a>
@@ -15900,11 +15508,11 @@ if (searchInput) {
     <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> When Tower 62 rolls, it's because the fire is big, the building is tall, or somebody is trapped where ground crews can't reach. The aerial saves lives in ways nothing else on the fleet can. But it also weighs around 70,000 pounds, has outriggers that crush bystanders' feet, and a bucket that will kill the operator if they don't know what they're doing. Walk every compartment. Open every door. Understand every piece. Then climb the stick.</p>
     <p style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#A8B8D0;">📅 Study guide last synced from Google Doc: <strong style="color:#D4A017;">May 24, 2026</strong></p>
   </div>
-  <!-- ══════════════ DRIVER'S SIDE FRONT COMPARTMENT ══════════════ -->
+  <!-- ══════════════ ENGINEERS COMPARTMENT ══════════════ -->
   <section class="comp-section" id="t62-ds-front">
     <div class="section-header">
       <div class="section-icon">🚰</div>
-      <div><h2>Driver's Side Front Compartment</h2><div class="sub">25 ft of 5" LDH</div></div>
+      <div><h2>Engineers Compartment</h2><div class="sub">25 ft of 5" LDH · Duct Tape · Caution Tape</div></div>
     </div>
 
     <div class="equip-card">
@@ -15920,6 +15528,35 @@ if (searchInput) {
         <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"LDH" (Large Diameter Hose — the umbrella term), "five-inch," "supply hose," "soft suction" (older slang, technically incorrect), "the 25-footer," "jumper line."</p></div>
         <div class="callout callout-danger"><span class="callout-icon">💥</span><div class="callout-content"><strong>Rookie Mistake — Storz Coupling Not Fully Locked</strong>A 5" line under pump pressure that isn't fully seated and locked can blow apart under load. The coupling becomes a 12-pound projectile, the line whips like a python on PCP, and anybody in line with it gets hurt. Push the couplings together, rotate the quarter-turn until you feel BOTH lugs seat, then push the Kochek lock. Two checks before you charge the line. Every time.</div></div>
         <div class="callout callout-warn"><span class="callout-icon">⚖️</span><div class="callout-content"><strong>Heavy When Charged — Light When Dry</strong>A charged 5" line holds roughly 1.7 gallons per foot. A 25-footer charged is 40+ pounds of water alone, plus the hose. Don't drag a charged LDH section around like a dry one. Plan the layout BEFORE you charge.</div></div>
+      </div>
+    </div>
+
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <div><div class="card-title">Duct Tape</div><span class="card-aka">AKA: Duck tape, hundred-mile-an-hour tape, mil tape, cloth tape</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A roll of heavy-duty cloth-backed adhesive tape stored in the Engineers Compartment. On scene, duct tape does everything from securing hoselines and sealing vapor leaks to packaging patients and making quick equipment repairs.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Duck tape," "hundred-mile-an-hour tape" (military slang), "mil tape," "cloth tape," "rigger's tape."</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Check It on Rig Check</strong>Duct tape loses adhesion when it dries out or gets cold. If the roll feels stiff or the edge is peeling dry, flag it for replacement before you need it at 0300.</div></div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="t62Toggle(this)">
+        <div><div class="card-title">Caution Tape</div><span class="card-aka">AKA: Barrier tape, hazard tape, scene tape, yellow tape</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bright yellow "CAUTION" barrier tape for establishing scene perimeters and keeping civilians out of the hazard zone. Goes up fast, visible from a distance, and costs almost nothing — use it liberally to protect bystanders and define your working area.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Barrier tape," "scene tape," "hazard tape," "yellow tape," "perimeter tape."</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">🚧</span><div class="callout-content"><strong>Rookie Mistake — Skimping on Tape</strong>A perimeter that's too small gets walked through. When in doubt, go bigger. The tape is cheap; a civilian walking into a collapse zone or a downed power line is not. Establish the perimeter early and expand it if the scene expands.</div></div>
       </div>
     </div>
 
@@ -17642,11 +17279,11 @@ if (searchInput) {
     <p style="font-size:15px; line-height:1.7; color:#D8E4D8;">Squad 61 is your heavy rescue rig. It carries the cutters, spreaders, rams, air bags, cascade, water rescue gear, and the technical tools you'll grab when a regular engine response isn't enough. Every compartment on this truck exists because somebody, somewhere, needed exactly what's inside it — and they didn't have time to wait. Walk it. Know it. Don't guess.</p>
     <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> The Squad doesn't get called for grass fires. When we roll, somebody is trapped, pinned, drowning, electrocuted, or already dead and we're trying to keep more people from joining them. Every minute you spend hunting for a tool is a minute somebody isn't breathing. Learn this rig cold.</p>
   </div>
-  <!-- ══════════════ DRIVER'S SIDE FRONT COMPARTMENT ══════════════ -->
+  <!-- ══════════════ ENGINEERS COMPARTMENT ══════════════ -->
   <section class="comp-section" id="sq61-ds-front">
     <div class="section-header">
       <div class="section-icon">💡</div>
-      <div><h2>Driver's Side Front Compartment</h2><div class="sub">Light Tower · Fire Investigation · Wet Vac · Particulate Mask</div></div>
+      <div><h2>Engineers Compartment</h2><div class="sub">Light Tower · Fire Investigation · Wet Vac · Particulate Mask</div></div>
     </div>
 
     <!-- LIGHT TOWER CONTROLLER -->
