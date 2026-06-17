@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Illinois Non-CDL Permit Practice Quiz — v3</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f5f7;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .container { max-width: 700px; margin: 0 auto; }
+
+  header { margin-bottom: 2rem; }
+  header h1 { font-size: 22px; font-weight: 700; color: #1a1a1a; }
+  header p { font-size: 14px; color: #666; margin-top: 5px; }
+
+  .stats-row { display: flex; gap: 10px; margin-bottom: 1.5rem; }
+  .stat-card {
+    flex: 1; background: #fff; border: 1px solid #e2e4e8;
+    border-radius: 10px; padding: 12px 10px; text-align: center;
+  }
+  .stat-val { font-size: 20px; font-weight: 700; color: #185FA5; }
+  .stat-lbl { font-size: 11px; color: #888; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .progress-bar-bg { background: #e2e4e8; border-radius: 99px; height: 8px; margin-bottom: 1.25rem; }
+  .progress-bar-fill { background: #185FA5; height: 8px; border-radius: 99px; transition: width 0.3s; }
+
+  .pager { font-size: 13px; color: #666; margin-bottom: 10px; }
+
+  .q-block {
+    background: #fff; border: 1px solid #e2e4e8;
+    border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem;
+  }
+
+  .q-category {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    background: #EBF3FC; color: #185FA5;
+    padding: 3px 10px; border-radius: 99px; margin-bottom: 10px;
+  }
+
+  .q-text { font-size: 16px; font-weight: 500; margin-bottom: 1.25rem; line-height: 1.55; }
+
+  .opt {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 11px 14px; border-radius: 8px;
+    border: 1px solid #e2e4e8; margin-bottom: 8px;
+    cursor: pointer; transition: background 0.12s, border-color 0.12s;
+    user-select: none;
+  }
+  .opt:hover { background: #f4f5f7; }
+  .opt.selected { border-color: #185FA5; background: #EBF3FC; }
+  .opt.correct { border-color: #3B6D11; background: #EAF3DE; }
+  .opt.wrong { border-color: #A32D2D; background: #FCEBEB; }
+
+  .opt-letter {
+    font-size: 13px; font-weight: 700; color: #aaa;
+    min-width: 18px; padding-top: 1px; flex-shrink: 0;
+  }
+  .opt.selected .opt-letter { color: #185FA5; }
+  .opt.correct .opt-letter { color: #3B6D11; }
+  .opt.wrong .opt-letter { color: #A32D2D; }
+
+  .opt-text { font-size: 14px; line-height: 1.5; color: #1a1a1a; }
+
+  .feedback {
+    font-size: 13px; margin-top: 10px; padding: 10px 14px;
+    border-radius: 8px; line-height: 1.5;
+  }
+  .feedback.correct { background: #EAF3DE; color: #27500A; }
+  .feedback.wrong { background: #FCEBEB; color: #791F1F; }
+
+  .nav {
+    display: flex; gap: 10px; margin-top: 1.25rem;
+    align-items: center; justify-content: space-between;
+  }
+
+  button {
+    padding: 9px 22px; border-radius: 8px;
+    border: 1px solid #d0d3d9; background: #fff;
+    cursor: pointer; font-size: 14px; color: #1a1a1a;
+    font-family: inherit; transition: background 0.12s;
+  }
+  button:hover { background: #f4f5f7; }
+  button:disabled { opacity: 0.35; cursor: not-allowed; }
+  button.primary { background: #185FA5; color: #fff; border-color: #185FA5; }
+  button.primary:hover { background: #0C447C; }
+
+  .score-card {
+    background: #fff; border: 1px solid #e2e4e8; border-radius: 12px;
+    padding: 2.5rem 1rem; text-align: center; margin-bottom: 1.5rem;
+  }
+  .score-big { font-size: 60px; font-weight: 800; color: #185FA5; line-height: 1; }
+  .score-sub { font-size: 15px; color: #666; margin-top: 8px; }
+  .score-verdict { margin-top: 14px; font-size: 16px; font-weight: 600; }
+  .pass { color: #3B6D11; }
+  .fail { color: #A32D2D; }
+
+  .section-breakdown {
+    background: #fff; border: 1px solid #e2e4e8;
+    border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;
+  }
+  .section-breakdown h2 { font-size: 15px; font-weight: 600; margin-bottom: 1rem; }
+  .sb-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 0; border-bottom: 1px solid #f0f1f3; font-size: 13px;
+  }
+  .sb-row:last-child { border-bottom: none; }
+  .sb-cat { flex: 1; color: #444; min-width: 130px; }
+  .sb-bar-bg { flex: 2; background: #f0f1f3; border-radius: 99px; height: 6px; }
+  .sb-bar-fill { height: 6px; border-radius: 99px; background: #185FA5; }
+  .sb-score { font-weight: 600; min-width: 44px; text-align: right; }
+
+  .answer-key {
+    background: #fff; border: 1px solid #e2e4e8;
+    border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;
+  }
+  .answer-key h2 { font-size: 15px; font-weight: 600; margin-bottom: 1rem; }
+  .ak-row {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 8px 0; border-bottom: 1px solid #f0f1f3; font-size: 13px;
+  }
+  .ak-row:last-child { border-bottom: none; }
+  .ak-q { min-width: 34px; font-weight: 700; color: #888; }
+  .ak-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .dot-green { background: #639922; }
+  .dot-red { background: #E24B4A; }
+  .ak-letter { font-weight: 700; color: #185FA5; min-width: 18px; }
+  .ak-text { color: #1a1a1a; flex: 1; line-height: 1.5; }
+
+  .restart-row { text-align: center; margin: 1.5rem 0 2rem; }
+
+  @media (max-width: 480px) {
+    body { padding: 1rem 0.75rem; }
+    .q-block { padding: 1rem; }
+    .score-big { font-size: 44px; }
+    .stats-row { gap: 6px; }
+    .stat-val { font-size: 17px; }
+    .stat-lbl { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Illinois Non-CDL Permit Practice Quiz</h1>
+    <p>55 questions based on the updated Illinois Non-CDL permit study guide — aim for 80% or higher to pass</p>
+  </header>
+  <div id="app"></div>
+</div>
+
+<script>
+const questions = [
+
+  // ── FEDERAL HEALTH REGULATION (4) ──
+  {
+    cat: "Federal Health",
+    q: "Which vehicle operators are required to carry a medical examiner's certificate at all times?",
+    opts: ["All Illinois licensed drivers", "Operators of second division vehicles with a gross weight of 10,001 lbs or more", "Only CDL holders", "Any driver hauling cargo across state lines"],
+    ans: 1
+  },
+  {
+    cat: "Federal Health",
+    q: "What is the minimum gross weight of a second division vehicle that requires the operator to carry a medical examiner's certificate?",
+    opts: ["8,000 pounds", "16,000 pounds", "10,001 pounds", "26,001 pounds"],
+    ans: 2
+  },
+  {
+    cat: "Federal Health",
+    q: "When exactly must the medical examiner's certificate be in the operator's possession?",
+    opts: ["Only during interstate trips", "Only when transporting hazardous materials", "At all times while operating the vehicle", "Only when requested at a weigh station"],
+    ans: 2
+  },
+  {
+    cat: "Federal Health",
+    q: "The medical examiner's certificate requirement applies to operators of which vehicle type?",
+    opts: ["First division vehicles only", "Second division vehicles at 10,001 lbs or more", "Any vehicle towing a trailer", "All commercial vehicles regardless of weight"],
+    ans: 1
+  },
+
+  // ── MECHANICAL SAFETY INSPECTIONS (5) ──
+  {
+    cat: "Safety Inspections",
+    q: "How often are safety inspections required for second division vehicles in Illinois?",
+    opts: ["Once a year", "Every 3 months", "Every 6 months", "Every 2 years"],
+    ans: 2
+  },
+  {
+    cat: "Safety Inspections",
+    q: "Which of the following is a required item on the vehicle inspection checklist?",
+    opts: ["Windshield wipers", "Seat belts", "Air pressure gauge", "Horn"],
+    ans: 2
+  },
+  {
+    cat: "Safety Inspections",
+    q: "Which of the following is also a required inspection item?",
+    opts: ["Fuel level", "Temperature gauge", "Radio", "Door locks"],
+    ans: 1
+  },
+  {
+    cat: "Safety Inspections",
+    q: "Which item below is on the required inspection checklist?",
+    opts: ["Speedometer", "Mirrors", "Turn signals", "Emergency brake"],
+    ans: 1
+  },
+  {
+    cat: "Safety Inspections",
+    q: "Cargo covers appear on the inspection checklist. Which other item is also required?",
+    opts: ["Pressure gauge", "Headlights", "Fuel filter", "Battery charge"],
+    ans: 0
+  },
+
+  // ── IDENTIFICATION (3) ──
+  {
+    cat: "Identification",
+    q: "Where must registration ID cards for second division vehicles (except pole trailers or semi-trailers) be kept?",
+    opts: ["At the company dispatch office", "In the vehicle, carried by the driver, or carried by the person in control at all times", "Mailed to the Illinois Secretary of State", "Only in the glove compartment"],
+    ans: 1
+  },
+  {
+    cat: "Identification",
+    q: "Which vehicles are exempt from the registration ID card requirement described in the identification rules?",
+    opts: ["Vehicles over 26,000 lbs", "Pole trailers and semi-trailers", "Farm vehicles", "Vehicles registered out of state"],
+    ans: 1
+  },
+  {
+    cat: "Identification",
+    q: "Who may carry the registration ID card on behalf of the driver?",
+    opts: ["Only the driver", "Only a CDL holder", "The driver or the person in control of the vehicle", "A company supervisor riding along"],
+    ans: 2
+  },
+
+  // ── SIZE & WEIGHT — GENERAL (3) ──
+  {
+    cat: "Size & Weight",
+    q: "How far may heavier and larger vehicles travel on non-designated streets to reach a designated highway?",
+    opts: ["1 mile", "3 miles", "5 miles", "10 miles"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "What is the maximum width allowed for most vehicles on standard Illinois roads?",
+    opts: ["7 feet 6 inches", "8 feet", "8 feet 6 inches", "9 feet"],
+    ans: 1
+  },
+  {
+    cat: "Size & Weight",
+    q: "On Class I and II state designated highways, what is the maximum vehicle width allowed?",
+    opts: ["8 feet", "8 feet 6 inches", "9 feet", "9 feet 6 inches"],
+    ans: 1
+  },
+  {
+    cat: "Size & Weight",
+    q: "Farm equipment may exceed the standard width limit. During what condition is this exception allowed?",
+    opts: ["Only at night with flashing lights", "During daylight hours in good visibility", "Anytime with a slow-moving emblem displayed", "Only on private farm roads"],
+    ans: 1
+  },
+  {
+    cat: "Size & Weight",
+    q: "In counties with 500,000 or more residents, buses may be up to how wide on non-interstate roads?",
+    opts: ["8 feet", "8 feet 6 inches", "8 feet 8 inches", "9 feet"],
+    ans: 3
+  },
+  {
+    cat: "Size & Weight",
+    q: "What is the maximum length for a vehicle with or without a load (excluding exceptions)?",
+    opts: ["35 feet", "40 feet", "42 feet", "55 feet"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "Poles and machinery that cannot be taken apart may exceed 42 feet but may not exceed what length?",
+    opts: ["60 feet", "70 feet", "80 feet", "100 feet"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "Vehicles hauling poles or machinery that exceed 42 feet are NOT allowed under which conditions?",
+    opts: ["During rush hour on interstates", "On weekends, holidays, or in darkness", "Within city limits only", "When the load overhangs more than 4 feet"],
+    ans: 1
+  },
+  {
+    cat: "Size & Weight",
+    q: "What is the maximum height for all vehicles in Illinois, measured from the underside of the tire to the top?",
+    opts: ["12 feet", "13 feet", "13 feet 6 inches", "14 feet"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "What is the maximum single axle weight on designated state and local streets?",
+    opts: ["16,000 pounds", "18,000 pounds", "20,000 pounds", "24,000 pounds"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "What is the maximum tandem axle weight on designated Illinois roads?",
+    opts: ["28,000 pounds", "30,000 pounds", "34,000 pounds", "40,000 pounds"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "A 5-axle combination vehicle on a designated highway may carry a maximum gross weight of:",
+    opts: ["60,000 pounds", "70,000 pounds", "80,000 pounds", "90,000 pounds"],
+    ans: 2
+  },
+  {
+    cat: "Size & Weight",
+    q: "All vehicles weighing how many pounds or more must stop at an official weigh station?",
+    opts: ["8,000 pounds", "10,000 pounds", "16,000 pounds", "26,000 pounds"],
+    ans: 2
+  },
+
+  // ── LIGHTS & REFLECTORS (6) ──
+  {
+    cat: "Lights & Reflectors",
+    q: "Outside city and town limits between sunset and sunrise, how many amber/yellow lights are required on the front of a qualifying vehicle?",
+    opts: ["1", "2", "3", "4"],
+    ans: 1
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "Front amber lights on qualifying vehicles must be visible from how far away?",
+    opts: ["200 feet", "300 feet", "500 feet", "1,000 feet"],
+    ans: 2
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "How many red lights are required on the rear of a qualifying second division vehicle?",
+    opts: ["1", "2", "3", "4"],
+    ans: 2
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "Rear red lights on qualifying vehicles must be visible from how far?",
+    opts: ["200 feet", "300 feet", "500 feet", "1,000 feet"],
+    ans: 2
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "Rear red reflectors must be placed no more than how far from the corner of the vehicle?",
+    opts: ["6 inches", "12 inches", "18 inches", "24 inches"],
+    ans: 1
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "A second division or combination vehicle longer than 20 feet and weighing more than 3,000 lbs must have amber side reflectors placed at approximately what position along the vehicle's length?",
+    opts: ["One-quarter of the vehicle length", "One-third of the vehicle length", "One-half of the vehicle length", "Two-thirds of the vehicle length"],
+    ans: 1
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "For vehicles over 20 feet and 3,000 lbs, the side amber reflectors must be no more than how high above the road?",
+    opts: ["2 feet", "3 feet", "5 feet", "7 feet"],
+    ans: 2
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "A front amber side reflector must be placed no more than how far from the front of the vehicle?",
+    opts: ["6 inches", "12 inches", "18 inches", "24 inches"],
+    ans: 1
+  },
+  {
+    cat: "Lights & Reflectors",
+    q: "A rear red side reflector must be placed no more than how far from the rear of the vehicle?",
+    opts: ["6 inches", "12 inches", "18 inches", "2 feet"],
+    ans: 1
+  },
+
+  // ── WARNING FLAGS & FLARES (3) ──
+  {
+    cat: "Warning Flags & Flares",
+    q: "Vehicles transporting explosives, flammable liquids, or compressed gas must carry which warning devices?",
+    opts: ["Three fusees and two flags", "Three red lanterns or three emergency reflectors", "Two flares and one flag", "Standard road flares only"],
+    ans: 1
+  },
+  {
+    cat: "Warning Flags & Flares",
+    q: "What warning devices are PROHIBITED on vehicles transporting explosives, flammable liquids, or compressed gas?",
+    opts: ["Red lanterns", "Emergency reflectors", "Flares, fusees, or any flame-based signals", "Red cloth flags"],
+    ans: 2
+  },
+  {
+    cat: "Warning Flags & Flares",
+    q: "Why are flame-based warning signals (flares/fusees) prohibited on vehicles carrying explosives or flammable cargo?",
+    opts: ["They are too expensive to replace", "Open flames near flammable or explosive cargo create a serious ignition risk", "They are not visible enough at highway speeds", "State law prohibits all open flames on commercial vehicles"],
+    ans: 1
+  },
+
+  // ── SLOW-MOVING VEHICLES (3) ──
+  {
+    cat: "Slow-Moving Vehicles",
+    q: "What color is the slow-moving vehicle emblem?",
+    opts: ["Yellow and black", "Red and orange", "Orange and white", "Red and white"],
+    ans: 1
+  },
+  {
+    cat: "Slow-Moving Vehicles",
+    q: "Which vehicles are required to display a slow-moving vehicle emblem?",
+    opts: ["All trucks over 8,000 lbs", "Certain slow-moving farm vehicles, construction equipment, and vehicles drawn by animals", "Any vehicle traveling under 35 mph on a highway", "All second division vehicles on rural roads"],
+    ans: 1
+  },
+  {
+    cat: "Slow-Moving Vehicles",
+    q: "At what height above the road surface must the slow-moving vehicle emblem be mounted?",
+    opts: ["1 to 4 feet", "2 to 8 feet", "4 to 12 feet", "6 to 15 feet"],
+    ans: 2
+  },
+
+  // ── SPEED LIMITS (3) ──
+  {
+    cat: "Speed Limits",
+    q: "What is the maximum speed limit on any Illinois interstate?",
+    opts: ["55 mph", "60 mph", "65 mph", "70 mph"],
+    ans: 3
+  },
+  {
+    cat: "Speed Limits",
+    q: "What is the maximum highway speed limit for vehicles weighing over 8,000 lbs?",
+    opts: ["45 mph", "55 mph", "60 mph", "65 mph"],
+    ans: 1
+  },
+  {
+    cat: "Speed Limits",
+    q: "An interstate highway has a posted speed limit of 70 mph. Your vehicle weighs 12,000 lbs. What is your maximum legal speed?",
+    opts: ["70 mph — posted limit applies to all vehicles", "55 mph — the limit for vehicles over 8,000 lbs on highways", "65 mph — a 5 mph reduction for heavy vehicles", "60 mph — half-way between highway and interstate limits"],
+    ans: 1
+  },
+
+  // ── RAILROAD CROSSINGS (3) ──
+  {
+    cat: "Railroad Crossings",
+    q: "Which vehicles are required to stop at railroad crossings?",
+    opts: ["All second division vehicles regardless of cargo", "Vehicles carrying passengers for hire, buses, and vehicles placarded for hazardous materials", "Only vehicles over 26,000 lbs", "Only vehicles towing a trailer"],
+    ans: 1
+  },
+  {
+    cat: "Railroad Crossings",
+    q: "When required to stop at a railroad crossing, how close to the nearest rail must you stop?",
+    opts: ["No more than 10 feet", "No more than 100 feet", "Within 50 feet but no closer than 15 feet", "Within 30 feet but no closer than 5 feet"],
+    ans: 2
+  },
+  {
+    cat: "Railroad Crossings",
+    q: "A bus driver approaches an active railroad crossing. They stop correctly at 20 feet from the rail. This stop is:",
+    opts: ["Correct — it is within 50 feet and no closer than 15 feet", "Incorrect — they must stop within 10 feet of the rail", "Incorrect — they must be at least 30 feet away", "Correct — any distance over 5 feet is acceptable"],
+    ans: 0
+  },
+
+  // ── SECURED LOADS (3) ──
+  {
+    cat: "Secured Loads",
+    q: "What must a vehicle's load be constructed or secured to prevent?",
+    opts: ["Weight shifts on curves only", "The load from dropping, shifting, falling, or escaping — load and covering must be securely fastened", "Only liquid cargo from spilling", "Cargo from moving if the vehicle exceeds 55 mph"],
+    ans: 1
+  },
+  {
+    cat: "Secured Loads",
+    q: "According to Illinois law, what must also be securely fastened in addition to the load itself?",
+    opts: ["The trailer doors", "The truck cab", "The load covering", "The tie-down straps only"],
+    ans: 2
+  },
+  {
+    cat: "Secured Loads",
+    q: "A driver's load shifts during transit, causing cargo to fall onto the highway. Under Illinois law, who is responsible?",
+    opts: ["The shipper who loaded the vehicle", "The driver and/or owner of the vehicle", "The Illinois Department of Transportation", "The receiving company"],
+    ans: 1
+  },
+
+  // ── PROJECTING LOADS (2) ──
+  {
+    cat: "Projecting Loads",
+    q: "A load projecting 4 feet or more to the rear of a vehicle must display what at night?",
+    opts: ["An amber flashing light visible for 300 feet", "A red light visible for at least 500 feet", "A slow-moving vehicle emblem", "Three red reflectors in a horizontal line"],
+    ans: 1
+  },
+  {
+    cat: "Projecting Loads",
+    q: "The red light on a projecting rear load must be visible for at least how far when it is dark?",
+    opts: ["200 feet", "300 feet", "400 feet", "500 feet"],
+    ans: 3
+  },
+
+  // ── DROWSINESS / DRUGS / ALCOHOL (3) ──
+  {
+    cat: "Drowsiness & Drugs",
+    q: "Why are amphetamines and stimulant drugs dangerous to use while driving?",
+    opts: ["They cause immediate unconsciousness", "They make you feel awake but impair decision making and muscle movement", "They are only dangerous if taken in large doses", "They reduce reaction time with no side effects"],
+    ans: 1
+  },
+  {
+    cat: "Drowsiness & Drugs",
+    q: "Stimulant drugs taken to stay awake impair which of the following?",
+    opts: ["Only vision", "Decision making and muscle movement", "Only hearing", "Only depth perception"],
+    ans: 1
+  },
+  {
+    cat: "Drowsiness & Drugs",
+    q: "What is the primary danger of using stimulants to fight drowsiness while driving?",
+    opts: ["They are addictive", "They create a false sense of alertness while your actual abilities are impaired", "They raise blood pressure too high to drive safely", "They are illegal in Illinois"],
+    ans: 1
+  },
+
+  // ── DOWNSHIFTING (2) ──
+  {
+    cat: "Downshifting",
+    q: "When should you downshift before a hill?",
+    opts: ["After you start going downhill", "Before you reach the hill", "At the top of the hill only", "Downshifting is not recommended on hills"],
+    ans: 1
+  },
+  {
+    cat: "Downshifting",
+    q: "Besides hills, when else should you downshift?",
+    opts: ["When merging onto an interstate", "When going into a turn", "When stopping at a weigh station", "When the temperature gauge rises"],
+    ans: 1
+  },
+
+  // ── TIRE FAILURE (3) ──
+  {
+    cat: "Tire Failure",
+    q: "What is the first thing you should do if you experience a tire failure while driving?",
+    opts: ["Immediately hit the brakes hard", "Hold the steering wheel firmly", "Pull sharply to the right", "Accelerate to maintain control"],
+    ans: 1
+  },
+  {
+    cat: "Tire Failure",
+    q: "What should you do with the brakes during a tire failure?",
+    opts: ["Apply brakes immediately and hard", "Pump the brakes rapidly", "Stay off the brakes and let the vehicle slow naturally", "Use the parking brake only"],
+    ans: 2
+  },
+  {
+    cat: "Tire Failure",
+    q: "After a tire failure, once you have safely stopped, you should:",
+    opts: ["Continue driving slowly to the nearest exit", "Call for assistance without inspecting the tire", "Check the tire afterward before proceeding", "Immediately change the tire while on the highway shoulder"],
+    ans: 2
+  },
+
+  // ── FRONT WHEEL SKIDS (3) ──
+  {
+    cat: "Front Wheel Skids",
+    q: "When a vehicle enters a front wheel skid, what does the vehicle tend to do?",
+    opts: ["Turn sharply in the direction the wheel is pointed", "Go straight regardless of where the steering wheel is turned", "Spin out in the opposite direction", "Slow down rapidly and stop"],
+    ans: 1
+  },
+  {
+    cat: "Front Wheel Skids",
+    q: "During a front wheel skid, applying the brakes will:",
+    opts: ["Help bring the vehicle back under control", "Have no benefit — braking won't help during a front wheel skid", "Lock the wheels and stop the vehicle quickly", "Transfer weight forward to restore traction"],
+    ans: 1
+  },
+  {
+    cat: "Front Wheel Skids",
+    q: "What is the correct way to handle a front wheel skid?",
+    opts: ["Steer hard into the skid and brake firmly", "Steer hard away from the skid", "Let the vehicle come to a stop on its own — steering and braking won't help", "Downshift immediately to slow the vehicle"],
+    ans: 2
+  },
+
+  // ── VEHICLE FIRES (4) ──
+  {
+    cat: "Vehicle Fires",
+    q: "Where should you NOT pull over if your vehicle catches fire?",
+    opts: ["An open field", "A service station", "The shoulder of the road away from other vehicles", "A parking lot far from buildings"],
+    ans: 1
+  },
+  {
+    cat: "Vehicle Fires",
+    q: "How should you fight an engine fire under the hood?",
+    opts: ["Open the hood and pour water directly on the engine", "Extinguish through vents or openings without opening the hood", "Hose down the undercarriage", "Open the hood and use an extinguisher from above"],
+    ans: 1
+  },
+  {
+    cat: "Vehicle Fires",
+    q: "Which type of fire extinguisher is appropriate for a vehicle engine fire?",
+    opts: ["A-rated (water-based)", "D-rated only", "B, C rated or ABC rated", "Any extinguisher is equally effective"],
+    ans: 2
+  },
+  {
+    cat: "Vehicle Fires",
+    q: "Why should you NOT open the cargo door if the cargo inside the trailer is on fire?",
+    opts: ["The door is too hot to touch safely", "Opening the door introduces oxygen that feeds the fire", "The door may fall off and cause injury", "Opening the door is against Illinois law during emergencies"],
+    ans: 1
+  },
+
+  // ── HAZARDOUS MATERIALS (4) ──
+  {
+    cat: "Hazardous Materials",
+    q: "What information must shippers include in the item description on shipping papers for hazardous materials?",
+    opts: ["The vehicle's license plate number", "The name of the hazard class", "The driver's CDL number", "The weight of the shipment in metric tons"],
+    ans: 1
+  },
+  {
+    cat: "Hazardous Materials",
+    q: "What type of label must appear on hazardous material containers?",
+    opts: ["A 6-inch square label", "A 4-inch diamond label", "A 2-foot rectangle label", "A 1-foot circle label"],
+    ans: 1
+  },
+  {
+    cat: "Hazardous Materials",
+    q: "If a diamond label does not fit on a hazardous material container, what must the shipper do?",
+    opts: ["Omit the label and note it on the shipping papers", "Use a smaller non-standard shape", "Place the label on a tag attached to the container", "Write the hazard class directly on the container with a marker"],
+    ans: 2
+  },
+  {
+    cat: "Hazardous Materials",
+    q: "Where must the name of the hazard class appear on hazardous material shipments?",
+    opts: ["On the outside of the vehicle only", "On a placard visible to the driver only", "In the item description on the shipping papers", "On a tag attached to the vehicle door"],
+    ans: 2
+  }
+
+];
+
+const letters = ['A','B','C','D'];
+let current = 0;
+let answers = new Array(questions.length).fill(null);
+let revealed = new Array(questions.length).fill(false);
+let quizDone = false;
+
+function getStats() {
+  const answered = answers.filter(a => a !== null).length;
+  const correct = answers.filter((a,i) => a !== null && a === questions[i].ans).length;
+  return { answered, correct };
+}
+
+function render() {
+  const app = document.getElementById('app');
+  if (quizDone) { renderResults(app); return; }
+
+  const q = questions[current];
+  const pct = Math.round((current / questions.length) * 100);
+  const isRevealed = revealed[current];
+  const userAns = answers[current];
+  const { answered, correct } = getStats();
+
+  app.innerHTML = `
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-val">${current+1}/${questions.length}</div>
+        <div class="stat-lbl">Question</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">${answered}</div>
+        <div class="stat-lbl">Answered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">${correct}</div>
+        <div class="stat-lbl">Correct</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">${answered > 0 ? Math.round((correct / answered) * 100) : 0}%</div>
+        <div class="stat-lbl">Score</div>
+      </div>
+    </div>
+
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" style="width:${pct}%"></div>
+    </div>
+    <div class="pager">Question ${current+1} of ${questions.length}</div>
+
+    <div class="q-block">
+      <span class="q-category">${q.cat}</span>
+      <div class="q-text">${q.q}</div>
+      ${q.opts.map((o, i) => {
+        let cls = 'opt';
+        if (isRevealed) {
+          if (i === q.ans) cls += ' correct';
+          else if (i === userAns && i !== q.ans) cls += ' wrong';
+        } else if (i === userAns) cls += ' selected';
+        return `<div class="${cls}" onclick="selectOpt(${i})">
+          <span class="opt-letter">${letters[i]}</span>
+          <span class="opt-text">${o}</span>
+        </div>`;
+      }).join('')}
+      ${isRevealed ? `
+        <div class="feedback ${userAns === q.ans ? 'correct' : 'wrong'}">
+          ${userAns === q.ans
+            ? '✓ Correct!'
+            : `✗ The correct answer is ${letters[q.ans]}: ${q.opts[q.ans]}`}
+        </div>` : ''}
+    </div>
+
+    <div class="nav">
+      <button onclick="prevQ()" ${current === 0 ? 'disabled' : ''}>← Back</button>
+      <div style="display:flex;gap:8px;">
+        ${!isRevealed && userAns !== null
+          ? `<button onclick="checkAns()">Check answer</button>` : ''}
+        ${current < questions.length - 1
+          ? `<button class="primary" onclick="nextQ()">Next →</button>`
+          : `<button class="primary" onclick="finish()">Finish &amp; see score</button>`}
+      </div>
+    </div>
+  `;
+}
+
+function selectOpt(i) {
+  if (revealed[current]) return;
+  answers[current] = i;
+  render();
+}
+function checkAns() { revealed[current] = true; render(); }
+function nextQ() { if (current < questions.length - 1) { current++; render(); } }
+function prevQ() { if (current > 0) { current--; render(); } }
+function finish() { quizDone = true; render(); }
+
+function renderResults(app) {
+  const correct = answers.filter((a,i) => a === questions[i].ans).length;
+  const total = questions.length;
+  const pct = Math.round((correct / total) * 100);
+  const pass = pct >= 80;
+
+  const cats = {};
+  questions.forEach((q, i) => {
+    if (!cats[q.cat]) cats[q.cat] = { total: 0, correct: 0 };
+    cats[q.cat].total++;
+    if (answers[i] === q.ans) cats[q.cat].correct++;
+  });
+
+  const breakdownRows = Object.entries(cats).map(([cat, data]) => {
+    const cpct = Math.round((data.correct / data.total) * 100);
+    return `<div class="sb-row">
+      <span class="sb-cat">${cat}</span>
+      <div class="sb-bar-bg"><div class="sb-bar-fill" style="width:${cpct}%"></div></div>
+      <span class="sb-score">${data.correct}/${data.total}</span>
+    </div>`;
+  }).join('');
+
+  app.innerHTML = `
+    <div class="score-card">
+      <div class="score-big">${pct}%</div>
+      <div class="score-sub">${correct} of ${total} correct</div>
+      <div class="score-verdict ${pass ? 'pass' : 'fail'}">
+        ${pass ? '✓ Passing score — you are ready!' : '✗ Keep studying — aim for 80% or higher'}
+      </div>
+    </div>
+
+    <div class="section-breakdown">
+      <h2>Score by topic</h2>
+      ${breakdownRows}
+    </div>
+
+    <div class="answer-key">
+      <h2>Answer key</h2>
+      ${questions.map((q, i) => {
+        const ok = answers[i] === q.ans;
+        return `<div class="ak-row">
+          <span class="ak-q">Q${i+1}</span>
+          <span class="ak-dot ${ok ? 'dot-green' : 'dot-red'}"></span>
+          <span class="ak-letter">${letters[q.ans]}</span>
+          <span class="ak-text">${q.opts[q.ans]}</span>
+        </div>`;
+      }).join('')}
+    </div>
+
+    <div class="restart-row">
+      <button class="primary" onclick="restart()">Retake quiz</button>
+    </div>
+  `;
+}
+
+function restart() {
+  current = 0;
+  answers = new Array(questions.length).fill(null);
+  revealed = new Array(questions.length).fill(false);
+  quizDone = false;
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
