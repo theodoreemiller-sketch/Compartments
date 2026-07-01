@@ -3575,7 +3575,7 @@
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 6/25/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Creation Date = 7/1/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eight apparatus study guides + three coming soon. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -17225,22 +17225,785 @@ if (searchInput) {
 <!-- ═══════ SNORKEL 61 SECTION BREAK ═══════ -->
 <div class="guide-section-divider" id="snorkel61-guide" style="border-top:3px solid #8B1A1A;">
   <div>
-    <div class="div-label" style="color:#8B1A1A;">🚒 Snorkel 61 — Compartment Study Guide</div>
-    <div class="div-sub">Aerial snorkel operations · Compartments coming soon</div>
+    <div class="div-label" style="color:#8B1A1A;">🚒 Snorkel 61 — Compartment Study Guide
+  <a href="https://docs.google.com/document/d/1fHzJ-8tGMlFT4tolnAyLlfXqSeNOFIas3i-pm4oUObg/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Snorkel 61</a>
+</div>
+    <div class="div-sub">Aerial snorkel operations · Driver's side · Officer's side · Rear · Cab</div>
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
 </div>
 
+<!-- ═══════ SNORKEL 61 SCOPED STYLES ═══════ -->
+<style>
+#sn61-guide {
+  --sn61-red:#8B1A1A; --sn61-dark:#3B0A0A; --sn61-gold:#D4A017;
+  --sn61-cream:#F5F0E8; --sn61-paper:#EDE8DC;
+  --sn61-ink:#1A1612; --sn61-slate:#2C2825; --sn61-mid:#5A5248;
+  --sn61-muted:#8A7F74; --sn61-border:#C8BFB0;
+  font-family:'Source Serif 4',Georgia,serif; background:#F5F0E8; color:#1A1612; font-size:16px; line-height:1.7;
+}
+#sn61-guide .layout { display:flex; max-width:1400px; margin:0 auto; min-height:calc(100vh - 52px); }
+#sn61-sidebar { width:280px; flex-shrink:0; background:#2C2825; position:sticky; top:52px; height:calc(100vh - 52px); overflow-y:auto; padding:20px 0 40px; }
+#sn61-sidebar::-webkit-scrollbar { width:4px; }
+#sn61-sidebar::-webkit-scrollbar-thumb { background:#5A5248; border-radius:2px; }
+#sn61-guide .nav-section-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#8A7F74; padding:16px 20px 6px; }
+#sn61-sidebar .nav-link { display:block; padding:8px 20px; color:#C8BFB0; text-decoration:none; font-family:'Oswald',sans-serif; font-size:14px; border-left:3px solid transparent; transition:all .15s; }
+#sn61-sidebar .nav-link:hover { color:#fff; border-left-color:#8B1A1A; background:rgba(255,255,255,.05); padding-left:24px; }
+#sn61-guide .nav-divider { border:none; border-top:1px solid rgba(255,255,255,.08); margin:8px 20px; }
+#sn61-guide .comp-section { margin-bottom:56px; }
+#sn61-guide .section-header { display:flex; align-items:center; gap:16px; margin-bottom:28px; padding-bottom:16px; border-bottom:3px solid #8B1A1A; }
+#sn61-guide .section-icon { width:48px; height:48px; background:#8B1A1A; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px; color:#fff; }
+#sn61-guide .section-header h2 { font-family:'Oswald',sans-serif; font-size:28px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#2C2825 !important; }
+#sn61-guide .section-header .sub { font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; letter-spacing:1px; margin-top:3px; }
+#sn61-guide .equip-card { background:#fff; border:1px solid #C8BFB0; border-radius:10px; margin-bottom:18px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.06); transition:box-shadow .2s; }
+#sn61-guide .equip-card:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); }
+#sn61-guide .card-header { display:flex; align-items:flex-start; gap:14px; padding:16px 20px 12px; cursor:pointer; user-select:none; background:#faf9f7; border-bottom:1px solid transparent; transition:background .15s; }
+#sn61-guide .card-header:hover { background:#EDE8DC; }
+#sn61-guide .card-header.open { border-bottom-color:#C8BFB0; background:#EDE8DC; }
+#sn61-guide .card-number { font-family:'JetBrains Mono',monospace; font-size:11px; color:#5A5248 !important; background:#EDE8DC; border:1px solid #C8BFB0; border-radius:4px; padding:2px 7px; white-space:nowrap; margin-top:3px; flex-shrink:0; }
+#sn61-guide .card-title { font-family:'Oswald',sans-serif; font-size:18px; font-weight:500; color:#2C2825 !important; flex:1; line-height:1.3; }
+#sn61-guide .card-aka { font-family:'JetBrains Mono',monospace; font-size:11px; color:#5A5248 !important; display:block; margin-top:2px; }
+#sn61-guide .toggle-btn { width:28px; height:28px; border-radius:50%; background:#F5F0E8; border:1px solid #C8BFB0; display:flex; align-items:center; justify-content:center; font-size:14px; color:#5A5248; flex-shrink:0; transition:background .15s,transform .2s; margin-top:2px; }
+#sn61-guide .card-header.open .toggle-btn { background:#8B1A1A; border-color:#8B1A1A; color:#fff; transform:rotate(45deg); }
+#sn61-guide .card-body { display:none; padding:20px 20px 22px; }
+#sn61-guide .card-body.visible { display:block; }
+#sn61-guide .entry-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+#sn61-guide .entry-block { background:#F5F0E8; border-radius:8px; padding:14px 16px; border:1px solid #C8BFB0; }
+#sn61-guide .entry-block.full { grid-column:1 / -1; }
+#sn61-guide .entry-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:#8B1A1A !important; font-weight:500; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+#sn61-guide .card-body p, #sn61-guide .card-body li, #sn61-guide .entry-block p, #sn61-guide .entry-block li { color:#1A1612 !important; font-size:14.5px; line-height:1.65; }
+#sn61-guide .callout { border-radius:8px; padding:14px 16px; margin:12px 0 6px; display:flex; gap:12px; align-items:flex-start; font-size:14px; line-height:1.6; }
+#sn61-guide .callout-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+#sn61-guide .callout-content strong { display:block; font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; margin-bottom:3px; }
+#sn61-guide .callout-warn { background:#FFF4E0; border:1px solid #D4A017; border-left:4px solid #D4A017; color:#5A3A00 !important; }
+#sn61-guide .callout-warn .callout-content strong { color:#7A4A00 !important; }
+#sn61-guide .callout-danger { background:#FBE4E4; border:1px solid #8B1A1A; border-left:4px solid #8B1A1A; color:#5A1A1A !important; }
+#sn61-guide .callout-danger .callout-content strong { color:#7A1A1A !important; }
+#sn61-guide .callout-tip { background:#E4ECF5; border:1px solid #1A4B8C; border-left:4px solid #1A4B8C; color:#0F2F5C !important; }
+#sn61-guide .callout-tip .callout-content strong { color:#0F2F5C !important; }
+#sn61-guide .callout-safe { background:#E8F4E8; border:1px solid #3A7A3A; border-left:4px solid #3A7A3A; color:#1A3A1A !important; }
+#sn61-guide .callout-safe .callout-content strong { color:#1A5A1A !important; }
+#sn61-guide .search-hidden { display:none !important; }
+@media (max-width:900px) {
+  #sn61-guide .layout { flex-direction:column; }
+  #sn61-sidebar { display:none; width:100% !important; height:auto !important; position:relative !important; top:auto !important; }
+  #sn61-sidebar.mob-open { display:block; }
+  #sn61-guide #sn61-main { padding:20px 16px 60px !important; max-width:100% !important; }
+  #sn61-guide .entry-grid { grid-template-columns:1fr !important; }
+}
+@media (max-width:640px) {
+  #sn61-guide .card-title { font-size:15px !important; }
+  #sn61-guide .section-header h2 { font-size:20px !important; }
+}
+</style>
+
 <!-- ═══════ SNORKEL 61 CONTENT ═══════ -->
-<div id="snorkel61-guide" style="background:#F5F0E8; min-height:60vh; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:24px; padding:60px 40px; text-align:center;">
-  <div style="font-size:64px;">🚒</div>
-  <h2 style="font-family:'Oswald',sans-serif; font-size:36px; font-weight:700; letter-spacing:3px; color:#2C2825; text-transform:uppercase;">SNORKEL 61</h2>
-  <div style="background:#fff; border:2px dashed #8B1A1A; border-radius:16px; padding:32px 48px; max-width:560px;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:3px; text-transform:uppercase; color:#8B1A1A; margin-bottom:12px;">🔧 Coming Soon</div>
-    <p style="font-family:'Source Serif 4',Georgia,serif; font-size:16px; color:#5A5248; line-height:1.7;">This compartment study guide is under development. Equipment cards, rig check checklists, and interactive study tools for <strong>SNORKEL 61</strong> will appear here.</p>
-    <p style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A7F74; margin-top:16px;">Check back soon · Glen Ellyn Fire Department</p>
-  </div>
+<div id="sn61-guide">
+<div style="background:#3B0A0A; border-bottom:2px solid #8B1A1A; padding:12px 24px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; position:sticky; top:52px; z-index:90;">
+  <input type="search" id="sn61-search" placeholder="Search Snorkel 61 equipment, tools, nicknames…" autocomplete="off"
+    style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
+           border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
+  <a href="https://docs.google.com/document/d/1fHzJ-8tGMlFT4tolnAyLlfXqSeNOFIas3i-pm4oUObg/edit?usp=sharing" target="_blank" rel="noopener"
+     style="background:#8B1A1A; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+    📋 Snorkel 61 Inventory &amp; Photos
+  </a>
+  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D0A8A8; white-space:nowrap;">🚒 SNORKEL 61 · AERIAL SNORKEL</span>
 </div>
+<div class="layout">
+<nav id="sn61-sidebar">
+  <div class="nav-section-label">Driver's Side</div>
+  <a class="nav-link" href="#sn61-ds-pump">DS Pumping Area</a>
+  <a class="nav-link" href="#sn61-ds-gen">DS Generator Compartment</a>
+  <a class="nav-link" href="#sn61-ds-eng">DS Engineers Compartment</a>
+  <a class="nav-link" href="#sn61-ds-wheel">DS Over The Wheel</a>
+  <a class="nav-link" href="#sn61-ds-behindwheel">DS Behind The Wheel</a>
+  <a class="nav-link" href="#sn61-ds-secondlast">DS Second to Last</a>
+  <a class="nav-link" href="#sn61-ds-rear">DS Rear Compartment</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Rear of Apparatus</div>
+  <a class="nav-link" href="#sn61-back-left">Back — Left Side</a>
+  <a class="nav-link" href="#sn61-back-right">Back — Right Side</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Officer's Side</div>
+  <a class="nav-link" href="#sn61-os-rear">OS Rear</a>
+  <a class="nav-link" href="#sn61-os-secondrear">OS Second to Rear</a>
+  <a class="nav-link" href="#sn61-os-behindwheel">OS Behind Wheel</a>
+  <a class="nav-link" href="#sn61-os-wheel">OS Over Wheel</a>
+  <a class="nav-link" href="#sn61-os-fronttire">OS In Front of Tire</a>
+  <a class="nav-link" href="#sn61-os-front">OS Front Compartment</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Cab</div>
+  <a class="nav-link" href="#sn61-cab">Cab Compartment</a>
+</nav>
+<main id="sn61-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - 280px); overflow-x:hidden;">
+  <div class="intro-banner" style="background:linear-gradient(135deg,#3B0A0A 0%,#8B1A1A 100%);
+       border-radius:12px; border-left:5px solid #D4A017; padding:28px 32px; margin-bottom:40px;">
+    <h3 style="font-family:'Oswald',sans-serif; font-size:20px; letter-spacing:2px; text-transform:uppercase; color:#D4A017; margin-bottom:12px;">🚒 Snorkel 61 — Compartment Study Guide</h3>
+    <p style="font-size:15px; line-height:1.7; color:#F0D8D8;">Snorkel 61 is the aerial snorkel — a specialized elevated platform that puts water above a fire or gets crews to heights no ladder can reach quickly. Unlike the tower, the snorkel's articulating boom gives it flexibility in tight spots. It's a tool with a specific job, and knowing its compartments is how you support that job without fumbling around in the dark.</p>
+    <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> When the snorkel rolls, the crew needs to move fast and know exactly where everything is. This rig has gear distributed across both sides, the rear, and the cab — and you're expected to put your hands on the right thing without stopping to read a label. Walk every compartment. Know what's on each shelf. Then do it again until it's automatic.</p>
+    <p style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#D0A8A8;">📅 Study guide synced from Google Doc: <strong style="color:#D4A017;">June 26, 2026</strong></p>
+  </div>
+
+  <!-- ══════════════ DRIVER'S SIDE ══════════════ -->
+  <section class="comp-section" id="sn61-ds-pump">
+    <div class="section-header">
+      <div class="section-icon">🚰</div>
+      <div><h2>DS Pumping Area</h2><div class="sub">Driver's Side · Pump Panel</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-01</span>
+        <div class="card-title">Driver's Side Pumping Area
+          <span class="card-aka">aka: Pump panel, pump compartment</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full">
+            <div class="entry-label">📋 Contents</div>
+            <p>Contents pending verification — walk this compartment with your officer during rig check and document what's here.</p>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>Probie Note</strong>The pump panel controls water flow and pressure for the entire rig. If you haven't been walked through pump operations by your engineer, make that happen before your next shift.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-gen">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div><h2>DS Generator Compartment</h2><div class="sub">Driver's Side · Onboard Generator</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-02</span>
+        <div class="card-title">Driver's Side Generator Compartment
+          <span class="card-aka">aka: Gen compartment, power compartment</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full">
+            <div class="entry-label">📋 Contents</div>
+            <p>Contents pending verification — walk this compartment with your officer during rig check and document what's here.</p>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>Know Your Generator</strong>The generator powers lights, saws, and other electric tools on scene. Know how to start it, what it powers, and when to use it before you're standing in the dark at a structure fire.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-eng">
+    <div class="section-header">
+      <div class="section-icon">🔧</div>
+      <div><h2>DS Engineers Compartment</h2><div class="sub">Driver's Side · Hydrant tools · Air · Fittings</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-03</span>
+        <div class="card-title">Hydrant Bag
+          <span class="card-aka">aka: Hydrant kit, hydrant tools</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 What It Is</div>
+            <p>A bag containing all the tools needed to connect to and open a fire hydrant — typically includes a hydrant wrench, gate valve, and spanner wrenches.</p>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">📍 Location</div>
+            <p>Driver's Side Engineers Compartment.</p>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>Probie Note</strong>The hydrant bag should be one of the first things you can grab without looking. The engineer needs water fast and you're often the one making the hydrant connection happen.</div>
+        </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-04</span>
+        <div class="card-title">25' of 5" LDH
+          <span class="card-aka">aka: Five-inch, large diameter hose, supply line, soft sleeve</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 What It Is</div>
+            <p>Large diameter hose — 25 feet of 5-inch supply hose used to connect from a hydrant or water supply to the rig's intake. High-volume, low-pressure supply line.</p>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">📍 Location</div>
+            <p>Driver's Side Engineers Compartment.</p>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>Handle It Right</strong>Five-inch is heavy and stiff. Know how it's loaded and how to lay it out without kinking it. A kinked 5-inch is a stopped water supply. That is a very bad thing at a working fire.</div>
+        </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-05</span>
+        <div class="card-title">2 Air Bottles
+          <span class="card-aka">aka: SCBA cylinders, spare bottles, spare air</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full">
+            <div class="entry-label">📋 What They Are</div>
+            <p>Spare SCBA air cylinders stored for crew replenishment or RIT (Rapid Intervention Team) operations. Always check that bottles are full during rig check — if a bottle is not at full pressure, swap it out and report it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-06</span>
+        <div class="card-title">Additional Engineers Compartment Contents</div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Hose Roller</li>
+              <li>Oil Dry</li>
+              <li>Connectors, Adaptors, Caps</li>
+              <li>Spanner</li>
+              <li>WD-40</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>Hose Roller:</strong> Protects hose from sharp edges on windowsills and parapets when pulling line into a building.<br><br>
+            <strong>Spanner:</strong> Hose coupling wrench — used to tighten or loosen couplings that are hand-tight.<br><br>
+            <strong>Connectors/Adaptors/Caps:</strong> Assorted fittings for making connections between different hose sizes and threads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-wheel">
+    <div class="section-header">
+      <div class="section-icon">🪓</div>
+      <div><h2>DS Over The Wheel Compartment</h2><div class="sub">Driver's Side · Irons · Forcible entry</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-07</span>
+        <div class="card-title">Irons &amp; Forcible Entry Tools
+          <span class="card-aka">aka: The irons, hand tools, FE tools</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Flathead Axe</li>
+              <li>Halligan</li>
+              <li>Pick Axe</li>
+              <li>Closet Pike Pole</li>
+              <li>Sledge Hammer</li>
+              <li>K-Tool</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Key Tools</div>
+            <p><strong>Halligan + Flathead Axe:</strong> Together these are "the irons" — the primary forcible entry tool set in the fire service. Learn to use them as a pair.<br><br>
+            <strong>K-Tool:</strong> Used to pull lock cylinders out of doors so you can unlock from the inside without destroying the entire door. Faster and cleaner than forcing in many situations.<br><br>
+            <strong>Closet Pike Pole:</strong> Short pike pole for use in tight spaces like closets and small rooms — opens ceilings without needing full swing room.</p>
+          </div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content"><strong>Know Your Irons Cold</strong>Forcible entry is a perishable skill. If you can't marry a Halligan and an axe under pressure in poor visibility and get a door open in seconds, you need more practice. People have died in buildings that couldn't be accessed fast enough.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-behindwheel">
+    <div class="section-header">
+      <div class="section-icon">🔩</div>
+      <div><h2>DS Behind The Wheel Compartment</h2><div class="sub">Driver's Side · Power saws · Fuel</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-08</span>
+        <div class="card-title">Power Saws &amp; Fuel
+          <span class="card-aka">aka: Saw compartment, cutting tools</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Tool Box</li>
+              <li>Fuel for Chainsaw and K12</li>
+              <li>K12</li>
+              <li>Chainsaw</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>K12 (Partner Saw):</strong> Rotary rescue saw — cuts metal, concrete, and masonry. Used for vehicle extrication and forcible entry through metal doors and security gates.<br><br>
+            <strong>Chainsaw:</strong> Used for cutting wood — roof ventilation, tree removal from roadways, wooden debris at collapse scenes.<br><br>
+            <strong>Fuel:</strong> Each saw uses its own fuel mix. Don't cross-contaminate. Know which can goes with which saw before you're standing on a roof in full gear.</p>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>Fuel Check Every Shift</strong>Check fuel levels on both saws at the start of every shift. A saw that stalls on a roof because it's dry is worse than useless — it's a delay that costs lives. Top them off if they're not full.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-secondlast">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <div><h2>DS Second to Last Compartment</h2><div class="sub">Driver's Side · Tarps · Blades</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-09</span>
+        <div class="card-title">Tarp, Spare Blades &amp; Eye Protection
+          <span class="card-aka">aka: Salvage compartment</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Plastic Tarp</li>
+              <li>Spare Blade</li>
+              <li>Black Box (Eye Protection)</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>Spare Blade:</strong> Replacement blade for the K12 or chainsaw. Know what blade goes with what saw and how to swap it safely — blade changes happen under pressure on scene.<br><br>
+            <strong>Black Box:</strong> Likely contains eye protection (safety glasses, goggles) for saw operations. Confirm contents during rig check.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-rear">
+    <div class="section-header">
+      <div class="section-icon">🧯</div>
+      <div><h2>DS Rear Compartment</h2><div class="sub">Driver's Side · Extinguishers · Climbing gear</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-10</span>
+        <div class="card-title">Extinguishers &amp; Climbing Belt
+          <span class="card-aka">aka: Extinguisher compartment, rear DS</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Climbing Belt</li>
+              <li>ABC Fire Extinguisher</li>
+              <li>CO2 Extinguisher</li>
+              <li>Silver Bullet (Pressurized Water)</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Extinguisher Types</div>
+            <p><strong>ABC Extinguisher:</strong> Dry chemical — works on ordinary combustibles, flammable liquids, and electrical fires. Versatile, but messy and corrosive.<br><br>
+            <strong>CO2 Extinguisher:</strong> Carbon dioxide — used on electrical fires and flammable liquids where clean-up matters (server rooms, electrical panels). Leaves no residue.<br><br>
+            <strong>Silver Bullet:</strong> Pressurized water extinguisher — Class A fires only (wood, paper, ordinary combustibles). Do NOT use on electrical or flammable liquid fires.</p>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>Climbing Belt</strong>The climbing belt is used for aerial operations — working safely in the bucket or from an elevated position. Know how to don it correctly. Inspect it every shift for wear, damage, or missing hardware.</div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content"><strong>Wrong Extinguisher = Disaster</strong>Spraying water on a flammable liquid fire or electrical fire turns a bad situation catastrophic. Know your extinguisher types cold and match the right tool to the right fire class without hesitation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ REAR OF APPARATUS ══════════════ -->
+  <section class="comp-section" id="sn61-back-left">
+    <div class="section-header">
+      <div class="section-icon">🏗️</div>
+      <div><h2>Back of Snorkel — Left Side</h2><div class="sub">Rear exterior · Pike poles · Ladder · Shovels</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">RR-01</span>
+        <div class="card-title">Rear Left — Pike Poles, Attic Ladder &amp; Shovels
+          <span class="card-aka">aka: Rear exterior, rear stowage</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>4 Pike Poles</li>
+              <li>Folding Attic Ladder</li>
+              <li>2 Blue Poles</li>
+              <li>2 Scoop Shovels</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>Pike Poles:</strong> Used for pulling ceilings, opening walls, and moving debris without getting hands near fire. Know the hook-end vs. pike-end and how to use each.<br><br>
+            <strong>Folding Attic Ladder:</strong> Lightweight, compact ladder for accessing attic spaces through hatches or when full ground ladder deployment isn't practical.<br><br>
+            <strong>Blue Poles:</strong> Confirm exact purpose with your officer during rig walk — document what these are used for.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-back-right">
+    <div class="section-header">
+      <div class="section-icon">🏗️</div>
+      <div><h2>Back of Snorkel — Right Side</h2><div class="sub">Rear exterior · Pike poles · New York Hook</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">RR-02</span>
+        <div class="card-title">Rear Right — Pike Poles &amp; New York Hook
+          <span class="card-aka">aka: Rear right, right side stowage</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>2 Pike Poles</li>
+              <li>New York Hook</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 New York Hook</div>
+            <p>The New York Hook (or "NY Hook") has a large angled hook head with a curved pick — designed specifically for pulling plaster ceilings and heavy lathe. The hook shape gives you mechanical advantage and keeps your hands out of the drop zone. It's heavier than a standard pike pole and worth every ounce when you're opening up a heavy ceiling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ OFFICER'S SIDE ══════════════ -->
+  <section class="comp-section" id="sn61-os-rear">
+    <div class="section-header">
+      <div class="section-icon">💨</div>
+      <div><h2>Officers Side Rear</h2><div class="sub">Officer's Side · Smoke Ejector · Electric Adapter</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-01</span>
+        <div class="card-title">Smoke Ejector &amp; Electric Adapter
+          <span class="card-aka">aka: Fan, blower, PPV fan</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Smoke Ejector</li>
+              <li>Electric Adapter</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>Smoke Ejector:</strong> Electric or gas-powered fan used for positive pressure ventilation (PPV) or negative pressure smoke removal. PPV pushes fresh air in through an entry point, forcing smoke and heat out through openings. Know when to use PPV vs. when it will make things worse — ask your officer.<br><br>
+            <strong>Electric Adapter:</strong> Cord or adapter for powering the electric smoke ejector from the rig's generator or shore power.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-os-secondrear">
+    <div class="section-header">
+      <div class="section-icon">🪢</div>
+      <div><h2>Officers Side Second to Rear</h2><div class="sub">Officer's Side · Life safety rope</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-02</span>
+        <div class="card-title">3 Bags of 150' Rope
+          <span class="card-aka">aka: Life safety rope, rescue rope, throwbag</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <p>3 bags, each containing 150 feet of life safety rope.</p>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p>Life safety rope is NFPA-rated for rescue operations — it's not general utility rope. Each bag should be inspected regularly and after any deployment. If a rope is used for rescue, it gets retired from rescue service afterward per NFPA 1983. Know which is which and don't co-mingle rescue rope with general utility rope.</p>
+          </div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content"><strong>Rescue Rope Is Not Utility Rope</strong>Life safety rope that has been shock-loaded (a person fell and the rope caught them) must be removed from service immediately, regardless of whether it looks damaged. The internal fibers may have failed. Using compromised rope for rescue has gotten people killed.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-os-behindwheel">
+    <div class="section-header">
+      <div class="section-icon">💡</div>
+      <div><h2>Officers Side Behind Wheel</h2><div class="sub">Officer's Side · Electrical cord · Smoke Ejector · Air Bottles</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-03</span>
+        <div class="card-title">Electrical Cord, Smoke Ejector &amp; Air Bottles
+          <span class="card-aka">aka: OS behind wheel, electrical compartment</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>135 Feet of Electrical Cord</li>
+              <li>Smoke Ejector</li>
+              <li>3 Air Bottles</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>135' Electrical Cord:</strong> Heavy-duty extension cord for powering tools and fans on scene where the rig's generator is being used as a power source.<br><br>
+            <strong>3 Air Bottles:</strong> Spare SCBA cylinders for crew rotation or RIT operations. Check pressure every shift — full means full, not "pretty close to full."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-os-wheel">
+    <div class="section-header">
+      <div class="section-icon">✂️</div>
+      <div><h2>Officers Side Over Wheel</h2><div class="sub">Officer's Side · Boltcutters · Irons · RASP Rope</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-04</span>
+        <div class="card-title">Top Shelf — Boltcutters
+          <span class="card-aka">aka: Bolt cutters, gate cutters</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Medium Boltcutters</li>
+              <li>Large Boltcutters</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p>Boltcutters cut padlocks, chains, fence links, and hasps. Size matters — medium for light-gauge locks, large for heavy-duty chains and padlocks. Know the difference between a lock that will yield to bolt cutters and one that needs a saw or hydraulic tool. Hardened steel locks will destroy cheap bolt cutters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-05</span>
+        <div class="card-title">Bottom Shelf — Irons, Silver Pick Axe &amp; RASP Rope
+          <span class="card-aka">aka: OS irons, forcible entry tools</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>Flathead Axe</li>
+              <li>Halligan</li>
+              <li>Pick Axe</li>
+              <li>Sledge Hammer</li>
+              <li>Silver Pick Axe</li>
+              <li>RASP Rope</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 RASP Rope</div>
+            <p>RASP (Rapid Ascent and Safety Profile) rope system — used for elevated rescue operations and controlled descent from the snorkel or elevated positions. Know how to deploy it before you need it. If you haven't been trained on it, that training needs to happen.</p>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>Two Sets of Irons</strong>This rig carries irons on both the driver's side and officer's side. That's intentional — two crews can grab tools simultaneously without crossing each other. Know which set is on which side so you go to the right place under pressure.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-os-fronttire">
+    <div class="section-header">
+      <div class="section-icon">🔦</div>
+      <div><h2>Officers Side In Front of Tire</h2><div class="sub">Officer's Side · Lights · Cones · Traction materials</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-06</span>
+        <div class="card-title">Lights, Cones, Road Salt &amp; Hose Roller
+          <span class="card-aka">aka: OS front-of-tire, scene lighting compartment</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>3 Plug-in Lights</li>
+              <li>Traffic Cones</li>
+              <li>Road Salt</li>
+              <li>Road Sand</li>
+              <li>Hose Roller</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>Plug-in Lights:</strong> Scene lighting powered via the rig's electrical system or a portable generator. Know how to deploy and position lights to illuminate the work area without blinding your crew.<br><br>
+            <strong>Road Salt / Sand:</strong> Traction materials for icy conditions — used around scene perimeter or under outrigger pads when surface is slippery.<br><br>
+            <strong>Traffic Cones:</strong> Scene perimeter — get them out fast on any roadway incident.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-os-front">
+    <div class="section-header">
+      <div class="section-icon">🧱</div>
+      <div><h2>Officers Side Front Compartment</h2><div class="sub">Officer's Side Front · Tarps</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OS-07</span>
+        <div class="card-title">2 Tarps
+          <span class="card-aka">aka: Salvage tarps, poly tarps</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full">
+            <div class="entry-label">📋 What They Are</div>
+            <p>Heavy-duty tarps used for salvage operations — covering furniture and belongings to protect from water damage during overhaul, covering roof holes after ventilation, or establishing a debris drop zone. Know where they are so you're not digging through compartments when the crew is ready to pull ceilings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CAB ══════════════ -->
+  <section class="comp-section" id="sn61-cab">
+    <div class="section-header">
+      <div class="section-icon">🚗</div>
+      <div><h2>Cab Compartment</h2><div class="sub">Inside the cab · Crew area</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">CAB-01</span>
+        <div class="card-title">Cab Compartment
+          <span class="card-aka">aka: Inside the cab, crew cab</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full">
+            <div class="entry-label">📋 Contents</div>
+            <p>Contents pending verification — walk the cab with your officer during rig check and document what's stored here. Typical cab items include maps, passport systems, TIC (thermal imaging camera), flashlights, and PPE.</p>
+          </div>
+        </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>Know Your Cab</strong>The cab is the last place you're in before you step off the rig into a working scene. Everything in it should be in the same place every time. Learn it so well that you could grab what you need in the dark with gloves on.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+</div>
+
+<!-- ═══════ SNORKEL 61 GUIDE SCRIPT ═══════ -->
+<script>
+(function(){
+  function sn61Toggle(hdr){
+    const body=hdr.nextElementSibling;
+    const isOpen=hdr.classList.contains('open');
+    hdr.classList.toggle('open',!isOpen);
+    body.classList.toggle('visible',!isOpen);
+  }
+  window.sn61Toggle=sn61Toggle;
+
+  const searchInput=document.getElementById('sn61-search');
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      const q=this.value.toLowerCase().trim();
+      document.querySelectorAll('#sn61-guide .equip-card').forEach(card=>{
+        const text=card.textContent.toLowerCase();
+        card.classList.toggle('search-hidden',q.length>0&&!text.includes(q));
+      });
+    });
+  }
+})();
+</script>
+
 
 
 <!-- ═══════ SQUAD 61 SECTION BREAK ═══════ -->
@@ -17371,7 +18134,7 @@ if (searchInput) {
   <section class="comp-section" id="sq61-ds-front">
     <div class="section-header">
       <div class="section-icon">💡</div>
-      <div><h2>Engineers Compartment</h2><div class="sub">Light Tower · Fire Investigation · Particulate Mask</div></div>
+      <div><h2>Engineers Compartment</h2><div class="sub">Light Tower · Fire Investigation · Wet Vac · Particulate Mask</div></div>
     </div>
 
     <!-- LIGHT TOWER CONTROLLER -->
@@ -17423,6 +18186,23 @@ if (searchInput) {
         <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"N95," "particulate respirator," "filtering facepiece," "dust mask," "paper mask" (informal — and inaccurate, because the media is non-woven polypropylene).</p></div>
         <div class="callout callout-danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Rookie Mistake — Wearing a Dust Mask in Smoke</strong>I've seen probies pull a dust mask out and head into overhaul thinking they're protected. They are not. Carcinogenic combustion byproducts laugh at an N95. Lung cancer is the leading occupational killer of firefighters. If there is ANY smoke, soot, or combustion atmosphere, you wear SCBA — not a dust mask. Period.</div></div>
         <div class="callout callout-warn"><span class="callout-icon">🧔</span><div class="callout-content"><strong>Seal Requires Clean-Shaven Skin</strong>Beard stubble breaks the seal. Same rule as your SCBA facepiece. Both straps. Pinched nose clip. Test the seal with a sharp inhale — it should pull in against your face.</div></div>
+      </div>
+    </div>
+
+    <!-- WET VAC -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">Wet Vac</div><span class="card-aka">AKA: Shop vac, wet-dry vac, wet vacuum, "the vac"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An industrial wet/dry vacuum used for sucking up standing water, spilled liquids, and debris at scenes. On Squad you'll use it at vehicle extrication scenes with water intrusion, fire cleanup, and hazmat spill mitigation. Faster and more controlled than a mop — and it gets into spots a mop can't reach.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Tank/drum:</strong> The collection vessel. Check the fill level — it gets heavy fast.</li><li><strong>Motor/suction head:</strong> The power unit that mounts on top of the tank.</li><li><strong>Hose:</strong> Flexible suction hose — check for cracks or blockages before use.</li><li><strong>Nozzles/attachments:</strong> Floor nozzle, crevice tool — stored with or inside the unit.</li><li><strong>Filter:</strong> Must be correct type for wet use. Some foam sleeve filters, some run filter-free for liquids.</li><li><strong>On/off switch:</strong> Simple toggle on the motor head.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Shop vac," "wet-dry vac," "wet vacuum." On scenes you'll just hear "grab the vac."</p></div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Rookie Mistake — Wrong Filter for Wet Use</strong>Most wet/dry vacs ship with a paper or pleated filter meant for dry use only. Run it wet with that filter installed and you'll destroy the filter and possibly burn out the motor. For wet use, remove the paper filter and use a foam sleeve or run filter-free per manufacturer spec. Check before you power on.</div></div>
+        <div class="callout callout-tip"><span class="callout-icon">💧</span><div class="callout-content"><strong>Watch the Tank Level</strong>The tank fills faster than you think. When the float shuts off suction, empty it before continuing. A full tank of water is heavy — and dump it somewhere appropriate, not into a storm drain at a hazmat scene.</div></div>
       </div>
     </div>
 
@@ -17679,7 +18459,7 @@ if (searchInput) {
   <section class="comp-section" id="sq61-ds-cascade">
     <div class="section-header">
       <div class="section-icon">🫁</div>
-      <div><h2>Driver's Side Rear Cabinet — Air Cascade</h2><div class="sub">Cascade Controls · Adapters · Towel</div></div>
+      <div><h2>Driver's Side Rear Cabinet — Air Cascade</h2><div class="sub">Cascade Controls · Adapters · Towel · Quick Connect · O-Rings · Air Hose · Power Cord</div></div>
     </div>
 
     <!-- CASCADE CONTROLS -->
@@ -17730,6 +18510,73 @@ if (searchInput) {
         </div>
         <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Fill towel," "cascade rag," "the rag."</p></div>
         <div class="callout callout-danger"><span class="callout-icon">🛢️</span><div class="callout-content"><strong>Rookie Mistake — Using a Greasy Shop Rag</strong>Any hydrocarbon — oil, grease, gasoline, even hand lotion residue — on a high-pressure oxygen or air fitting can spontaneously combust under pressure. This is called "adiabatic ignition" and it has burned hands clean off and ruptured cylinders. The cascade towel is for cascade work, period. If somebody used it to wipe up bar oil, throw it out.</div></div>
+      </div>
+    </div>
+
+    <!-- QUICK CONNECT FOR SCBA -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">Quick Connect for SCBA</div><span class="card-aka">AKA: Quick fill, SCBA fill adapter, cascade fill connector, "fill line"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A high-pressure quick-connect/disconnect fitting that interfaces the cascade system directly with SCBA cylinders for on-scene refills. Instead of swapping bottles, this lets you fill a cylinder right at the rig during extended operations — structural fires, prolonged extrication, anything that burns through air. The fitting seats and seals under pressure.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Quick-disconnect body:</strong> The mating half that seats into the SCBA cylinder fill nipple.</li><li><strong>Valve/shutoff:</strong> Controls flow — open after connection, close before disconnecting.</li><li><strong>High-pressure hose:</strong> Connects the fitting to the cascade panel output.</li><li><strong>Dust cap:</strong> Keeps the fitting clean and contamination-free when stored — cap it every time.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Quick fill," "cascade fill adapter," "SCBA fill connector," "fill line." You'll also hear "hook up the quick connect" as shorthand for the whole fill procedure.</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Rookie Mistake — Disconnecting Under Pressure</strong>NEVER yank a quick-connect fitting while there is still pressure in the fill line. Close the cascade valve first, let the line vent, then disconnect. A high-pressure fitting that separates under load can cause severe injury. Establish the sequence and never skip it: close valve → vent → disconnect. Every time.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🧹</span><div class="callout-content"><strong>Keep It Clean and Capped</strong>Contamination introduced into the breathing air system is a life safety issue. Cap the fitting after every use. Inspect the o-ring on the fitting before each fill — a damaged o-ring means a leaking connection at 4500 PSI.</div></div>
+      </div>
+    </div>
+
+    <!-- O-RINGS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">O-Rings</div><span class="card-aka">AKA: Seals, gaskets (informal), o-ring kit, cascade seals</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Rubber torus seals that maintain airtight connections throughout the cascade system and SCBA fill fittings. At operating pressures of 4500 PSI, a compromised o-ring doesn't just leak — it fails. These are your first line of defense against air system failures during extended operations. Keep them stocked, inspect them routinely, replace them without hesitation.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>O-ring body:</strong> The rubber torus — inspect for cuts, nicks, flattening, or brittleness.</li><li><strong>Various sizes:</strong> Different connections require specific o-ring sizes — don't substitute.</li><li><strong>O-ring pick/removal tool:</strong> For removing a seated o-ring without damaging the groove.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"O-ring," "seal," sometimes called "gasket" informally (gaskets are flat — o-rings are round, but don't waste time correcting people on scene). In cascade context you'll hear "check your o-rings" or "swap the o-ring."</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Rookie Mistake — Reusing a Damaged O-Ring</strong>If you find a nicked, flattened, or cracked o-ring, replace it. Do not reinstall it. At 4500 PSI, a bad o-ring doesn't leak slowly — it can fail suddenly, blow the fitting, and vent compressed air violently. Keep spares stocked. Check them every time you check the cascade.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🛢️</span><div class="callout-content"><strong>Use the Right Lubricant</strong>If an o-ring needs lubrication, use only silicone grease or lubricant rated for high-pressure air or oxygen service. Petroleum-based lubes degrade the rubber — and in oxygen-enriched systems, create a combustion hazard. Use what's approved. If you're not sure, ask before you guess.</div></div>
+      </div>
+    </div>
+
+    <!-- AIR HOSE FOR SCBA FILLING -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">Air Hose for SCBA Filling</div><span class="card-aka">AKA: Fill hose, cascade hose, "the fill line"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The dedicated high-pressure hose that runs from the cascade fill panel out to the quick-connect fitting used for filling SCBA cylinders on scene. This is the line under pressure every time a fill is happening — treat it with the same respect you give any charged air line.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>High-pressure hose body:</strong> Rated for cascade fill pressures.</li><li><strong>Fittings at each end:</strong> One threads to the cascade panel, one mates to the quick-connect.</li><li><strong>Protective sleeve/cover (if equipped):</strong> Guards against abrasion and kinking.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Fill hose," "cascade hose," "fill line," "SCBA fill hose."</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">☠️</span><div class="callout-content"><strong>Rookie Mistake — Kinking or Standing on the Hose</strong>A kinked high-pressure hose restricts flow and stresses the hose wall. A hose someone's standing on, or that's laid across a sharp compartment edge, can chafe and fail under pressure. Route it clean — keep it off the ground where boots and tools can catch it.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🔍</span><div class="callout-content"><strong>Inspect Before Every Fill</strong>Look the hose over for cuts, bulges, or soft spots before you charge it. A compromised high-pressure hose is a whip hazard if it fails under load.</div></div>
+      </div>
+    </div>
+
+    <!-- POWER CORD (GENERATOR) -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">Power Cord (from Generator)</div><span class="card-aka">AKA: Generator cord, shore cord, extension cord, "the gen cord"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A heavy-duty power cord that runs from the rig's onboard generator/inverter to equipment stored in the Air Cascade cabinet that needs electrical power — lighting, chargers, or accessory equipment tied to the cascade setup. Without it, anything electrical in this cabinet is dead weight.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Cord body:</strong> Heavy-gauge, weather-rated jacket.</li><li><strong>Male/female ends:</strong> Grounded plug connectors — inspect prongs and grounding pin before use.</li><li><strong>Storage reel or coil strap:</strong> Keeps the cord from tangling in the compartment.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Generator cord," "shore cord," "extension cord," "power lead."</p></div>
+        <div class="callout callout-warn"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Running a Damaged Cord</strong>A cracked jacket or a bent/missing ground pin turns a convenience item into a shock hazard, especially near the cascade's wet-towel-and-metal environment. Inspect before every use. Damaged cord goes out of service, not back in the cabinet.</div></div>
       </div>
     </div>
 
@@ -17850,7 +18697,7 @@ if (searchInput) {
   <section class="comp-section" id="sq61-of-traverse">
     <div class="section-header">
       <div class="section-icon">🛠️</div>
-      <div><h2>Transverse — Officer Side Shelf</h2><div class="sub">Hurst Ram Tool · Hurst Cutter · Hurst Spreader</div></div>
+      <div><h2>Transverse — Officer Side Shelf</h2><div class="sub">Hurst Ram Tool · Hurst Cutter · Hurst Spreader · B-Post Tool</div></div>
     </div>
 
     <!-- HURST RAM TOOL -->
@@ -17905,13 +18752,29 @@ if (searchInput) {
       </div>
     </div>
 
+    <!-- B-POST TOOL -->
+    <div class="equip-card">
+      <div class="card-header" onclick="sq61Toggle(this)">
+        <div><div class="card-title">B-Post Tool</div><span class="card-aka">AKA: B-pillar tool, post tool, side-impact tool, "the B-post"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A specialty tool used to displace or attach to the B-pillar (the post between the front and rear doors of a 4-door vehicle) during extrication. Helps spread or remove the B-post when it's pinning a patient or blocking patient access. The exact design varies — some are leverage adapters, some are mounting bases for the Hurst spreader, some are sleeves that capture the post.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Capture jaws or hooks:</strong> Engage the B-pillar.</li><li><strong>Mounting/coupling point:</strong> Connects to the Hurst spreader or ram.</li><li><strong>Locking pin / set screw:</strong> Holds the tool to the spreader.</li></ul></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"B-pillar tool," "post tool," "B-post displacer," "side-impact tool." Various brands.</p></div>
+        <div class="callout callout-warn"><span class="callout-icon">🪛</span><div class="callout-content"><strong>Rookie Mistake — Not Knowing Which Tool Pairs With Which</strong>If you grab the B-post tool but don't know it pairs with the spreader (or ram, depending on model), you've just delayed the rescue. Pre-shift familiarization. Pair the tool with the powered device, dry-fit it once a month so you know exactly how it goes together.</div></div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ══════════════ TRANSVERSE — LONG SHELF ══════════════ -->
   <section class="comp-section" id="sq61-of-traverse-long">
     <div class="section-header">
       <div class="section-icon">🔧</div>
-      <div><h2>Transverse — Long Shelf</h2><div class="sub">Akron Lights · Jacks · Air Chisel · Chain · RIT Pack · B-Post · Window Punch · Airbag Controller · Submersible · Road Salt · Bolt Cutters · Life Safety Rope · Blue Bag</div></div>
+      <div><h2>Transverse — Long Shelf</h2><div class="sub">Akron Lights · Jacks · Air Chisel · Chain · RIT Pack · Window Punch · Submersible · Road Salt · Bolt Cutters · Life Safety Rope</div></div>
     </div>
 
     <!-- AKRON LIGHTS -->
@@ -17934,12 +18797,12 @@ if (searchInput) {
     <!-- HIGH LIFT JACKS -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">High Lift Jacks</div><span class="card-aka">AKA: Hi-Lift, farm jack, bumper jack, "the Hi-Lift"</span></div>
+        <div><div class="card-title">2× High Lift Jacks / Farmer Jacks</div><span class="card-aka">AKA: Hi-Lift, farm jack, farmer jack, bumper jack, "the Hi-Lift"</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A tall mechanical jack with a long vertical beam and a ratcheting lift carriage — the classic "farm jack." Lifts heavy loads a long way (much higher than a bottle or scissor jack). Used for off-road extrications, raising vehicles in mud or uneven terrain, and any heavy lift where you need significant clearance.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two tall mechanical jacks with a long vertical beam and a ratcheting lift carriage — the classic "farm jack" or "farmer jack." Lifts heavy loads a long way (much higher than a bottle or scissor jack). Used for off-road extrications, raising vehicles in mud or uneven terrain, and any heavy lift where you need significant clearance. Carrying two lets you lift from both ends of a load at once.</p></div>
           <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>I-beam (post):</strong> The vertical column with the ratchet holes.</li><li><strong>Carriage / runner:</strong> Climbs the beam with the lift nose.</li><li><strong>Climbing pin / lift pin:</strong> Engages the beam holes.</li><li><strong>Reversing latch (UP/DOWN):</strong> Switch position depending on whether you're lifting or lowering.</li><li><strong>Handle / lever:</strong> The long bar you pump.</li><li><strong>Base plate:</strong> The foot — bigger base on soft ground.</li><li><strong>Lift nose / hook:</strong> Where the load sits.</li></ul></div>
         </div>
         <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Hi-Lift" (brand-as-generic), "farm jack," "high-lift," "bumper jack," "kangaroo jack."</p></div>
@@ -17951,7 +18814,7 @@ if (searchInput) {
     <!-- CONES -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">Traffic Cones</div><span class="card-aka">AKA: Cones, traffic cones, pylons, witches' hats, "the cones"</span></div>
+        <div><div class="card-title">4× Traffic Cones</div><span class="card-aka">AKA: Cones, traffic cones, pylons, witches' hats, "the cones"</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
@@ -18049,22 +18912,6 @@ if (searchInput) {
       </div>
     </div>
 
-    <!-- B-POST TOOL -->
-    <div class="equip-card">
-      <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">B-Post Tool</div><span class="card-aka">AKA: B-pillar tool, post tool, side-impact tool, "the B-post"</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A specialty tool used to displace or attach to the B-pillar (the post between the front and rear doors of a 4-door vehicle) during extrication. Helps spread or remove the B-post when it's pinning a patient or blocking patient access. The exact design varies — some are leverage adapters, some are mounting bases for the Hurst spreader, some are sleeves that capture the post.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Capture jaws or hooks:</strong> Engage the B-pillar.</li><li><strong>Mounting/coupling point:</strong> Connects to the Hurst spreader or ram.</li><li><strong>Locking pin / set screw:</strong> Holds the tool to the spreader.</li></ul></div>
-        </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"B-pillar tool," "post tool," "B-post displacer," "side-impact tool." Various brands.</p></div>
-        <div class="callout callout-warn"><span class="callout-icon">🪛</span><div class="callout-content"><strong>Rookie Mistake — Not Knowing Which Tool Pairs With Which</strong>If you grab the B-post tool but don't know it pairs with the spreader (or ram, depending on model), you've just delayed the rescue. Pre-shift familiarization. Pair the tool with the powered device, dry-fit it once a month so you know exactly how it goes together.</div></div>
-      </div>
-    </div>
-
     <!-- CENTER PUNCH -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
@@ -18083,23 +18930,6 @@ if (searchInput) {
       </div>
     </div>
 
-
-    <!-- AIRBAG CONTROLLER -->
-    <div class="equip-card">
-      <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">Airbag Controller (Older Bags)</div><span class="card-aka">AKA: Old airbag controller, manual controller, "the temporary one"</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The control unit (regulator and dual-bag controller) that pairs with the OLDER pneumatic lifting airbags. NOT the controller for the Multi-Lift system in the rear — those are different. This unit is here because some of the older-generation airbags are still in service and they need their own dedicated controller. It regulates supply pressure down from the SCBA bottle / cascade and lets the operator inflate two bags independently or simultaneously.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>High-pressure inlet:</strong> CGA fitting to the air supply.</li><li><strong>Pressure regulator:</strong> Drops supply down to bag working pressure (typically 116–145 psi for older bags).</li><li><strong>Two dead-man valves:</strong> One per bag, operator-controlled.</li><li><strong>Pressure gauges:</strong> Supply gauge, working pressure gauge.</li><li><strong>Bleed/exhaust valves:</strong> For controlled deflation.</li><li><strong>Output hoses:</strong> Color-coded to match the bags.</li></ul></div>
-        </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Manual controller," "old-gen controller," "two-bag controller," "Vetter/Paratech controller" (brands).</p></div>
-        <div class="callout callout-danger"><span class="callout-icon">🎈</span><div class="callout-content"><strong>Rookie Mistake — Mixing Controllers and Bags</strong>The older bags and newer Multi-Lift bags have DIFFERENT working pressures. Mixing a high-pressure controller with a low-pressure bag will over-pressurize and rupture the bag. Color-coded systems exist for a reason. Match the controller to the bag set. If you don't know which set you're using, STOP and ask.</div></div>
-        <div class="callout callout-warn"><span class="callout-icon">📦</span><div class="callout-content"><strong>Stack Bags Correctly</strong>If you stack two airbags, the LARGER bag goes on the BOTTOM, smaller on top. Never the reverse. Inflate the bottom bag fully BEFORE the top one. And always crib in between as the lift happens.</div></div>
-      </div>
-    </div>
 
     <!-- DAYTON SUBMERSIBLE PUMP -->
     <div class="equip-card">
@@ -18137,69 +18967,39 @@ if (searchInput) {
     </div>
 
 
-    <!-- LARGE BOLT CUTTER -->
+    <!-- 2x BOLT CUTTERS (LARGE + SMALL) -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">Large Bolt Cutter</div><span class="card-aka">AKA: Big bolt cutter, heavy cutter, long-handled cutter, "the big one"</span></div>
+        <div><div class="card-title">2× Bolt Cutters (1 Large, 1 Small)</div><span class="card-aka">AKA: Big bolt cutter/small bolt cutter, heavy cutter, medium cutter, long-handled cutter, "the big one" / "the small one"</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A large-frame bolt cutter — typically 24" to 36" handles — for cutting heavy-gauge locks, chains, bolts, padlocks, cable, and metal strapping that a smaller cutter can't bite through. The long handles deliver enormous mechanical advantage; what takes a crowbar and a hammer with the medium cutter goes with one hard squeeze on the large one. Used on forced entry to outbuildings, garages, shipping containers, and chain-secured gates.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blades / jaws:</strong> Hardened steel cutting edges. Must be aligned — misaligned blades won't cut cleanly.</li><li><strong>Blade pivot:</strong> Center bolt that holds the jaws together.</li><li><strong>Handles:</strong> Long steel or composite handles that provide the mechanical advantage.</li><li><strong>Springs:</strong> Return the handles open after each cut.</li></ul></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two bolt cutters carried as a matched pair — a large-frame cutter (typically 24" to 36" handles) for heavy-gauge locks, chains, bolts, padlocks, cable, and metal strapping a smaller cutter can't bite through, and a smaller-frame cutter (previously logged on this rig as the "medium," roughly 18" to 24" handles) for lighter cutting tasks: chain-link fencing, light gauge padlocks, wire, cable, thin rebar. The long handles on the large cutter deliver enormous mechanical advantage. Reach for the small one when the material is clearly going to give; reach for the large one when you're not sure.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blades / jaws:</strong> Hardened steel cutting edges on both. Must be aligned — misaligned blades won't cut cleanly.</li><li><strong>Blade pivot:</strong> Center bolt that holds the jaws together on each cutter.</li><li><strong>Handles:</strong> Long on the large cutter for mechanical advantage; shorter on the small cutter for maneuverability and portability.</li><li><strong>Springs:</strong> Return the handles open after each cut.</li></ul></div>
         </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Large bolt cutter," "big cutters," "24-inch cutter," "36-inch cutter," "heavy bolt cutters."</p></div>
-        <div class="callout callout-danger"><span class="callout-icon">🔗</span><div class="callout-content"><strong>Rookie Mistake — Cutting Hardened Steel Locks With the Wrong Cutter</strong>Hardened-shackle padlocks (Master Lock "shrouded" or "hockey puck" locks) will chip or roll a bolt cutter blade and NOT cut. You'll feel the blade deflect and nothing happens — except now your blade is nicked. For hardened locks: use the rotary saw, angle grinder, or Halligan. Know your target before you pick a tool.</div></div>
-        <div class="callout callout-warn"><span class="callout-icon">✂️</span><div class="callout-content"><strong>Keep the Blades Oiled</strong>Dry pivot points and dry blades wear faster and require more force. A drop of oil on the pivot and blade edges after each use keeps the cutter moving smoothly. Blades that are chipped or misaligned need maintenance before they go back in service.</div></div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Large: "big cutters," "24-inch cutter," "36-inch cutter," "heavy bolt cutters." Small: "medium cutters" (older logs), "18-inch cutters," "wire cutters" (informal).</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">🔗</span><div class="callout-content"><strong>Rookie Mistake — Cutting Hardened Steel Locks With the Wrong Cutter</strong>Hardened-shackle padlocks (Master Lock "shrouded" or "hockey puck" locks) will chip or roll a bolt cutter blade and NOT cut — with either cutter. You'll feel the blade deflect and nothing happens, except now your blade is nicked. For hardened locks: use the rotary saw, angle grinder, or Halligan. Know your target before you pick a tool.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🔀</span><div class="callout-content"><strong>Right Tool, Right Job</strong>The small cutter won't budge a 5/8" hardened chain. The large cutter is overkill on light wire. Learn to size up the material first. Forcing a too-small cutter bends the blades and takes the tool out of service.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">✂️</span><div class="callout-content"><strong>Keep the Blades Oiled</strong>Dry pivot points and dry blades wear faster and require more force. A drop of oil on the pivot and blade edges after each use keeps both cutters moving smoothly. Blades that are chipped or misaligned need maintenance before they go back in service.</div></div>
       </div>
     </div>
 
-    <!-- MEDIUM BOLT CUTTER -->
+    <!-- 2x LIFE SAFETY ROPE BAGS (RED & BLUE) -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">Medium Bolt Cutter</div><span class="card-aka">AKA: Medium cutters, 18-inch cutter, wire cutter, "the medium one"</span></div>
+        <div><div class="card-title">2× Life Safety Rope Bags — 200' (Red &amp; Blue)</div><span class="card-aka">AKA: Life safety rope, rescue rope, kernmantle rope, blue bag, "the 200-footer," "the red bag/blue bag"</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A medium-frame bolt cutter — typically 18" to 24" handles — for lighter cutting tasks: chain-link fencing, light gauge padlocks, wire, cable, thin rebar, zip ties on steroids. Easier to maneuver in tight spaces than the large cutter, lighter to carry. Reach for the medium when the material is clearly going to give; reach for the large when you're not sure.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blades / jaws:</strong> Hardened steel cutting edges, smaller profile than the large cutter.</li><li><strong>Blade pivot.</strong></li><li><strong>Handles:</strong> Medium-length for a balance of leverage and portability.</li><li><strong>Springs.</strong></li></ul></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Two 200-foot kernmantle life safety ropes, each in its own color-coded bag (red and blue) so crews can grab a rope fast without rooting through a single bag. Kernmantle construction — braided outer sheath (mantle) over a core (kern) of parallel or braided fibers — provides high strength, low stretch, and abrasion resistance. Used for lowering rescuers, raising patients, securing loads, high-angle operations, and any task where a person's life depends on the rope holding. At 200 feet each, they cover significant vertical distances — multi-story buildings, steep embankments, bridge decks — and having two means a second crew or a backup line is never far away.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Kern (core):</strong> Load-bearing fibers inside — twisted, parallel, or braided depending on construction.</li><li><strong>Mantle (sheath):</strong> Woven outer jacket — protects the kern and handles abrasion.</li><li><strong>Ends / terminations:</strong> Factory-finished or field-whipped to prevent fraying.</li><li><strong>Color-coded bag (red or blue):</strong> Stored for rapid deployment without tangles — the color makes it identifiable across the compartment at a glance.</li><li><strong>Tag/label:</strong> Shows rated capacity, length, manufacture date, and inspection history.</li></ul></div>
         </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Medium bolt cutters," "18-inch cutters," "wire cutters" (informal), "the medium cutters."</p></div>
-        <div class="callout callout-warn"><span class="callout-icon">🔀</span><div class="callout-content"><strong>Right Tool, Right Job</strong>Medium cutter won't budge a 5/8" hardened chain. Large cutter is overkill on light wire. Learn to size up the material first. Forcing a too-small cutter bends the blades and takes the tool out of service.</div></div>
-      </div>
-    </div>
-
-    <!-- 200' LIFE SAFETY ROPE -->
-    <div class="equip-card">
-      <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">200' Life Safety Rope</div><span class="card-aka">AKA: Life safety rope, rescue rope, kernmantle rope, "the 200-footer"</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A 200-foot kernmantle life safety rope rated for rescue use. Kernmantle construction — braided outer sheath (mantle) over a core (kern) of parallel or braided fibers — provides high strength, low stretch, and abrasion resistance. Used for lowering rescuers, raising patients, securing loads, high-angle operations, and any task where a person's life depends on the rope holding. At 200 feet it covers significant vertical distances — multi-story buildings, steep embankments, bridge decks.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Kern (core):</strong> Load-bearing fibers inside — twisted, parallel, or braided depending on construction.</li><li><strong>Mantle (sheath):</strong> Woven outer jacket — protects the kern and handles abrasion.</li><li><strong>Ends / terminations:</strong> Factory-finished or field-whipped to prevent fraying.</li><li><strong>Bag or rope pack:</strong> Stored for rapid deployment without tangles.</li><li><strong>Tag/label:</strong> Shows rated capacity, length, manufacture date, and inspection history.</li></ul></div>
-        </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Life safety rope," "rescue rope," "kernmantle," "technical rope," "the 200," "long rope."</p></div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Life safety rope," "rescue rope," "kernmantle," "technical rope," "the 200," "long rope," "blue bag" / "red bag," "safety bag," "rope bag."</p></div>
         <div class="callout callout-danger"><span class="callout-icon">🔎</span><div class="callout-content"><strong>Inspect Before Every Use</strong>Run the rope through your hands before any life-safety application. Feel for sheath abrasion (rough, fuzzy, or cut strands), soft spots (kern damage under intact sheath), stiffness (chemical contamination), or flat sections (shock-loaded). One damaged spot means the rope is OUT OF SERVICE. Life safety rope is retired after any fall arrest or known shock load, period.</div></div>
         <div class="callout callout-danger"><span class="callout-icon">☀️</span><div class="callout-content"><strong>UV, Heat, and Chemicals Degrade Rope</strong>Nylon and polyester life safety ropes degrade from UV exposure, high heat, and chemical contamination (acids, bases, fuels). Never store in direct sunlight. Keep out of the engine exhaust bay. If a rope contacts an unknown chemical, it's out of service until inspected or condemned.</div></div>
-      </div>
-    </div>
-
-    <!-- BLUE BAG WITH SAFETY ROPE -->
-    <div class="equip-card">
-      <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">Blue Bag with Safety Rope</div><span class="card-aka">AKA: Blue bag, safety bag, rope bag, "the blue bag"</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A blue gear bag containing a safety rope — a shorter utility rope used for secondary securing, tag lines, equipment lowering, or as a safety tether in lower-risk applications. Stored separately from the main life safety rope so crews can grab the right rope fast without rooting through a single bag. The color coding (blue) makes it identifiable across the compartment at a glance.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Blue bag / rope bag:</strong> Color-coded storage bag, usually drawstring or zippered.</li><li><strong>Rope:</strong> Life safety rated rope, shorter length than the 200-footer.</li></ul></div>
-        </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"Blue bag," "safety bag," "rope bag," "the blue one."</p></div>
-        <div class="callout callout-warn"><span class="callout-icon">🎨</span><div class="callout-content"><strong>Color Coding Exists for a Reason</strong>Know what's in each bag by color. Blue bag is the safety rope. Arizona Vortex gear is in its blue bag. Don't mix contents between bags — the whole point of color coding is quick positive identification under stress. If you can't tell what's in the bag by the color, something went back in the wrong bag.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🎨</span><div class="callout-content"><strong>Color Coding Exists for a Reason</strong>Know which bag is which by color — don't mix contents between bags. Arizona Vortex gear has its own blue bag elsewhere on the rig; don't confuse it with this one. The whole point of color coding is quick positive identification under stress. If you can't tell what's in the bag by the color, something went back in the wrong bag.</div></div>
       </div>
     </div>
 
@@ -18665,13 +19465,13 @@ if (searchInput) {
     <!-- NY HOOKS AND PIKE POLES -->
     <div class="equip-card">
       <div class="card-header" onclick="sq61Toggle(this)">
-        <div><div class="card-title">NY Hooks &amp; Pike Poles (5 Total)</div><span class="card-aka">AKA: Pikes, hooks, NY hooks, ceiling hooks, "the pike poles"</span></div>
+        <div><div class="card-title">NY Hooks &amp; Pike Poles (4 Total)</div><span class="card-aka">AKA: Pikes, hooks, NY hooks, ceiling hooks, "the pike poles"</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Five long-handled hooks and poles stored on the top shelf for pulling ceilings, dragging burning debris, checking for fire extension, and breaching walls. Three 8-foot New York hooks, one 6-foot New York hook, and one 6-foot pike pole give size options for different situations. The NY hook has a distinct curved blade-and-pike pattern designed for tougher plaster ceilings. The pike pole has a standard pointed pike and curved hook.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>What's in this group</div><ul><li><strong>3× 8' New York Hooks:</strong> Primary overhaul tools for larger rooms and high ceilings.</li><li><strong>1× 6' New York Hook:</strong> Shorter — better for lower ceilings and tighter spaces.</li><li><strong>1× 6' Pike Pole:</strong> Standard pike-and-hook head for general pulling and breaching work.</li><li><strong>All handles:</strong> Fiberglass preferred — non-conductive around energized lines.</li></ul></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Four long-handled hooks and poles stored on the top shelf for pulling ceilings, dragging burning debris, checking for fire extension, and breaching walls. Two 8-foot New York hooks, one 6-foot New York hook, and one 6-foot pike pole give size options for different situations. The NY hook has a distinct curved blade-and-pike pattern designed for tougher plaster ceilings. The pike pole has a standard pointed pike and curved hook.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>What's in this group</div><ul><li><strong>2× 8' New York Hooks:</strong> Primary overhaul tools for larger rooms and high ceilings.</li><li><strong>1× 6' New York Hook:</strong> Shorter — better for lower ceilings and tighter spaces.</li><li><strong>1× 6' Pike Pole:</strong> Standard pike-and-hook head for general pulling and breaching work.</li><li><strong>All handles:</strong> Fiberglass preferred — non-conductive around energized lines.</li></ul></div>
         </div>
         <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>"NY hook," "New York hook," "San Francisco hook," "Boston rake," "ceiling hook," "pike pole," "hook" (generic).</p></div>
         <div class="callout callout-danger"><span class="callout-icon">⚡</span><div class="callout-content"><strong>Rookie Mistake — Pole Contacting Energized Service Drop</strong>Eight-foot poles reach the electrical service drop. Wood and aluminum handles conduct electricity. Even fiberglass in wet conditions can carry current. ALWAYS look UP before swinging a long pole near a structure. Probies have been electrocuted by a single careless lift.</div></div>
