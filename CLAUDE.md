@@ -50,8 +50,12 @@ git --git-dir="$GITDIR" --work-tree="$WORKTREE" remote add origin https://github
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" fetch origin
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" update-ref refs/heads/main origin/main
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" branch --set-upstream-to=origin/main main
+cp "$WORKTREE/scripts/check_datestamp.sh" "$GITDIR/hooks/pre-commit"
+chmod +x "$GITDIR/hooks/pre-commit"
 ```
 The GitHub credential (token) is stored in `.git-auth/.git-credentials` inside this project folder (gitignored, never committed) — it persists across sessions even though the git-dir itself doesn't.
+
+The last two lines reinstall the pre-commit hook (`scripts/check_datestamp.sh`, a persistent file in this folder) into the fresh git-dir. This hook blocks any commit that touches `index.html` unless its 📅 Creation Date / Last Updated field shows today's date — it enforces the mandatory rule above automatically. Don't skip reinstalling it after recreating `$GITDIR`.
 
 Then for any edit:
 ```
