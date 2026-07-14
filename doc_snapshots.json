@@ -1,0 +1,1207 @@
+{
+  "Engine 62": {
+    "saved_at": "2026-05-25T13:31:53.862359+00:00",
+    "compartments": {
+      "Engine 62 Compartments": [
+        "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
+        "Drivers side compartment E62 over the wheel contains air bags",
+        "E61 stores airbags in the compartment near the back on the drivers side",
+        "E61 and E62 have different air bag controllers. Both inflate to 118PSI for safety.",
+        "E62 has a RIT pack on top shelf rear compartment",
+        "Officer side rear compartment E61 contains a crowbar",
+        "Officer side rear compartment E61 contains 2 shovels (spade end and flat end)",
+        "Officer side rear compartment E61 contains a Pig",
+        "Officer side middle compartment E61 has cleats for bottom of boots to keep from sliding on ice",
+        "E61 Hacksaw in tool box",
+        "Cabin Compartment"
+      ],
+      "Side /Middle Hose Bay": [
+        "2x 1 \u00be crosslays - 200 ft w/fog nozzle - Both Preconnected",
+        "2 \u00bd crosslay - 200 ft w/smooth bore nozzle - Preconnected"
+      ],
+      "Rear Of Engine": [
+        "Left bay - 600\u2019 3\u201d, skid load 2 \u00bd 150\u2019- Static load",
+        "Middle Bay - 1000\u2019 5\u201d",
+        "Right Bay - 600\u2019 3\u201d, skid load 1 \u00be 150\u2019- Static load",
+        "Blitz Fire 300\u2019 3\u201d - Preconnected",
+        "High-Rise Pack 150\u2019 1 \u00be",
+        "High Rise Bag",
+        "2 Backboards in rear"
+      ],
+      "**Compartment 1** - (Engineers Compartment)": [
+        "1\u201d green garden hose - Length?",
+        "2 Storz connectors (1 is a reducer) at 30 degree angle need mode info",
+        "Nozzle - fits on deck gun and blitzfire",
+        "Small utility flags pink flag on wire 12\u201d",
+        "Black tool box",
+        "Greese",
+        "2 screwdrivers",
+        "Needle nose pliers",
+        "Carb Cleaner",
+        "Food grade silicone",
+        "Heat gun and attachments",
+        "Lube stick",
+        "Airpack",
+        "2 double ended spanners - Storz and hose",
+        "2 small hose spanners with gas turn off notch",
+        "2 Gated Wye ball valves - 2 \u00bd to 1 \u00bd",
+        "2 fog nozzles",
+        "2 small reducers",
+        "1 reducer - 1 \u00be to 1\u201d",
+        "1 steamer to storz",
+        "1 smooth bore nozzle",
+        "1 nozzle with yellow tip fog",
+        "6 2 \u00bd connectors 2 F2F, 2 m2m, 2 CFD",
+        "6 1 \u00be connectors2 F2F, 2 m2m, 2 CFD",
+        "4 reducers 2 \u00bd female to 1 \u00be male",
+        "1 cap for 1 \u00be",
+        "Hydrant bag",
+        "2 Hydrant wrenches",
+        "2 steamer to Storz",
+        "2 small spanners with gas valve notch",
+        "2 wedges",
+        "1 \u00be gate valve",
+        "Storz to 1 \u00be female",
+        "3 double ended spanners",
+        "Rubber mallet",
+        "Pipe wrench",
+        "Rope to move hose",
+        "25 ft of 5 inch hose"
+      ],
+      "Compartment 2 Driver Side Middle": [
+        "Closet pike pole (D handle)",
+        "Maul  (wedge on one end and sledge on the other)",
+        "Haligan",
+        "Flat head axe",
+        "1 medium sized bolt cutter with hook for barbed wire cutting",
+        "1 large bolt cutter",
+        "Air bag (some time both are here)",
+        "Manhole cover remover",
+        "K tool in a leather case",
+        "3 air tanks"
+      ],
+      "Compartment 3 Drivers Side Rear Of Engine": [
+        "RIT pack - Six foot hose, extra SCBA, UCA and buddy connectors, 60 minute, 4500",
+        "2 portable work lights",
+        "Cellar Nozzle on a cellar pipe",
+        "Small step ladder",
+        "Battery Powered Ventilation fan (make sure its plugged in for charging)",
+        "Orange box with air bag controls",
+        "2 air bags (max psi is 118)",
+        "Plastic Cribbing",
+        "Transformer nozzles - For spraying into small openings"
+      ],
+      "Rear of Truck": [
+        "2 Backboards in rear",
+        "Left bay - 600\u2019 3\u201d, skid load 2 \u00bd 150\u2019- Static load",
+        "Middle Bay - 1000\u2019 5\u201d",
+        "Right Bay - 600\u2019 3\u201d, skid load 1 \u00be 150\u2019- Static load",
+        "Blitz Fire 300\u2019 3\u201d - Preconnected",
+        "High Rise Pack 150\u2019 1 \u00be with Gated Wye",
+        "High Rise Bag",
+        "Small length of 2 \u00bd",
+        "90 degree  connector",
+        "T connector with pressure gauge",
+        "Vise grips to turn valve handle of standpipe",
+        "2 New York Hooks 6,8 feet",
+        "Attic ladder 10 length",
+        "6 batteries",
+        "1 battery to AC connector",
+        "Hydraulic Ram",
+        "Quick Kick ram support - silver with teeth",
+        "Battery Powered Reciprocating Saw",
+        "2 double ended spanners",
+        "Window punch",
+        "Hurst Rescue Cutter",
+        "Hurst Rescue spreader"
+      ],
+      "Compartment 5 Officer Side Rear": [
+        "Flat Head Axe",
+        "Haligan",
+        "Pig axe",
+        "Pick head axe/Fire Axe",
+        "100\u2019 of utility rope confirm length",
+        "Pig Drain Cover",
+        "RASP - 200 \u2019Search Rope, Has bead every 100 ft with butterfly knot stopper",
+        "Red Bag - 4 PFDS, 1 throw preserver",
+        "W-Tool for hydraulic tool for spreading door jam  can be used as a battery ram",
+        "Tool box",
+        "Screw drivers of various sizes",
+        "Socket wrench",
+        "Sockets",
+        "Duct tape",
+        "Box cutter",
+        "Zip ties",
+        "Tape Measure",
+        "Pipe Wrench",
+        "Hammer",
+        "Teflon Tape",
+        "Adjustable Crescent wrench",
+        "Crow bar - small",
+        "Wire cutters",
+        "Window glazing tool",
+        "Razor scraper",
+        "Small sledge hammer",
+        "Voltage tester",
+        "Allen Key wrench",
+        "Pliers",
+        "Punch",
+        "3 metric box wrenches 18mm, , "
+      ],
+      "Compartment 6 Officer Side Middle": [
+        "Water helmet",
+        "PFD",
+        "Mustang Suit",
+        "Rope throw bag",
+        "Life Safety ring to put around victim",
+        "Strap with 3 carabiners",
+        "4 Air bottles"
+      ],
+      "Compartment 7 Officer Side Front": [
+        "Silver bullet - pressurized water",
+        "ABC Dry Chemical",
+        "C02",
+        "K",
+        "Oil Dry Kitty Litter",
+        "Fire Blanket for covering electric cars",
+        "2 Pike poles 6 and 8 ft",
+        "2 ladders - 3 Ladder Sections",
+        "Extension ladder 24ft 2 sections",
+        "Roof  Ladder 14ft"
+      ],
+      "Inside Cab": [
+        "Binoculars",
+        "Blue Lock out Tag Out bag",
+        "Pet o2 mask",
+        "2 Extra SCBA Masks",
+        "After Fire Survey clipboard",
+        "Patient Clip boars",
+        "Fire Tape",
+        "Caution tape",
+        "Red bio hazard bags",
+        "Red - Jump bag, First In",
+        "Green -  Airway bag",
+        "Dark Blue - Collar bag",
+        "Small Orange bag - small bag is suction",
+        "Yellow - AED",
+        "CO Meter - 4 Gas (O2, CO, H2S, combustible gas)",
+        "Methane meter - Gas Trac",
+        "HCN Meter",
+        "CO2 meter",
+        "Hot Stick",
+        "Contractor Bags",
+        "Fire Wipes",
+        "Flood Light",
+        "Wipes",
+        "Hot Feet",
+        "Blankets",
+        "Contractor bags",
+        "Vests under the seats",
+        "Water",
+        "4 Radios",
+        "Elevator Key",
+        "Knoxbox",
+        "ERG",
+        "Accountability Velcro name board"
+      ],
+      "Top Of Engine": [
+        "Snow shovel",
+        "1 inch hose garden",
+        "Traffic cones",
+        "Fire Paddle",
+        "Manifold for fire gun",
+        "Dawn Soap and Brush in bucket"
+      ]
+    }
+  },
+  "Engine 61": {
+    "saved_at": "2026-05-25T13:31:53.885422+00:00",
+    "compartments": {
+      "Engine 61 Compartments": [
+        "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
+        "Drivers side compartment E62 over the wheel contains air bags",
+        "E61 stores airbags in the compartment near the back on the drivers side",
+        "E61 and E62 have different air bag controllers. Both inflate to 118PSI for safety.",
+        "E62 has a RIT pack on top shelf rear compartment",
+        "Passenger side rear compartment E61 contains a crowbar",
+        "Passenger side rear compartment E61 contains 2 shovels (spade end and flat end)",
+        "Passenger side rear compartment E61 contains a Pig",
+        "Passenger side middle compartment E61 has cleats for bottom of boots to keep from sliding on ice",
+        "E61 Hacksaw in tool box"
+      ],
+      "Front Of Engine": [
+        "Trash Line - 100ft - Preconnected",
+        "30' of 5\" hose",
+        "Storz to steamer connector",
+        "Hydrant wrench"
+      ],
+      "Side /Middle Hose Bay": [
+        "2x 1 3/4 crosslays - 200 ft w/fog nozzle - Both Preconnected",
+        "2 1/2 crosslay - 200 ft w/smooth bore nozzle - Preconnected"
+      ],
+      "Rear of Engine": [
+        "Left bay - 600' 3\", skid load 2 1/2 150'- Static load",
+        "Middle Bay - 1000' 5\"",
+        "Right Bay - 600' 3\", skid load 1 3/4 150'- Static load",
+        "Blitz Fire 300' 3\" - Preconnected",
+        "High Rise Pack 150' 1 3/4, Fog Nozzle, Gated Wye",
+        "High Rise Bag",
+        "2 Backboards in rear"
+      ],
+      "Compartment 1 - (Engineers comp)": [
+        "1\" green garden hose",
+        "2 Storz connectors at 30 degree angle",
+        "Nozzle - fits on deck gun and blitzfire",
+        "Small utility flags",
+        "Black tool box",
+        "Greese",
+        "2 screwdrivers",
+        "Needle nose pliers",
+        "Carb Cleaner",
+        "Food grade silicone",
+        "Heat gun and attachments",
+        "Lube stick",
+        "Airpack",
+        "2 double ended spanners",
+        "2 small house spanners with gas turn off notch",
+        "2 wye ball valves",
+        "2 fog nozzles",
+        "2 small reducers",
+        "1 reducer",
+        "1 steamer to storz",
+        "1 smooth bore nozzle",
+        "1 nozzle with yellow tip fog",
+        "6 2 1/2 connectors",
+        "6 1 3/4 connectors",
+        "4 reducers",
+        "1 cap for 1 3/4",
+        "Hydrant bag",
+        "2 Hydrant wrenches",
+        "2 steamer to Storz",
+        "2 small spanners with gas valve notch",
+        "2 wedges",
+        "1 3/4 gate valve",
+        "Storz to 1 3/4 female",
+        "3 double ended spanners",
+        "Rubber mallet",
+        "Pipe wrench",
+        "Rope to move hose",
+        "25' of 5\" hose"
+      ],
+      "Compartment 2 Driver Side Middle": [
+        "Closet pike pole",
+        "Maul",
+        "Haligan",
+        "Flat head axe",
+        "1 medium sized bolt cutter with hook for barbed wire cutting",
+        "1 large bolt cutter",
+        "Captains tool pry axe",
+        "Manhole cover remover",
+        "K tool in a leather case"
+      ],
+      "Outside of Drivers Side Middle Compartment": [
+        "3 air tanks"
+      ],
+      "Compartment 3 Drivers Side Rear Compartment": [
+        "Cellar Nozzle on a cellar pipe",
+        "2 battery powered portable work lights",
+        "Small step ladder",
+        "Ventilation fan (make sure its plugged in)",
+        "Yellow box with air bag controls",
+        "3 air bags",
+        "Plastic Cribbing",
+        "Transformer nozzles"
+      ],
+      "Rear of Truck": [
+        "2 Backboards in rear",
+        "Left bay - 600' 3\"",
+        "Middle Bay - 1000' 5\"",
+        "Right Bay - 600' 3\"",
+        "Blitz Fire 300' 3\" - Preconnected",
+        "High-Rise Pack 150' 1 3/4, Gate Wye, Fog Nozzle",
+        "High-Rise Bag",
+        "Small length of 1 3/4",
+        "90 degree connector",
+        "T connector with pressure gauge",
+        "Wye connector",
+        "Vise grips to turn valve handle of standpipe",
+        "2x New York Hooks 6,8 feet",
+        "Attic ladder 10' length",
+        "6 batteries",
+        "1 battery to AC connector",
+        "Hydraulic Ram",
+        "Quick Kick ram support",
+        "Reciprocating Saw",
+        "2x Double ended spanners",
+        "Window punch",
+        "Hurst Rescue Cutter",
+        "Hurst Rescue spreader"
+      ],
+      "Compartment 5 Passenger Side Rear": [
+        "Flat Head Axe",
+        "Haligan",
+        "Crowbar",
+        "Pick head axe/Fire Axe",
+        "100' of utility rope",
+        "Pig Drain Cover",
+        "RASP - 200' Search Rope",
+        "Red Bag - 4 PFDS, 1 throw preserver",
+        "W-Tool",
+        "Tool box",
+        "Screw drivers of various sizes",
+        "Socket wrench",
+        "Sockets",
+        "Hacksaw",
+        "Box cutter",
+        "Zip ties",
+        "Tape Measure",
+        "Pipe Wrench",
+        "Hammer",
+        "Teflon Tape",
+        "Adjustable Crescent wrench",
+        "Crow bar - small",
+        "Wire cutters",
+        "Window glazing tool",
+        "Razor scraper",
+        "Small sledge hammer",
+        "Voltage tester",
+        "Allen Key wrench",
+        "Pliers",
+        "Punch",
+        "3 metric box wrenches"
+      ],
+      "Compartment 6 Middle Passenger Side": [
+        "Water helmet",
+        "PFD",
+        "Mustang Suit",
+        "Rope throw bag",
+        "Life Safety ring to put around victim",
+        "Strap with 3 carabiners",
+        "Ice Spikes (for hands)",
+        "Ice Cleats",
+        "4 Air bottles (2 per side)"
+      ],
+      "Compartment 7 Front Passenger Side": [
+        "Silver bullet - pressurized water",
+        "ABC Dry Chemical",
+        "C02",
+        "K",
+        "Oil Dry /Kitty Litter",
+        "Fire Blanket for covering electric cars"
+      ],
+      "Above The Compartments": [
+        "2 Pike poles 6 and 8 ft",
+        "Extension ladder 24ft",
+        "Roof Ladder 14ft"
+      ],
+      "Inside Cab": [
+        "Binoculars",
+        "Blue Lock out Tag Out bag",
+        "Pet o2 mask",
+        "2 Extra SCBA Masks",
+        "After Fire Survey clipboard",
+        "Fire Tape",
+        "Caution tape",
+        "Red bio hazard bags",
+        "Camera",
+        "FIU investigation box",
+        "PR box - stickers",
+        "Red - Jump bag, First In",
+        "Green - Airway bag",
+        "Dark Blue Collar bag",
+        "Small Orange bag",
+        "AED",
+        "CO Meter - 4 Gas",
+        "Methane meter - Gas Trac",
+        "HCN Meter",
+        "CO2 meter",
+        "Hot Stick",
+        "Contractor Bags",
+        "Fire Wipes",
+        "Flood Light",
+        "Wipes",
+        "Hot Feet",
+        "Blankets",
+        "Contractor bags",
+        "Vests under the seats",
+        "Water",
+        "4 Radios",
+        "Elevator Key",
+        "Knoxbox",
+        "ERG",
+        "Accountability Velcro name board"
+      ],
+      "Top Of Engine": [
+        "Snow shovel",
+        "1 inch hose garden",
+        "Traffic cones",
+        "Fire Swatter",
+        "Manifold for fire gun",
+        "Dawn Soap and Brush in bucket"
+      ]
+    }
+  },
+  "Engine 60": {
+    "saved_at": "2026-05-25T13:31:53.904330+00:00",
+    "compartments": {
+      "Front of engine": [
+        "100' 1 3/4' Trash line",
+        "No intake"
+      ],
+      "Engineers Compartment": [
+        "Towels",
+        "30 degree Storz",
+        "Pickup tubes for foam/gel",
+        "Reducers",
+        "Duct tape",
+        "SCBA",
+        "Extra air bottle",
+        "Nozzle for foam 125 gpm (orange)",
+        "Gated Wye",
+        "2 fog nozzles",
+        "Rope to move charged 5\" hose",
+        "Adaptors (m2m, f2f, CFD, 2 1/2 -1 3/4)",
+        "Eye protection",
+        "Chief Eductor",
+        "Hydrant Bag",
+        "Gate Valve",
+        "25'' of 5\"",
+        "Smooth bore nozzles"
+      ],
+      "Middle Compartment Drivers Side": [
+        "3 air tanks",
+        "Fire tape",
+        "Deck gun ground mount",
+        "Fan Hanger",
+        "Piercing Nozzle",
+        "Haligan",
+        "Pickhead or fire axe",
+        "Flat head axe",
+        "Deck gun nozzle",
+        "Halligan with roof ring",
+        "Red Pickhead axe",
+        "Sledge Hammer",
+        "Officers tool Pry Axe",
+        "K tool",
+        "Cellar nozzle"
+      ],
+      "Rear Compartment Drivers Side": [
+        "200' Roll of electrical cord",
+        "10KW Generator",
+        "B post cover",
+        "Plug in Lights",
+        "Duct Tape",
+        "Sawzall",
+        "Extension Cord",
+        "Cribbing",
+        "Small Step Ladder",
+        "Ventilation fan",
+        "Plug adaptors (can be plugged into 110v)"
+      ],
+      "First Compartment Passengers Side": [
+        "Akron Coping Tool (Hose hoist)",
+        "2x 150' Utility Rope Bags",
+        "Spare Battery",
+        "Cynch Collar Life Vest aka Horse Collar",
+        "Mustang Suit",
+        "Water Helmet",
+        "Water Rescue Rope",
+        "Manual Pump Can",
+        "Gel Foam",
+        "Oil Dry",
+        "Traffic Cones",
+        "Life Vests",
+        "50' of 5\""
+      ],
+      "Middle Compartment Passengers Side": [
+        "Small Bolt Cutter",
+        "Pig axe tool",
+        "Sledge Hammer",
+        "Pick Head / Fire axe",
+        "Haligan",
+        "Flat Head Axe"
+      ],
+      "Rear Compartment Passengers Side": [
+        "Tarps",
+        "Blanket",
+        "High Rise Pack 150' with fog nozzle and Gated Wye",
+        "Silver Bullet",
+        "ABC Extinguisher",
+        "CO2 Extinguisher",
+        "High Rise Bag",
+        "Tool box",
+        "Oil Dry (Kitty Litter)",
+        "2 Shovels",
+        "Decontamination buckets and soap"
+      ],
+      "Rear of Engine": [
+        "10 foot folding ladder",
+        "24 foot Extension Ladder",
+        "14 foot roof ladder",
+        "2 backboards",
+        "Pry tool",
+        "Pry bar",
+        "Hurst Combi tool cuts and spreads",
+        "Ram jam to provide support to Ram",
+        "2 shovels (scoop shovel, pointed shovel)",
+        "Braces for Ram tool",
+        "6' Pike",
+        "6' Pike",
+        "1000' 5\" LDH",
+        "150' 2 1/2\" skid load w/ smooth bore nozzle connected to 400' of 3 inch",
+        "150' 1 3/4\" skid load W/ breakaway fog nozzle connected to 550't of 3\""
+      ],
+      "Middle Cross Lays": [
+        "200 feet 1 3/4 crosslay (total of 2)",
+        "Both pre-connected"
+      ],
+      "Cab Compartment": [
+        "AED",
+        "4 Gas",
+        "Gas Trac",
+        "Water bottles",
+        "OB Kit",
+        "Caution Tape",
+        "Fire Wipes",
+        "Vests",
+        "Extra gloves",
+        "Hot Stick",
+        "Knox Box",
+        "Medic Bag",
+        "Battery Chargers",
+        "TIC",
+        "2 Face pieces L and M"
+      ]
+    }
+  },
+  "Engine 63": {
+    "saved_at": "2026-05-25T13:31:53.922231+00:00",
+    "compartments": {
+      "Front of engine": [
+        "50' of 5' (different than other engines)",
+        "Gate Valve and Hydrant wrench attached to top of bumper",
+        "Storz to steamer"
+      ],
+      "Compartment 1 Engineers Compartment Drivers Side": [
+        "Eye protection",
+        "Fog Nozzle",
+        "Deck gun nozzle",
+        "Double ended Spanners",
+        "Gated Wye valve",
+        "M2m. f2f, CFD, Reducer",
+        "Storz to steamer",
+        "Storz to 1 1/2'",
+        "30 degree elbow Storz to reduce kinking",
+        "Hydrant bag",
+        "Gate valve",
+        "Hydrant wrench",
+        "Pipe wrench",
+        "Rope and hook to move charged 5\" pipe",
+        "2 small spanners",
+        "2 double ended spanners",
+        "Storz to steam connectors",
+        "Storz reducer",
+        "CFD coupler",
+        "Rubber mallet",
+        "Chief Eductor 125 gpm",
+        "2 Person Hose roller",
+        "5\" LDH 30'"
+      ],
+      "Middle Compartment Drivers Side": [
+        "Pick Axe",
+        "Flat head axe",
+        "Sledge Hammer",
+        "Haligan",
+        "(k tool and officers tool added after this pic was taken)"
+      ],
+      "Rear Compartment Drivers Side": [
+        "Haligan",
+        "Flat Head Axe",
+        "Silver Bullet pressurized water can",
+        "Manual Pump Can",
+        "ABC Extinguisher",
+        "Small Step Ladder"
+      ],
+      "Front Compartment Passengers Side": [
+        "Akron Brass Hose hoist AKA coping tool",
+        "High-rise bag (6' 2 1/2\" hose, 90 degree coupling, pressure gauge, vise grips, spanner)",
+        "50 feet of 5\""
+      ],
+      "Middle Compartment Passengers Side": [
+        "High-rise Pack w/Gated Wye 150' of 1 3/4\"",
+        "Bolt cutters"
+      ],
+      "Rear Compartment Passengers Side": [
+        "Tool Box",
+        "Traffic Cones",
+        "Tarps",
+        "Blanket",
+        "Fan Hanger"
+      ],
+      "Rear of Engine": [
+        "Bucket with dawn soap and brush for decontamination",
+        "Garden hose",
+        "Hurst Combi tool cuts and spreads",
+        "2 shovels (scoop shovel, pointed shovel)",
+        "6 foot Pike",
+        "8 foot New York Hook",
+        "10 foot New York",
+        "6 foot Pike",
+        "8 foot Pike",
+        "10 foot pike"
+      ],
+      "Top Hose Bays Rear": [
+        "1000ft 5 inch",
+        "150ft 2 1/2 skid load w/ smooth bore nozzle connected to 400ft of 3 inch",
+        "150ft 1 3/4 skid load W/ breakaway fog nozzle connected to 500ft of 3\""
+      ],
+      "Middle Cross Lays": [
+        "200 feet 1 3/4 crosslay (total of 2 top and bottom)"
+      ],
+      "Middle Compartments": [
+        "95 gpm Nozzle",
+        "95 gpm eductor",
+        "5gal x 5 eco gel buckets",
+        "Eductor with pickup tube",
+        "Foam Aeration tube",
+        "Pickup tube for the Chief Eductor",
+        "Foam nozzle 75psi 125gpm",
+        "Oil Dry (kitty litter)"
+      ],
+      "Ladders": [
+        "28' Extension Ladder",
+        "16' Roof Ladder",
+        "10' Folding/Attic Ladder"
+      ],
+      "Cab Compartment": [
+        "AED",
+        "4 Gas",
+        "GasTrac",
+        "HCN",
+        "Water bottle",
+        "SCBA air pack",
+        "Knox Box"
+      ],
+      "Top of Engine": [
+        "Empty water bottle",
+        "Foam/Gel",
+        "Manifold"
+      ]
+    }
+  },
+  "Utility 61": {
+    "saved_at": "2026-05-26T12:57:19.366395+00:00",
+    "compartments": {
+      "**Yellow Pages (number)**": [
+        "Lists in numerical order 4-digit UN/NA identification identifies the appropriate guide number to reference in the Orange Section",
+        "Materials highlighted in green indicate they are Toxic Inhalation Hazard, Dangerous Water Reactive Materials that produce toxic gas upon contact with water"
+      ],
+      "**Blue Pages (name)**": [
+        "Lists in alphabetical order by name, identifies the appropriate guide number to reference in the Orange Section and the 4-digit UN/NA",
+        "Materials highlighted in green will have evacuation distances in the Green Section"
+      ],
+      "**Orange Pages(response)**": [
+        "Contains response guides, safety recommendations and directions on how to proceed during the initial response phase of the incident",
+        "Provides information on potential hazards to health, risk of fire or explosion, emergency response procedures, personal protective equipment (PPE), evacuation procedures, first aid, and spill and fire control measures"
+      ],
+      "**Green Pages(evacuation)**": [
+        "Provides initial evacuation or shelter-in-place distances for spills of materials that are Toxic-by-Inhalation. Over 50 gal is a large spill",
+        "Distances vary based on the size of the spill (small or large) and whether the incident occurs during the day or at night",
+        "Fire East is the first  channel",
+        "Fire White is channel 3",
+        "Microphone can change channels",
+        "Push red button for emergency, \"ACCIDENTAL ACTIVATION\" if you click by mistake",
+        "Voice recognition for changing channels on front",
+        "\"Hey you, Its Me\"",
+        "Don't scan channels, keep volume low when in groups",
+        "Pocket mask also included",
+        "Screen should show green not red",
+        "Pads attach to chest",
+        "Contains tape measure,",
+        "Folders"
+      ],
+      "The Bed (6 containers loose tools count as 1\"container\")": [
+        "Shears for cutting clothing",
+        "Glucose level measuring",
+        "Medical drugs and narcan",
+        "Personal protective equipment",
+        "Sharps container",
+        "BP cuff",
+        "Splints",
+        "PPE",
+        "Tourniquet",
+        "Markers",
+        "Contains Breathing equipment and",
+        "Oxygen tank",
+        "AMBU [artificial manual breathing unit] masks (bagging someone)",
+        "BVM (Bag, Valve, Mask)",
+        "Pediatric breathing tubes",
+        "Intubation tubes/air way tube",
+        "suction",
+        "Nasal Cannula tubes",
+        "Oral and nasal tubes",
+        "PPE",
+        "Advanced Airway",
+        "One Airpack",
+        "Air bottle (In black case)",
+        "Medium sized face piece",
+        "Contains stabilization hardware and neck braces (two styles) (may need to know how to put together and deploy)",
+        "Foam head-locks (unrolled on the board and between board and head, will be taped to board and person's forehead)",
+        "Red/Orange with white stripe - mass casualties tag bag (Triage bag)",
+        "Orange bag with black zipper - traction materials i.e. straps, tubes for splints"
+      ]
+    }
+  },
+  "Utility 62": {
+    "saved_at": "2026-05-24T20:58:08.482973+00:00",
+    "compartments": {
+      "Front Dash": [
+        "Gray Microphone is DuCom",
+        "Black Microphone (lower left) is Fireground",
+        "Black Microphone (upper right) is PA system"
+      ],
+      "Glove Compartment": [
+        "Maps",
+        "Truck loading instruction paper",
+        "Patient prepare reports (blank)",
+        "Vehicle Name Laminate",
+        "Spare tire lock key (In bag)",
+        "Road flares (2x)",
+        "Passport Accountability System",
+        "Emergency Response Handbook"
+      ],
+      "Drivers Door": [
+        "Roadway Vest (x1)"
+      ],
+      "Back Seat": [
+        "Sterile Gloves and Masks",
+        "2 Radios",
+        "Vests",
+        "Ice Scraper"
+      ],
+      "Truck Bed": [
+        "MSA Case (Air bottle, SCBA, SCBA face piece size M)",
+        "Milk Crate (Jumper Cables, Wheel Chocks, Caution Tape, Receiver and Hitch ball)",
+        "Gray Bin with Black Top (4 Waders, 14\" inner tube, 100 lb Lift Bag, 250 Lift Bag, PFD)",
+        "Orange Square bag (Blanket)",
+        "Black Bag (Flood Light, Flood Light Stand, Dewalt Battery)",
+        "Orange/Red Bag (1 PFD, Throw Bag)",
+        "Rope Spool 200' feet",
+        "ABC Fire Extinguisher",
+        "Sked (Foldable stretcher)",
+        "Tools (2 Pike Poles, Haligan, Flat Head Axe, Umbrella, Snow Scraper)",
+        "Water Bottles",
+        "Spare Dewalt Batteries"
+      ]
+    }
+  },
+  "Brushtruck 62": {
+    "saved_at": "2026-05-24T20:58:08.494957+00:00",
+    "compartments": {
+      "Front Seat": [
+        "Radios"
+      ],
+      "GloveBox": [
+        "ERG book",
+        "Bug spray",
+        "Fuel key",
+        "Water guides"
+      ],
+      "Back Seat": [
+        "PFD",
+        "Hot stick",
+        "Box light - big flashlight",
+        "Hose bag with garden hose"
+      ],
+      "Container in back seat": [
+        "Small 1\" hose",
+        "Strap",
+        "Towell",
+        "Safety Vest",
+        "Maps",
+        "Duct Tape",
+        "Caution tape",
+        "Garbage bags",
+        "Pub Ed - public education stickers"
+      ],
+      "Rear of Vehicle - Water System": [
+        "250 gallon water tank",
+        "200' of 1\" hose on a hose reel",
+        "Handle for hose reel",
+        "2 pieces 12' long Black hard suction hose",
+        "Metal filter for suction hose",
+        "1 metal wheel chock",
+        "Plastic gas tank to provide fuel for pump",
+        "2 1/2\" hose  - 50 feet long",
+        "1 \u00bd\" hose roll on cross lay - 150 feet",
+        "Fog Nozzle"
+      ],
+      "Rear of Vehicle - Hand Tools": [
+        "3 brush paddles to put out brush fires",
+        "2 pike poles",
+        "1 New York pole",
+        "Bolt cutters",
+        "Hallagan tool",
+        "Plastic funnel"
+      ],
+      "Water Pump": [
+        "2 \u00bd\" inlet",
+        "1 \u00bd outlet"
+      ],
+      "Hydrant Bag": [
+        "Gate valve - connects to hydrant",
+        "1\" garden hose",
+        "Hydrant wrench",
+        "Small spanner for 1 \u00be\" hose and for gas shut off",
+        "Large spanner for 5\" hose",
+        "Black electrical tape",
+        "Steamer to Storz connectors",
+        "2 1/2\" Storz male and female",
+        "Pipe  Wrench"
+      ]
+    }
+  },
+  "Squad 61": {
+    "saved_at": "2026-07-01T14:17:54.012134+00:00",
+    "compartments": {
+      "Drivers Side Front Compartment": [
+        "Light Tower Controller",
+        "Fire Investigation Box",
+        "Wet Vac",
+        "Dust/Particulate Face Mask"
+      ],
+      "Drivers Side Traverse": [
+        "Winch",
+        "Remote for winch",
+        "Steering Wheel Cutter"
+      ],
+      "Driver's Side Compartment 3 over Wheel": [
+        "Circular Saw",
+        "K12 Saw",
+        "Chainsaw",
+        "Chain Oil",
+        "1/2\" Impact Wrench",
+        "1/4\" Impact Wrench with Bits",
+        "Angle Grinder",
+        "Reciprocating Saw (with blades for metal and wood)",
+        "Blades",
+        "Charger",
+        "Bits"
+      ],
+      "Driver Side Rear Cabinet - Air Cascade": [
+        "Cascade Controls",
+        "Adapters (for Air Reel, Scuba, and Boom Fill)",
+        "Towel",
+        "Quick connect for SCBA",
+        "O-rings",
+        "Air Hose for SCBA Filling",
+        "Power cord from generator"
+      ],
+      "Officer Front Compartments": [
+        "Little Giant ladder",
+        "Tarps",
+        "Step Cribbing/Chocks",
+        "Cribbing Platforms",
+        "Oil Dry",
+        "Garbage Container"
+      ],
+      "Transverse Compartments Officer Side Shelf": [
+        "Hurst Ram Tool",
+        "Hurst Cutter",
+        "Hurst Spreader",
+        "B-Post Tool"
+      ],
+      "Transverse Long Shelf Compartments": [
+        "2 Buckets tow hooks and chain",
+        "2 Akron Lights",
+        "2 High Lift Jacks/Farmer Jacks",
+        "2 Scissor Jacks",
+        "2 Bolt Cutters (1 large 1 small)",
+        "2 Life Satey Rope Bags 200' (Red & BLue)",
+        "4 Traffic Cones",
+        "4 Res-Q-Jacks",
+        "Dayton Submersible Pump",
+        "RIT Airpack",
+        "Air Chisel",
+        "Window Punch",
+        "Road Salt"
+      ],
+      "Officers Side Compartment Over Wheel": [
+        "Flat Head Axe",
+        "Halligan",
+        "Sledgehammer",
+        "2 Closet Pikes",
+        "Pick Axe",
+        "Rigging kit",
+        "Arizona Vortex  in Blue bag",
+        "Air Bag controller"
+      ],
+      "Officers Side Rear Compartment": [
+        "Plasma Torch Face Shied",
+        "Welding Gloves",
+        "Plasma Torch IR/UV Safety Glasses",
+        "Rescue Blanket",
+        "Wool Blanket",
+        "Metric and standard open end wrenches",
+        "More Cribbing and Wedges",
+        "Ratchet Straps",
+        "Toolbox with SAE & Metric Wrenches",
+        "Standard Toolbox",
+        "Socket Sets"
+      ],
+      "Rear of Squad Compartment (Big stuff):": [
+        "Stokes Basket",
+        "Fire Investigation Rake",
+        "2x 8' New York Hooks",
+        "6' New York Hook",
+        "6' Pike Pole",
+        "Umbrella",
+        "3 Multi-lift Air Bags 1 small, 2 medium",
+        "3 Fire Extinguishers",
+        "ABC Fire Extinguisher",
+        "Co2 Fire Extinguisher",
+        "Silver Bullet",
+        "Towel",
+        "B-post covers",
+        "2 large multi-lift air bags",
+        "2 Battery powered Smoke Ejectors",
+        "Air Bag Controller in Dewalt bag",
+        "Multi-force Air Bag (snowman)",
+        "6 pack of Dewalt Batteries"
+      ],
+      "Officer Coffin Compartment On Top (Spill stuff):": [
+        "Absorbent Pads",
+        "Oil Dry",
+        "Spill Kit",
+        "Oil Pan",
+        "Shovels"
+      ],
+      "Driver Coffin Compartment (Water rescue gear):": [
+        "2 Mustang Suits",
+        "2 Horse Collars with Water Rescue Rope",
+        "2 Helmets",
+        "2 Throw Bags",
+        "4 PFDs (Personal Flotation Devices)",
+        "Box with Pipe Plugs"
+      ],
+      "Cab and EMS Compartment:": [
+        "3 Dewalt Battery Chargers",
+        "3 Hurst Battery Chargers",
+        "Hotstick",
+        "Gas Trac",
+        "4 Gas and Wand (detector)",
+        "AED (Automated External Defibrillator)",
+        "2 SCBA Masks (1 medium, 1 small)",
+        "2 Fire Hoods",
+        "Caution  Tape",
+        "Fire Tape",
+        "4 box lights",
+        "Safety Vests",
+        "Fire Wipes",
+        "Knox Box",
+        "Passport System",
+        "Box Light",
+        "TIC",
+        "Fuel Keys",
+        "Safety Flares"
+      ]
+    }
+  },
+  "SCBA": {
+    "saved_at": "2026-05-24T20:58:08.524702+00:00",
+    "compartments": {
+      "Harness and Frame Assembly": [
+        "Speaker",
+        "Bleeder /bypass valve",
+        "Side handle of harness, holds 500 lbs, top handle holds 1000",
+        "Battery - when replaced it does a system check - shut down with green buttons, 6 hours to recharge",
+        "Waist belt buckle, also contains tool for opening battery holder",
+        "High pressure hose 4500psi",
+        "Manual switch to turn pass off and double click turns the ICM/PASS off",
+        "Digital air pressure display and battery levels",
+        "Analog air pressure gauge",
+        "Second stage regulator",
+        "Red Button turns PASS on manually"
+      ],
+      "Cylinder": [
+        "Aluminum tank, covered in carbon fiber, and epoxy resin, filled to 4800 pounds initially once cooled it should be at 4500",
+        "High pressure hose going to splitter",
+        "High pressure release valve will blow at 5600 PSI per MSA specs",
+        "Cylinder valve coupling nut",
+        "Pressure gauge",
+        "URC - Universal RIT connector",
+        "Burst Disc 7000 PSI per MSA specs",
+        "PASS alarm lights AKA Buddy lights",
+        "Air valve on/off",
+        "Bells - powered by air left in tank",
+        "Hydrostatic test date is every 5 years",
+        "Piezo Emitters provide the alarm sound"
+      ],
+      "Buddy Breather": [
+        "Male and female ends",
+        "Proprietary to the maker and model",
+        "Can daisy chain multiple",
+        "The air used comes from the tank with highest pressure",
+        "The connection provides only 110psi",
+        "3ft (39 inch) long hose"
+      ],
+      "RIT Pack": [
+        "Universal connection",
+        "Can be used to top up someones air tank",
+        "The RIT tank we use is at 6000 PSI",
+        "The RIT pack contains face piece size medium if needed",
+        "Pressure at 6000psi will partially fill a tank"
+      ],
+      "Alarms": [
+        "PASS alarm",
+        "Bells alarm at 1500 psi"
+      ]
+    }
+  },
+  "Tower 62": {
+    "saved_at": "2026-06-10T14:18:05.345127+00:00",
+    "compartments": {
+      "Engineers Compartment": [
+        "25' of 5' LDH",
+        "Duct Tape",
+        "Caution Tape"
+      ],
+      "Cross Lay": [
+        "Center crosslay - 1 \u00be Hose 200' with fog nozzle pre-connected",
+        "Rear crosslay - 1 \u00be hose 200' with fog nozzle pre-connected",
+        "Front crosslay - 2 \u00bd hose 200' with smoothbore nozzle pre-connected"
+      ],
+      "Drivers Side Front Middle Compartment": [
+        "Gated Wye",
+        "Storz Connectors",
+        "Female/Female Adaptors",
+        "Male to Male Adaptor",
+        "Storz reducer",
+        "Intake cap with chain",
+        "Angled Connectors",
+        "High-rise Pack (150' of 1 \u00be hose, Gated Wye bundled in a shoulder carry pack)",
+        "High-rise bag (Short length of 2 \u00bd, Pressuremeter T, Elbow connector, vise grips)",
+        "2 Fog nozzles",
+        "Hydrant Bag (hydrant wrench, spanners, mallet, gate valve, Storz connectors, LDH rope)",
+        "K-12 blades"
+      ],
+      "Divers Side Rear Middle Compartment": [
+        "Dewalt Sawzall",
+        "Angle Grinder",
+        "Chain saw with roof guide",
+        "K12 rotary saw",
+        "Chain Lub",
+        "Fuel for K12/Chainsaw",
+        "Tool Kit For Chainsaw",
+        "Small Spanners",
+        "Hydrant Wrench",
+        "O Rings for hose swivel"
+      ],
+      "Drivers Side Rear Compartment": [
+        "3 SCBAs",
+        "Rit Pack",
+        "RASP Rope line",
+        "30 Amp generator",
+        "200 Electrical Cable",
+        "Extension cords",
+        "Plug adaptors",
+        "Fan",
+        "Road Salt",
+        "Safety Harness for Tower Climbing"
+      ],
+      "Rear Engine Compartment": [
+        "3\" 350' hose",
+        "5\" 250' Hose",
+        "2 35' 2 Section Extension Ladders",
+        "28' 2 section Extension Ladder",
+        "2 20' Roof Ladders",
+        "16' Roof Ladder",
+        "12'Pike Pole",
+        "10' Pike Pole",
+        "2x 8' pike Poles",
+        "2x 6' Pike Poles",
+        "10' Folding Ladder",
+        "12' Folding Ladder",
+        "5 New York Hooks",
+        "2 Dry Wall Hooks"
+      ],
+      "Officers Side Rear Compartment": [
+        "Road sand",
+        "Fan with a cord. Aka smoke ejector",
+        "30 Amp Generator",
+        "200 ft Poser Cord",
+        "Extension Cords",
+        "Plug Adaptors"
+      ],
+      "Officers Side Rear Middle Compartment": [
+        "Dewalt Powered Fan",
+        "2x 150' Utility Rope",
+        "130' Utility Rope"
+      ],
+      "Officers Side Middle Compartment": [
+        "2x Flat Head Axes",
+        "2x Haligans",
+        "2x Pick Axes",
+        "2x Sledge Hammer",
+        "4x Shovels",
+        "K tool",
+        "Bolt cutters"
+      ],
+      "Officers Side Front Middle Compartment": [
+        "2x Closet Pike (d Handle)",
+        "Fire Maul (SLedge Hammer with wedge on other side)",
+        "Pig Axe (Flat head with pick on other side)",
+        "Pry Bar",
+        "Long Pry Bar",
+        "Large Bolt Cutters",
+        "Large Light for on Scene lighting"
+      ],
+      "Officers Side Front 2 Middle Compartment": [
+        "Traps",
+        "Wet Vac",
+        "Portable Lights",
+        "Tool Box",
+        "Submersible pump"
+      ],
+      "Officers Side Front Compartment": [
+        "Hose Hoist",
+        "Silver Bullet - Pressurized water extinguisher",
+        "Pump Can",
+        "CO2 Extinguisher",
+        "ABC Extinguisher"
+      ],
+      "Inside Cab Compartment": [
+        "Caution Tape",
+        "Spare Batteries",
+        "Water Bottles",
+        "AED",
+        "Clear Plastic Box (Extra Sterile Gloves, N95, Eye Protection, gowns, Bio Bags )",
+        "Extra SCBA mask size M",
+        "TIC in Officers Seat"
+      ],
+      "Top Of Tower": [
+        "New York Hook",
+        "Roofing ladder with hooks on both ends"
+      ],
+      "Coffin Compartment": [
+        "Stokes Basket"
+      ],
+      "Bucket Contents": [
+        "Pick Axe",
+        "Master Stream Nozzle",
+        "Haligan"
+      ],
+      "Bucket Compartment": [
+        "2 50' 1 \u00be hoses",
+        "5' 1 \u00be hose",
+        "Fog nozzle",
+        "Brackets to attach ladder to bucket",
+        "Air hoses to allow direct connection to Tower air supply"
+      ],
+      "Pivot Compartment": [
+        "Chainsaw",
+        "K-12"
+      ]
+    }
+  }
+}
