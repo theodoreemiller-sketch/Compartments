@@ -1,0 +1,8 @@
+.git-auth/
+.DS_Store
+__pycache__/
+*.pyc
+*.bak
+*.bak[0-9]
+*.bak_*
+*.presync_*.bak
