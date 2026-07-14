@@ -17312,6 +17312,10 @@ if (searchInput) {
 </div>
 <div class="layout">
 <nav id="sn61-sidebar">
+  <div class="nav-section-label">Apparatus Overview</div>
+  <a class="nav-link" href="#sn61-overview">Snorkel 61 Overview</a>
+  <a class="nav-link" href="#sn61-crosslays">Crosslay Hoses</a>
+  <hr class="nav-divider">
   <div class="nav-section-label">Driver's Side</div>
   <a class="nav-link" href="#sn61-ds-pump">DS Pumping Area</a>
   <a class="nav-link" href="#sn61-ds-gen">DS Generator Compartment</a>
@@ -17320,10 +17324,11 @@ if (searchInput) {
   <a class="nav-link" href="#sn61-ds-behindwheel">DS Behind The Wheel</a>
   <a class="nav-link" href="#sn61-ds-secondlast">DS Second to Last</a>
   <a class="nav-link" href="#sn61-ds-rear">DS Rear Compartment</a>
+  <a class="nav-link" href="#sn61-ds-ladders">DS Ladders</a>
   <hr class="nav-divider">
   <div class="nav-section-label">Rear of Apparatus</div>
-  <a class="nav-link" href="#sn61-back-left">Back — Left Side</a>
-  <a class="nav-link" href="#sn61-back-right">Back — Right Side</a>
+  <a class="nav-link" href="#sn61-back-left">Back — Left (Driver) Side</a>
+  <a class="nav-link" href="#sn61-back-right">Back — Right (Officer) Side</a>
   <hr class="nav-divider">
   <div class="nav-section-label">Officer's Side</div>
   <a class="nav-link" href="#sn61-os-rear">OS Rear</a>
@@ -17340,35 +17345,115 @@ if (searchInput) {
   <div class="intro-banner" style="background:linear-gradient(135deg,#3B0A0A 0%,#8B1A1A 100%);
        border-radius:12px; border-left:5px solid #D4A017; padding:28px 32px; margin-bottom:40px;">
     <h3 style="font-family:'Oswald',sans-serif; font-size:20px; letter-spacing:2px; text-transform:uppercase; color:#D4A017; margin-bottom:12px;">🚒 Snorkel 61 — Compartment Study Guide</h3>
-    <p style="font-size:15px; line-height:1.7; color:#F0D8D8;">Snorkel 61 is the aerial snorkel — a specialized elevated platform that puts water above a fire or gets crews to heights no ladder can reach quickly. Unlike the tower, the snorkel's articulating boom gives it flexibility in tight spots. It's a tool with a specific job, and knowing its compartments is how you support that job without fumbling around in the dark.</p>
-    <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> When the snorkel rolls, the crew needs to move fast and know exactly where everything is. This rig has gear distributed across both sides, the rear, and the cab — and you're expected to put your hands on the right thing without stopping to read a label. Walk every compartment. Know what's on each shelf. Then do it again until it's automatic.</p>
-    <p style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#D0A8A8;">📅 Study guide synced from Google Doc: <strong style="color:#D4A017;">June 26, 2026</strong></p>
+    <p style="font-size:15px; line-height:1.7; color:#F0D8D8;">Snorkel 61 is an aerial snorkel with a 75-foot reach, a 2,000 GPM pump, and a 1,000 GPM waterway — but no water tank. That last part matters: this rig needs a continuous water supply from a hydrant or another engine. It also runs a 10kW onboard generator and carries 8 floodlights and 6 spotlights, making it a serious lighting and elevated water platform.</p>
+    <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> No tank means no margin. If the water supply drops, the master stream stops. Know the pump operations, know how to support the engineer, and know every compartment cold so you're not the reason the crew is standing still on a working fire.</p>
+    <p style="margin-top:10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#D0A8A8;">📅 Study guide synced from Google Doc: <strong style="color:#D4A017;">July 14, 2026</strong></p>
   </div>
+
+  <!-- ══════════════ OVERVIEW ══════════════ -->
+  <section class="comp-section" id="sn61-overview">
+    <div class="section-header">
+      <div class="section-icon">🚒</div>
+      <div><h2>Snorkel 61 Overview</h2><div class="sub">Apparatus specs · Key capabilities</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">OV-01</span>
+        <div class="card-title">Apparatus Specifications
+          <span class="card-aka">aka: Spec sheet, rig specs</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Specs</div>
+            <ul>
+              <li>75ft Aerial reach</li>
+              <li>2,000 GPM pump</li>
+              <li>1,000 GPM waterway</li>
+              <li><strong>NO TANK</strong> — requires continuous water supply</li>
+              <li>10kW onboard generator</li>
+              <li>8 Floodlights</li>
+              <li>6 Spotlights</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 What This Means for You</div>
+            <p><strong>No tank = no buffer.</strong> Every other rig on this fleet has a water supply to work from while you're getting the hydrant line established. Snorkel 61 does not. The pump stops the moment water supply is interrupted. Support the engineer. Get that line established fast.<br><br>
+            The 10kW generator and 14 lights (8 flood, 6 spot) make this rig a major scene lighting asset — know how to deploy them.</p>
+          </div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content"><strong>NO WATER TANK</strong>This rig carries zero water. If you arrive on scene and haven't established a water supply, you have a very large, very expensive piece of equipment that can do nothing. This is not a mistake you make twice.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CROSSLAY HOSES ══════════════ -->
+  <section class="comp-section" id="sn61-crosslays">
+    <div class="section-header">
+      <div class="section-icon">🚿</div>
+      <div><h2>Crosslay Hoses</h2><div class="sub">Pre-connected attack lines</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">CL-01</span>
+        <div class="card-title">2× 200' of 1¾" with Fog Nozzle
+          <span class="card-aka">aka: Crosslays, preconnects, attack lines</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <p>Two crosslay bays, each loaded with 200 feet of 1¾" attack hose pre-connected to a fog nozzle. These are your primary interior attack lines — pull and go.</p>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p>Crosslays run perpendicular to the rig so either side of the street can pull from either bay. Know which side each bay opens from and how the hose is loaded so you don't pull it wrong and create a kink before you even reach the door.<br><br>
+            Remember: <strong>no tank</strong> means these lines go dead the second water supply drops. Get that hydrant before you pull.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ══════════════ DRIVER'S SIDE ══════════════ -->
   <section class="comp-section" id="sn61-ds-pump">
     <div class="section-header">
       <div class="section-icon">🚰</div>
-      <div><h2>DS Pumping Area</h2><div class="sub">Driver's Side · Pump Panel</div></div>
+      <div><h2>DS Pumping Area</h2><div class="sub">Driver's Side · Pump panel · Shore power</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">DS-01</span>
-        <div class="card-title">Driver's Side Pumping Area
+        <div class="card-title">DS Pumping Area
           <span class="card-aka">aka: Pump panel, pump compartment</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full">
+          <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
-            <p>Contents pending verification — walk this compartment with your officer during rig check and document what's here.</p>
+            <ul>
+              <li>20 Amp Service</li>
+              <li>250' of Cord</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>20 Amp Service:</strong> Shore power connection — allows the rig to be plugged into station power to keep batteries charged and systems ready without running the engine.<br><br>
+            <strong>250' of Cord:</strong> Heavy-duty extension cord for powering the shore power connection or running tools from an external power source on scene.</p>
           </div>
         </div>
         <div class="callout callout-tip">
           <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>Probie Note</strong>The pump panel controls water flow and pressure for the entire rig. If you haven't been walked through pump operations by your engineer, make that happen before your next shift.</div>
+          <div class="callout-content"><strong>Pump Panel = Engineer's Domain</strong>The pump panel controls water flow and pressure for the entire rig. If you haven't been walked through pump operations by your engineer, make that happen. Every firefighter should understand the basics even if they're not running the panel.</div>
         </div>
       </div>
     </div>
@@ -17377,26 +17462,30 @@ if (searchInput) {
   <section class="comp-section" id="sn61-ds-gen">
     <div class="section-header">
       <div class="section-icon">⚡</div>
-      <div><h2>DS Generator Compartment</h2><div class="sub">Driver's Side · Onboard Generator</div></div>
+      <div><h2>DS Generator Compartment</h2><div class="sub">Driver's Side · 10kW onboard generator</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">DS-02</span>
-        <div class="card-title">Driver's Side Generator Compartment
-          <span class="card-aka">aka: Gen compartment, power compartment</span>
+        <div class="card-title">10kW Generator
+          <span class="card-aka">aka: Gen, onboard generator, power plant</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full">
+          <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
-            <p>Contents pending verification — walk this compartment with your officer during rig check and document what's here.</p>
+            <p>10 kilowatt onboard generator — powers the rig's 8 floodlights, 6 spotlights, and any electric tools on scene.</p>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p>10kW is substantial power output. This generator makes Snorkel 61 a capable scene lighting platform — at a nighttime structure fire or a large incident, this rig can light up the scene significantly. Know how to start it, what it powers, and how to connect external loads to it.</p>
           </div>
         </div>
         <div class="callout callout-warn">
           <div class="callout-icon">⚠️</div>
-          <div class="callout-content"><strong>Know Your Generator</strong>The generator powers lights, saws, and other electric tools on scene. Know how to start it, what it powers, and when to use it before you're standing in the dark at a structure fire.</div>
+          <div class="callout-content"><strong>Generator Check Every Shift</strong>Verify fuel level and test-start the generator during rig check. A generator that won't start at 2am on scene is a failure you could have caught at 0900. Don't skip it.</div>
         </div>
       </div>
     </div>
@@ -17405,99 +17494,65 @@ if (searchInput) {
   <section class="comp-section" id="sn61-ds-eng">
     <div class="section-header">
       <div class="section-icon">🔧</div>
-      <div><h2>DS Engineers Compartment</h2><div class="sub">Driver's Side · Hydrant tools · Air · Fittings</div></div>
+      <div><h2>DS Engineers Compartment</h2><div class="sub">Driver's Side · High-rise packs · Adapters · Hydrant tools</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">DS-03</span>
-        <div class="card-title">Hydrant Bag
-          <span class="card-aka">aka: Hydrant kit, hydrant tools</span>
+        <div class="card-title">High-Rise Packs &amp; Hydrant Tools
+          <span class="card-aka">aka: Engineer's comp, water supply tools</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
           <div class="entry-block">
-            <div class="entry-label">📋 What It Is</div>
-            <p>A bag containing all the tools needed to connect to and open a fire hydrant — typically includes a hydrant wrench, gate valve, and spanner wrenches.</p>
+            <div class="entry-label">📋 High-Rise Equipment</div>
+            <ul>
+              <li>100' × 2½" High-Rise Pack w/Smooth Bore Nozzle</li>
+              <li>150' × 1¾" High-Rise Pack w/Wye &amp; Fog Nozzle</li>
+              <li>High-Rise Tool Bag</li>
+              <li>Wye — 2½" to 1½"</li>
+              <li>Siamese Adapter — 2½" Female to 5" Storz</li>
+            </ul>
           </div>
           <div class="entry-block">
-            <div class="entry-label">📍 Location</div>
-            <p>Driver's Side Engineers Compartment.</p>
+            <div class="entry-label">📋 Nozzles &amp; Adapters</div>
+            <ul>
+              <li>1½" 300 GPM Fog Nozzle</li>
+              <li>1000 GPM Fog Nozzle (Basket Turret)</li>
+              <li>Steamer to Storz</li>
+              <li>Steamer to Storz Elbow</li>
+              <li>Various Adapters — M-M, F-F, CFD, Garden Hose</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">📋 Hydrant &amp; Supply Tools</div>
+            <ul>
+              <li>Hydrant Bag</li>
+              <li>Hose Rope</li>
+              <li>Spanner Wrenches</li>
+              <li>50' of 5" Donut Roll</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">📋 Misc</div>
+            <ul>
+              <li>Engineer's Card</li>
+              <li>Oil Dry</li>
+              <li>Dry Silicone Spray</li>
+              <li>Duct Tape</li>
+              <li>2 Spare Air Bottles</li>
+            </ul>
           </div>
         </div>
         <div class="callout callout-tip">
           <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>Probie Note</strong>The hydrant bag should be one of the first things you can grab without looking. The engineer needs water fast and you're often the one making the hydrant connection happen.</div>
+          <div class="callout-content"><strong>High-Rise Packs</strong>The two high-rise packs (2½" smooth bore and 1¾" w/wye) are pre-assembled for rapid deployment into multi-story buildings where hose must be stretched up stairwells. Know how each is packed and how to carry them — these are heavy loads when fully charged.</div>
         </div>
-      </div>
-    </div>
-    <div class="equip-card">
-      <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-04</span>
-        <div class="card-title">25' of 5" LDH
-          <span class="card-aka">aka: Five-inch, large diameter hose, supply line, soft sleeve</span>
-        </div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block">
-            <div class="entry-label">📋 What It Is</div>
-            <p>Large diameter hose — 25 feet of 5-inch supply hose used to connect from a hydrant or water supply to the rig's intake. High-volume, low-pressure supply line.</p>
-          </div>
-          <div class="entry-block">
-            <div class="entry-label">📍 Location</div>
-            <p>Driver's Side Engineers Compartment.</p>
-          </div>
-        </div>
-        <div class="callout callout-warn">
-          <div class="callout-icon">⚠️</div>
-          <div class="callout-content"><strong>Handle It Right</strong>Five-inch is heavy and stiff. Know how it's loaded and how to lay it out without kinking it. A kinked 5-inch is a stopped water supply. That is a very bad thing at a working fire.</div>
-        </div>
-      </div>
-    </div>
-    <div class="equip-card">
-      <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-05</span>
-        <div class="card-title">2 Air Bottles
-          <span class="card-aka">aka: SCBA cylinders, spare bottles, spare air</span>
-        </div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full">
-            <div class="entry-label">📋 What They Are</div>
-            <p>Spare SCBA air cylinders stored for crew replenishment or RIT (Rapid Intervention Team) operations. Always check that bottles are full during rig check — if a bottle is not at full pressure, swap it out and report it.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="equip-card">
-      <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-06</span>
-        <div class="card-title">Additional Engineers Compartment Contents</div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block">
-            <div class="entry-label">📋 Contents</div>
-            <ul>
-              <li>Hose Roller</li>
-              <li>Oil Dry</li>
-              <li>Connectors, Adaptors, Caps</li>
-              <li>Spanner</li>
-              <li>WD-40</li>
-            </ul>
-          </div>
-          <div class="entry-block">
-            <div class="entry-label">💡 Notes</div>
-            <p><strong>Hose Roller:</strong> Protects hose from sharp edges on windowsills and parapets when pulling line into a building.<br><br>
-            <strong>Spanner:</strong> Hose coupling wrench — used to tighten or loosen couplings that are hand-tight.<br><br>
-            <strong>Connectors/Adaptors/Caps:</strong> Assorted fittings for making connections between different hose sizes and threads.</p>
-          </div>
+        <div class="callout callout-tip">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content"><strong>1000 GPM Basket Turret Nozzle</strong>The 1000 GPM fog nozzle is dedicated to the basket turret (master stream in the snorkel bucket). This is a high-flow master stream nozzle — it's not a handline nozzle. Know which nozzle is which.</div>
         </div>
       </div>
     </div>
@@ -17510,7 +17565,7 @@ if (searchInput) {
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-07</span>
+        <span class="card-number">DS-04</span>
         <div class="card-title">Irons &amp; Forcible Entry Tools
           <span class="card-aka">aka: The irons, hand tools, FE tools</span>
         </div>
@@ -17531,14 +17586,14 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Key Tools</div>
-            <p><strong>Halligan + Flathead Axe:</strong> Together these are "the irons" — the primary forcible entry tool set in the fire service. Learn to use them as a pair.<br><br>
-            <strong>K-Tool:</strong> Used to pull lock cylinders out of doors so you can unlock from the inside without destroying the entire door. Faster and cleaner than forcing in many situations.<br><br>
-            <strong>Closet Pike Pole:</strong> Short pike pole for use in tight spaces like closets and small rooms — opens ceilings without needing full swing room.</p>
+            <p><strong>Halligan + Flathead Axe = The Irons.</strong> Your primary forcible entry team. One person on the Halligan, one on the axe. Learn to work as a pair — the axe drives the Halligan, not brute strength alone.<br><br>
+            <strong>K-Tool:</strong> Pulls lock cylinders out of commercial doors — faster and cleaner than forcing when it applies.<br><br>
+            <strong>Closet Pike Pole:</strong> Short-handle pike for tight spaces — closets, small rooms — where you can't swing a full pole.</p>
           </div>
         </div>
         <div class="callout callout-danger">
           <div class="callout-icon">🚨</div>
-          <div class="callout-content"><strong>Know Your Irons Cold</strong>Forcible entry is a perishable skill. If you can't marry a Halligan and an axe under pressure in poor visibility and get a door open in seconds, you need more practice. People have died in buildings that couldn't be accessed fast enough.</div>
+          <div class="callout-content"><strong>Know Your Irons Cold</strong>Forcible entry under fire conditions with poor visibility, bad air, and a ticking clock is not the time to figure out how these tools work. If you can't do it fast in daylight, you can't do it when it counts. Practice.</div>
         </div>
       </div>
     </div>
@@ -17551,7 +17606,7 @@ if (searchInput) {
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-08</span>
+        <span class="card-number">DS-05</span>
         <div class="card-title">Power Saws &amp; Fuel
           <span class="card-aka">aka: Saw compartment, cutting tools</span>
         </div>
@@ -17564,20 +17619,22 @@ if (searchInput) {
             <ul>
               <li>Tool Box</li>
               <li>Fuel for Chainsaw and K12</li>
-              <li>K12</li>
+              <li>2× K12 — one with metal blade, one with composite blade</li>
               <li>Chainsaw</li>
+              <li>Saw Blades</li>
             </ul>
           </div>
           <div class="entry-block">
-            <div class="entry-label">💡 Notes</div>
-            <p><strong>K12 (Partner Saw):</strong> Rotary rescue saw — cuts metal, concrete, and masonry. Used for vehicle extrication and forcible entry through metal doors and security gates.<br><br>
-            <strong>Chainsaw:</strong> Used for cutting wood — roof ventilation, tree removal from roadways, wooden debris at collapse scenes.<br><br>
-            <strong>Fuel:</strong> Each saw uses its own fuel mix. Don't cross-contaminate. Know which can goes with which saw before you're standing on a roof in full gear.</p>
+            <div class="entry-label">💡 Two K12s</div>
+            <p>Having two K12 rotary saws with different blades means you can switch materials without a blade change on scene:<br><br>
+            <strong>Metal blade K12:</strong> Steel doors, security gates, vehicle extrication.<br>
+            <strong>Composite blade K12:</strong> Concrete, masonry, hard composite materials.<br><br>
+            Know which saw has which blade. Grabbing the wrong one wastes time and destroys blades.</p>
           </div>
         </div>
         <div class="callout callout-warn">
           <div class="callout-icon">⚠️</div>
-          <div class="callout-content"><strong>Fuel Check Every Shift</strong>Check fuel levels on both saws at the start of every shift. A saw that stalls on a roof because it's dry is worse than useless — it's a delay that costs lives. Top them off if they're not full.</div>
+          <div class="callout-content"><strong>Fuel Check — Every Single Shift</strong>Both saws need correct fuel mix. Cross-contaminating fuel (gas-only vs oil mix) will destroy an engine. Check fuel level and confirm correct fuel before leaving the station.</div>
         </div>
       </div>
     </div>
@@ -17586,14 +17643,12 @@ if (searchInput) {
   <section class="comp-section" id="sn61-ds-secondlast">
     <div class="section-header">
       <div class="section-icon">🛡️</div>
-      <div><h2>DS Second to Last Compartment</h2><div class="sub">Driver's Side · Tarps · Blades</div></div>
+      <div><h2>DS Second to Last Compartment</h2><div class="sub">Driver's Side · Tarp · Blades · Eye protection</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-09</span>
-        <div class="card-title">Tarp, Spare Blades &amp; Eye Protection
-          <span class="card-aka">aka: Salvage compartment</span>
-        </div>
+        <span class="card-number">DS-06</span>
+        <div class="card-title">Tarp, Spare Blades &amp; Eye Protection</div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
@@ -17603,13 +17658,13 @@ if (searchInput) {
             <ul>
               <li>Plastic Tarp</li>
               <li>Spare Blade</li>
-              <li>Black Box (Eye Protection)</li>
+              <li>Black Box — Eye Protection Equipment</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>Spare Blade:</strong> Replacement blade for the K12 or chainsaw. Know what blade goes with what saw and how to swap it safely — blade changes happen under pressure on scene.<br><br>
-            <strong>Black Box:</strong> Likely contains eye protection (safety glasses, goggles) for saw operations. Confirm contents during rig check.</p>
+            <p><strong>Spare Blade:</strong> Replacement saw blade. Know what size/type fits which saw before you're doing a blade swap on scene. Practice the change with gloves on.<br><br>
+            <strong>Eye Protection:</strong> Safety glasses and/or goggles for saw operations. Required PPE any time a saw is running near you, period.</p>
           </div>
         </div>
       </div>
@@ -17619,13 +17674,13 @@ if (searchInput) {
   <section class="comp-section" id="sn61-ds-rear">
     <div class="section-header">
       <div class="section-icon">🧯</div>
-      <div><h2>DS Rear Compartment</h2><div class="sub">Driver's Side · Extinguishers · Climbing gear</div></div>
+      <div><h2>DS Rear Compartment</h2><div class="sub">Driver's Side · Extinguishers · Climbing belt · Basket equipment</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
-        <span class="card-number">DS-10</span>
-        <div class="card-title">Extinguishers &amp; Climbing Belt
-          <span class="card-aka">aka: Extinguisher compartment, rear DS</span>
+        <span class="card-number">DS-07</span>
+        <div class="card-title">Extinguishers, Climbing Belt &amp; Basket Equipment
+          <span class="card-aka">aka: DS rear, extinguisher compartment</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17634,26 +17689,62 @@ if (searchInput) {
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
             <ul>
-              <li>Climbing Belt</li>
+              <li>Climbing Belt For Basket</li>
               <li>ABC Fire Extinguisher</li>
-              <li>CO2 Extinguisher</li>
+              <li>Pump Can Extinguisher</li>
               <li>Silver Bullet (Pressurized Water)</li>
+              <li>Breather Lines for Basket</li>
             </ul>
           </div>
           <div class="entry-block">
-            <div class="entry-label">💡 Extinguisher Types</div>
-            <p><strong>ABC Extinguisher:</strong> Dry chemical — works on ordinary combustibles, flammable liquids, and electrical fires. Versatile, but messy and corrosive.<br><br>
-            <strong>CO2 Extinguisher:</strong> Carbon dioxide — used on electrical fires and flammable liquids where clean-up matters (server rooms, electrical panels). Leaves no residue.<br><br>
-            <strong>Silver Bullet:</strong> Pressurized water extinguisher — Class A fires only (wood, paper, ordinary combustibles). Do NOT use on electrical or flammable liquid fires.</p>
+            <div class="entry-label">💡 Basket-Specific Gear</div>
+            <p><strong>Climbing Belt For Basket:</strong> Worn when operating in or from the aerial basket. Inspect every shift — look for wear, fraying, damaged hardware. Don't skip this step.<br><br>
+            <strong>Breather Lines for Basket:</strong> Air supply lines that connect to the basket, allowing personnel in the bucket to breathe from the rig's air supply during extended operations. Know how to connect and use them.</p>
           </div>
-        </div>
-        <div class="callout callout-tip">
-          <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>Climbing Belt</strong>The climbing belt is used for aerial operations — working safely in the bucket or from an elevated position. Know how to don it correctly. Inspect it every shift for wear, damage, or missing hardware.</div>
+          <div class="entry-block full">
+            <div class="entry-label">💡 Extinguisher Types</div>
+            <p><strong>ABC:</strong> Dry chemical — works on ordinary combustibles, flammable liquids, electrical. Messy and corrosive, so use sparingly and only when appropriate.&nbsp;&nbsp;<strong>Pump Can / Silver Bullet:</strong> Pressurized water — Class A only (wood, paper, ordinary combustibles). <em>Do NOT use on electrical or flammable liquid fires.</em></p>
+          </div>
         </div>
         <div class="callout callout-danger">
           <div class="callout-icon">🚨</div>
-          <div class="callout-content"><strong>Wrong Extinguisher = Disaster</strong>Spraying water on a flammable liquid fire or electrical fire turns a bad situation catastrophic. Know your extinguisher types cold and match the right tool to the right fire class without hesitation.</div>
+          <div class="callout-content"><strong>Wrong Extinguisher = Catastrophe</strong>Water on a flammable liquid fire or energized electrical equipment can get you and your crew killed. Know your extinguisher types before you're standing in front of a fire.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="comp-section" id="sn61-ds-ladders">
+    <div class="section-header">
+      <div class="section-icon">🪜</div>
+      <div><h2>DS Ladders</h2><div class="sub">Driver's Side · Ground ladders</div></div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="sn61Toggle(this)">
+        <span class="card-number">DS-08</span>
+        <div class="card-title">Ground Ladders — Driver's Side
+          <span class="card-aka">aka: Ground ladders, DS ladder rack</span>
+        </div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block">
+            <div class="entry-label">📋 Contents</div>
+            <ul>
+              <li>2× 28' Extension Ladders</li>
+              <li>2× 16' Roof Ladders</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>28' Extension:</strong> Your primary reach ladder — good to second-floor and some third-floor windows. Two of them means you can ladder two openings simultaneously.<br><br>
+            <strong>16' Roof Ladder:</strong> Has roof hooks that fold out to lock onto a ridge line. Used on pitched roofs to give firefighters a stable work platform during ventilation or search. Two on this rig — know how to deploy and anchor them.</p>
+          </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>Ladder Placement Matters</strong>A ladder set at the wrong angle or against an unstable surface has killed firefighters. 75-degree working angle. Tip even with or one rung above the sill. Footing secured. No exceptions.</div>
         </div>
       </div>
     </div>
@@ -17663,13 +17754,13 @@ if (searchInput) {
   <section class="comp-section" id="sn61-back-left">
     <div class="section-header">
       <div class="section-icon">🏗️</div>
-      <div><h2>Back of Snorkel — Left Side</h2><div class="sub">Rear exterior · Pike poles · Ladder · Shovels</div></div>
+      <div><h2>Back of Snorkel — Left (Driver) Side</h2><div class="sub">Rear exterior · Pry bars · Pike poles · Attic ladder</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">RR-01</span>
-        <div class="card-title">Rear Left — Pike Poles, Attic Ladder &amp; Shovels
-          <span class="card-aka">aka: Rear exterior, rear stowage</span>
+        <div class="card-title">Rear Left — Pry Bars, Pike Poles, Attic Ladder &amp; Shovels
+          <span class="card-aka">aka: Rear exterior left, driver-side rear stowage</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17678,17 +17769,18 @@ if (searchInput) {
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
             <ul>
-              <li>4 Pike Poles</li>
-              <li>Folding Attic Ladder</li>
-              <li>2 Blue Poles</li>
+              <li>2× 6' Pry Bars</li>
+              <li>2× 8' Pike Poles</li>
+              <li>2× 12' Pike Poles</li>
+              <li>Attic Ladder — 10'</li>
               <li>2 Scoop Shovels</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>Pike Poles:</strong> Used for pulling ceilings, opening walls, and moving debris without getting hands near fire. Know the hook-end vs. pike-end and how to use each.<br><br>
-            <strong>Folding Attic Ladder:</strong> Lightweight, compact ladder for accessing attic spaces through hatches or when full ground ladder deployment isn't practical.<br><br>
-            <strong>Blue Poles:</strong> Confirm exact purpose with your officer during rig walk — document what these are used for.</p>
+            <p><strong>Pry Bars (6'):</strong> For moving heavy debris, opening access panels, and bracing operations — more leverage than a Halligan in certain situations.<br><br>
+            <strong>Pike Poles (8' and 12'):</strong> Pulling ceilings and opening walls from a safe distance. The 12-footers give you reach without getting directly under the drop zone.<br><br>
+            <strong>Attic Ladder (10'):</strong> Compact folding ladder for attic access through small hatches. Lighter than an extension ladder, fits in tight spaces.</p>
           </div>
         </div>
       </div>
@@ -17698,13 +17790,13 @@ if (searchInput) {
   <section class="comp-section" id="sn61-back-right">
     <div class="section-header">
       <div class="section-icon">🏗️</div>
-      <div><h2>Back of Snorkel — Right Side</h2><div class="sub">Rear exterior · Pike poles · New York Hook</div></div>
+      <div><h2>Back of Snorkel — Right (Officer) Side</h2><div class="sub">Rear exterior · 5" hose bed · Pike pole · NY hooks</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">RR-02</span>
-        <div class="card-title">Rear Right — Pike Poles &amp; New York Hook
-          <span class="card-aka">aka: Rear right, right side stowage</span>
+        <div class="card-title">Rear Right — 5" Hose Bed, Pike Pole &amp; NY Hooks
+          <span class="card-aka">aka: Rear right, officer-side rear stowage</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17713,14 +17805,20 @@ if (searchInput) {
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
             <ul>
-              <li>2 Pike Poles</li>
-              <li>New York Hook</li>
+              <li>400' of 5" LDH Hose Bed</li>
+              <li>8' Pike Pole</li>
+              <li>2× 8' New York Hooks</li>
             </ul>
           </div>
           <div class="entry-block">
-            <div class="entry-label">💡 New York Hook</div>
-            <p>The New York Hook (or "NY Hook") has a large angled hook head with a curved pick — designed specifically for pulling plaster ceilings and heavy lathe. The hook shape gives you mechanical advantage and keeps your hands out of the drop zone. It's heavier than a standard pike pole and worth every ounce when you're opening up a heavy ceiling.</p>
+            <div class="entry-label">💡 Notes</div>
+            <p><strong>400' of 5" LDH:</strong> Large diameter supply hose. This is your primary water supply capability — 400 feet gives you distance from the hydrant to the rig. Five-inch is heavy and stiff; know how to lay it without kinking it.<br><br>
+            <strong>New York Hooks (8'):</strong> Large angled hook designed specifically for pulling plaster ceilings and heavy lathe. The curved head gives mechanical advantage and keeps hands clear of the drop zone when you're pulling overhead.</p>
           </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>5" Hose — Handle It Right</strong>A kinked 5-inch line cuts your water supply. Know how this hose is loaded, how it deploys, and how to avoid kinks when it charges. Practice the lay before you need to do it at a working fire.</div>
         </div>
       </div>
     </div>
@@ -17736,7 +17834,7 @@ if (searchInput) {
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-01</span>
         <div class="card-title">Smoke Ejector &amp; Electric Adapter
-          <span class="card-aka">aka: Fan, blower, PPV fan</span>
+          <span class="card-aka">aka: Fan, blower, PPV fan, smoke ejector</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17751,8 +17849,8 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>Smoke Ejector:</strong> Electric or gas-powered fan used for positive pressure ventilation (PPV) or negative pressure smoke removal. PPV pushes fresh air in through an entry point, forcing smoke and heat out through openings. Know when to use PPV vs. when it will make things worse — ask your officer.<br><br>
-            <strong>Electric Adapter:</strong> Cord or adapter for powering the electric smoke ejector from the rig's generator or shore power.</p>
+            <p><strong>Smoke Ejector:</strong> Electric fan used for positive pressure ventilation (PPV) or smoke removal. PPV pushes fresh air through a doorway, forcing smoke out of designated openings.<br><br>
+            <strong>Electric Adapter:</strong> Powers the ejector from the rig's 10kW generator. Know how to connect it and which outlets on the rig are live when the generator is running.</p>
           </div>
         </div>
       </div>
@@ -17767,8 +17865,8 @@ if (searchInput) {
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-02</span>
-        <div class="card-title">3 Bags of 150' Rope
-          <span class="card-aka">aka: Life safety rope, rescue rope, throwbag</span>
+        <div class="card-title">3 Bags of 150' Life Safety Rope
+          <span class="card-aka">aka: Rescue rope, life safety rope, search rope</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17776,16 +17874,16 @@ if (searchInput) {
         <div class="entry-grid">
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
-            <p>3 bags, each containing 150 feet of life safety rope.</p>
+            <p>3 bags, each containing 150 feet of NFPA-rated life safety rope.</p>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p>Life safety rope is NFPA-rated for rescue operations — it's not general utility rope. Each bag should be inspected regularly and after any deployment. If a rope is used for rescue, it gets retired from rescue service afterward per NFPA 1983. Know which is which and don't co-mingle rescue rope with general utility rope.</p>
+            <p>Life safety rope is rated for rescue — it is not general utility rope. Inspect each bag at every shift change. If a rope has been shock-loaded (caught a falling person), remove it from service immediately, even if it looks fine. Internal fiber failure is invisible to the eye.</p>
           </div>
         </div>
         <div class="callout callout-danger">
           <div class="callout-icon">🚨</div>
-          <div class="callout-content"><strong>Rescue Rope Is Not Utility Rope</strong>Life safety rope that has been shock-loaded (a person fell and the rope caught them) must be removed from service immediately, regardless of whether it looks damaged. The internal fibers may have failed. Using compromised rope for rescue has gotten people killed.</div>
+          <div class="callout-content"><strong>Shock-Loaded Rope = Retired Rope</strong>Using a rope that has been shock-loaded for rescue operations has killed rescuers. It gets retired, tagged, and pulled from service — no exceptions, no "but it looks okay."</div>
         </div>
       </div>
     </div>
@@ -17800,7 +17898,7 @@ if (searchInput) {
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-03</span>
         <div class="card-title">Electrical Cord, Smoke Ejector &amp; Air Bottles
-          <span class="card-aka">aka: OS behind wheel, electrical compartment</span>
+          <span class="card-aka">aka: OS behind wheel, power compartment</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17809,15 +17907,15 @@ if (searchInput) {
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
             <ul>
-              <li>135 Feet of Electrical Cord</li>
+              <li>135' of Electrical Cord</li>
               <li>Smoke Ejector</li>
               <li>3 Air Bottles</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>135' Electrical Cord:</strong> Heavy-duty extension cord for powering tools and fans on scene where the rig's generator is being used as a power source.<br><br>
-            <strong>3 Air Bottles:</strong> Spare SCBA cylinders for crew rotation or RIT operations. Check pressure every shift — full means full, not "pretty close to full."</p>
+            <p><strong>135' Electrical Cord:</strong> Extension cord for running tools and fans when the rig's generator is the power source. Heavy-gauge — know the amperage limits before loading it.<br><br>
+            <strong>3 Air Bottles:</strong> Spare SCBA cylinders. Check pressure every shift — full means full. A half-empty spare bottle is a liability, not an asset.</p>
           </div>
         </div>
       </div>
@@ -17848,7 +17946,7 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p>Boltcutters cut padlocks, chains, fence links, and hasps. Size matters — medium for light-gauge locks, large for heavy-duty chains and padlocks. Know the difference between a lock that will yield to bolt cutters and one that needs a saw or hydraulic tool. Hardened steel locks will destroy cheap bolt cutters.</p>
+            <p>Match bolt cutter size to the lock. Medium for light padlocks and chain links. Large for heavy-duty chains and reinforced padlocks. Hardened steel locks will destroy standard bolt cutters — if the medium won't cut, go large, and if large won't cut, go to the K12.</p>
           </div>
         </div>
       </div>
@@ -17857,7 +17955,7 @@ if (searchInput) {
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-05</span>
         <div class="card-title">Bottom Shelf — Irons, Silver Pick Axe &amp; RASP Rope
-          <span class="card-aka">aka: OS irons, forcible entry tools</span>
+          <span class="card-aka">aka: OS irons, officer-side forcible entry</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17876,12 +17974,12 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 RASP Rope</div>
-            <p>RASP (Rapid Ascent and Safety Profile) rope system — used for elevated rescue operations and controlled descent from the snorkel or elevated positions. Know how to deploy it before you need it. If you haven't been trained on it, that training needs to happen.</p>
+            <p>RASP (Rapid Ascent and Safety Profile) rope system — used for elevated rescue, controlled descent, and personnel safety during aerial operations. If you haven't been trained on the RASP system, that training needs to happen before you're working around the snorkel at height.</p>
           </div>
         </div>
         <div class="callout callout-tip">
           <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>Two Sets of Irons</strong>This rig carries irons on both the driver's side and officer's side. That's intentional — two crews can grab tools simultaneously without crossing each other. Know which set is on which side so you go to the right place under pressure.</div>
+          <div class="callout-content"><strong>Two Sets of Irons</strong>Driver's side and officer's side both carry irons. That's deliberate — two crews can tool up simultaneously without crossing each other. Know which set is on which side so you go to the right place without thinking.</div>
         </div>
       </div>
     </div>
@@ -17895,8 +17993,8 @@ if (searchInput) {
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-06</span>
-        <div class="card-title">Lights, Cones, Road Salt &amp; Hose Roller
-          <span class="card-aka">aka: OS front-of-tire, scene lighting compartment</span>
+        <div class="card-title">Plug-in Lights, Cones, Road Salt &amp; Hose Roller
+          <span class="card-aka">aka: Scene lighting compartment, OS front-of-tire</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -17914,9 +18012,9 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>Plug-in Lights:</strong> Scene lighting powered via the rig's electrical system or a portable generator. Know how to deploy and position lights to illuminate the work area without blinding your crew.<br><br>
-            <strong>Road Salt / Sand:</strong> Traction materials for icy conditions — used around scene perimeter or under outrigger pads when surface is slippery.<br><br>
-            <strong>Traffic Cones:</strong> Scene perimeter — get them out fast on any roadway incident.</p>
+            <p><strong>Plug-in Lights:</strong> Scene lighting run off the rig's generator. Know where the outlets are and how to position lights to illuminate the work area without blinding the crew or oncoming traffic.<br><br>
+            <strong>Road Salt/Sand:</strong> Traction for icy conditions — under outrigger pads, around the perimeter, or for crew footing. Slippery ground around a 70,000 lb rig with outriggers deployed is a serious hazard.<br><br>
+            <strong>Hose Roller:</strong> Protects hose from sharp edges on windowsills and building parapets when pulling line inside.</p>
           </div>
         </div>
       </div>
@@ -17940,7 +18038,7 @@ if (searchInput) {
         <div class="entry-grid">
           <div class="entry-block full">
             <div class="entry-label">📋 What They Are</div>
-            <p>Heavy-duty tarps used for salvage operations — covering furniture and belongings to protect from water damage during overhaul, covering roof holes after ventilation, or establishing a debris drop zone. Know where they are so you're not digging through compartments when the crew is ready to pull ceilings.</p>
+            <p>Heavy-duty salvage tarps. Used to cover contents from water damage during overhaul, cover roof holes after ventilation cuts, or establish a debris drop zone beneath ceiling pulls. Know where these are so you're not digging for them when the crew is ready to overhaul.</p>
           </div>
         </div>
       </div>
@@ -17951,7 +18049,7 @@ if (searchInput) {
   <section class="comp-section" id="sn61-cab">
     <div class="section-header">
       <div class="section-icon">🚗</div>
-      <div><h2>Cab Compartment</h2><div class="sub">Inside the cab · Crew area</div></div>
+      <div><h2>Cab Compartment</h2><div class="sub">Inside the cab · Detection · Safety · Master stream</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
@@ -17963,14 +18061,33 @@ if (searchInput) {
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full">
+          <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
-            <p>Contents pending verification — walk the cab with your officer during rig check and document what's stored here. Typical cab items include maps, passport systems, TIC (thermal imaging camera), flashlights, and PPE.</p>
+            <ul>
+              <li>Safety Vest</li>
+              <li>Hot Stick</li>
+              <li>RIT Pack</li>
+              <li>Sawzall</li>
+              <li>4-Gas Detector</li>
+              <li>Gas Trac</li>
+              <li>Box Lights</li>
+              <li>Caution Tape</li>
+              <li>Fire Wipes</li>
+              <li>Master Stream Control Unit</li>
+              <li>2 MSA Masks</li>
+              <li>Surgical Face Mask</li>
+            </ul>
+          </div>
+          <div class="entry-block">
+            <div class="entry-label">💡 Key Items</div>
+            <p><strong>RIT Pack:</strong> Rapid Intervention Team air pack — a full SCBA pre-assembled for a crew member who has to go in after a downed firefighter. This is a life-safety item. Know where it is and how to don it fast.<br><br>
+            <strong>Master Stream Control Unit:</strong> Controls the snorkel's aerial waterway and master stream nozzle from the cab. Understand the basics of what this unit does before you're operating near it on scene.<br><br>
+            <strong>4-Gas / Gas Trac:</strong> Atmospheric monitors for O2, CO, combustible gas, and H2S. Should be pre-checked before every response.</p>
           </div>
         </div>
-        <div class="callout callout-tip">
-          <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>Know Your Cab</strong>The cab is the last place you're in before you step off the rig into a working scene. Everything in it should be in the same place every time. Learn it so well that you could grab what you need in the dark with gloves on.</div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>RIT Pack — Know It Before You Need It</strong>The RIT Pack exists for one reason: to bring air to a firefighter who is down or trapped inside. You will not have time to figure out how it works when that call comes. Know the pack, know the deployment, know it now.</div>
         </div>
       </div>
     </div>
@@ -18003,9 +18120,6 @@ if (searchInput) {
   }
 })();
 </script>
-
-
-
 <!-- ═══════ SQUAD 61 SECTION BREAK ═══════ -->
 <div class="guide-section-divider" id="squad61-guide" style="border-top:3px solid #1A6B2A;">
   <div>
