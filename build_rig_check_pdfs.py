@@ -1398,23 +1398,48 @@ VEHICLES['sn61'] = {
     'filename': 'Snorkel_61_Shift_Rig_Check.pdf',
     'label': 'SNORKEL 61 SHIFT RIG CHECK',
     'compartments': [
+        ("Rig Specifications", [
+            "75' Aerial",
+            "2000 GPM Pump",
+            "1000 GPM Waterway",
+            "NO Booster Tank",
+            "10kW Generator",
+            "8 Floodlights",
+            "6 Spotlights",
+            "5 Driver Side Compartments",
+        ]),
+        ("Crosslay Hoses", [
+            "2× 200' of 1¾\" Hose w/Fog Nozzle",
+        ]),
         ("Driver Side Pumping Area", [
-            "Verify contents with officer during rig check",
+            "20 Amp Service",
+            "250' of Cord",
         ]),
         ("Driver Side Generator Compartment", [
-            "Verify contents with officer during rig check",
+            "10kW Generator",
         ]),
         ("Driver Side Engineers Compartment", [
-            "Hydrant Bag",
-            "25' of 5\" LDH",
-            "2 Air Bottles",
-            "Hose Roller",
+            "100' x 2½\" High-Rise Pack w/Smooth Bore Nozzle",
+            "150' x 1¾\" High-Rise Pack w/Wye and 150/75 GPM Fog Nozzle",
+            "High-Rise Tool Bag",
+            "Wye 2½\" to 1½\"",
+            "Siamese Adapter 2½\" Female to 5\" Storz",
+            "Engineer's Card",
             "Oil Dry",
-            "Connectors, Adaptors, Caps",
-            "Spanner",
-            "WD-40",
+            "Dry Silicone Spray",
+            "Duct Tape",
+            "2 Spare Air Bottles",
+            "1½\" 300 GPM Fog Nozzle",
+            "Various Adapters (M-M, F-F, CFD, Garden Hose)",
+            "1000 GPM Fog Nozzle for Basket Turret",
+            "Steamer to Storz",
+            "Steamer to Storz Elbow",
+            "Hydrant Bag",
+            "Hose Rope",
+            "Spanner Wrenches",
+            "50' of 5\" Donut Roll",
         ]),
-        ("Driver Side Over The Wheel", [
+        ("Driver Side Over The Wheel Compartment", [
             "Flathead Axe",
             "Halligan",
             "Pick Axe",
@@ -1422,42 +1447,50 @@ VEHICLES['sn61'] = {
             "Sledge Hammer",
             "K-Tool",
         ]),
-        ("Driver Side Behind The Wheel", [
+        ("Driver Side Behind The Wheel Compartment", [
             "Tool Box",
             "Fuel for Chainsaw and K12",
-            "K12",
+            "2× K12 (1 Metal Blade, 1 Composite Blade)",
             "Chainsaw",
+            "Saw Blades",
         ]),
         ("Driver Side Second to Last Compartment", [
             "Plastic Tarp",
             "Spare Blade",
-            "Black Box (Eye Protection)",
+            "Black Box with Eye Protection Equipment",
         ]),
         ("Driver Side Rear Compartment", [
-            "Climbing Belt",
+            "Climbing Belt for Basket",
             "ABC Fire Extinguisher",
-            "CO2 Extinguisher",
+            "Pump Can Extinguisher",
             "Silver Bullet (Pressurized Water)",
+            "Breather Lines for Basket",
         ]),
-        ("Back of Snorkel — Left Side", [
-            "4 Pike Poles",
-            "Folding Attic Ladder",
-            "2 Blue Poles",
+        ("Driver Side Ladders", [
+            "2× 28' Extension Ladders",
+            "2× 16' Roof Ladders",
+        ]),
+        ("Back of Snorkel — Left (Driver) Side", [
+            "2× 6' Pry Bars",
+            "2× 8' Pike Poles",
+            "2× 12' Pike Poles",
+            "10' Attic Ladder",
             "2 Scoop Shovels",
         ]),
-        ("Back of Snorkel — Right Side", [
-            "2 Pike Poles",
-            "New York Hook",
+        ("Back of Snorkel — Right (Officer) Side", [
+            "400' of 5\" Hose (Hose Bed)",
+            "8' Pike Pole",
+            "2× 8' New York Hooks",
         ]),
         ("Officers Side Rear", [
             "Smoke Ejector",
             "Electric Adapter",
         ]),
         ("Officers Side Second to Rear", [
-            "3 Bags of 150' Life Safety Rope",
+            "3× Bags of 150' Rope",
         ]),
         ("Officers Side Behind Wheel", [
-            "135 Feet of Electrical Cord",
+            "135' of Electrical Cord",
             "Smoke Ejector",
             "3 Air Bottles",
         ]),
@@ -1471,7 +1504,7 @@ VEHICLES['sn61'] = {
             "Pick Axe",
             "Sledge Hammer",
             "Silver Pick Axe",
-            "RASP Rope",
+            "RASP Rope Bag",
         ]),
         ("Officers Side In Front of Tire", [
             "3 Plug-in Lights",
@@ -1484,10 +1517,127 @@ VEHICLES['sn61'] = {
             "2 Tarps",
         ]),
         ("Cab Compartment", [
-            "Verify contents with officer during rig check",
+            "Safety Vest",
+            "Hot Stick",
+            "RIT Pack",
+            "Sawzall",
+            "4-Gas Meter",
+            "Gas Trac",
+            "Box Lights",
+            "Caution Tape",
+            "Fire Wipes",
+            "Master Stream Control Unit",
+            "2 MSA Masks",
+            "Surgical Face Masks",
+        ]),
+        ("On Top / In The Basket", [
+            "100' of 1¾\" Hose",
+            "Pick Axe",
+            "Pike Pole",
+            "Roof Ladder",
+            "2× 28' Extension Ladders",
+            "16' Roof Ladder",
         ]),
     ]
 }
+
+
+
+# ── MEDIC 62 ─────────────────────────────────────────────────────────────────
+VEHICLES['m62'] = {
+    'name': 'Medic 62',
+    'filename': 'Medic_62_Shift_Rig_Check.pdf',
+    'label': 'MEDIC 62 SHIFT RIG CHECK',
+    'compartments': [
+        ("Driver Side Front Compartment", [
+            "Stair Chair",
+            "Oxygen Tank",
+        ]),
+        ("Middle Cabinet", [
+            "Hydrant Bag",
+            "Kevlar Vests",
+        ]),
+        ("Driver Side Rear Cabinet", [
+            "Turnout Coat",
+            "Turnout Pants",
+            "Turnout Boots",
+            "Helmet",
+        ]),
+        ("Officer Side Rear Compartment", [
+            "Backboards",
+            "Scoop Stretcher",
+            "Head Beds",
+            "C-Collar Bag",
+            "Spider Straps",
+            "KED (Kendrick Extrication Device)",
+            "Short Boards for Splinting Limbs",
+        ]),
+        ("Officer Side Front Cabinet", [
+            "LUCAS Device (Mechanical CPR)",
+        ]),
+        ("Inside the Cab", [
+            "Verify contents with officer during rig check",
+        ]),
+        ("Inside the Ambulance — Overhead", [
+            "Breathing Bag",
+            "Access to LUCAS Device",
+        ]),
+        ("Inside — Trauma & First Aid Supplies", [
+            "Trauma Dressing (Bulk Gauze, ACE Wraps)",
+            "Tourniquets",
+            "Arm Splints & Slings",
+            "Ice/Warm Packs",
+            "Saline",
+            "Bulb Syringe",
+        ]),
+        ("Inside Left Front — Airway Cabinet", [
+            "CPAP (Continuous Positive Airway Pressure)",
+            "NRB (Non-Rebreather Mask)",
+            "Capnography",
+            "Nasopharyngeal/Oropharyngeal Airways",
+            "BVM (Bag Valve Mask)",
+            "ET Tubes (Endotracheal Tube)",
+            "I-Gel Airways",
+            "Nebulizer",
+            "Nasal Cannula",
+            "Cricothyrotomy Kit",
+        ]),
+        ("Inside Right Door — Clear Cabinet", [
+            "IV Fluid Warmer",
+            "Portable Suction",
+            "Masks & Gloves",
+            "Top Drawer — Syringes, IVs, Band-Aids, IV Tubing",
+            "Bottom Drawer — IV Fluids, Mag, Dopamine, IV Tubing, Med Boxes",
+        ]),
+        ("Inside Right Bench", [
+            "Triage Bag",
+            "Vacuum Splints",
+            "Extra Splints",
+            "Blankets (also stored overhead)",
+        ]),
+        ("Left Side Under Seat", [
+            "ACR (Ambulance Child Restraint, Weight-Coded)",
+            "Restraints (Psych)",
+            "OB Pack (Obstetrical)",
+        ]),
+        ("Inside Left — Infectious Waste", [
+            "Infectious Waste Bin",
+            "Sharps Container",
+        ]),
+        ("Ambulance Cot", [
+            "Portable Oxygen Tank (Under Head of Cot)",
+            "Airway Equipment (Under Head of Cot)",
+            "Cardiac Monitor & Pads (Side Bags)",
+        ]),
+        ("Behind Passenger Seat", [
+            "Extra Portable Oxygen Tanks",
+            "ABC Dry Chem Extinguisher",
+            "Pediatric Bag (Floor, Adjacent)",
+        ]),
+    ]
+}
+
+
 
 # ── PDF builder ───────────────────────────────────────────────────────────────
 def build_vehicle_pdf(vehicle_key):
@@ -1521,7 +1671,7 @@ def build_vehicle_pdf(vehicle_key):
 if __name__ == '__main__':
     KEY_MAP = {
         'e61': 'e61', 'e62': 'e62', 'e60': 'e60', 'e63': 'e63',
-        'u61': 'u61', 'u62': 'u62', 'bt62': 'bt62', 'sq61': 'sq61', 't62': 't62', 'sn61': 'sn61',
+        'u61': 'u61', 'u62': 'u62', 'bt62': 'bt62', 'sq61': 'sq61', 't62': 't62', 'sn61': 'sn61', 'm62': 'm62',
     }
     if len(sys.argv) > 1:
         key = sys.argv[1].lower()

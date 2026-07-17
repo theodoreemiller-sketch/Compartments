@@ -64,6 +64,7 @@ VEHICLE_SECTION_IDS = {
     "SCBA":         "scba-guide-content",
     "Tower 62":     "t62-guide",
     "Snorkel 61":   "sn61-guide",
+    "Medic 62":     "medic62-guide",
 }
 
 
