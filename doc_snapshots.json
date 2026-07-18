@@ -1205,48 +1205,50 @@
     }
   },
   "Snorkel 61": {
-    "saved_at": "2026-07-14T23:32:44.506123+00:00",
+    "saved_at": "2026-07-17T14:16:42.689158+00:00",
     "compartments": {
       "Snorkel 61Compartment": [
-        "75ft Aerial",
-        "2000 gpm pump",
-        "1000 gpm waterway",
-        "NO TANK",
-        "10kW generator",
-        "8 Floodlights",
-        "6 spotlight"
+        "75ft Aerial\u200b",
+        "2000 gpm pump\u200b",
+        "1000 gpm waterway\u200b",
+        "NO TANK\u200b",
+        "10kW generator\u200b",
+        "8 Floodlights\u200b",
+        "6 spotlight",
+        "5 Driver Side Compartments"
       ],
       "Drivers Side Pumping Area": [
         "20 Amp Service",
-        "250' of cord"
+        "250\u2019 of cord"
       ],
       "Drivers Side Generator Compartment": [
         "10KW Generator"
       ],
       "Drivers Side Engineers Compartment": [
-        "100' x 2.5\" high rise pack with smooth bore nozzle",
-        "150' x 1.75\" high rise pack with wye and fog nozzle",
-        "High rise tool bag",
-        "Wye 2.5 to 1.5\"",
-        "Siamese adapter 2.5\" female to 5\" Storz",
-        "Engineer's card",
-        "Oil dry",
-        "Dry silicone spray",
-        "Duct tape",
-        "2 spare air bottles",
-        "1.5\" 300gpm fog nozzle",
-        "Various adapters M-M, F-F, CFD, Garden hose",
-        "1000gpm fog nozzle for basket turret",
-        "Steamer to Storz",
-        "Steamer to Storz elbow",
-        "Hydrant bag",
-        "Hose rope",
-        "Spanner wrenches",
-        "50' of 5\" donut roll"
+        "100\u2019 x 2\u00bd\u201d high rise pack with and smooth bore nozzle\u200b",
+        "150\u2019 x 1\u00be\u201d high rise pack with wye and 150/75 gpm fog",
+        "nozzle\u200b",
+        "High rise tool bag\u200b",
+        "Wye 2\u00bd to 1\u00bd\u201d\u200b",
+        "Siamese adapter 2\u00bd\u201d female to 5\u201d Storz \u200b",
+        "Engineer\u2019s card\u200b",
+        "Oil dry\u200b",
+        "Dry silicone spray\u200b",
+        "Duct tape\u200b",
+        "2 spare air bottles\u200b",
+        "1 \u00bd\u201d 300gpm fog nozzle\u200b",
+        "Various adapters M-M, F-F, CFD, Garden hose\u200b",
+        "1000gpm fog nozzle for basket turret.\u200b",
+        "Steamer to Storz\u200b",
+        "Steamer to Storz elbow\u200b",
+        "Hydrant bag\u200b",
+        "Hose rope\u200b",
+        "Spanner wrenches\u200b",
+        "50\u2019 of 5\u201d donut roll\u200b"
       ],
       "Drivers Side Over The Wheel Compartment": [
         "Flathead Axe",
-        "Halligan",
+        "Haligan",
         "Pick Axe",
         "Closet Pike Pole",
         "Sledge Hammer",
@@ -1255,7 +1257,7 @@
       "Drivers Side Behind The Wheel Compartment": [
         "Tool Box",
         "Fuel for Chain Saw and K12",
-        "2x K12 - One with metal blade the other with composite",
+        "2x  K12 - One with metal blade the other with composite",
         "Chainsaw",
         "Saw Blades"
       ],
@@ -1272,44 +1274,40 @@
         "Breather lines for Basket"
       ],
       "Drivers Side Ladders": [
-        "2x 28' Extension",
-        "2x 16' Roof Ladder"
+        "2x 28\u2019 Extension",
+        "2x 16\u2019 Roof Ladder"
       ],
-      "Back of Snorkle Left Side": [
-        "2 6' pry bars",
-        "2 8' pike poles",
-        "2 12' pike poles",
-        "Attic ladder 10'",
-        "2 Scoop Shovels"
-      ],
-      "Back of Snorkle Right Side": [
-        "400ft of 5\" hose bed",
-        "8' pike pole",
-        "2 8' NY hooks"
+      "Back of Snorkle": [
+        "(2) 6\u2019 pry bars\u200b",
+        "(2) 8\u2019 pike poles\u200b",
+        "(2) 12\u2019 pike poles\u200b",
+        "Attic ladder 10\u2019\u200b",
+        "2 Scoop Shovels",
+        "400ft of 5\u201d hose bed\u200b",
+        "8\u2019 pike pole\u200b",
+        "(2) 8\u2019 NY hooks\u200b"
       ],
       "Officers Side Rear": [
         "Smoke Ejector",
         "Electric Adapter"
       ],
       "Officers Side Second to Rear": [
-        "3 bags of 150' of rope"
+        "3x bags of 150\u2019 of rope"
       ],
-      "Officers Side Behind Wheel": [
+      "Officers Side Behing Wheel": [
         "135 feet of electrical cord",
         "Smoke Ejector",
         "3 Air Bottles"
       ],
-      "Officers Side Over Wheel Top Shelf": [
+      "Officers Side Over Wheel": [
         "Medium Boltcutters",
-        "Large Boltcutters"
-      ],
-      "Officers Side Over Wheel Bottom Shelf": [
+        "Large Boltcutters",
         "Flathead Axe",
-        "Halligan",
+        "Haligan",
         "Pick Axe",
         "Sledge Hammer",
         "Silver Pick Axe",
-        "RASP Rope"
+        "RASP Rope Bag"
       ],
       "Officers Side Infront Of Tire": [
         "3 Plug in Lights",
@@ -1324,7 +1322,7 @@
       "Cab Compartment": [
         "Safety Vest",
         "Hot stick",
-        "Rit Pack",
+        "RIT Pack",
         "Sawzall",
         "4 Gas",
         "Gas Trac",
@@ -1334,6 +1332,14 @@
         "Master Stream Control Unit",
         "2 MSA Masks",
         "Surgical Face Mask"
+      ],
+      "On Top or In The Basket": [
+        "100\u2019 1 \u00be hose",
+        "Pick Axe",
+        "Pike Pole (size?)",
+        "Roof Ladder (size)",
+        "2x 28\u2019 Extension Ladder",
+        "16\u2019 Roof Ladder"
       ]
     }
   }
