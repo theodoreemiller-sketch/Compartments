@@ -2968,13 +2968,17 @@
   #e61-guide .layout,
   #e60-guide .layout,
   #e63-guide .layout,
-  #u61-guide .layout {
+  #u61-guide .layout,
+  #e62-guide .layout,
+  #bt62-guide .layout {
     flex-direction: column;
   }
   #e61-sidebar,
   #e60-sidebar,
   #e63-sidebar,
-  #u61-sidebar {
+  #u61-sidebar,
+  #e62-sidebar,
+  #bt62-sidebar {
     display: none;
     width: 100% !important;
     height: auto !important;
@@ -2984,13 +2988,17 @@
   #e61-sidebar.mob-open,
   #e60-sidebar.mob-open,
   #e63-sidebar.mob-open,
-  #u61-sidebar.mob-open {
+  #u61-sidebar.mob-open,
+  #e62-sidebar.mob-open,
+  #bt62-sidebar.mob-open {
     display: block;
   }
   #e61-guide #e61-main,
   #e60-guide #e60-main,
   #e63-guide #e63-main,
-  #u61-guide #u61-main {
+  #u61-guide #u61-main,
+  #e62-guide #e62-main,
+  #bt62-guide #bt62-main {
     padding: 20px 16px 60px !important;
     max-width: 100% !important;
   }
@@ -3001,13 +3009,15 @@
   #e61-guide .entry-grid,
   #e60-guide .entry-grid,
   #e63-guide .entry-grid,
-  #u61-guide .entry-grid {
+  #u61-guide .entry-grid,
+  #bt62-guide .entry-grid {
     grid-template-columns: 1fr !important;
   }
   #e61-guide .entry-block.full,
   #e60-guide .entry-block.full,
   #e63-guide .entry-block.full,
-  #u61-guide .entry-block.full {
+  #u61-guide .entry-block.full,
+  #bt62-guide .entry-block.full {
     grid-column: 1 / -1;
   }
 }
@@ -8475,14 +8485,20 @@ if (searchInput) {
     btn.innerHTML = '☰';
     btn.title = 'Toggle section navigation';
     btn.addEventListener('click', function() {
-      // Find the current visible guide's sidebar
-      var sidebars = ['e61-sidebar','e60-sidebar','e63-sidebar','u61-sidebar'];
+      // Find the current visible guide's sidebar — pick whichever section
+      // divider has scrolled closest to (but not past) the top of the viewport.
+      var sidebars = ['e61-sidebar','e60-sidebar','e63-sidebar','u61-sidebar','e62-sidebar','bt62-sidebar','u62-sidebar','t62-sidebar','sn61-sidebar','sq61-sidebar','mp62-sidebar'];
+      var sections = ['engine61-guide','engine60-guide','engine63-guide','utility61-guide','engine62-guide','brushtruck62-guide','utility62-guide','tower62-guide','snorkel61-guide','squad61-guide','medic62-guide'];
       var activeSection = null;
-      var scrollY = window.scrollY;
-      ['engine61-guide','engine60-guide','engine63-guide','utility61-guide'].forEach(function(id, i) {
+      var bestTop = -Infinity;
+      sections.forEach(function(id, i) {
         var el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 100) {
-          activeSection = sidebars[i];
+        if (el) {
+          var top = el.getBoundingClientRect().top;
+          if (top <= 100 && top > bestTop) {
+            bestTop = top;
+            activeSection = sidebars[i];
+          }
         }
       });
       if (activeSection) {
@@ -17515,17 +17531,18 @@ if (searchInput) {
             <div class="entry-label">📋 High-Rise Equipment</div>
             <ul>
               <li>100' × 2½" High-Rise Pack w/Smooth Bore Nozzle</li>
-              <li>150' × 1¾" High-Rise Pack w/Wye &amp; Fog Nozzle</li>
+              <li>150' × 1¾" High-Rise Pack w/Gated Wye &amp; 150/75 GPM Fog Nozzle</li>
               <li>High-Rise Tool Bag</li>
-              <li>Wye — 2½" to 1½"</li>
+              <li>Gated Wye — 2½" to 1½"</li>
               <li>Siamese Adapter — 2½" Female to 5" Storz</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">📋 Nozzles &amp; Adapters</div>
             <ul>
-              <li>1½" 300 GPM Fog Nozzle</li>
-              <li>1000 GPM Fog Nozzle (Basket Turret)</li>
+              <li>Fog Nozzle (general)</li>
+              <li>1½" 60–200 GPM Fog Nozzle</li>
+              <li>1000 GPM Fog Nozzle (Basket Turret) — <strong>currently missing, per doc</strong></li>
               <li>Steamer to Storz</li>
               <li>Steamer to Storz Elbow</li>
               <li>Various Adapters — M-M, F-F, CFD, Garden Hose</li>
@@ -17548,16 +17565,21 @@ if (searchInput) {
               <li>Dry Silicone Spray</li>
               <li>Duct Tape</li>
               <li>2 Spare Air Bottles</li>
+              <li>Chair</li>
             </ul>
           </div>
         </div>
         <div class="callout callout-tip">
           <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>High-Rise Packs</strong>The two high-rise packs (2½" smooth bore and 1¾" w/wye) are pre-assembled for rapid deployment into multi-story buildings where hose must be stretched up stairwells. Know how each is packed and how to carry them — these are heavy loads when fully charged.</div>
+          <div class="callout-content"><strong>High-Rise Packs</strong>The two high-rise packs (2½" smooth bore and 1¾" w/gated wye) are pre-assembled for rapid deployment into multi-story buildings where hose must be stretched up stairwells. Know how each is packed and how to carry them — these are heavy loads when fully charged. The wye on the 1¾" pack is gated now, so you can shut down one leg without killing both.</div>
+        </div>
+        <div class="callout callout-danger">
+          <div class="callout-icon">🚨</div>
+          <div class="callout-content"><strong>1000 GPM Basket Turret Nozzle — CONFIRM BEFORE YOU NEED IT</strong>The doc flags this one as currently missing from the compartment. That nozzle is dedicated to the basket turret (master stream in the snorkel bucket) — a high-flow master stream nozzle, not a handline nozzle. Don't assume it's sitting where it's supposed to be. Check this compartment at rig check, and if it's not there, report it up the chain before this rig goes on a run where you need a master stream off the basket.</div>
         </div>
         <div class="callout callout-tip">
           <div class="callout-icon">💡</div>
-          <div class="callout-content"><strong>1000 GPM Basket Turret Nozzle</strong>The 1000 GPM fog nozzle is dedicated to the basket turret (master stream in the snorkel bucket). This is a high-flow master stream nozzle — it's not a handline nozzle. Know which nozzle is which.</div>
+          <div class="callout-content"><strong>1½" 60–200 GPM Fog Nozzle</strong>Replaced the old fixed 300 GPM nozzle with an adjustable 60–200 GPM unit. Know the adjustment ring on this one — it's not a fixed-flow tip anymore, so dial it in for the line you're flowing.</div>
         </div>
       </div>
     </div>
@@ -17626,7 +17648,6 @@ if (searchInput) {
               <li>Fuel for Chainsaw and K12</li>
               <li>2× K12 — one with metal blade, one with composite blade</li>
               <li>Chainsaw</li>
-              <li>Saw Blades</li>
             </ul>
           </div>
           <div class="entry-block">
@@ -17634,7 +17655,7 @@ if (searchInput) {
             <p>Having two K12 rotary saws with different blades means you can switch materials without a blade change on scene:<br><br>
             <strong>Metal blade K12:</strong> Steel doors, security gates, vehicle extrication.<br>
             <strong>Composite blade K12:</strong> Concrete, masonry, hard composite materials.<br><br>
-            Know which saw has which blade. Grabbing the wrong one wastes time and destroys blades.</p>
+            Know which saw has which blade. Grabbing the wrong one wastes time and destroys blades. This compartment no longer stocks spare blades — the two saws carry the only blades you've got on this rig, so don't burn one up carelessly expecting a replacement to be sitting right there.</p>
           </div>
         </div>
         <div class="callout callout-warn">
@@ -17698,6 +17719,7 @@ if (searchInput) {
               <li>ABC Fire Extinguisher</li>
               <li>Pump Can Extinguisher</li>
               <li>Silver Bullet (Pressurized Water)</li>
+              <li>CO2 Extinguisher</li>
               <li>Breather Lines for Basket</li>
             </ul>
           </div>
@@ -17708,12 +17730,12 @@ if (searchInput) {
           </div>
           <div class="entry-block full">
             <div class="entry-label">💡 Extinguisher Types</div>
-            <p><strong>ABC:</strong> Dry chemical — works on ordinary combustibles, flammable liquids, electrical. Messy and corrosive, so use sparingly and only when appropriate.&nbsp;&nbsp;<strong>Pump Can / Silver Bullet:</strong> Pressurized water — Class A only (wood, paper, ordinary combustibles). <em>Do NOT use on electrical or flammable liquid fires.</em></p>
+            <p><strong>ABC:</strong> Dry chemical — works on ordinary combustibles, flammable liquids, electrical. Messy and corrosive, so use sparingly and only when appropriate.&nbsp;&nbsp;<strong>Pump Can / Silver Bullet:</strong> Pressurized water — Class A only (wood, paper, ordinary combustibles). <em>Do NOT use on electrical or flammable liquid fires.</em>&nbsp;&nbsp;<strong>CO2:</strong> Displaces oxygen, leaves no residue — your go-to for energized electrical equipment and sensitive gear where a mess or corrosion would cause more damage than the fire. Doesn't work well outdoors or in wind; the gas dissipates before it can smother anything.</p>
           </div>
         </div>
         <div class="callout callout-danger">
           <div class="callout-icon">🚨</div>
-          <div class="callout-content"><strong>Wrong Extinguisher = Catastrophe</strong>Water on a flammable liquid fire or energized electrical equipment can get you and your crew killed. Know your extinguisher types before you're standing in front of a fire.</div>
+          <div class="callout-content"><strong>Wrong Extinguisher = Catastrophe</strong>Water on a flammable liquid fire or energized electrical equipment can get you and your crew killed. This compartment now carries four different types — ABC, Pump Can, Silver Bullet, and CO2. Know all four cold before you're standing in front of a fire; grabbing the wrong one under pressure is not a mistake you get to walk back.</div>
         </div>
       </div>
     </div>
@@ -17738,13 +17760,13 @@ if (searchInput) {
             <div class="entry-label">📋 Contents</div>
             <ul>
               <li>2× 28' Extension Ladders</li>
-              <li>2× 16' Roof Ladders</li>
+              <li>2× 16' Roof Ladders (one stowed in the aerial ladder)</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
             <p><strong>28' Extension:</strong> Your primary reach ladder — good to second-floor and some third-floor windows. Two of them means you can ladder two openings simultaneously.<br><br>
-            <strong>16' Roof Ladder:</strong> Has roof hooks that fold out to lock onto a ridge line. Used on pitched roofs to give firefighters a stable work platform during ventilation or search. Two on this rig — know how to deploy and anchor them.</p>
+            <strong>16' Roof Ladder:</strong> Has roof hooks that fold out to lock onto a ridge line. Used on pitched roofs to give firefighters a stable work platform during ventilation or search. Two on this rig, but they don't live in the same spot — one's in the DS ladder rack, the other rides in the aerial ladder itself. Know where both are before you go looking under pressure.</p>
           </div>
         </div>
         <div class="callout callout-warn">
@@ -17764,7 +17786,7 @@ if (searchInput) {
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">RR-01</span>
-        <div class="card-title">Rear Left — Pry Bars, Pike Poles, Attic Ladder &amp; Shovels
+        <div class="card-title">Rear Left — Pry Bar, Pike Poles, NY Hook, Attic Ladder &amp; Shovels
           <span class="card-aka">aka: Rear exterior left, driver-side rear stowage</span>
         </div>
         <div class="toggle-btn">+</div>
@@ -17774,8 +17796,9 @@ if (searchInput) {
           <div class="entry-block">
             <div class="entry-label">📋 Contents</div>
             <ul>
-              <li>2× 6' Pry Bars</li>
-              <li>2× 8' Pike Poles</li>
+              <li>1× 5' Pry Bar</li>
+              <li>1× 5' Pike Pole</li>
+              <li>1× 8' New York Hook</li>
               <li>2× 12' Pike Poles</li>
               <li>Attic Ladder — 10'</li>
               <li>2 Scoop Shovels</li>
@@ -17783,8 +17806,9 @@ if (searchInput) {
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
-            <p><strong>Pry Bars (6'):</strong> For moving heavy debris, opening access panels, and bracing operations — more leverage than a Halligan in certain situations.<br><br>
-            <strong>Pike Poles (8' and 12'):</strong> Pulling ceilings and opening walls from a safe distance. The 12-footers give you reach without getting directly under the drop zone.<br><br>
+            <p><strong>Pry Bar (5'):</strong> For moving heavy debris, opening access panels, and bracing operations — more leverage than a Halligan in certain situations. Rig went down to a single 5' bar here — don't assume there's a spare on this side.<br><br>
+            <strong>Pike Poles (5' and 12'):</strong> Pulling ceilings and opening walls from a safe distance. The 12-footer gives you reach without getting directly under the drop zone; the 5' works tight interior spaces where a 12-footer can't swing.<br><br>
+            <strong>New York Hook (8'):</strong> Large angled hook for pulling plaster ceilings and heavy lathe — one now lives on this side too, not just the officer's side.<br><br>
             <strong>Attic Ladder (10'):</strong> Compact folding ladder for attic access through small hatches. Lighter than an extension ladder, fits in tight spaces.</p>
           </div>
         </div>
@@ -17795,12 +17819,12 @@ if (searchInput) {
   <section class="comp-section" id="sn61-back-right">
     <div class="section-header">
       <div class="section-icon">🏗️</div>
-      <div><h2>Back of Snorkel — Right (Officer) Side</h2><div class="sub">Rear exterior · 5" hose bed · Pike pole · NY hooks</div></div>
+      <div><h2>Back of Snorkel — Right (Officer) Side</h2><div class="sub">Rear exterior · 5" hose bed · Pike poles · NY hook</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">RR-02</span>
-        <div class="card-title">Rear Right — 5" Hose Bed, Pike Pole &amp; NY Hooks
+        <div class="card-title">Rear Right — 5" Hose Bed, Pike Poles &amp; NY Hook
           <span class="card-aka">aka: Rear right, officer-side rear stowage</span>
         </div>
         <div class="toggle-btn">+</div>
@@ -17812,13 +17836,15 @@ if (searchInput) {
             <ul>
               <li>400' of 5" LDH Hose Bed</li>
               <li>8' Pike Pole</li>
-              <li>2× 8' New York Hooks</li>
+              <li>6' Pike Pole</li>
+              <li>8' New York Hook</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
             <p><strong>400' of 5" LDH:</strong> Large diameter supply hose. This is your primary water supply capability — 400 feet gives you distance from the hydrant to the rig. Five-inch is heavy and stiff; know how to lay it without kinking it.<br><br>
-            <strong>New York Hooks (8'):</strong> Large angled hook designed specifically for pulling plaster ceilings and heavy lathe. The curved head gives mechanical advantage and keeps hands clear of the drop zone when you're pulling overhead.</p>
+            <strong>Pike Poles (8' and 6'):</strong> Two lengths now stowed here — the 8-footer for reach, the 6-footer for tighter interior work. Know which one you grabbed before you commit to a pull.<br><br>
+            <strong>New York Hook (8'):</strong> Large angled hook designed specifically for pulling plaster ceilings and heavy lathe. The curved head gives mechanical advantage and keeps hands clear of the drop zone when you're pulling overhead. Down to one on this side now — the other lives on the driver's side.</p>
           </div>
         </div>
         <div class="callout callout-warn">
@@ -17974,12 +18000,19 @@ if (searchInput) {
               <li>Pick Axe</li>
               <li>Sledge Hammer</li>
               <li>Silver Pick Axe</li>
-              <li>RASP Rope</li>
+              <li>Roof Shovel</li>
+              <li>Closet Pike</li>
+              <li>RASP Rope Bag</li>
             </ul>
           </div>
           <div class="entry-block">
+            <div class="entry-label">💡 New On This Shelf</div>
+            <p><strong>Roof Shovel:</strong> Flat-bladed tool for clearing debris off a roof or scraping through roof coverings during ventilation. Not the same job as the pike poles — this one's for pushing and clearing, not pulling.<br><br>
+            <strong>Closet Pike:</strong> Short-handle pike for tight spaces where you can't swing a full-length pole — this side now carries one too, same as the driver's side over-the-wheel compartment.</p>
+          </div>
+          <div class="entry-block">
             <div class="entry-label">💡 RASP Rope</div>
-            <p>RASP (Rapid Ascent and Safety Profile) rope system — used for elevated rescue, controlled descent, and personnel safety during aerial operations. If you haven't been trained on the RASP system, that training needs to happen before you're working around the snorkel at height.</p>
+            <p>RASP (Rapid Ascent and Safety Profile) rope bag system — used for elevated rescue, controlled descent, and personnel safety during aerial operations. If you haven't been trained on the RASP system, that training needs to happen before you're working around the snorkel at height.</p>
           </div>
         </div>
         <div class="callout callout-tip">
@@ -17998,7 +18031,7 @@ if (searchInput) {
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-06</span>
-        <div class="card-title">Plug-in Lights, Cones, Road Salt &amp; Hose Roller
+        <div class="card-title">Plug-in Lights, Cones, Road Salt &amp; Hose Hoist
           <span class="card-aka">aka: Scene lighting compartment, OS front-of-tire</span>
         </div>
         <div class="toggle-btn">+</div>
@@ -18009,17 +18042,17 @@ if (searchInput) {
             <div class="entry-label">📋 Contents</div>
             <ul>
               <li>3 Plug-in Lights</li>
-              <li>Traffic Cones</li>
+              <li>Traffic Cones (9)</li>
               <li>Road Salt</li>
               <li>Road Sand</li>
-              <li>Hose Roller</li>
+              <li>Hose Hoist</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
             <p><strong>Plug-in Lights:</strong> Scene lighting run off the rig's generator. Know where the outlets are and how to position lights to illuminate the work area without blinding the crew or oncoming traffic.<br><br>
             <strong>Road Salt/Sand:</strong> Traction for icy conditions — under outrigger pads, around the perimeter, or for crew footing. Slippery ground around a 70,000 lb rig with outriggers deployed is a serious hazard.<br><br>
-            <strong>Hose Roller:</strong> Protects hose from sharp edges on windowsills and building parapets when pulling line inside.</p>
+            <strong>Hose Hoist:</strong> This replaced the hose roller that used to live in this compartment — don't go looking for the roller anymore. A hose hoist is a rope-and-webbing rig used to haul charged hose, tools, or equipment vertically up to the aerial basket or an upper floor rather than making someone carry it up a ladder. Different job than a roller, which just protected hose dragged over a windowsill — know which tool you actually need before you grab one.</p>
           </div>
         </div>
       </div>
@@ -18034,8 +18067,8 @@ if (searchInput) {
     <div class="equip-card">
       <div class="card-header" onclick="sn61Toggle(this)">
         <span class="card-number">OS-07</span>
-        <div class="card-title">2 Tarps
-          <span class="card-aka">aka: Salvage tarps, poly tarps</span>
+        <div class="card-title">2 Canvas Tarps
+          <span class="card-aka">aka: Salvage tarps</span>
         </div>
         <div class="toggle-btn">+</div>
       </div>
@@ -18043,8 +18076,12 @@ if (searchInput) {
         <div class="entry-grid">
           <div class="entry-block full">
             <div class="entry-label">📋 What They Are</div>
-            <p>Heavy-duty salvage tarps. Used to cover contents from water damage during overhaul, cover roof holes after ventilation cuts, or establish a debris drop zone beneath ceiling pulls. Know where these are so you're not digging for them when the crew is ready to overhaul.</p>
+            <p>Heavy-duty canvas salvage tarps. Used to cover contents from water damage during overhaul, cover roof holes after ventilation cuts, or establish a debris drop zone beneath ceiling pulls. Know where these are so you're not digging for them when the crew is ready to overhaul.</p>
           </div>
+        </div>
+        <div class="callout callout-warn">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content"><strong>Canvas Isn't Poly — Dry It Before It Goes Back</strong>These are canvas now, not poly. Poly you can fold up wet and toss back in the compartment. Canvas mildews and rots if it goes back damp — get it dried out before it's returned to the rig, or you'll find a ruined tarp next time someone needs it.</div>
         </div>
       </div>
     </div>
@@ -18123,12 +18160,14 @@ if (searchInput) {
               <li>Roof Ladder (size not specified — verify in person)</li>
               <li>2× 28' Extension Ladders</li>
               <li>16' Roof Ladder</li>
+              <li>In Box — 50' of 1¾" Hose w/Fog Nozzle</li>
             </ul>
           </div>
           <div class="entry-block">
             <div class="entry-label">💡 Notes</div>
             <p>This is stowage on top of the rig and inside the aerial basket — separate from the driver's-side ladder rack. That means there's more ladder and hose capacity on this rig than what's on the DS ladder rack alone. Know both locations cold; don't assume "the ladders" means only the rack.<br><br>
-            The doc doesn't nail down sizes on the pike pole or the second roof ladder listed here — that's on you to confirm in person at rig check, not guess at on scene.</p>
+            The doc doesn't nail down sizes on the pike pole or the second roof ladder listed here — that's on you to confirm in person at rig check, not guess at on scene.<br><br>
+            <strong>In Box — 50' of 1¾" w/Fog Nozzle:</strong> A separate, boxed-off length of hose with its own nozzle, distinct from the 100' length listed above. Keep it separate in your head — this is a quick-deploy length for the basket, not extra length to tie into the 100'.</p>
           </div>
         </div>
         <div class="callout callout-warn">
