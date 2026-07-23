@@ -1413,7 +1413,7 @@ VEHICLES['sn61'] = {
         ]),
         ("Driver Side Pumping Area", [
             "20 Amp Service",
-            "250' of Cord",
+            "250' of Cord (both sides)",
         ]),
         ("Driver Side Generator Compartment", [
             "10kW Generator",
@@ -1511,7 +1511,8 @@ VEHICLES['sn61'] = {
             "Silver Pick Axe",
             "Roof Shovel",
             "Closet Pike",
-            "RASP Rope Bag",
+            "200' RASP Rope Bag",
+            "Pipe Wrench",
         ]),
         ("Officers Side In Front of Tire", [
             "3 Plug-in Lights",
@@ -1540,10 +1541,9 @@ VEHICLES['sn61'] = {
         ("On Top / In The Basket", [
             "100' of 1¾\" Hose",
             "Pick Axe",
-            "Pike Pole",
-            "Roof Ladder",
+            "6' Pike Pole",
             "2× 28' Extension Ladders",
-            "16' Roof Ladder",
+            "2× 16' Roof Ladders",
             "In Box — 50' of 1¾\" Hose w/Fog Nozzle",
         ]),
     ]
