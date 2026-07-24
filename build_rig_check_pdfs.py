@@ -479,7 +479,7 @@ VEHICLES['e62'] = {
         ]),
         ("Rear of Truck — Left Side", [
             "2 New York Hooks (6ft, 8ft)",
-            "Attic Ladder 10ft",
+            "Attic Ladder 10ft (aka Pencil Ladder)",
         ]),
         ("Rear of Truck — Middle", [
             "Upper: 6 Batteries",
