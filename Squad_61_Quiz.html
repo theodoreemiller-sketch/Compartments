@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Squad 61 — 50 Question Compartment Quiz</title>
+<style>
+  :root{
+    --green:#1A6B2A; --dark:#0F4218; --gold:#D4A017;
+    --cream:#F5F0E8; --paper:#EDE8DC;
+    --ink:#1A1612; --slate:#2C2825; --mid:#5A5248;
+    --muted:#8A7F74; --border:#C8BFB0;
+    --bad:#8B1A1A; --bad-bg:#FBE4E4;
+    --good-bg:#E8F4E8;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:Georgia,'Source Serif 4',serif; line-height:1.6;
+  }
+  header{
+    background:linear-gradient(135deg,var(--dark) 0%,var(--green) 100%);
+    color:var(--cream); padding:28px 24px; text-align:center;
+    border-bottom:5px solid var(--gold);
+  }
+  header h1{
+    margin:0 0 6px; font-family:'Oswald',Arial,sans-serif; letter-spacing:2px;
+    text-transform:uppercase; font-size:26px; color:var(--gold);
+  }
+  header p{ margin:4px 0 0; font-size:14px; color:#D8E4D8; }
+  .wrap{ max-width:760px; margin:0 auto; padding:24px 16px 80px; }
+
+  .scoreboard{
+    display:flex; justify-content:space-between; align-items:center;
+    background:#fff; border:1px solid var(--border); border-radius:10px;
+    padding:12px 18px; margin-bottom:20px; font-family:'JetBrains Mono',monospace;
+    font-size:13px; color:var(--mid); gap:10px; flex-wrap:wrap;
+  }
+  .scoreboard strong{ color:var(--slate); }
+  #progress-track{
+    height:6px; background:var(--paper); border-radius:3px; overflow:hidden; margin-bottom:20px;
+    border:1px solid var(--border);
+  }
+  #progress-fill{ height:100%; background:var(--green); width:0%; transition:width .25s; }
+
+  .card{
+    background:#fff; border:1px solid var(--border); border-radius:12px;
+    padding:26px 26px 22px; box-shadow:0 2px 10px rgba(0,0,0,.06);
+  }
+  .qnum{
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted);
+    letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;
+  }
+  .qtext{ font-size:19px; color:var(--slate); margin:0 0 14px; line-height:1.5; }
+  .pic-link{
+    display:inline-flex; align-items:center; gap:6px; margin-bottom:16px;
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.5px;
+    text-transform:uppercase; color:var(--green); background:var(--paper);
+    border:1px solid var(--green); border-radius:6px; padding:6px 12px;
+    text-decoration:none;
+  }
+  .pic-link:hover{ background:var(--green); color:#fff; }
+
+  .choices{ display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+  .choice{
+    display:flex; gap:12px; align-items:flex-start; text-align:left;
+    background:var(--paper); border:1px solid var(--border); border-radius:8px;
+    padding:12px 14px; cursor:pointer; font-size:15.5px; color:var(--ink);
+    font-family:inherit; transition:background .12s,border-color .12s; width:100%;
+  }
+  .choice:hover{ background:#fff; border-color:var(--mid); }
+  .choice .letter{
+    font-family:'JetBrains Mono',monospace; font-weight:600; color:var(--green);
+    flex-shrink:0; width:20px;
+  }
+  .choice.selected{ border-color:var(--green); background:#fff; box-shadow:0 0 0 2px var(--green) inset; }
+  .choice.correct{ background:var(--good-bg); border-color:var(--green); }
+  .choice.correct .letter{ color:var(--green); }
+  .choice.incorrect{ background:var(--bad-bg); border-color:var(--bad); }
+  .choice.incorrect .letter{ color:var(--bad); }
+  .choice.disabled{ cursor:default; }
+  .choice.dim{ opacity:.55; }
+
+  .feedback{
+    display:none; border-radius:8px; padding:14px 16px; margin-bottom:16px;
+    font-size:14.5px; line-height:1.55;
+  }
+  .feedback.show{ display:block; }
+  .feedback.right{ background:var(--good-bg); border:1px solid var(--green); color:#0F3418; }
+  .feedback.wrong{ background:var(--bad-bg); border:1px solid var(--bad); color:#5A1A1A; }
+  .feedback strong{ display:block; font-family:'Oswald',Arial,sans-serif; letter-spacing:1px;
+    text-transform:uppercase; font-size:13px; margin-bottom:4px; }
+
+  .controls{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  .enter-tip{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted); }
+  button.nextbtn{
+    background:var(--green); color:#fff; border:none; border-radius:6px;
+    padding:11px 22px; font-family:'Oswald',Arial,sans-serif; font-size:14px;
+    letter-spacing:1px; text-transform:uppercase; cursor:pointer;
+  }
+  button.nextbtn:hover{ background:var(--dark); }
+  button.nextbtn:disabled{ background:var(--border); cursor:not-allowed; }
+
+  .results{ text-align:center; padding:20px 10px; }
+  .results h2{
+    font-family:'Oswald',Arial,sans-serif; letter-spacing:2px; text-transform:uppercase;
+    font-size:24px; margin-bottom:6px;
+  }
+  .results .bigscore{ font-size:56px; font-weight:700; margin:14px 0 4px; font-family:'Oswald',Arial,sans-serif; }
+  .pass{ color:var(--green); }
+  .fail{ color:var(--bad); }
+  .results .pct{ font-family:'JetBrains Mono',monospace; font-size:16px; color:var(--mid); margin-bottom:18px; }
+  .banner{
+    display:inline-block; padding:10px 22px; border-radius:30px; font-family:'Oswald',Arial,sans-serif;
+    letter-spacing:2px; text-transform:uppercase; font-size:15px; margin-bottom:20px;
+  }
+  .banner.pass{ background:var(--good-bg); border:2px solid var(--green); }
+  .banner.fail{ background:var(--bad-bg); border:2px solid var(--bad); }
+  .restart{
+    background:var(--dark); color:#fff; border:none; border-radius:6px; padding:12px 28px;
+    font-family:'Oswald',Arial,sans-serif; font-size:14px; letter-spacing:1px; text-transform:uppercase;
+    cursor:pointer; margin-top:6px;
+  }
+  .restart:hover{ background:var(--green); }
+  footer{ text-align:center; padding:30px 10px 10px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚑 Squad 61 — Compartment &amp; Equipment Quiz</h1>
+  <p>50 questions · multiple choice · press <strong>Enter</strong> to check your answer, then <strong>Enter</strong> again for the next one · 70% to pass</p>
+</header>
+
+<div class="wrap">
+  <div class="scoreboard">
+    <span>Question <strong id="qposition">1</strong> / <span id="qtotal">50</span></span>
+    <span>Score: <strong id="scoreDisplay">0</strong> / <span id="scoredOf">0</span></span>
+    <span>Running: <strong id="runningPct">—</strong></span>
+  </div>
+  <div id="progress-track"><div id="progress-fill"></div></div>
+
+  <div class="card" id="quizCard"></div>
+  <div class="card" id="resultsCard" style="display:none;"></div>
+</div>
+
+<footer>Unofficial Apparatus Study Guides &middot; Squad 61 &middot; For probationary study use — always verify against the actual rig.</footer>
+
+<script>
+const QUESTIONS = [
+  {q:"You pull up the linked compartment photos for Squad 61's Engineers Compartment. Which tool actually lives there?",
+   choices:["Fire Investigation Box","Hurst Ram Tool","Stokes Basket","4-Gas Detector"],
+   correct:0, note:"The Engineers Compartment holds the Light Tower Controller, Fire Investigation Box, Dust/Particulate Mask, and Wet Vac.",
+   pic:{label:"View Engineers Compartment photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.ax5fgt25xghc"}},
+  {q:"What is the Fire Investigation Box also commonly called?",
+   choices:["The cause-and-origin (C&O) kit","The passport board","The Gas Trac","The rigging kit"],
+   correct:0, note:"AKA fire investigation kit, cause-and-origin kit, arson kit, \"the evidence box.\""},
+  {q:"What's the rookie mistake firefighters make with the dust/particulate (N95) mask?",
+   choices:["Wearing it in actual smoke instead of donning SCBA","Using it on a Class B fire","Storing it in direct sunlight","Overinflating it"],
+   correct:0, note:"An N95 filters particulates only — it does nothing against combustion byproducts, CO, or HCN. Any smoke atmosphere means SCBA, not a dust mask."},
+
+  {q:"The linked photos for the Driver's Side Traverse — Bottom Shelf show which two tools?",
+   choices:["Winch with Remote and Steering Wheel Cutter","K12 Saw and Chainsaw","Halligan and Flat-Head Axe","Cascade Controls and O-Rings"],
+   correct:0, note:"This shelf holds the portable Winch with Remote and the Steering Wheel Cutter.",
+   pic:{label:"View DS Traverse — Bottom Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.qim29teeoqog"}},
+  {q:"Why must you never stand in line with a loaded winch cable?",
+   choices:["A parted cable snaps back like a steel whip with lethal energy","It can overheat the winch motor","It drains the battery instantly","It voids the manufacturer's warranty"],
+   correct:0, note:"Stand 90° offset and use a damper (jacket/salvage cover) over the line to absorb whip energy if it parts."},
+  {q:"Before cutting a steering wheel with the wheel cutter, what must you check first?",
+   choices:["Whether the airbag is undeployed, and disconnect the battery / cover it","Whether the blade is rated for masonry","Whether the chain oil reservoir is full","Whether the winch is anchored"],
+   correct:0, note:"A live, undeployed airbag firing into your face during extrication will break it. Disconnect the battery, cover the module, and stay out of the deployment path."},
+
+  {q:"According to the linked photos, which saw is stored on DS Compartment 3 (Over Wheel) — Top Shelf?",
+   choices:["K12 Saw","Angle Grinder","1/2\" Impact Wrench","Air Chisel"],
+   correct:0, note:"Top Shelf holds the Circular Saw, K12 Saw, Chainsaw, and Chain Oil.",
+   pic:{label:"View DS Comp 3 — Top Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.marmtu8b9hvw"}},
+  {q:"What's the danger of putting the wrong blade type on the K12 saw?",
+   choices:["It can shatter at 5,000 RPM and send shrapnel into a femoral artery","It just cuts more slowly","It drains the two-stroke fuel faster","It only affects the bar oil flow"],
+   correct:0, note:"Confirm the blade (abrasive vs. diamond) matches the material — metal/masonry vs. concrete — before you pull the trigger."},
+  {q:"Chainsaw kickback happens when...",
+   choices:["the tip of the bar contacts something and the saw flips back toward your face/neck","the bar oil reservoir runs low","you cut with the body of the bar instead of the tip","the chain brake engages too early"],
+   correct:0, note:"Cut with the body of the bar, never the tip, and test the chain brake before every use."},
+
+  {q:"The linked photos for DS Compartment 3 — Bottom Shelf show a set of cordless tools. Which of these is NOT part of that set (it's one shelf up)?",
+   choices:["Circular Saw","1/2\" Impact Wrench","Angle Grinder","Reciprocating Saw"],
+   correct:0, note:"The Circular Saw lives on the Top Shelf. The Bottom Shelf holds the impact wrench, impact driver, grinder, recip saw, blades, bits, and charger.",
+   pic:{label:"View DS Comp 3 — Bottom Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.ets2e1fzxqo"}},
+  {q:"Why should you never put a standard chrome hand socket on the 1/2\" impact wrench?",
+   choices:["It can shatter under impact and send shrapnel into hands and faces","It reverses the forward/reverse switch","It strips the anvil permanently","It voids the battery warranty"],
+   correct:0, note:"Only impact-rated (matte black) sockets are safe on impact tools."},
+  {q:"What is described as \"the single most common Squad sin\" involving cordless batteries?",
+   choices:["Pulling a battery and not putting it back on the charger","Mixing metric and SAE sockets","Leaving the angle grinder guard off","Using a wood blade on metal"],
+   correct:0, note:"Battery out, battery on the charger — every time — or the next crew finds a dead pack mid-extrication."},
+
+  {q:"The linked photos for the Air Cascade cabinet show equipment used to...",
+   choices:["Refill empty SCBA bottles on scene from onboard high-pressure air storage","Power the Hurst tools hydraulically","Detect combustible gas leaks","Charge Dewalt battery packs"],
+   correct:0, note:"The cascade is a bank of high-pressure air cylinders plumbed to a fill station — a mobile SCBA fill plant.",
+   pic:{label:"View Air Cascade cabinet photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.2blbgknqwvy5"}},
+  {q:"Why must the containment cabinet door be fully closed during an SCBA fill?",
+   choices:["A cylinder failure at 4,500 psi can be catastrophic — the cabinet is blast-rated","It speeds up the fill rate","It's only required for scuba fills","It keeps bar oil out of the breathing air"],
+   correct:0, note:"Filling with the door open, or on the bench because the cabinet is \"too slow,\" has killed people. Closed door, every fill, no exceptions."},
+  {q:"Why is the cascade \"towel\" treated so carefully — never substituted with a greasy shop rag?",
+   choices:["Hydrocarbon contamination on a high-pressure air fitting can cause adiabatic ignition","It's the only rag rated for hazmat cleanup","It doubles as patient care linen","It's needed to dry the winch cable"],
+   correct:0, note:"Oil, grease, or even hand lotion on a high-pressure air/oxygen fitting can spontaneously combust under pressure."},
+
+  {q:"The linked photos for the Officer Front Compartments show which piece of equipment?",
+   choices:["Little Giant Ladder","Plasma Torch","RIT Airpack","Stokes Basket"],
+   correct:0, note:"This compartment holds the Little Giant Ladder, Tarps, Step Cribbing, Cribbing Platforms, Oil Dry, and Garbage Container.",
+   pic:{label:"View Officer Front Compartments photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.3u7osay1da3v"}},
+  {q:"What's the critical rule before climbing the Little Giant ladder in any configuration?",
+   choices:["Verify BOTH hinge locks are fully engaged — listen for both clicks","Only ever use it in the A-frame position","Fully extend it before every climb","Never use it indoors"],
+   correct:0, note:"If you climb without confirming both hinge locks, the ladder folds in the middle and dumps you."},
+  {q:"What's the fire-service mantra for cribbing under a lifted load?",
+   choices:["\"Lift an inch, crib an inch\"","\"Lift high, crib later\"","\"Crib first, lift never\"","\"One crib per ton\""],
+   correct:0, note:"The crib bears the load, not the jack. The jack is only a temporary lifter."},
+
+  {q:"The linked photos for the Transverse — Officer Side Shelf show the Hurst tool set. Which tool is NOT part of this set (it's stored on the Long Shelf instead)?",
+   choices:["Res-Q-Jacks (rescue struts)","Hurst Ram Tool","Hurst Cutter","Hurst Spreader"],
+   correct:0, note:"This shelf holds the Ram, Cutter, Spreader, and B-Post Tool. Res-Q-Jacks live on the Transverse — Long Shelf.",
+   pic:{label:"View Officer Side Shelf (Hurst tools) photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.9tx3iys3onb"}},
+  {q:"On a hybrid or EV vehicle, what color cable must NEVER be cut with the Hurst cutter?",
+   choices:["Orange","Blue","Green","Black"],
+   correct:0, note:"Orange = high voltage. Cutting it can kill you and start a thermal-runaway battery fire that water won't extinguish."},
+  {q:"Why do Hurst spreader tips sometimes slip off explosively during a bite?",
+   choices:["Slick/wet metal or shallow purchase points","Low hydraulic fluid in the pump","The wrong hose coupler size","Cold weather stiffening the seals"],
+   correct:0, note:"Set the tips DEEP, keep the crew clear of the firing line, and keep your hand on the handle — never under the tip."},
+
+  {q:"The linked photos for the Transverse — Long Shelf show which piece of stabilization equipment?",
+   choices:["Res-Q-Jacks (rescue struts)","Hurst Ram Tool","Little Giant Ladder","Cascade Controls"],
+   correct:0, note:"The Long Shelf holds Akron Lights, Hi-Lift Jacks, cones, Res-Q-Jacks, scissor jacks, an air chisel, chain, the RIT pack, and more.",
+   pic:{label:"View Transverse — Long Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.b08p2vv9gg6"}},
+  {q:"The Hi-Lift (farm) jack is described as one of the most dangerous jacks around because...",
+   choices:["the handle can whip up violently if the load shifts or the lift nose slips","it can't lift more than 500 lbs","it requires hydraulic fluid to operate","it has no reversing latch"],
+   correct:0, note:"Keep the handle vertical when not pumping, stand to the side (never in front), and crib as you lift."},
+  {q:"Per the guide, how many Res-Q-Jack struts are the minimum for stabilizing a vehicle resting on its ROOF?",
+   choices:["Four","One","Two, both on the same side","None if the ground is soft"],
+   correct:0, note:"Two struts minimum on a side-resting vehicle; four on a roof-resting vehicle, with heads chained to the chassis."},
+  {q:"The spring-loaded center (window) punch will NOT break which piece of vehicle glass?",
+   choices:["The windshield (laminated safety glass)","The rear window","The front side windows","The rear side windows"],
+   correct:0, note:"Windshields are laminated and will only chip, not shatter. Tempered side and rear glass is what the punch is for."},
+  {q:"The RIT Airpack on Squad 61 is meant to be used for...",
+   choices:["a Mayday — rescuing a downed firefighter","routine SCBA refills during overhaul","confined space gas monitoring","structure fire salvage operations"],
+   correct:0, note:"It's locked, loaded, and untouched until a firefighter goes down — never a spare bottle for routine use."},
+
+  {q:"The linked photos for the Officer's Side Compartment Over Wheel show \"the irons\" and related forcible-entry tools. Which set is it?",
+   choices:["Flat Head Axe, Pick Axe, and Halligan","Hurst Cutter and Spreader","K12 Saw and Chainsaw","4-Gas Detectors and Hotstick"],
+   correct:0, note:"This compartment holds hand tools/forcible entry (axe, pick, Halligan, sledge, closet pikes) plus the Rigging Kit and Arizona Vortex.",
+   pic:{label:"View Officer's Side Over Wheel photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.8djhi2e88pv9"}},
+  {q:"Why is the flat-head axe sometimes called a \"marrying axe\"?",
+   choices:["Its flat poll is used to drive/marry the Halligan bar","It's always issued in matched pairs","It was invented by Hugh Halligan himself","It's traditionally given as a promotion gift"],
+   correct:0, note:"Flat-head axe + Halligan = \"the irons,\" the most basic forcible-entry set in the fire service."},
+  {q:"How do you tell which way a residential door swings before forcing it with the Halligan?",
+   choices:["Hinges visible = swings toward you (outward); no hinges visible = swings away (inward)","Always assume it swings inward","Check which side the doorknob is on","It doesn't matter — force from either side"],
+   correct:0, note:"Forcing outward on an inward-swinging door bends the metal but won't open it. Know the swing before you commit."},
+  {q:"What must you have before rigging a real rescue with the Arizona Vortex?",
+   choices:["Formal confined space / rope rescue training — or support a trained technician","A signed waiver from the Incident Commander","At least two years on the department","Nothing — any firefighter can rig it solo"],
+   correct:0, note:"Wrong leg angle, an apex that isn't plumb, or bad rigging can collapse the system under load."},
+
+  {q:"The linked photos for the Officer's Side Rear Compartment — Top Shelf show which tools?",
+   choices:["Metric & Standard Open End Wrenches","Plasma Torch and Face Shield","Ratchet Straps","Toolbox with SAE & Metric combination wrenches"],
+   correct:0, note:"Open-end wrenches are stored on the top shelf for quick access — faster on/off than box-end wrenches in confined spaces.",
+   pic:{label:"View Officer's Side Rear — Top Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.aqu0ek3aj4xk"}},
+  {q:"When disconnecting a vehicle's battery during extrication, which terminal do you remove first?",
+   choices:["Negative","Positive","Whichever is closer to you","Both simultaneously"],
+   correct:0, note:"Disconnecting positive first risks an arc-flash short to the chassis if your wrench touches metal. Negative-first is the safe sequence."},
+  {q:"Why is a six-point socket preferred over a twelve-point on a rounded or badly stuck fastener?",
+   choices:["It grips the fastener's flats and is less likely to round it off further","It fits more socket sizes","It's rated for higher torque overall","It's lighter to carry"],
+   correct:0, note:"Twelve-point sockets are convenient for tight angles but more likely to slip on a rusted or rounded fastener."},
+
+  {q:"The linked photos for the Rear of Squad Compartment — Top Shelf show which group of tools?",
+   choices:["Stokes Basket, Fire Investigation Rake, NY Hooks/Pike Poles, and Umbrella","Multi-lift Air Bags and their controller","Fire Extinguishers (ABC, CO2, Silver Bullet)","6-Pack of Dewalt Batteries"],
+   correct:0, note:"Top Shelf holds the Stokes Basket, Investigation Rake, NY Hooks/Pike Poles, and Umbrella.",
+   pic:{label:"View Rear of Squad — Top Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.1iklvox8wlhc"}},
+  {q:"The linked photos for the Rear of Squad Compartment — Second Shelf show which item?",
+   choices:["3 of the 5 Multi-lift Air Bags (1 small, 2 medium)","The 2 large Multi-lift Air Bags","The 3 Fire Extinguishers","The Smoke Ejectors"],
+   correct:0, note:"Second Shelf holds 3 smaller Multi-lift bags; the 2 large bags are one shelf over on the Middle Vertical.",
+   pic:{label:"View Rear of Squad — Second Shelf photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.qx4ujzjm68pc"}},
+  {q:"In a two-bag \"snowman\" air bag stack, which bag goes on the bottom and gets inflated first?",
+   choices:["The larger bag","The smaller bag","Either — order doesn't matter","Whichever bag has more air remaining"],
+   correct:0, note:"Reversing this causes the stack to walk out from under the load — a rule that has gotten people hurt for decades."},
+  {q:"Which of the three rear-compartment fire extinguishers is pressurized water and must NEVER be used on a fuel or energized-electrical fire?",
+   choices:["The \"Silver Bullet\"","The ABC dry chemical","The CO2 extinguisher","None — all three are safe on any fire class"],
+   correct:0, note:"Water on a gasoline fire scatters the fuel; water on energized electrical conducts current back to you."},
+
+  {q:"The linked photos for the Officer Coffin Compartment (Spill Gear) show all of these EXCEPT one — which item actually lives on the Transverse Long Shelf instead?",
+   choices:["Dayton Submersible Pump","Absorbent Pads","Spill Kit","Shovels"],
+   correct:0, note:"Officer Coffin (Spill Gear) holds Pads, Oil Dry, Spill Kit, Oil Pan, and Shovels. The submersible pump is on the Transverse — Long Shelf.",
+   pic:{label:"View Officer Coffin (Spill Gear) photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.1dhegg60am9s"}},
+  {q:"What's the single most valuable item in the spill kit, and why?",
+   choices:["The drain cover(s) — used EARLY, before fuel reaches the storm drain","The non-sparking shovel, because it's reusable","The nitrile gloves, because OSHA requires them","The absorbent socks, because they're waterproof"],
+   correct:0, note:"Once a fuel spill hits the storm drain, it's an environmental incident your department pays to clean up."},
+  {q:"What's the rookie mistake with absorbent pads used on a fuel spill?",
+   choices:["Leaving fuel-soaked pads bagged and sitting on the rig — a spontaneous combustion risk","Using white pads instead of gray","Spreading them too thin","Using them on a water-only spill"],
+   correct:0, note:"Get used pads OFF the rig and to hazmat disposal — never leave them stored in the apparatus compartment."},
+
+  {q:"What's the correct technique for throwing a throw bag / horse-collar rope to a victim in the water?",
+   choices:["Hold the rope-end, throw the bag underhand, aiming PAST the victim","Tie the rope around your own wrist before throwing","Throw the bag directly at the victim's head","Throw overhand for maximum distance"],
+   correct:0, note:"The rope feeds out of the bag as it flies. Never tie yourself to it — you could be pulled in."},
+  {q:"Why are dedicated water-rescue helmets used instead of structural firefighting helmets in the water?",
+   choices:["Structural helmets fill with water and act like a drag bucket; water helmets drain","Structural helmets are too light for water impacts","Water rescue helmets are simply cheaper","There's no real difference between the two"],
+   correct:0, note:"Water rescue helmets are lightweight, drainable, and fit under a Mustang suit hood."},
+  {q:"Why doesn't a Mustang suit alone replace wearing a PFD on top of it?",
+   choices:["Only some Mustang models have inherent flotation built in — it's not guaranteed","State law requires a separate PFD regardless","Mustang suits are only rated for warm water","A PFD helps the suit's neck/wrist seals hold"],
+   correct:0, note:"Mustang suits provide thermal insulation and, on some models, flotation — but that's not a substitute for a PFD or for cold-water rescue training."},
+
+  {q:"The linked \"Pics: Front\" photos for the Cab and EMS Compartment show an item explicitly stored in the FRONT of the cab. Which is it?",
+   choices:["Fuel Keys","3× Dewalt Battery Chargers","3× Hurst Battery Chargers","Passport System"],
+   correct:0, note:"Fuel Keys are stored in the front of the cab for driver access; the Dewalt chargers are explicitly in the rear of the cab.",
+   pic:{label:"View Cab & EMS — Front photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.dtdnifehbtgt"}},
+  {q:"The linked \"Pics: Rear\" photos for the Cab and EMS Compartment show which item, explicitly stored in the rear of the cab?",
+   choices:["3× Dewalt Battery Chargers","Fuel Keys","Box Light (Front of Cab)","Safety Flares"],
+   correct:0, note:"The three Dewalt 20V chargers are in the rear of the cab, charging the six battery packs stored in the rear compartment.",
+   pic:{label:"View Cab & EMS — Rear photos", url:"https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?tab=t.0#bookmark=id.aqmho2rmzjij"}},
+  {q:"Why must you self-test the Hotstick on a KNOWN energized source before checking an unknown wire?",
+   choices:["A dead battery reads NEGATIVE on a hot wire — a false \"safe\" reading can kill you","It calibrates the audible alarm volume","It's only required once per shift","It extends the telescoping pole automatically"],
+   correct:0, note:"Self-test on known-energized, test the unknown, then re-test known again. Three-step, every time."},
+  {q:"What's the critical difference between the 4-gas monitor and the Gas Trac?",
+   choices:["The 4-gas reads O2/CO/H2S/LEL for entry safety; the Gas Trac traces a leak back to its source","They are the same tool with different brand names","The Gas Trac replaces the need for a 4-gas in confined spaces","The 4-gas only works on natural gas, the Gas Trac only on propane"],
+   correct:0, note:"Never substitute the Gas Trac for a 4-gas before confined space entry — it has no O2, H2S, or CO readout."},
+  {q:"Cardiac arrest is confirmed. What's the rookie mistake with the AED?",
+   choices:["Hesitating to apply pads and shock, waiting for the medic","Applying pads to a wet chest without drying it first","Both of the above","Neither — there's no real rookie mistake with an AED"],
+   correct:2, note:"Every minute without defibrillation costs 7–10% survival — apply pads immediately, and dry the chest first so current travels through the heart, not across wet skin."},
+  {q:"Why do you hand in your Passport card to accountability BEFORE entering a hazard area?",
+   choices:["If you go down inside, the IC immediately knows you're in there and where you were assigned","It's required paperwork for payroll purposes","It lets dispatch know the rig is on scene","It unlocks the RIT pack for deployment"],
+   correct:0, note:"Without it, a Mayday search starts from scratch."},
+  {q:"What's the key limitation of the TIC (thermal imaging camera) that a rookie must understand?",
+   choices:["It shows relative heat, not absolute temperature — a heat signature doesn't confirm a living victim","It only works in total darkness","It cannot detect any heat source below 200°F","It replaces the need for a hands-on search"],
+   correct:0, note:"The TIC guides your search; it doesn't replace hands-on assessment, and it can't see through water, mirrors, or certain materials."}
+];
+
+const PASS_THRESHOLD = 0.70;
+
+let current = 0;
+let score = 0;
+let answered = false;
+let selectedIndex = null;
+
+const quizCard = document.getElementById('quizCard');
+const resultsCard = document.getElementById('resultsCard');
+const qposition = document.getElementById('qposition');
+const qtotal = document.getElementById('qtotal');
+const scoreDisplay = document.getElementById('scoreDisplay');
+const scoredOf = document.getElementById('scoredOf');
+const runningPct = document.getElementById('runningPct');
+const progressFill = document.getElementById('progress-fill');
+
+qtotal.textContent = QUESTIONS.length;
+
+function renderQuestion(){
+  answered = false;
+  selectedIndex = null;
+  const item = QUESTIONS[current];
+  qposition.textContent = current + 1;
+  progressFill.style.width = (current / QUESTIONS.length * 100) + '%';
+
+  let html = '';
+  html += '<div class="qnum">Question ' + (current + 1) + ' of ' + QUESTIONS.length + (item.pic ? ' &middot; 📷 photo reference' : '') + '</div>';
+  html += '<p class="qtext">' + item.q + '</p>';
+  if (item.pic) {
+    html += '<a class="pic-link" href="' + item.pic.url + '" target="_blank" rel="noopener">📷 ' + item.pic.label + '</a><br>';
+  }
+  html += '<div class="choices" id="choicesWrap">';
+  const letters = ['A','B','C','D'];
+  item.choices.forEach(function(choiceText, i){
+    html += '<button type="button" class="choice" data-idx="' + i + '"><span class="letter">' + letters[i] + '</span><span>' + choiceText + '</span></button>';
+  });
+  html += '</div>';
+  html += '<div class="feedback" id="feedbackBox"></div>';
+  html += '<div class="controls">';
+  html += '<span class="enter-tip">Select an answer, then press <strong>Enter</strong> to check it.</span>';
+  html += '<button type="button" class="nextbtn" id="nextBtn" disabled>Check Answer</button>';
+  html += '</div>';
+
+  quizCard.innerHTML = html;
+
+  document.querySelectorAll('.choice').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if (answered) return;
+      selectedIndex = parseInt(btn.getAttribute('data-idx'), 10);
+      document.querySelectorAll('.choice').forEach(function(b){ b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      document.getElementById('nextBtn').disabled = false;
+    });
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', handleNextButton);
+}
+
+function handleNextButton(){
+  if (!answered) {
+    checkAnswer();
+  } else {
+    advance();
+  }
+}
+
+function checkAnswer(){
+  if (selectedIndex === null) return;
+  answered = true;
+  const item = QUESTIONS[current];
+  const correctIdx = item.correct;
+  const isRight = selectedIndex === correctIdx;
+  if (isRight) score++;
+
+  document.querySelectorAll('.choice').forEach(function(btn){
+    const idx = parseInt(btn.getAttribute('data-idx'), 10);
+    btn.classList.add('disabled');
+    if (idx === correctIdx) {
+      btn.classList.add('correct');
+    } else if (idx === selectedIndex) {
+      btn.classList.add('incorrect');
+    } else {
+      btn.classList.add('dim');
+    }
+  });
+
+  const fb = document.getElementById('feedbackBox');
+  fb.classList.add('show');
+  fb.classList.add(isRight ? 'right' : 'wrong');
+  fb.innerHTML = '<strong>' + (isRight ? 'Correct' : 'Not quite') + '</strong>' + item.note;
+
+  const nextBtn = document.getElementById('nextBtn');
+  nextBtn.disabled = false;
+  nextBtn.textContent = (current === QUESTIONS.length - 1) ? 'See Results' : 'Next Question';
+
+  updateScoreboard();
+}
+
+function updateScoreboard(){
+  const scoredCount = current + (answered ? 1 : 0);
+  scoreDisplay.textContent = score;
+  scoredOf.textContent = scoredCount;
+  runningPct.textContent = scoredCount > 0 ? Math.round(score / scoredCount * 100) + '%' : '—';
+}
+
+function advance(){
+  if (current < QUESTIONS.length - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults(){
+  progressFill.style.width = '100%';
+  quizCard.style.display = 'none';
+  resultsCard.style.display = 'block';
+  const pct = score / QUESTIONS.length;
+  const passed = pct >= PASS_THRESHOLD;
+  let html = '<div class="results">';
+  html += '<h2>Quiz Complete</h2>';
+  html += '<div class="bigscore ' + (passed ? 'pass' : 'fail') + '">' + score + ' / ' + QUESTIONS.length + '</div>';
+  html += '<div class="pct">' + Math.round(pct * 100) + '% correct &middot; 70% required to pass</div>';
+  html += '<div class="banner ' + (passed ? 'pass' : 'fail') + '">' + (passed ? '✅ PASS' : '❌ NOT YET — RESTUDY') + '</div><br>';
+  html += '<button type="button" class="restart" id="restartBtn">Retake the Quiz</button>';
+  html += '</div>';
+  resultsCard.innerHTML = html;
+  document.getElementById('restartBtn').addEventListener('click', restartQuiz);
+}
+
+function restartQuiz(){
+  current = 0; score = 0; answered = false; selectedIndex = null;
+  quizCard.style.display = 'block';
+  resultsCard.style.display = 'none';
+  scoreDisplay.textContent = '0';
+  scoredOf.textContent = '0';
+  runningPct.textContent = '—';
+  progressFill.style.width = '0%';
+  renderQuestion();
+}
+
+document.addEventListener('keydown', function(e){
+  if (e.key !== 'Enter') return;
+  if (resultsCard.style.display === 'block') return;
+  e.preventDefault();
+  if (!answered) {
+    if (selectedIndex !== null) checkAnswer();
+  } else {
+    advance();
+  }
+});
+
+renderQuestion();
+</script>
+</body>
+</html>
