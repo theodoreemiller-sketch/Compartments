@@ -3551,6 +3551,64 @@
 </head>
 <body>
 
+<script>
+// ══ SHARED EQUIPMENT SEARCH (all vehicle guides) ══
+// One robust search implementation used by every vehicle guide so behavior
+// (and visible feedback) is identical everywhere. Filters .equip-card elements
+// inside #guideId, collapsing any section left with zero matches, and shows a
+// live "X of Y shown" / "No matches" readout next to the box so it's obvious
+// the search is actually doing something even on broad queries.
+window.rigSearch = function(searchInputId, guideId) {
+  var inp = document.getElementById(searchInputId);
+  if (!inp) return;
+  var guide = document.getElementById(guideId);
+  if (!guide) return;
+
+  var countEl = document.getElementById(searchInputId + '-count');
+  if (!countEl) {
+    countEl = document.createElement('span');
+    countEl.id = searchInputId + '-count';
+    countEl.style.cssText = 'font-family:\'JetBrains Mono\',monospace;font-size:11px;color:#8A7F74;white-space:nowrap;margin-left:4px;';
+    if (inp.parentNode) inp.parentNode.insertBefore(countEl, inp.nextSibling);
+  }
+
+  function runFilter() {
+    var q = (inp.value || '').trim().toLowerCase();
+    var cards = guide.querySelectorAll('.equip-card');
+    var total = cards.length;
+    var shown = 0;
+    cards.forEach(function(card) {
+      var match = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
+      card.classList.toggle('search-hidden', !match);
+      if (match) {
+        shown++;
+        if (q) {
+          var h = card.querySelector('.card-header');
+          var b = card.querySelector('.card-body');
+          if (h) h.classList.add('open');
+          if (b) b.classList.add('visible');
+        }
+      }
+    });
+    // Collapse any section (comp-section or equip-section) left with zero visible cards
+    guide.querySelectorAll('.comp-section, .equip-section, .section').forEach(function(sec) {
+      if (!sec.querySelector('.equip-card')) return;
+      var anyVisible = sec.querySelectorAll('.equip-card:not(.search-hidden)').length > 0;
+      sec.style.display = (!q || anyVisible) ? '' : 'none';
+    });
+    if (!q) {
+      countEl.textContent = '';
+    } else if (shown === 0) {
+      countEl.textContent = 'No matches';
+    } else {
+      countEl.textContent = shown + ' of ' + total + ' shown';
+    }
+  }
+
+  inp.addEventListener('input', runFilter);
+};
+</script>
+
 <!-- ═══════ UNIFIED NAV ═══════ -->
 <nav class="site-nav">
   <a href="#home" class="nav-brand">GEFD Study</a>
@@ -3585,7 +3643,7 @@
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 7/26/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 7/27/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -7363,23 +7421,7 @@
 (function() {
 
 // E62 search
-(function() {
-  var inp = document.getElementById('e62-search');
-  if (!inp) return;
-  inp.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#e62-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-})();
+rigSearch('e62-search', 'e62-guide');
 
 window.e62Toggle = function(header) {
   var body = header.nextElementSibling;
@@ -7423,23 +7465,7 @@ window.e62Toggle = function(header) {
 (function() {
 
 // E62 search
-(function() {
-  var inp = document.getElementById('e62-search');
-  if (!inp) return;
-  inp.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#e62-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-})();
+rigSearch('e62-search', 'e62-guide');
 
 window.e62Toggle = function(header) {
   var body = header.nextElementSibling;
@@ -8457,22 +8483,7 @@ window.u61Toggle = function(header) {
   body.classList.toggle('visible', !isOpen);
 };
 
-const searchInput = document.getElementById('u61-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    const q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#u61-guide .equip-card').forEach(function(card) {
-      const match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        const h = card.querySelector('.card-header');
-        const b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-}
+rigSearch('u61-search', 'u61-guide');
 })();
 
 // ── Mobile sidebar toggle (global) ──
@@ -9306,21 +9317,7 @@ if (searchInput) {
       body.classList.toggle('visible', !isOpen);
     };
     document.addEventListener('DOMContentLoaded', function() {
-      var inp = document.getElementById('bt62-search');
-      if (!inp) return;
-      inp.addEventListener('input', function() {
-        var q = this.value.trim().toLowerCase();
-        document.querySelectorAll('#bt62-guide .equip-card').forEach(function(card) {
-          var match = !q || card.textContent.toLowerCase().includes(q);
-          card.classList.toggle('search-hidden', !match);
-          if (match && q) {
-            var h = card.querySelector('.card-header');
-            var b = card.querySelector('.card-body');
-            if (h) h.classList.add('open');
-            if (b) b.classList.add('visible');
-          }
-        });
-      });
+      rigSearch('bt62-search', 'bt62-guide');
     });
   })();
   </script>
@@ -11688,34 +11685,7 @@ window.e61ToggleCard = function(header) {
 }
 
 // ── Search ──
-const searchInput = document.getElementById('e61-search');
-if (!searchInput) return;
-searchInput.addEventListener('input', function() {
-  const q = this.value.trim().toLowerCase();
-  const cards = document.querySelectorAll('#e61-guide .equip-card');
-
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    if (!q || text.includes(q)) {
-      card.classList.remove('search-hidden');
-      if (q) {
-        // Auto-open matching cards
-        const header = card.querySelector('.card-header');
-        const body = card.querySelector('.card-body');
-        header.classList.add('open');
-        body.classList.add('visible');
-      }
-    } else {
-      card.classList.add('search-hidden');
-    }
-  });
-
-  // Hide empty sections
-  document.querySelectorAll('#e61-guide .comp-section').forEach(sec => {
-    const visible = sec.querySelectorAll('.equip-card:not(.search-hidden)');
-    sec.style.display = visible.length === 0 && q ? 'none' : '';
-  });
-});
+rigSearch('e61-search', 'e61-guide');
 
 
 
@@ -13422,25 +13392,7 @@ window.e60ToggleCard = function(header) {
   body.classList.toggle('visible', !isOpen);
 }
 
-const searchInput = document.getElementById('e60-search');
-if (!searchInput) return;
-searchInput.addEventListener('input', function() {
-  const q = this.value.trim().toLowerCase();
-  document.querySelectorAll('#e60-guide .equip-card').forEach(card => {
-    const match = !q || card.textContent.toLowerCase().includes(q);
-    card.classList.toggle('search-hidden', !match);
-    if (match && q) {
-      const h = card.querySelector('.card-header');
-      const b = card.querySelector('.card-body');
-      if (h) h.classList.add('open');
-      if (b) b.classList.add('visible');
-    }
-  });
-  document.querySelectorAll('#e60-guide .comp-section').forEach(sec => {
-    const anyVisible = sec.querySelectorAll('.equip-card:not(.search-hidden)').length > 0;
-    sec.style.display = (!q || anyVisible) ? '' : 'none';
-  });
-});
+rigSearch('e60-search', 'e60-guide');
 
 document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   sec.style.animationDelay = (i * 0.08) + 's';
@@ -14766,26 +14718,7 @@ window.e63ToggleCard = function(header) {
   header.classList.toggle('open', !isOpen);
   body.classList.toggle('visible', !isOpen);
 }
-const searchInput = document.getElementById('e63-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    const q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#e63-guide .equip-card').forEach(card => {
-      const match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        const h = card.querySelector('.card-header');
-        const b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-    document.querySelectorAll('#e63-guide .comp-section').forEach(sec => {
-      const anyVisible = sec.querySelectorAll('.equip-card:not(.search-hidden)').length > 0;
-      sec.style.display = (!q || anyVisible) ? '' : 'none';
-    });
-  });
-}
+rigSearch('e63-search', 'e63-guide');
 document.querySelectorAll('#e63-guide .comp-section').forEach((sec, i) => {
   sec.style.animationDelay = (i * 0.08) + 's';
 });
@@ -15417,22 +15350,7 @@ window.u62Toggle = function(header) {
   header.classList.toggle('open', !isOpen);
   body.classList.toggle('visible', !isOpen);
 };
-var searchInput = document.getElementById('u62-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#u62-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-}
+rigSearch('u62-search', 'u62-guide');
 })();
 </script>
 
@@ -17219,22 +17137,7 @@ window.t62Toggle = function(header) {
   header.classList.toggle('open', !isOpen);
   body.classList.toggle('visible', !isOpen);
 };
-var searchInput = document.getElementById('t62-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#t62-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-}
+rigSearch('t62-search', 't62-guide');
 })();
 </script>
 
@@ -18196,16 +18099,7 @@ if (searchInput) {
   }
   window.sn61Toggle=sn61Toggle;
 
-  const searchInput=document.getElementById('sn61-search');
-  if(searchInput){
-    searchInput.addEventListener('input',function(){
-      const q=this.value.toLowerCase().trim();
-      document.querySelectorAll('#sn61-guide .equip-card').forEach(card=>{
-        const text=card.textContent.toLowerCase();
-        card.classList.toggle('search-hidden',q.length>0&&!text.includes(q));
-      });
-    });
-  }
+  rigSearch('sn61-search', 'sn61-guide');
 })();
 </script>
 <!-- ═══════ SQUAD 61 SECTION BREAK ═══════ -->
@@ -20277,22 +20171,7 @@ window.sq61Toggle = function(header) {
   header.classList.toggle('open', !isOpen);
   body.classList.toggle('visible', !isOpen);
 };
-var searchInput = document.getElementById('sq61-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#sq61-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-}
+rigSearch('sq61-search', 'sq61-guide');
 })();
 </script>
 
@@ -21236,22 +21115,7 @@ window.mp62Toggle = function(header) {
   header.classList.toggle('open', !isOpen);
   body.classList.toggle('visible', !isOpen);
 };
-var searchInput = document.getElementById('mp62-search');
-if (searchInput) {
-  searchInput.addEventListener('input', function() {
-    var q = this.value.trim().toLowerCase();
-    document.querySelectorAll('#mp62-guide .equip-card').forEach(function(card) {
-      var match = !q || card.textContent.toLowerCase().includes(q);
-      card.classList.toggle('search-hidden', !match);
-      if (match && q) {
-        var h = card.querySelector('.card-header');
-        var b = card.querySelector('.card-body');
-        if (h) h.classList.add('open');
-        if (b) b.classList.add('visible');
-      }
-    });
-  });
-}
+rigSearch('mp62-search', 'mp62-guide');
 })();
 </script>
 
