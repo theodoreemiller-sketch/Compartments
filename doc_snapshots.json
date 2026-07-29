@@ -826,25 +826,25 @@
     }
   },
   "Brushtruck 62": {
-    "saved_at": "2026-05-24T20:58:08.494957+00:00",
+    "saved_at": "2026-07-29T14:14:19.414576+00:00",
     "compartments": {
-      "Front Seat": [
+      "Front Seat:": [
         "Radios"
       ],
-      "GloveBox": [
+      "GloveBox:": [
         "ERG book",
         "Bug spray",
         "Fuel key",
         "Water guides"
       ],
-      "Back Seat": [
+      "Back Seat:": [
         "PFD",
         "Hot stick",
         "Box light - big flashlight",
         "Hose bag with garden hose"
       ],
-      "Container in back seat": [
-        "Small 1\" hose",
+      "Container in back seat:": [
+        "Small 1\u201d hose",
         "Strap",
         "Towell",
         "Safety Vest",
@@ -854,19 +854,19 @@
         "Garbage bags",
         "Pub Ed - public education stickers"
       ],
-      "Rear of Vehicle - Water System": [
+      "Rear of Vehicle:": [
         "250 gallon water tank",
-        "200' of 1\" hose on a hose reel",
+        "200\u2019 of 1\u201d hose on a hose reel -",
         "Handle for hose reel",
-        "2 pieces 12' long Black hard suction hose",
+        "2 pieces 12\u2019 long Black hard suction hose to replenish water tank on site from natural sources",
         "Metal filter for suction hose",
         "1 metal wheel chock",
         "Plastic gas tank to provide fuel for pump",
-        "2 1/2\" hose  - 50 feet long",
-        "1 \u00bd\" hose roll on cross lay - 150 feet",
+        "2 1/2\u201d hose  - 50 feet long",
+        "1 \u00bd\u201d hose roll on cross lay - 150 feet",
         "Fog Nozzle"
       ],
-      "Rear of Vehicle - Hand Tools": [
+      "Tools in back:": [
         "3 brush paddles to put out brush fires",
         "2 pike poles",
         "1 New York pole",
@@ -874,19 +874,17 @@
         "Hallagan tool",
         "Plastic funnel"
       ],
-      "Water Pump": [
-        "2 \u00bd\" inlet",
-        "1 \u00bd outlet"
-      ],
-      "Hydrant Bag": [
+      "Water pump": [
+        "\\\\2 \u00bd\u201d inlet\\\\***",
+        "\\\\1 \u00bd outlet\\\\***",
         "Gate valve - connects to hydrant",
-        "1\" garden hose",
+        "1\u201d garden hose",
         "Hydrant wrench",
-        "Small spanner for 1 \u00be\" hose and for gas shut off",
-        "Large spanner for 5\" hose",
+        "Small spanner for 1 \u00be\u201d hose and for gas shut off",
+        "Large spanner for 5\u201d hose",
         "Black electrical tape",
         "Steamer to Storz connectors",
-        "2 1/2\" Storz male and female",
+        "2 1/2\u201d Storz male and female",
         "Pipe  Wrench"
       ]
     }
@@ -1378,6 +1376,117 @@
         "2x 28\u2019 Extension Ladder",
         "16\u2019 Roof Ladder",
         "In box - 50\u2019 1 \u00be with fog nozzle"
+      ]
+    }
+  },
+  "Medic 62": {
+    "saved_at": "2026-07-28T14:16:52.005748+00:00",
+    "compartments": {
+      "Driver Side  Front Compartment": [
+        "Stair Chair",
+        "Oxygen Tank"
+      ],
+      "Middle Cabinet": [
+        "Hydrant Bag",
+        "Kevlar Vests"
+      ],
+      "Drivers Side Rear Cabinet": [
+        "Turnout Coat",
+        "Turnout Boots",
+        "Turnout Pants",
+        "Helmut",
+        "Backboards\u200b",
+        "Scoop stretcher\u200b",
+        "Head beds\u200b",
+        "C-collar bag\u200b",
+        "Spider straps\u200b",
+        "KED (Kendrick Extrication Device)\u200b",
+        "Short boards for splinting limbs\u200b"
+      ],
+      "Officier Side Front Cabinet": [
+        "Lucas"
+      ],
+      "Inside The Ambulance": [
+        "Breathing Bag",
+        "Access to Lucas"
+      ],
+      "Inside": [
+        "Trauma dressing (bulk, gauze, ace",
+        "wraps)\u200b",
+        "Tourniquets\u200b",
+        "Arm splints, slings\u200b",
+        "Ice/Warm packs\u200b",
+        "Saline\u200b",
+        "Bulb syringe"
+      ],
+      "Inside Left Front": [
+        "CPAP (Continuous Positive Airway Pressure)\u200b",
+        "NRB (Non-ReBreather mask)\u200b",
+        "Capnography\u200b",
+        "Nasopharyngeal/oropharyngeal airway\u200b",
+        "BVM (Bag Valve Mask)\u200b",
+        "ET tubes (Endotracheal Tube)\u200b",
+        "I-Gel airways\u200b",
+        "Nebulizer\u200b",
+        "Nasal cannula\u200b",
+        "Cricothyrotomy kit"
+      ],
+      "Inside Right Door": [
+        "Clear Cabinet\u200b",
+        "IV fluid warmer\u200b",
+        "Portable suction\u200b",
+        "Masks & gloves\u200b",
+        "Top Drawer\u200b",
+        "Syringes\u200b",
+        "IVs\u200b",
+        "Band-Aids\u200b",
+        "IV tubing\u200b",
+        "Bottom Drawer\u200b",
+        "IV fluids\u200b",
+        "Mag\u200b",
+        "Dopamine\u200b",
+        "IV tubing\u200b",
+        "Med boxes\u200b"
+      ],
+      "Inside Right Bench": [
+        "Triage bag\u200b",
+        "Vacuum splints\u200b",
+        "Extra splints\u200b",
+        "Blankets (also above)\u200b",
+        "ACR (Ambulance Child Restraint, coded by",
+        "weight)\u200b",
+        "Restraints (psych)\u200b",
+        "OB pack (obstetrical)\u200b"
+      ],
+      "Inside Left Infectious Waste": [
+        "Infectious waste bin\u200b",
+        "Sharps container"
+      ],
+      "Ambulance Cot": [
+        "Portable oxygen tank, airway stuff under head of cot\u200b",
+        "Monitor, pads in side bags\u200b",
+        "Anything red on cot has to do with moving (raising/ lower/ locking), bar under the head of the cot",
+        "can be shortened to fit the cot into elevators, but it must be fully extended to put back in ambulance\u200b",
+        "Unloading\u200b",
+        "Open rear doors\u200b",
+        "Make sure rear of ambulance has dumped (lowered)\u200b",
+        "If not close doors and reopen\u200b",
+        "Push in the release\u200b",
+        "Pull stretcher out until solid green light \u200b",
+        "Push Plus (+) button to \"add legs\u201c\u200b",
+        "Hold plus (+) button until release arm underneath swings free\u200b",
+        "Release cot by pushing small red button above plus and minus buttons (can also press manual release)\u200b",
+        "Reloading\u200b",
+        "Push stretcher into receiving track until you get green lights?\u200b",
+        "Push minus (-) button until legs fully retrack and you get a solid green light\u200b",
+        "Push stretcher in until locked\u200b",
+        "If stretcher will not move pull out slightly, and push in until locked\u200b",
+        "Confirm it is locked\u200b"
+      ],
+      "Behind Passenger Seat": [
+        "Extra portable oxygen tanks\u200b",
+        "ABC dry chem extinguisher\u200b",
+        "Pediatric bag (next to this on floor)\u200b"
       ]
     }
   }
