@@ -1,6 +1,6 @@
 {
   "Engine 62": {
-    "saved_at": "2026-07-24T14:13:39.075048+00:00",
+    "saved_at": "2026-08-01T14:18:41.856746+00:00",
     "compartments": {
       "Engine 62 Compartments": [
         "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
@@ -114,8 +114,11 @@
         "Pig axe",
         "Pick head axe/Fire Axe",
         "100\u2019 of utility rope confirm length",
-        "Pig Drain Cover -",
-        "RASP - 200 \u2018Search Rope, Has bead every 100 ft with butterfly knot stopper",
+        "Pig Drain Cover",
+        "RASP bag -",
+        "200 \u2018Search Rope, Has bead every 100 ft with butterfly knot stopper",
+        "Strobe light for rope end",
+        "Cable cutters",
         "Red Bag - 4 PFDS, 1 throw preserver",
         "W-Tool for hydraulic tool for spreading door jam  can be used as a battery ram",
         "Tool box",
@@ -568,10 +571,11 @@
     }
   },
   "Engine 63": {
-    "saved_at": "2026-05-25T13:31:53.922231+00:00",
+    "saved_at": "2026-08-01T14:18:41.885739+00:00",
     "compartments": {
       "Front of engine": [
-        "50' of 5' (different than other engines)",
+        "50\u2019 of 5\u2019 (different than other engines)",
+        "100\u2019 1 \u00be trash line with fog nozzle",
         "Gate Valve and Hydrant wrench attached to top of bumper",
         "Storz to steamer"
       ],
@@ -583,24 +587,22 @@
         "Gated Wye valve",
         "M2m. f2f, CFD, Reducer",
         "Storz to steamer",
-        "Storz to 1 1/2'",
+        "Storz to 1 \u00bd\u2019",
         "30 degree elbow Storz to reduce kinking",
         "Hydrant bag",
         "Gate valve",
         "Hydrant wrench",
         "Pipe wrench",
-        "Rope and hook to move charged 5\" pipe",
+        "Rope and hook to moke charged 5\u201d pipe",
         "2 small spanners",
         "2 double ended spanners",
-        "Storz to steam connectors",
-        "Storz reducer",
+        "Stroz to steam connectors",
+        "Storz reducer (to 1 \u00bd?)",
         "CFD coupler",
         "Rubber mallet",
-        "Chief Eductor 125 gpm",
-        "2 Person Hose roller",
-        "5\" LDH 30'"
-      ],
-      "Middle Compartment Drivers Side": [
+        "Chief Eductor 125 gpm - fill tube is in middle container",
+        "2 Person Hose roller to remove air and water from 5\u201d hose",
+        "5\u201d LDH 30\u2019",
         "Pick Axe",
         "Flat head axe",
         "Sledge Hammer",
@@ -610,18 +612,19 @@
       "Rear Compartment Drivers Side": [
         "Haligan",
         "Flat Head Axe",
-        "Silver Bullet pressurized water can",
+        "(Sledge hammer and Pick axe added after this pic)",
+        "Silver Bullet pressureized water can",
         "Manual Pump Can",
         "ABC Extinguisher",
         "Small Step Ladder"
       ],
       "Front Compartment Passengers Side": [
         "Akron Brass Hose hoist AKA coping tool",
-        "High-rise bag (6' 2 1/2\" hose, 90 degree coupling, pressure gauge, vise grips, spanner)",
-        "50 feet of 5\""
+        "High-rise bag (6\u2019  2 \u00bd \u201c hose, 90 degree coupling, pressure gauge, vise grips, spanner)",
+        "50 feet of 5\u201d"
       ],
       "Middle Compartment Passengers Side": [
-        "High-rise Pack w/Gated Wye 150' of 1 3/4\"",
+        "High-rise Pack w/Gated Wye 150\u2019 of 1 \u00be\u201d",
         "Bolt cutters"
       ],
       "Rear Compartment Passengers Side": [
@@ -634,24 +637,18 @@
       "Rear of Engine": [
         "Bucket with dawn soap and brush for decontamination",
         "Garden hose",
-        "Hurst Combi tool cuts and spreads",
+        "Hurst Combi tool cuts and spreads(different than other engines)",
         "2 shovels (scoop shovel, pointed shovel)",
         "6 foot Pike",
         "8 foot New York Hook",
         "10 foot New York",
         "6 foot Pike",
         "8 foot Pike",
-        "10 foot pike"
-      ],
-      "Top Hose Bays Rear": [
+        "10 foot pike",
         "1000ft 5 inch",
         "150ft 2 1/2 skid load w/ smooth bore nozzle connected to 400ft of 3 inch",
-        "150ft 1 3/4 skid load W/ breakaway fog nozzle connected to 500ft of 3\""
-      ],
-      "Middle Cross Lays": [
-        "200 feet 1 3/4 crosslay (total of 2 top and bottom)"
-      ],
-      "Middle Compartments": [
+        "150ft 1 3/4  skid load W/ breakaway fog nozzle connected to 500ft of 3\u201d 75 psi 150gpm",
+        "200 feet 1 \u00be crosslay (total of 2 top and bottom)",
         "95 gpm Nozzle",
         "95 gpm eductor",
         "5gal x 5 eco gel buckets",
@@ -659,23 +656,17 @@
         "Foam Aeration tube",
         "Pickup tube for the Chief Eductor",
         "Foam nozzle 75psi 125gpm",
-        "Oil Dry (kitty litter)"
-      ],
-      "Ladders": [
-        "28' Extension Ladder",
-        "16' Roof Ladder",
-        "10' Folding/Attic Ladder"
-      ],
-      "Cab Compartment": [
+        "Oil Dry (kitty litter) foam in other middle passenger side container",
+        "28\u2019 Extension Ladder",
+        "16\u2019 Roof Ladder",
+        "10\u2019 Folding/Attic Ladder",
         "AED",
         "4 Gas",
         "GasTrac",
         "HCN",
         "Water bottle",
         "SCBA air pack",
-        "Knox Box"
-      ],
-      "Top of Engine": [
+        "Knox Box",
         "Empty water bottle",
         "Foam/Gel",
         "Manifold"
@@ -890,7 +881,7 @@
     }
   },
   "Squad 61": {
-    "saved_at": "2026-07-27T14:17:31.004706+00:00",
+    "saved_at": "2026-08-01T14:18:41.905729+00:00",
     "compartments": {
       "Drivers Side Front Compartment": [
         "Light Tower Controller",
@@ -918,7 +909,7 @@
       ],
       "Driver Side Rear Cabinet - Air Cascade": [
         "Cascade Controls",
-        "Adapters (for Air Reel, Scuba, and Boom Fill)",
+        "Adapters (for Air Reel, SCBA, and Boom Fill)",
         "Towel",
         "Quick connect for SCBA",
         "O-rings",
@@ -945,7 +936,7 @@
         "2 High Lift Jacks/Farmer Jacks",
         "2 Scissor Jacks",
         "2 Bolt Cutters (1 large 1 small)",
-        "2 Life Satey Rope Bags 200\u2019 (Red & BLue)",
+        "2 Life Safety Rope Bags 200\u2019 (Red & BLue)",
         "4 Traffic Cones",
         "4 Res-Q-Jacks",
         "Dayton Submersible Pump",

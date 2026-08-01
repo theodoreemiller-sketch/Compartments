@@ -499,7 +499,7 @@ VEHICLES['e62'] = {
             "Top: Pick Head Axe / Fire Axe",
             "Mid: 100' Utility Rope",
             "Mid: Pig Drain Cover",
-            "Mid: RASP 200' Search Rope",
+            "Mid: RASP Bag — 200' Search Rope, Strobe Light, Cable Cutters",
             "Bottom: Red Bag (4 PFDs, 1 Throw Preserver)",
             "Bottom: W-Tool",
             "Bottom: Tool Box (Screwdrivers, Socket Wrench, Duct Tape, Pliers, etc.)",
