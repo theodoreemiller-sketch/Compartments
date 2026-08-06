@@ -62,7 +62,7 @@ def make_styles():
             fontName='Helvetica', fontSize=8.5, textColor=BLACK,
             spaceAfter=1, spaceBefore=1, leading=11, leftIndent=4),
         'header_title': ParagraphStyle('header_title',
-            fontName='Helvetica-Bold', fontSize=22, textColor=RED,
+            fontName='Helvetica-Bold', fontSize=22, leading=26, textColor=RED,
             alignment=TA_CENTER, spaceAfter=2),
         'header_sub': ParagraphStyle('header_sub',
             fontName='Helvetica', fontSize=10, textColor=colors.HexColor('#555550'),
@@ -81,7 +81,7 @@ def header_block(vehicle_name, subtitle=""):
     story.append(Spacer(1, 0.1*inch))
     story.append(Paragraph(vehicle_name.upper(), S['header_title']))
     story.append(Paragraph("SHIFT RIG CHECK", ParagraphStyle('src',
-        fontName='Helvetica-Bold', fontSize=13, textColor=DARK,
+        fontName='Helvetica-Bold', fontSize=13, leading=16, textColor=DARK,
         alignment=TA_CENTER, spaceAfter=2)))
     if subtitle:
         story.append(Paragraph(subtitle, S['header_sub']))
