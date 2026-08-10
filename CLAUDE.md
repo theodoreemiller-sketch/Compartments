@@ -39,7 +39,7 @@ GITDIR="<session outputs dir>/compartments.git"
 g() { git --git-dir="$GITDIR" --work-tree="$WORKTREE" "$@"; }
 ```
 
-If `$GITDIR` doesn't exist yet in a fresh session (outputs is cleared between sessions), recreate it:
+If `$GITDIR` doesn't exist yet in a fresh session (outputs is cleared between sessions), recreate it. Call `allow_cowork_file_delete` on the outputs git-dir *first, proactively* — fetch and reset both drop lock/temp files (`index.lock`, `HEAD.lock`, `tmp_pack_*`, `maintenance.lock`, etc.) that this sandbox can't unlink without it, and it happens on essentially every fresh session, not as an occasional edge case:
 ```
 mkdir -p "$GITDIR"
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" init -b main
@@ -50,10 +50,13 @@ git --git-dir="$GITDIR" --work-tree="$WORKTREE" remote add origin https://github
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" fetch origin
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" update-ref refs/heads/main origin/main
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" branch --set-upstream-to=origin/main main
+git --git-dir="$GITDIR" --work-tree="$WORKTREE" reset
 cp "$WORKTREE/scripts/check_datestamp.sh" "$GITDIR/hooks/pre-commit"
 chmod +x "$GITDIR/hooks/pre-commit"
 ```
 The GitHub credential (token) is stored in `.git-auth/.git-credentials` inside this project folder (gitignored, never committed) — it persists across sessions even though the git-dir itself doesn't.
+
+The `reset` line (no path, mixed mode) is mandatory — `update-ref` only points the branch at the right commit, it does not populate the index. Skip `reset` and the very next `git status` will show every tracked file as simultaneously deleted and untracked (index empty vs. a populated HEAD), which reads like the whole repo got wiped. It's a false alarm caused by the empty index, not real data loss — but don't skip the step, and don't ever try to "restore" files based on that reading.
 
 The last two lines reinstall the pre-commit hook (`scripts/check_datestamp.sh`, a persistent file in this folder) into the fresh git-dir. This hook blocks any commit that touches `index.html` unless its 📅 Creation Date / Last Updated field shows today's date — it enforces the mandatory rule above automatically. Don't skip reinstalling it after recreating `$GITDIR`.
 
@@ -64,7 +67,7 @@ g commit -m "<describe the change>"
 g push origin main
 ```
 
-If a git command fails with "Operation not permitted" on a lock/temp file, call the file-delete-approval tool on the relevant directory (the project folder and/or the outputs git-dir) rather than giving up — deletion just needs to be explicitly enabled per session.
+If a git command still fails with "Operation not permitted" on a lock/temp file after the proactive `allow_cowork_file_delete` call above, remove the offending lock file (e.g. `rm -f "$GITDIR/index.lock" "$GITDIR/HEAD.lock"`) and retry the git command — don't give up.
 
 ## Source of Truth
 - Vehicle compartment inventories come from the Google Docs linked in `doc_timestamps.json`
