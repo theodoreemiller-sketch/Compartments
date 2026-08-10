@@ -64,7 +64,7 @@ VEHICLE_SECTION_IDS = {
     "SCBA":         "scba-guide-content",
     "Tower 62":     "t62-guide",
     "Snorkel 61":   "sn61-guide",
-    "Medic 62":     "medic62-guide",
+    "Medic 62":     "mp62-guide",
 }
 
 
@@ -119,24 +119,45 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
     Parse the HTML for a vehicle section into:
       {compartment_name: [card_title, card_title, ...]}
 
-    Dispatches to a vehicle-specific parser based on section_id because
-    different vehicles use different HTML card architectures:
+    Standard markup covers every vehicle except SCBA:
+      <section class="comp-section"> wraps one compartment.
 
-      Standard (E61, E60, E63, U61, U62, SQ61, T62):
-        <section class="comp-section"> → <h2> → <div class="card-title">
+      Compartment name — checked in order:
+        1. <h2>...</h2>                      (most vehicles)
+        2. <div class="section-title">...</div>  (e.g. Brushtruck 62)
 
-      Engine 62 (e62-guide):
-        <div class="section-header"> → <h2> (compartment)
-        <div class="eq-title">           (item, may span tags like <span class="qty">)
+      Item names — checked per compartment, in order:
+        1. <div class="card-title">...</div>              (most vehicles)
+        2. <div class="card-header">...<span>...</span>   (legacy cards,
+           e.g. Utility 61 — item name is a bare <span> with no class,
+           as the first child of card-header, predating the card-title
+           convention). Only used as a fallback when a compartment has
+           zero card-title matches, so vehicles that mix both formats
+           across different compartments still parse correctly.
 
-      Brushtruck 62 (bt62-guide):
-        <div class="section-block"> → <div class="section-title"> (compartment)
-        <div class="eq-name">                                      (item)
+    SCBA (scba-guide-content):
+      Study-guide format — not a compartment inventory.
+      <h2 class="scba-section"> headings are tracked as compartments
+      with a single sentinel item so snapshots can detect additions/removals.
 
-      SCBA (scba-guide-content):
-        Study-guide format — not a compartment inventory.
-        <h2 class="scba-section"> headings are tracked as compartments
-        with a single sentinel item so snapshots can detect additions/removals.
+    HISTORY / WARNING: This function used to dispatch Engine 62 and
+    Brushtruck 62 to bespoke parsers (_parse_e62 / _parse_bt62) built for
+    an older card layout (eq-title / section-block+eq-name respectively).
+    Both vehicles' HTML was later rewritten to the standard comp-section
+    layout above, but nobody updated the dispatch — so both silently
+    returned ZERO compartments while still reporting "success" (empty
+    dict, no exception). That made diff_doc_vs_html claim every doc item
+    was "missing from the HTML" even when the HTML was current, which is
+    exactly the kind of silent failure this project can't afford. Medic 62
+    had a sibling bug: VEHICLE_SECTION_IDS pointed at the section DIVIDER
+    id ("medic62-guide") instead of the actual content div id
+    ("mp62-guide"), so it captured an empty sliver of HTML between the
+    two. All three are fixed as of 2026-08-10.
+    If you ever see a vehicle return 0 compartments (or a compartment
+    count far below its <section class="comp-section"> count), don't
+    assume the doc changed — check the vehicle's actual markup first with
+    a quick regex count (comp-section / h2 / section-title / card-title
+    occurrences) before writing a new special-case parser.
     """
     if html is None:
         with open(HTML_PATH, "r", encoding="utf-8") as f:
@@ -156,15 +177,10 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
     else:
         section_html = html[start_idx:]
 
-    # ── Dispatch by section ID ─────────────────────────────────────────────
-    if section_id == "e62-guide":
-        return _parse_e62(section_html)
-    if section_id == "bt62-guide":
-        return _parse_bt62(section_html)
     if section_id == "scba-guide-content":
         return _parse_scba(section_html)
 
-    # ── Standard parser (comp-section + card-title) ────────────────────────
+    # ── Standard parser (comp-section, with header/item format fallbacks) ──
     compartments = {}
     comp_pattern = re.compile(
         r'<section[^>]*class="comp-section"[^>]*>(.*?)</section>',
@@ -172,84 +188,51 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
     )
     for comp_match in comp_pattern.finditer(section_html):
         comp_html = comp_match.group(1)
+
         h2 = re.search(r"<h2[^>]*>(.*?)</h2>", comp_html, re.DOTALL)
-        if not h2:
+        if h2:
+            comp_name = _strip_tags(h2.group(1)).strip()
+        else:
+            section_title = re.search(
+                r'<div class="section-title">(.*?)</div>', comp_html, re.DOTALL
+            )
+            comp_name = _strip_tags(section_title.group(1)).strip() if section_title else None
+
+        if not comp_name:
             continue
-        comp_name = _strip_tags(h2.group(1)).strip()
+
         card_titles = [
             _strip_tags(m.group(1)).strip()
             for m in re.finditer(
                 r'<div class="card-title">(.*?)</div>', comp_html, re.DOTALL
             )
         ]
+        if not card_titles:
+            # Legacy fallback: bare <span> as the first child of card-header,
+            # from before the card-title class existed on this vehicle.
+            card_titles = [
+                _strip_tags(m.group(1)).strip()
+                for m in re.finditer(
+                    r'<div class="card-header"[^>]*>\s*<span>(.*?)</span>',
+                    comp_html, re.DOTALL
+                )
+            ]
+
+        if not card_titles:
+            # Reference-list fallback: some sections (e.g. Engine 62's
+            # "Top of the Engine") are real inventory but rendered as plain
+            # <ul class="gear-list"><li><strong>Item:</strong> description>
+            # prose instead of individual equip-cards. Pull the bolded lead
+            # word(s) as the item name.
+            card_titles = [
+                _strip_tags(m.group(1)).strip().rstrip(":")
+                for m in re.finditer(
+                    r'<li>\s*<strong>(.*?)</strong>', comp_html, re.DOTALL
+                )
+            ]
+
         if comp_name and card_titles:
             compartments[comp_name] = card_titles
-    return compartments
-
-
-def _parse_e62(section_html: str) -> dict:
-    """
-    Engine 62 parser.
-    Compartments: <div class="section-header"> → inner <h2>
-    Items:        <div class="eq-title"> (may contain <span> tags)
-    Strategy: find all compartment header positions, then collect eq-titles
-    between consecutive compartment positions.
-    """
-    # Collect (position, name) for each compartment header
-    header_pat = re.compile(
-        r'<div class="section-header"[^>]*>.*?<h2[^>]*>(.*?)</h2>',
-        re.DOTALL
-    )
-    headers = [(m.start(), _strip_tags(m.group(1)).strip())
-               for m in header_pat.finditer(section_html)]
-
-    if not headers:
-        return {}
-
-    # Collect all eq-title positions + text
-    item_pat = re.compile(r'<div class="eq-title">(.*?)</div>', re.DOTALL)
-    all_items = [(m.start(), _strip_tags(m.group(1)).strip())
-                 for m in item_pat.finditer(section_html)]
-
-    compartments = {}
-    for i, (hpos, hname) in enumerate(headers):
-        next_hpos = headers[i + 1][0] if i + 1 < len(headers) else len(section_html)
-        items = [text for pos, text in all_items if hpos <= pos < next_hpos and text]
-        if items:
-            compartments[hname] = items
-
-    return compartments
-
-
-def _parse_bt62(section_html: str) -> dict:
-    """
-    Brushtruck 62 parser.
-    Compartments: <div class="section-block"> → <div class="section-title">
-    Items:        <div class="eq-name"> within the same section-block
-    """
-    block_pat = re.compile(
-        r'<div class="section-block"[^>]*>(.*?)</div>\s*\n\s*\n',
-        re.DOTALL
-    )
-    # Use a broader approach: split on section-block boundaries
-    blocks = re.split(r'(?=<div class="section-block")', section_html)
-
-    compartments = {}
-    for block in blocks:
-        title_m = re.search(r'<div class="section-title">(.*?)</div>', block, re.DOTALL)
-        if not title_m:
-            continue
-        comp_name = _strip_tags(title_m.group(1)).strip()
-
-        items = [
-            _strip_tags(m.group(1)).strip()
-            for m in re.finditer(r'<div class="eq-name">(.*?)</div>', block, re.DOTALL)
-        ]
-        items = [it for it in items if it]
-
-        if comp_name and items:
-            compartments[comp_name] = items
-
     return compartments
 
 
