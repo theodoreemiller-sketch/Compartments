@@ -434,6 +434,7 @@ VEHICLES['e62'] = {
             "Small Utility Flags",
             "Black Tool Box (Grease, Screwdrivers, Pliers, Carb Cleaner, Silicone, Heat Gun, Lube Stick)",
             "Airpack",
+            "RIT Pack",
         ]),
         ("Comp 1 — Engineer's Compartment (Middle Shelf)", [
             "2 Double Ended Spanners (Storz and Hose)",
@@ -1093,6 +1094,7 @@ VEHICLES['sq61'] = {
             "K12 Saw",
             "Chainsaw",
             "Chain Oil",
+            "Extra Chains",
         ]),
         ("Driver Side Comp 3 — Over Wheel (Bottom Shelf)", [
             "\u00bd\" Impact Wrench",
@@ -1124,7 +1126,8 @@ VEHICLES['sq61'] = {
             "Hurst Ram Tool",
             "Hurst Cutter",
             "Hurst Spreader",
-            "B-Post Tool",
+            "B-Post Tool (V-Rocker)",
+            "Windows Punch",
         ]),
         ("Transverse — Long Shelf", [
             "2 Akron Lights",
@@ -1135,7 +1138,6 @@ VEHICLES['sq61'] = {
             "Air Chisel",
             "2 Buckets (Tow Hooks and Chain)",
             "RIT Airpack",
-            "Window Punch",
             "Dayton Submersible Pump",
             "Road Salt",
             "2 Bolt Cutters (1 Large, 1 Small)",

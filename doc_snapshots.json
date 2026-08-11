@@ -1,6 +1,6 @@
 {
   "Engine 62": {
-    "saved_at": "2026-08-10T13:34:43.029528+00:00",
+    "saved_at": "2026-08-11T14:15:42.010007+00:00",
     "compartments": {
       "Engine 62 Compartments": [
         "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
@@ -42,6 +42,7 @@
         "Heat gun and attachments",
         "Lube stick",
         "Airpack",
+        "RIT Pack",
         "2 double ended spanners - Storz and hose",
         "2 small hose spanners with gas turn off notch",
         "2 Gated Wye ball valves - 2 \u00bd to 1 \u00bd",
@@ -883,7 +884,7 @@
     }
   },
   "Squad 61": {
-    "saved_at": "2026-08-01T14:18:41.905729+00:00",
+    "saved_at": "2026-08-10T14:16:17.585826+00:00",
     "compartments": {
       "Drivers Side Front Compartment": [
         "Light Tower Controller",
@@ -892,22 +893,23 @@
         "Dust/Particulate Face Mask"
       ],
       "Drivers Side Traverse": [
-        "Winch",
-        "Remote for winch",
-        "Steering Wheel Cutter"
+        "Winch (Max Load 10,000lbs, 80ft long, should be handled by strap on hook, should be operated under rope tension \\[not loose\\])",
+        "Remote for winch (also wireless remote \\[may not be working\\])",
+        "Steering Wheel Cutter (manual small cutting tool)"
       ],
       "Driver's Side Compartment 3 over Wheel": [
         "Circular Saw",
         "K12 Saw",
         "Chainsaw",
         "Chain Oil",
-        "1/2\" Impact Wrench",
+        "Extra chains for chainsaw (in black box)",
+        "1/2\" Impact Wrench (Should only use black titanium bits on rear officer\u2019s side compartment)",
         "1/4\" Impact Wrench with Bits",
         "Angle Grinder",
         "Reciprocating Saw (with blades for metal and wood)",
         "Blades",
-        "Charger",
-        "Bits"
+        "Battery Charger",
+        "Bits for smaller impact wrench"
       ],
       "Driver Side Rear Cabinet - Air Cascade": [
         "Cascade Controls",
@@ -930,7 +932,8 @@
         "Hurst Ram Tool",
         "Hurst Cutter",
         "Hurst Spreader",
-        "B-Post Tool"
+        "B-Post Tool (aka V-Rocker, used as stabilization platform for Ram Tool)",
+        "Windows Punch (aka center punch, use on corner of car windows)"
       ],
       "Transverse Long Shelf Compartments": [
         "2 Buckets tow hooks and chain",
@@ -942,9 +945,8 @@
         "4 Traffic Cones",
         "4 Res-Q-Jacks",
         "Dayton Submersible Pump",
-        "RIT Airpack",
-        "Air Chisel",
-        "Window Punch",
+        "RIT Airpack (25ft long, 60 minute bottle, about 4500 psi)",
+        "Air Chisel (wood block nearby for testing, do not dry-fire)",
         "Road Salt"
       ],
       "Officers Side Compartment Over Wheel": [
