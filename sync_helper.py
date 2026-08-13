@@ -50,6 +50,7 @@ from datetime import datetime, timezone
 WORKSPACE = "/Users/ted.miller/Documents/Claude/Projects/UNOFFICIAL APPARATUS STUDY GUIDES"
 HTML_PATH  = f"{WORKSPACE}/index.html"
 SNAPSHOTS_PATH = f"{WORKSPACE}/doc_snapshots.json"
+CHANGES_TODAY_PATH = f"{WORKSPACE}/changes_today.json"  # reset + populated fresh each morning-doc-sync run; read by vehicle-new-item-email-alert
 
 # ── Vehicle → HTML section ID mapping ─────────────────────────────────────
 VEHICLE_SECTION_IDS = {
@@ -617,6 +618,64 @@ def diff_snapshots(vehicle: str, new_doc_text: str) -> str:
 
     lines.append("")
     return "\n".join(lines)
+
+
+def reset_changes_today() -> None:
+    """
+    Call ONCE, at the very start of a morning-doc-sync run, before processing
+    any vehicle. Clears changes_today.json to {} so the file only ever
+    reflects today's run — no stale entries from a previous day linger if a
+    vehicle that changed yesterday doesn't change again today.
+    """
+    with open(CHANGES_TODAY_PATH, "w", encoding="utf-8") as f:
+        json.dump({}, f, indent=2)
+
+
+def get_added_items(vehicle: str, new_doc_text: str) -> dict:
+    """
+    Same comparison as diff_snapshots(), but returns structured data instead
+    of a formatted report: {compartment_name: [added_item, ...]}, including
+    only compartments that actually gained an item. Call this BEFORE
+    save_snapshot() overwrites the baseline, so the comparison is against
+    the pre-update snapshot — exactly what "new since last check" means.
+
+    Returns {} if there's no saved snapshot yet for this vehicle (first-time
+    sync) rather than flagging every doc item as "added" against an empty
+    baseline.
+    """
+    snapshots = _load_snapshots()
+    if vehicle not in snapshots:
+        return {}
+
+    old_comps = snapshots[vehicle]["compartments"]
+    new_comps = parse_doc_compartments(new_doc_text)
+
+    added_by_comp = {}
+    for comp in set(list(old_comps) + list(new_comps)):
+        if comp == "__preamble__":
+            continue
+        added = sorted(set(new_comps.get(comp, [])) - set(old_comps.get(comp, [])))
+        if added:
+            added_by_comp[comp] = added
+    return added_by_comp
+
+
+def record_change(vehicle: str, added_by_comp: dict) -> None:
+    """
+    Merge one vehicle's added items into changes_today.json. No-op if
+    added_by_comp is empty (nothing to record). Call reset_changes_today()
+    once at the start of the run before any calls to this function.
+    """
+    if not added_by_comp:
+        return
+    data = {}
+    p = Path(CHANGES_TODAY_PATH)
+    if p.exists():
+        with open(p, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    data[vehicle] = added_by_comp
+    with open(CHANGES_TODAY_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
 
 
 def _load_snapshots() -> dict:
