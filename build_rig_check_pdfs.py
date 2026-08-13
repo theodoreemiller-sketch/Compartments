@@ -434,7 +434,7 @@ VEHICLES['e62'] = {
             "Small Utility Flags",
             "Black Tool Box (Grease, Screwdrivers, Pliers, Carb Cleaner, Silicone, Heat Gun, Lube Stick)",
             "Airpack",
-            "RIT Pack",
+            "RIT Pack (Outside Pocket: Cable Cutters, Webbing)",
         ]),
         ("Comp 1 — Engineer's Compartment (Middle Shelf)", [
             "2 Double Ended Spanners (Storz and Hose)",
