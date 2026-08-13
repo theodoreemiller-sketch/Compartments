@@ -39,7 +39,15 @@ GITDIR="<session outputs dir>/compartments.git"
 g() { git --git-dir="$GITDIR" --work-tree="$WORKTREE" "$@"; }
 ```
 
-If `$GITDIR` doesn't exist yet in a fresh session (outputs is cleared between sessions), recreate it. Call `allow_cowork_file_delete` on the outputs git-dir *first, proactively* — fetch and reset both drop lock/temp files (`index.lock`, `HEAD.lock`, `tmp_pack_*`, `maintenance.lock`, etc.) that this sandbox can't unlink without it, and it happens on essentially every fresh session, not as an occasional edge case:
+If `$GITDIR` doesn't exist yet in a fresh session (outputs is cleared between sessions), recreate it. Call `allow_cowork_file_delete` on the outputs git-dir *first, proactively, before any git command runs* — `git fetch` immediately creates and cleans up its own temp files (`tmp_pack_*`, `tmp_idx_*`, `maintenance.lock`, `HEAD.lock`, `.keep` files), and this sandbox can't unlink any of them, even ones git just created itself, without a delete grant in place first.
+
+**Path format matters and is the #1 cause of wasted/failed approval calls:** `allow_cowork_file_delete` only recognizes the sandbox/bash-mapped path (the one bash's `pwd` shows, e.g. `/sessions/<session-id>/mnt/outputs/compartments.git`) — it returns "Could not find mount for path" on the Mac-style path (`/Users/ted.miller/Library/.../outputs/compartments.git`) shown elsewhere in these instructions and in file tool results. Always derive the path from bash directly (`$(pwd)/compartments.git`, since bash's cwd is the outputs dir) rather than typing out a Mac-style path by hand. Called correctly, one call grants delete for the whole outputs folder for the rest of the session — it doesn't need to be repeated per file, and it works even before the target path exists:
+
+```
+GITDIR="$(pwd)/compartments.git"   # run from bash — pwd is already the outputs dir
+```
+Call `allow_cowork_file_delete` with that exact `$GITDIR` value as `file_path` *before* `mkdir`/`git init` below. Do this every time, even if it looks redundant — the grant does not persist across sessions.
+
 ```
 mkdir -p "$GITDIR"
 git --git-dir="$GITDIR" --work-tree="$WORKTREE" init -b main
@@ -67,7 +75,15 @@ g commit -m "<describe the change>"
 g push origin main
 ```
 
-If a git command still fails with "Operation not permitted" on a lock/temp file after the proactive `allow_cowork_file_delete` call above, remove the offending lock file (e.g. `rm -f "$GITDIR/index.lock" "$GITDIR/HEAD.lock"`) and retry the git command — don't give up.
+If a git command still fails with "Operation not permitted" on a lock/temp file after the proactive `allow_cowork_file_delete` call above, the grant call almost certainly used the wrong path format (see above — it must be the sandbox `pwd`-based path, not a Mac-style path). Re-run `allow_cowork_file_delete` with the sandbox path, then `rm -f` the offending lock file and retry the git command — don't give up.
+
+**If `g push origin main` is rejected** ("fetch first" / "remote contains work you do not have locally") — this happens routinely since multiple scheduled tasks push to this repo the same morning. Do NOT use `git stash` or `git rebase` to resolve it — both try to unlink/overwrite tracked files during checkout, which this sandbox blocks (`Operation not permitted`), and will leave the repo half-reset. Instead:
+```
+g fetch origin
+g update-ref refs/heads/main origin/main
+g reset
+```
+Your file's on-disk content is untouched by this — it's not restored from git, so nothing is lost. Then check `g status`: if it now shows "nothing to commit," another task's push already carried your exact change (harmless, skip re-committing). Otherwise re-add/commit/push as normal.
 
 ## Source of Truth
 - Vehicle compartment inventories come from the Google Docs linked in `doc_timestamps.json`
