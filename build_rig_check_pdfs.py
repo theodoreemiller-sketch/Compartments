@@ -1587,7 +1587,8 @@ VEHICLES['m62'] = {
             "LUCAS Device (Mechanical CPR)",
         ]),
         ("Inside the Cab", [
-            "Verify contents with officer during rig check",
+            "Maps",
+            "Fuel Keys",
         ]),
         ("Inside the Ambulance — Overhead", [
             "Breathing Bag",

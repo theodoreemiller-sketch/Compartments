@@ -3643,7 +3643,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 8/13/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 8/14/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -21283,6 +21283,7 @@ rigSearch('sq61-search', 'sq61-guide');
   <a class="nav-link" href="#mp62-boxgeneral">Box — General Access Items</a>
   <hr class="nav-divider">
   <div class="nav-section-label">Cab</div>
+  <a class="nav-link" href="#mp62-cab">Inside The Cab</a>
   <a class="nav-link" href="#mp62-behindseat">Behind Passenger Seat</a>
 </nav>
 <main id="mp62-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - 280px); overflow-x:hidden;">
@@ -22043,6 +22044,43 @@ rigSearch('sq61-search', 'sq61-guide');
           <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The LUCAS device is stored in the officer's side front exterior cabinet, but it's also reachable from inside the patient compartment — so a crew member already in the box during a code doesn't have to exit and re-enter the rig to retrieve it.</p></div>
         </div>
         <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Both Access Points</strong>Whichever way you learn the rig first, go back and confirm the other access point too. In a code, whoever's closest grabs it — that could be either side.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ INSIDE THE CAB ══════════════ -->
+  <section class="comp-section" id="mp62-cab">
+    <div class="section-header">
+      <div class="section-icon">🗺️</div>
+      <div><h2>Inside The Cab</h2><div class="sub">Maps &middot; Fuel Keys</div></div>
+    </div>
+
+    <!-- MAPS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Maps</div><span class="card-aka">AKA: Hard-copy maps, paper maps, map book</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Backup paper maps of the response area kept in the cab. The MDT and phone GPS are your primary navigation, but both are electronics — and electronics fail, lose signal, or lock up at the worst possible time. The map is what you fall back on when that happens.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Know How to Read It Before You Need It</strong>Don't wait for a dead MDT on an unfamiliar street at 0300 to find out you don't know how the map book is organized. Look it over on a slow shift so you're not learning the index under pressure.</div></div>
+      </div>
+    </div>
+
+    <!-- FUEL KEYS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Fuel Keys</div><span class="card-aka">AKA: Fuel cards, gas keys, fuel fob</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The key or fob that unlocks the department's fuel pump so you can fill the rig. Kept in the cab so whoever's on the fuel run doesn't have to track one down.</p></div>
+        </div>
+        <div class="callout callout-danger"><span class="callout-icon">⛽</span><div class="callout-content"><strong>Rookie Mistake — Not Confirming It's There at Shift Check</strong>A rig that runs low on fuel mid-shift because the key walked off — or nobody checked for it — is a rig that's out of service when a call drops. Verify it's in the cab every shift, same as any other piece of equipment.</div></div>
       </div>
     </div>
 
