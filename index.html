@@ -3643,7 +3643,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 8/14/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 8/15/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -9521,7 +9521,26 @@ rigSearch('u61-search', 'u61-guide');
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Know the Difference</div><p>E62 carries a <strong>RIT pack on the top shelf of the rear compartment</strong>. E61 does <strong>not</strong> have a RIT pack. If you're riding E61 and get assigned a RIT role, coordinate with command regarding which rig is supplying that equipment.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Know the Difference</div><p>E62 carries a <strong>RIT pack on the top shelf of the rear compartment (Comp 3, Driver's Side Rear)</strong>. E61 does <strong>not</strong> have a RIT pack. If you're riding E61 and get assigned a RIT role, coordinate with command regarding which rig is supplying that equipment.</p></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-content">
+            <strong>E62 Actually Carries TWO RIT Packs — Know Both</strong>
+            The source doc update (8/15/2026) adds a second location: E62 also stages a RIT pack on the <strong>top shelf of the Engineer's Compartment (Comp 1)</strong>, in addition to the one in Comp 3 rear listed above. This isn't an error — it matches E62's own compartment guide. Bottom line: if you're riding E61 and get pulled onto a RIT assignment off E62, don't assume there's only one pack or that the first one you grab is "the" RIT pack. Know both spots on E62 cold before you ever need one.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">Doc Note — "Cabin Compartment"</div><span class="card-aka">Flagged from source doc, undetailed</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>What This Is</div><p>The source compartment doc added a bare line item reading only "Cabin Compartment" under the E61-specific differences list, with no further detail on what changed or what it refers to. Rather than invent an explanation, this guide is flagging it as-is. If you know what this refers to, get it added to the doc properly — a one-word note like this helps nobody at 2 AM.</p></div>
         </div>
       </div>
     </div>
