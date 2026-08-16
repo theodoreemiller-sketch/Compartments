@@ -434,7 +434,6 @@ VEHICLES['e62'] = {
             "Small Utility Flags",
             "Black Tool Box (Grease, Screwdrivers, Pliers, Carb Cleaner, Silicone, Heat Gun, Lube Stick)",
             "Airpack",
-            "RIT Pack (Outside Pocket: Cable Cutters, Webbing)",
         ]),
         ("Comp 1 — Engineer's Compartment (Middle Shelf)", [
             "2 Double Ended Spanners (Storz and Hose)",
@@ -468,7 +467,7 @@ VEHICLES['e62'] = {
             "3 Air Tanks (Over Tire — E62 specific)",
         ]),
         ("Comp 3 — Driver Side Rear", [
-            "Top: RIT Pack (6ft Hose, Extra SCBA, UCA/Buddy Connectors, 60min 4500 psi)",
+            "Top: RIT Pack (6ft Hose, Extra SCBA, UCA/Buddy Connectors, 60min 4500 psi; Outside Pocket: Cable Cutters, Webbing)",
             "Mid: 2 Portable Work Lights",
             "Mid: Cellar Nozzle on Cellar Pipe",
             "Bottom: Small Step Ladder",

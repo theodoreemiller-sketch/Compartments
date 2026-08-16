@@ -1,6 +1,6 @@
 {
   "Engine 62": {
-    "saved_at": "2026-08-13T12:48:27.001655+00:00",
+    "saved_at": "2026-08-16T16:54:20.895063+00:00",
     "compartments": {
       "Engine 62 Compartments": [
         "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
@@ -42,9 +42,6 @@
         "Heat gun and attachments",
         "Lube stick",
         "Airpack",
-        "RIT Pack",
-        "Inside RIT pack outside pocket are Cable Cutters",
-        "Inside RIT pack outside pocket is Webbing",
         "2 double ended spanners - Storz and hose",
         "2 small hose spanners with gas turn off notch",
         "2 Gated Wye ball valves - 2 \u00bd to 1 \u00bd",
@@ -85,6 +82,8 @@
       ],
       "Compartment 3 Drivers Side Rear Of Engine": [
         "RIT pack - Six foot hose, extra SCBA, UCA and buddy connectors, 60 minute, 4500",
+        "Cable Cutters in RIT Pack Pocket",
+        "Webbing in RIT Pack Pocket",
         "2 portable work lights",
         "Cellar Nozzle on a cellar pipe",
         "Small step ladder",
@@ -102,7 +101,7 @@
         "2 New York Hooks 6,8 feet",
         "Attic ladder 10 length (AKA Pencil Ladder)",
         "6 batteries",
-        "1 battery to AC connector*******",
+        "1 battery to AC connector\\\\\\\\\\\\\\*",
         "Hydraulic Ram",
         "Quick Kick ram support - silver with teeth",
         "Battery Powered Reciprocating Saw",
@@ -143,11 +142,11 @@
         "Window glazing tool",
         "Razor scraper",
         "Small sledge hammer",
-        "Voltage tester*************",
+        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
         "Allen Key wrench",
         "Pliers",
         "Punch",
-        "3 metric box wrenches 18mm, , "
+        "3 metric box wrenches 18mm, \\, \\"
       ],
       "Compartment 6 Officer Side Middle": [
         "Water helmet",
@@ -216,7 +215,7 @@
     }
   },
   "Engine 61": {
-    "saved_at": "2026-08-15T15:06:02.799350+00:00",
+    "saved_at": "2026-08-16T16:54:20.912684+00:00",
     "compartments": {
       "Engine 61 Compartments": [
         "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
@@ -229,8 +228,7 @@
         "Passenger side rear compartment E61 contains a Pig",
         "Passenger side middle compartment E61 has cleats for bottom of boots to keep from sliding on ice",
         "E61 Hacksaw in tool box",
-        "Cabin Compartment",
-        "E62 RIT Pack in Engineers Compartment"
+        "Cabin Compartment"
       ],
       "Front Of Engine": [
         "Trash Line - 100ft - Preconnected",
@@ -367,7 +365,7 @@
         "Window glazing tool",
         "Razor scraper",
         "Small sledge hammer",
-        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\*",
+        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
         "Allen Key wrench",
         "Pliers",
         "Punch",
