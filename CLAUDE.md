@@ -26,67 +26,36 @@ or
 
 Update it to today's date before saving. No exceptions.
 
+As of 2026-08-18 this is also enforced server-side: `.github/workflows/static.yml` has a `validate` job that fails the deploy if `index.html` changed in a push but its date field doesn't match that day's date (America/Chicago). This catches manual GitHub web edits too — the old local pre-commit hook (`scripts/check_datestamp.sh`) only ever fired for git-based commits, which is exactly the gap that let this slip through undetected in the past.
+
 ## GitHub Sync — MANDATORY RULE
-This project is tracked in the GitHub repo `theodoreemiller-sketch/Compartments` (GitHub Pages auto-deploys on every push to `main`).
+*(Rewritten 2026-08-18 after a full afternoon of tracing exactly how git behaves in this environment. Read this before touching git on this project — the version before this one described a workflow that cannot work here and wasted real time.)*
 
-**Every time `index.html` (or any other file in this folder) is modified by Claude, commit and push the change to GitHub as part of that same turn — don't wait to be asked.**
+This project is tracked in the GitHub repo `theodoreemiller-sketch/Compartments` (GitHub Pages auto-deploys on every push to `main`, gated by the `validate` job above).
 
-Because this folder does not allow deleting/renaming files directly (only creating/modifying), the git metadata directory lives outside the folder, in the session's `outputs` directory, with `--work-tree` pointed back at this project folder. Use this pattern for every git command (adjust the outputs path per session if it changes):
+**Do not use the old `outputs` directory / `allow_cowork_file_delete` / `--git-dir`+`--work-tree` procedure.** It assumed a session type with a persistent `outputs` directory and a tool that grants file-delete permission on demand. Neither exists in the Cowork session type this project actually runs in — there is no `allow_cowork_file_delete` tool (confirmed via a live tool search, not just absent from a list), and there's no `outputs` directory to put a git-dir in. Following those old steps just burns a session rediscovering that they don't apply.
 
+**Known hard blocker — read this before assuming a push failure is your fault:** even a *correctly* configured push to this repo — real clone, valid stored credential, clean commit — gets rejected by the cloud session's own outbound proxy, not by GitHub:
 ```
-WORKTREE="<this project folder>"
-GITDIR="<session outputs dir>/compartments.git"
-g() { git --git-dir="$GITDIR" --work-tree="$WORKTREE" "$@"; }
+remote: access denied by the git proxy: theodoreemiller-sketch/Compartments is not in this
+session's authorized repository set, so the proxy will not inject a credential for it.
 ```
+This is a platform-level restriction on the sandbox itself. It is not a credentials problem, not a git-config problem, and not something fixable from inside a session — don't spend time debugging `.git-auth/.git-credentials` or remote URLs when this is the error; the setup is fine, the proxy is the blocker. If this is ever lifted (the repo added to the session's authorized set), a plain `git clone` / `commit` / `push` into a scratch directory such as `/tmp/repo` will work with no special tooling — `/tmp` has no delete restrictions, unlike the mounted project folder, so none of the old workarounds are needed even then.
 
-If `$GITDIR` doesn't exist yet in a fresh session (outputs is cleared between sessions), recreate it. Call `allow_cowork_file_delete` on the outputs git-dir *first, proactively, before any git command runs* — `git fetch` immediately creates and cleans up its own temp files (`tmp_pack_*`, `tmp_idx_*`, `maintenance.lock`, `HEAD.lock`, `.keep` files), and this sandbox can't unlink any of them, even ones git just created itself, without a delete grant in place first.
+**What actually works today, given that blocker:**
 
-**Path format matters and is the #1 cause of wasted/failed approval calls:** `allow_cowork_file_delete` only recognizes the sandbox/bash-mapped path (the one bash's `pwd` shows, e.g. `/sessions/<session-id>/mnt/outputs/compartments.git`) — it returns "Could not find mount for path" on the Mac-style path (`/Users/ted.miller/Library/.../outputs/compartments.git`) shown elsewhere in these instructions and in file tool results. Always derive the path from bash directly (`$(pwd)/compartments.git`, since bash's cwd is the outputs dir) rather than typing out a Mac-style path by hand. Called correctly, one call grants delete for the whole outputs folder for the rest of the session — it doesn't need to be repeated per file, and it works even before the target path exists:
+1. **Reading, diffing, verifying — always works.** Stage the project files from the device folder into the session workspace with `device_stage_files`, then `git clone https://github.com/theodoreemiller-sketch/Compartments.git` into a scratch directory (e.g. `/tmp/repo`), pointing `credential.helper` at the staged copy of `.git-auth/.git-credentials`. `git fetch` / `git diff` / `git log` / `git ls-tree` all work normally against GitHub — this is how you confirm what's actually live on `main` before claiming a change is (or isn't) deployed, rather than assuming the last push worked.
 
-```
-GITDIR="$(pwd)/compartments.git"   # run from bash — pwd is already the outputs dir
-```
-Call `allow_cowork_file_delete` with that exact `$GITDIR` value as `file_path` *before* `mkdir`/`git init` below. Do this every time, even if it looks redundant — the grant does not persist across sessions.
+2. **Publishing a change — the working path, since direct push is blocked.** Prepare and verify the change in the scratch clone from step 1, then have the user apply it on github.com themselves:
+   - For a file that already exists in the repo (`index.html`, `sync_helper.py`, `CLAUDE.md`, `static.yml`, etc.): open it on github.com, click the pencil ("Edit this file"), replace the full content, commit directly to `main`. This is a true overwrite of that exact file — no naming ambiguity.
+   - **Never use "Add file → Upload files" to replace a file that already exists in the repo.** If the browser doing the upload already has a same-named file downloaded locally (e.g. from earlier in the same conversation), it silently renames the upload — `index_1.html`, `index (1).html`, etc. — and GitHub creates a *new* file under that name instead of overwriting the original. The live site doesn't change and nothing on GitHub looks obviously wrong; it only surfaces when someone notices the deployed page didn't update. This exact failure happened twice in one afternoon on 2026-08-18 before being traced to this. "Upload files" is only safe for a genuinely new filename that doesn't already exist in the repo.
+   - Deliver the finished file to the user and walk them through the pencil-edit steps rather than guessing that an upload landed correctly.
 
-```
-mkdir -p "$GITDIR"
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" init -b main
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" config user.email "theodore.e.miller@gmail.com"
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" config user.name "Ted Miller"
-git --git-dir="$GITDIR" config credential.helper "store --file='$WORKTREE/.git-auth/.git-credentials'"
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" remote add origin https://github.com/theodoreemiller-sketch/Compartments.git
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" fetch origin
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" update-ref refs/heads/main origin/main
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" branch --set-upstream-to=origin/main main
-git --git-dir="$GITDIR" --work-tree="$WORKTREE" reset
-cp "$WORKTREE/scripts/check_datestamp.sh" "$GITDIR/hooks/pre-commit"
-chmod +x "$GITDIR/hooks/pre-commit"
-```
-The GitHub credential (token) is stored in `.git-auth/.git-credentials` inside this project folder (gitignored, never committed) — it persists across sessions even though the git-dir itself doesn't.
-
-The `reset` line (no path, mixed mode) is mandatory — `update-ref` only points the branch at the right commit, it does not populate the index. Skip `reset` and the very next `git status` will show every tracked file as simultaneously deleted and untracked (index empty vs. a populated HEAD), which reads like the whole repo got wiped. It's a false alarm caused by the empty index, not real data loss — but don't skip the step, and don't ever try to "restore" files based on that reading.
-
-The last two lines reinstall the pre-commit hook (`scripts/check_datestamp.sh`, a persistent file in this folder) into the fresh git-dir. This hook blocks any commit that touches `index.html` unless its 📅 Creation Date / Last Updated field shows today's date — it enforces the mandatory rule above automatically. Don't skip reinstalling it after recreating `$GITDIR`.
-
-Then for any edit:
-```
-g add -A
-g commit -m "<describe the change>"
-g push origin main
-```
-
-If a git command still fails with "Operation not permitted" on a lock/temp file after the proactive `allow_cowork_file_delete` call above, the grant call almost certainly used the wrong path format (see above — it must be the sandbox `pwd`-based path, not a Mac-style path). Re-run `allow_cowork_file_delete` with the sandbox path, then `rm -f` the offending lock file and retry the git command — don't give up.
-
-**If `g push origin main` is rejected** ("fetch first" / "remote contains work you do not have locally") — this happens routinely since multiple scheduled tasks push to this repo the same morning. Do NOT use `git stash` or `git rebase` to resolve it — both try to unlink/overwrite tracked files during checkout, which this sandbox blocks (`Operation not permitted`), and will leave the repo half-reset. Instead:
-```
-g fetch origin
-g update-ref refs/heads/main origin/main
-g reset
-```
-Your file's on-disk content is untouched by this — it's not restored from git, so nothing is lost. Then check `g status`: if it now shows "nothing to commit," another task's push already carried your exact change (harmless, skip re-committing). Otherwise re-add/commit/push as normal.
+3. **Verify after every push, regardless of how it happened.** Re-fetch the scratch clone from step 1 and confirm both the commit and the file contents match what was intended — don't assume a push or a manual upload succeeded. `git ls-tree origin/main` is the fastest way to catch a stray duplicate file before it's discovered the hard way (a Pages deploy that quietly changed nothing).
 
 ## Source of Truth
 - Vehicle compartment inventories come from the Google Docs linked in `doc_timestamps.json`
 - Shift rig check PDFs are generated by `build_rig_check_pdfs.py` and stored in the Shift Guides Drive folder
 - Always pull live Google Doc content before updating the HTML or PDFs — never rely on cached versions
 - `changes_today.json` is the intra-run handoff between the two phases of `morning-doc-sync`. Phase 1 resets it to `{}` as its first step, then records `{vehicle: {compartment: [added_item, ...]}}` for every vehicle with genuinely new items (via `sync_helper.reset_changes_today()` / `get_added_items()` / `record_change()`) before overwriting the snapshot baseline. Phase 2, at the end of that same run, reads it and drafts a single digest "New Item" alert email covering every affected vehicle that day — never one email per vehicle, to avoid flooding the chief's inbox. The standalone `vehicle-new-item-email-alert` scheduled task is disabled (superseded, not deleted) — it used to run ~55 minutes later as a separate task with its own baseline snapshot and its own git sync; merging it into `morning-doc-sync` as Phase 2 gave true completion-based sequencing (no fixed time gap to guess at) and means the email-drafting step no longer needs git or file-deletion permissions at all. Don't repurpose `changes_today.json` for anything else; it's a same-day, single-purpose handoff, fully overwritten every run.
+- `sync_helper.py`'s `parse_html_section()` raises `SyncParseError` (added 2026-08-18) when a vehicle's section markup can't be parsed cleanly — a wrong `VEHICLE_SECTION_IDS` id, a renamed CSS class, or partially-dropped compartments all surface as a loud, specific error instead of a silently wrong diff. Don't catch `SyncParseError` and fall back to treating it as "0 compartments" — it means the parser or the markup needs fixing before that vehicle's diff can be trusted. See the exception's docstring and the HISTORY/WARNING note on `parse_html_section()` for the three real bugs (Engine 62, Brushtruck 62, Medic 62) this replaced a comment-only warning for.
