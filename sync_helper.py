@@ -115,6 +115,85 @@ def parse_doc_compartments(doc_text: str) -> dict:
     return compartments
 
 
+class SyncParseError(Exception):
+    """
+    Raised by parse_html_section() when a vehicle's section markup was found
+    but zero (or suspiciously few) compartments could be extracted from it.
+
+    This is deliberately loud instead of returning {} and letting the caller
+    misread "parser broke" as "vehicle has no compartments" — which is
+    exactly the bug class documented in parse_html_section()'s
+    HISTORY/WARNING note (Engine 62, Brushtruck 62, Medic 62 all silently
+    returned 0 compartments in the past while reporting "success").
+    """
+    pass
+
+
+def _raw_section_marker_count(section_id: str, section_html: str) -> int:
+    """
+    Count structural section markers directly in the raw HTML, independent
+    of the parser below, so parse_html_section() has something to sanity
+    -check its own output against.
+    """
+    if section_id == "scba-guide-content":
+        return len(re.findall(r'<h2 class="scba-section"', section_html))
+    return len(re.findall(r'<section[^>]*class="comp-section"', section_html))
+
+
+# Every real vehicle section is tens of thousands of characters (the
+# smallest today, SCBA, is ~39,000). Anything drastically shorter than that
+# almost always means VEHICLE_SECTION_IDS pointed at the wrong id — e.g. a
+# section DIVIDER instead of the actual content div, which is exactly the
+# Medic 62 bug from the HISTORY note ("medic62-guide" vs "mp62-guide"): the
+# captured slice was just the empty gap between two adjacent divider ids,
+# so both the raw marker count AND the parsed count came back 0/0 —
+# internally "consistent" but consistently wrong, and invisible to a
+# count-vs-count check alone. Set well below the real minimum for margin.
+_MIN_PLAUSIBLE_SECTION_CHARS = 2000
+
+
+def _assert_parse_sanity(section_id: str, section_html: str, compartments: dict) -> None:
+    """
+    Sanity-check a parsed compartment dict against raw structural markers in
+    the HTML. Raises SyncParseError on a mismatch instead of letting a
+    parser/markup drift pass silently as "0 compartments" or "fewer
+    compartments than the raw markup has". See SyncParseError's docstring
+    for why this matters.
+    """
+    if not compartments and len(section_html) < _MIN_PLAUSIBLE_SECTION_CHARS:
+        raise SyncParseError(
+            f"#{section_id}: only captured {len(section_html)} chars of HTML for "
+            f"this section (a real vehicle section is tens of thousands). This "
+            f"usually means VEHICLE_SECTION_IDS points at a section DIVIDER id "
+            f"instead of the actual content div id — the Medic 62 bug from the "
+            f"HISTORY note above. Check the id in VEHICLE_SECTION_IDS against the "
+            f"real content div in index.html."
+        )
+
+    raw_count = _raw_section_marker_count(section_id, section_html)
+
+    if raw_count > 0 and not compartments:
+        raise SyncParseError(
+            f"#{section_id}: found {raw_count} section marker(s) in the raw HTML "
+            f"but the parser extracted 0 compartments. This is the exact "
+            f"silent-failure pattern that hit Engine 62, Brushtruck 62, and "
+            f"Medic 62 in the past — almost certainly a markup change (new "
+            f"class name, different heading tag, etc.), not an empty vehicle. "
+            f"Check the section's actual markup before trusting any diff "
+            f"against it."
+        )
+
+    if 0 < len(compartments) < raw_count:
+        dropped = raw_count - len(compartments)
+        raise SyncParseError(
+            f"#{section_id}: found {raw_count} section marker(s) but only "
+            f"{len(compartments)} parsed successfully ({dropped} silently "
+            f"dropped — likely a missing/unrecognized compartment name or "
+            f"item markup in at least one section). Check the raw HTML for "
+            f"this section before trusting this diff."
+        )
+
+
 def parse_html_section(section_id: str, html: str = None) -> dict:
     """
     Parse the HTML for a vehicle section into:
@@ -154,11 +233,14 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
     id ("medic62-guide") instead of the actual content div id
     ("mp62-guide"), so it captured an empty sliver of HTML between the
     two. All three are fixed as of 2026-08-10.
-    If you ever see a vehicle return 0 compartments (or a compartment
-    count far below its <section class="comp-section"> count), don't
-    assume the doc changed — check the vehicle's actual markup first with
-    a quick regex count (comp-section / h2 / section-title / card-title
-    occurrences) before writing a new special-case parser.
+
+    As of 2026-08-18 this check is no longer just a comment to remember —
+    it's enforced below. If the section is found but the parsed compartment
+    count doesn't roughly match the raw <section class="comp-section">
+    (or <h2 class="scba-section">) count in the HTML, this raises
+    SyncParseError instead of quietly returning a too-small dict. Don't
+    catch that and fall back to treating it as "0 compartments" — fix the
+    parser or the markup, per the HISTORY note above.
     """
     if html is None:
         with open(HTML_PATH, "r", encoding="utf-8") as f:
@@ -179,7 +261,9 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
         section_html = html[start_idx:]
 
     if section_id == "scba-guide-content":
-        return _parse_scba(section_html)
+        compartments = _parse_scba(section_html)
+        _assert_parse_sanity(section_id, section_html, compartments)
+        return compartments
 
     # ── Standard parser (comp-section, with header/item format fallbacks) ──
     compartments = {}
@@ -234,6 +318,8 @@ def parse_html_section(section_id: str, html: str = None) -> dict:
 
         if comp_name and card_titles:
             compartments[comp_name] = card_titles
+
+    _assert_parse_sanity(section_id, section_html, compartments)
     return compartments
 
 
@@ -483,7 +569,17 @@ def diff_doc_vs_html(vehicle: str, doc_text: str, html: str = None) -> str:
         return f"ERROR: Unknown vehicle '{vehicle}'. Check VEHICLE_SECTION_IDS."
 
     doc_comps  = parse_doc_compartments(doc_text)
-    html_comps = parse_html_section(section_id, html)
+    try:
+        html_comps = parse_html_section(section_id, html)
+    except SyncParseError as e:
+        return (
+            f"\n{'=' * 62}\n"
+            f"PARSE ERROR: {vehicle} (#{section_id})\n"
+            f"{'=' * 62}\n\n"
+            f"❌ {e}\n\n"
+            f"Not safe to diff against the doc until this is fixed — reporting\n"
+            f"every doc item as \"missing\" here would be misleading, not helpful.\n"
+        )
 
     lines = [
         "",
@@ -705,7 +801,11 @@ def run_self_test():
         html = f.read()
 
     for vehicle, section_id in VEHICLE_SECTION_IDS.items():
-        comps = parse_html_section(section_id, html)
+        try:
+            comps = parse_html_section(section_id, html)
+        except SyncParseError as e:
+            print(f"  ❌ {vehicle:<16} #{section_id:<22} PARSE ERROR — {e}")
+            continue
         total_cards = sum(len(v) for v in comps.values())
         status = "✅" if comps else "⚠️ "
         print(f"  {status} {vehicle:<16} #{section_id:<22} "
