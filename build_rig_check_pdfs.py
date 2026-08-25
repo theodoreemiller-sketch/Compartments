@@ -1441,7 +1441,7 @@ VEHICLES['sn61'] = {
             "Hose Rope",
             "Spanner Wrenches",
             "50' of 5\" Donut Roll",
-            "Chair",
+            "Folding Chair",
         ]),
         ("Driver Side Over The Wheel Compartment", [
             "Flathead Axe",
@@ -1463,7 +1463,7 @@ VEHICLES['sn61'] = {
             "Black Box with Eye Protection Equipment",
         ]),
         ("Driver Side Rear Compartment", [
-            "Climbing Belt for Basket",
+            "Climbing Belts for Basket (1 Medium, 2 Large, 1 XL)",
             "ABC Fire Extinguisher",
             "Pump Can Extinguisher",
             "Silver Bullet (Pressurized Water)",
@@ -1472,7 +1472,7 @@ VEHICLES['sn61'] = {
         ]),
         ("Driver Side Ladders", [
             "2× 28' Extension Ladders",
-            "2× 16' Roof Ladders (1 stowed in the aerial ladder)",
+            "2× 16' Roof Ladders (DS Rack — NOT Counting the One on the Boom)",
         ]),
         ("Back of Snorkel — Left (Driver) Side", [
             "1× 5' Pry Bar",
@@ -1545,7 +1545,8 @@ VEHICLES['sn61'] = {
             "Pick Axe",
             "6' Pike Pole",
             "2× 28' Extension Ladders",
-            "2× 16' Roof Ladders",
+            "16' Roof Ladder (Boom-Mounted, Hooks Both Ends)",
+            "2× 16' Roof Ladders (Topside — Separate from Boom & DS Rack)",
             "In Box — 50' of 1¾\" Hose w/Fog Nozzle",
         ]),
     ]
