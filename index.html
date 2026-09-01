@@ -3758,7 +3758,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 8/25/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/1/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -13905,7 +13905,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   <section class="comp-section" id="e63-mid-driver">
     <div class="section-header">
       <div class="section-icon">🪓</div>
-      <div><h2>Middle Compartment — Driver's Side</h2><div class="sub">Irons · Maul · K-tool · Officer's tool</div></div>
+      <div><h2>Middle Compartment — Driver's Side</h2><div class="sub">Irons · Maul · Closet pike · K-tool · Officer's tool</div></div>
     </div>
     <div class="equip-card">
       <div class="card-header" onclick="e63ToggleCard(this)">
@@ -13917,6 +13917,19 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
           <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Axe with cutting blade on one side, pointed pick on the other. For roof ventilation, floor breaching, wall opening.</p></div>
           <div class="entry-block"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol><li>Roof vent: pick pierces decking, blade cuts rafters/sheathing.</li><li>Floor breach: pick breaks surface, blade widens hole.</li><li>Driving Halligan: use flat of blade as striking face — never the pick.</li></ol></div>
         </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="e63ToggleCard(this)">
+        <div><div class="card-title">Closet Pike (Newly Added)</div><span class="card-aka">AKA: Closet hook, mini pike pole, close-quarters pike</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Short-handled pike pole sized for tight interior spaces — closets, small rooms, low ceilings — where a full-length pike pole can't be swung or maneuvered.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Overhaul and hidden-fire checks don't stop at the doorway of a closet. When a ceiling or wall needs opening in a confined space, the long pikes riding on the rear of the rig are the wrong tool — this is.</p></div>
+        </div>
+        <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>New to This Compartment</strong>This item was added to the Middle Compartment — Driver's Side per the latest doc sync. Confirm it's actually riding there on your next rig check — don't assume the paperwork updated the same day the tool showed up.</div></div>
       </div>
     </div>
     <div class="equip-card">
@@ -14540,7 +14553,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   <section class="comp-section" id="e63-cab">
     <div class="section-header">
       <div class="section-icon">🚨</div>
-      <div><h2>Cab Compartment</h2><div class="sub">AED · 4-Gas · GasTrac · HCN meter · SCBA pack · Knox Box</div></div>
+      <div><h2>Cab Compartment</h2><div class="sub">AED · 4-Gas · GasTrac · HCN meter · SCBA pack · Knox Box · Battery chargers · Caution tape · Gloves</div></div>
     </div>
     <div class="subsection"><div class="subsection-title">Medical</div></div>
     <div class="equip-card">
@@ -14643,6 +14656,45 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
         <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Hydrate Before, Not Just After</strong>Fluid loss starts the moment you don gear. Drink before the call if possible, immediately after coming out of a working fire.</div></div>
       </div>
     </div>
+    <div class="subsection"><div class="subsection-title">Support Supplies (Newly Added)</div></div>
+    <div class="equip-card">
+      <div class="card-header" onclick="e63ToggleCard(this)">
+        <div><div class="card-title">Battery Chargers — DeWalt</div><span class="card-aka">AKA: DeWalt chargers, tool chargers, battery bank</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Chargers for the DeWalt battery-powered tools carried on the rig — keeps spare batteries topped off between calls.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>A cordless tool with a dead battery is dead weight. Chargers riding in the cab mean batteries get rotated and topped off on the way back from a call, not forgotten in a bag until the next one.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Check the Charge, Not Just the Presence</strong>A charger being physically present tells you nothing about whether the batteries in it are actually full. Verify charge status, not just that the hardware is there.</div></div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="e63ToggleCard(this)">
+        <div><div class="card-title">Caution Tape</div><span class="card-aka">AKA: Barrier tape, fireline tape, scene tape</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Roll of barrier tape for cordoning off a scene — hazard areas, fire lines, downed wires, unstable structures.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Crowd and bystander control isn't optional at a working scene. Tape marks the line before someone wanders into it — a downed wire, a collapse zone, an area under investigation.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="equip-card">
+      <div class="card-header" onclick="e63ToggleCard(this)">
+        <div><div class="card-title">PPE / Nitrile Gloves</div><span class="card-aka">AKA: Exam gloves, nitrile gloves, medical gloves</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Box(es) of disposable nitrile gloves in the cab for medical calls and body substance isolation (BSI).</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Gloves go on before you touch the patient, every time — not after you notice the blood. BSI is the first thing you do on every medical call, no exceptions.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Glove Up Before Contact, Every Time</strong>Skipping BSI because "it's probably nothing" is how rookies get exposed to something they can't take back. No patient contact without gloves — full stop.</div></div>
+      </div>
+    </div>
   </section>
 
   <section class="comp-section" id="e63-top">
@@ -14724,7 +14776,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Check Each Item</div><ul style="columns:2; column-gap:24px;"><li>Fire axe (pickhead) — secured</li><li>Flat head axe — secured</li><li>Sledge hammer — secured</li><li>Halligan — secured</li><li><strong>K-tool — present (added after photos) ⭐</strong></li><li><strong>Officer's tool pry axe — present (added after photos) ⭐</strong></li></ul></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Check Each Item</div><ul style="columns:2; column-gap:24px;"><li>Fire axe (pickhead) — secured</li><li><strong>Closet pike — present (newly added, confirm on rig) ⭐</strong></li><li>Flat head axe — secured</li><li>Sledge hammer — secured</li><li>Halligan — secured</li><li><strong>K-tool — present (added after photos) ⭐</strong></li><li><strong>Officer's tool pry axe — present (added after photos) ⭐</strong></li></ul></div>
         </div>
       </div>
     </div>
@@ -14845,7 +14897,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Check Each Item</div><ul style="columns:2; column-gap:24px;"><li>AED — powered on and ready, pads present and in-date</li><li>4-Gas monitor — bump-tested, fully charged</li><li>Gas Trac (methane/HCN) — bump-tested, charged</li><li><strong>Standalone HCN meter — bump-tested, charged ⭐ (unique to E63)</strong></li><li>Water bottle — present</li><li>SCBA pack — cylinder ≥90% full, mask sealed, PASS armed</li><li>Knox Box key — present and secured</li></ul></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Check Each Item</div><ul style="columns:2; column-gap:24px;"><li>AED — powered on and ready, pads present and in-date</li><li>4-Gas monitor — bump-tested, fully charged</li><li>Gas Trac (methane/HCN) — bump-tested, charged</li><li><strong>Standalone HCN meter — bump-tested, charged ⭐ (unique to E63)</strong></li><li>Water bottle — present</li><li>SCBA pack — cylinder ≥90% full, mask sealed, PASS armed</li><li>Knox Box key — present and secured</li><li><strong>Battery chargers (DeWalt) — present, batteries charging ⭐ (newly added)</strong></li><li><strong>Caution tape — present ⭐ (newly added)</strong></li><li><strong>PPE/Nitrile gloves — stocked ⭐ (newly added)</strong></li></ul></div>
         </div>
       </div>
     </div>

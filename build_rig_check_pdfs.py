@@ -766,6 +766,7 @@ VEHICLES['e63'] = {
         ]),
         ("Middle Compartment — Driver Side", [
             "Pick Axe",
+            "Closet Pike",
             "Flat Head Axe",
             "Sledge Hammer",
             "Halligan",
@@ -846,6 +847,9 @@ VEHICLES['e63'] = {
             "Water Bottles",
             "SCBA Air Pack",
             "Knox Box Key",
+            "Battery Chargers (DeWalt)",
+            "Caution Tape",
+            "PPE / Nitrile Gloves",
         ]),
         ("Top of Engine", [
             "Foam / Gel",
