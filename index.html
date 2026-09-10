@@ -437,18 +437,18 @@
 #e62-guide .equip-card { background:#fff; border:1px solid #C8BFB0; border-radius:8px; margin-bottom:12px; overflow:hidden; }
 
   /* === COMPARTMENT PHOTOS (sourced from the Engine 62 Compartments Google Doc) === */
-  #e62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #e62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #e62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #e62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #e62-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e62-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #e62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #e62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #e62-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e62-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
   #e62-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #e62-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #e62-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #e62-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #e62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #e62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #e62-guide .photo-lightbox.open { display:flex; }
   #e62-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #e62-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
@@ -1482,17 +1482,17 @@
   
 }
 #e61-guide #e61-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #e61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #e61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #e61-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e61-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #e61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #e61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #e61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #e61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #e61-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e61-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #e61-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #e61-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #e61-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #e61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #e61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #e61-guide .photo-lightbox.open { display:flex; }
   #e61-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #e61-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
@@ -2172,17 +2172,17 @@
   
 }
 #e60-guide #e60-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #e60-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #e60-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #e60-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e60-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #e60-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #e60-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #e60-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #e60-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #e60-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e60-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #e60-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #e60-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #e60-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #e60-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #e60-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #e60-guide .photo-lightbox.open { display:flex; }
   #e60-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #e60-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
@@ -3680,116 +3680,116 @@
   #access-gate-agree:active { background: #d98f10; }
   body.gate-locked { overflow: hidden; }
   #u61-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #u61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #u61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #u61-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #u61-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
   #u61-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #u61-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #u61-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #u61-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #u61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #u61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #u61-guide .photo-lightbox.open { display:flex; }
   #u61-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #u61-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #bt62-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #bt62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #bt62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #bt62-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #bt62-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
   #bt62-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #bt62-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #bt62-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #bt62-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #bt62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #bt62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #bt62-guide .photo-lightbox.open { display:flex; }
   #bt62-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #bt62-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #e63-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #e63-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #e63-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #e63-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e63-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #e63-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #e63-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #e63-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #e63-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #e63-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #e63-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #e63-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #e63-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #e63-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #e63-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #e63-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #e63-guide .photo-lightbox.open { display:flex; }
   #e63-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #e63-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #t62-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #t62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #t62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #t62-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #t62-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #t62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #t62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #t62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #t62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #t62-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #t62-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #t62-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #t62-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #t62-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #t62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #t62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #t62-guide .photo-lightbox.open { display:flex; }
   #t62-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #t62-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #sn61-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #sn61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #sn61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #sn61-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #sn61-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #sn61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #sn61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #sn61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #sn61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #sn61-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #sn61-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #sn61-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #sn61-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #sn61-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #sn61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #sn61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #sn61-guide .photo-lightbox.open { display:flex; }
   #sn61-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #sn61-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #sq61-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #sq61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #sq61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #sq61-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #sq61-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #sq61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #sq61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #sq61-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #sq61-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #sq61-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #sq61-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #sq61-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #sq61-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #sq61-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #sq61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #sq61-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #sq61-guide .photo-lightbox.open { display:flex; }
   #sq61-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #sq61-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #mp62-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #mp62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #mp62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #mp62-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #mp62-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #mp62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #mp62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #mp62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #mp62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #mp62-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #mp62-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #mp62-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #mp62-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #mp62-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #mp62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #mp62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #mp62-guide .photo-lightbox.open { display:flex; }
   #mp62-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #mp62-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
   #u62-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
-  #u62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: cover; }
+  #u62-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
   #u62-guide .compartment-photo-caption { padding: 8px 14px; font-family:'JetBrains Mono',monospace; font-size:0.72rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #u62-guide .compartment-photo-caption strong { color: var(--accent); font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.04em; text-transform:uppercase; margin-right:6px; }
-  #u62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); }
-  #u62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+  #u62-guide .rig-hero-photo { margin: 1.25rem 0 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.45); background: var(--surface); }
+  #u62-guide .rig-hero-photo img { display: block; width: 100%; height: auto; max-height: 460px; object-fit: contain; background: var(--surface); }
   #u62-guide .rig-hero-caption { padding: 10px 16px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; color: var(--text-muted); background: var(--surface2); border-top: 1px solid var(--border); }
   #u62-guide .photo-thumb-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap:6px; margin: -0.75rem 0 1.5rem; }
   #u62-guide .photo-thumb-grid button.photo-thumb { padding:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--surface); cursor:zoom-in; aspect-ratio:1; display:block; }
   #u62-guide .photo-thumb-grid button.photo-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   #u62-guide .photo-thumb-grid button.photo-thumb:hover { border-color: var(--accent); }
-  #u62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:500; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
+  #u62-guide .photo-lightbox { position:fixed; inset:0; background:rgba(5,6,10,.92); z-index:2000; display:none; align-items:center; justify-content:center; padding:4vh 4vw; cursor:zoom-out; }
   #u62-guide .photo-lightbox.open { display:flex; }
   #u62-guide .photo-lightbox img { max-width:100%; max-height:88vh; border-radius:8px; box-shadow:0 20px 60px rgba(0,0,0,.6); cursor:default; }
   #u62-guide .photo-lightbox-close { position:absolute; top:18px; right:24px; color:#fff; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); padding:6px 14px; border-radius:6px; cursor:pointer; }
