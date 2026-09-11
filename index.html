@@ -3204,6 +3204,64 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
 }
 .back-link:hover { color: var(--accent); }
 
+/* ── PDF lightbox (Shift Rig Check) — in-page viewer with an always-visible close button ── */
+.pdf-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,6,10,.97);
+  z-index: 3000;
+  display: none;
+  flex-direction: column;
+}
+.pdf-lightbox.open { display: flex; }
+.pdf-lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #12141c;
+  border-bottom: 2px solid #2a3050;
+  flex-shrink: 0;
+}
+.pdf-lightbox-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5a623;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pdf-lightbox-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.pdf-lightbox-open-new {
+  color: #d8dce8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.pdf-lightbox-open-new:hover { border-color: #f5a623; color: #f5a623; }
+.pdf-lightbox-close {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #C8202D;
+  border: 1px solid rgba(255,255,255,.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.pdf-lightbox-close:hover { background: #a81826; }
+.pdf-lightbox iframe { flex: 1; width: 100%; border: none; background: #fff; }
+
 /* ── Tables: horizontal scroll wrapper so wide tables never get clipped on narrow screens ── */
 .table-scroll {
   width: 100%;
@@ -4177,11 +4235,11 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1dW8aJsXDRE2Rqu5Yo7g34g-5YYiW9M6mszpTycElrNc/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Engine 62</a>
-  <a href="Engine_62_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Engine_62_Shift_Rig_Check.pdf', 'Engine 62 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ ENGINE 62 CONTENT ═══════ -->
@@ -8055,11 +8113,11 @@ window.e62Toggle = function(header) {
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1KP5aUp1LBCrW2VOvqhBcK6DKArHViVMwG1CN2GgA5-4/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Utility 61</a>
-  <a href="Utility_61_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Utility_61_Shift_Rig_Check.pdf', 'Utility 61 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ UTILITY 61 CONTENT ═══════ -->
@@ -9150,11 +9208,11 @@ rigSearch('u61-search', 'u61-guide');
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1_nxABIDr0i_YAnUPlvn-ro3qhKSlpLNPkQFiF10xWe0/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Brushtruck 62</a>
-  <a href="Brushtruck_62_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Brushtruck_62_Shift_Rig_Check.pdf', 'Brushtruck 62 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <div id="bt62-guide" class="bt62-scope">
@@ -10009,11 +10067,11 @@ rigSearch('u61-search', 'u61-guide');
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1neTfSyfWCf6KAjAtsEhKJ6kjlzRdLfL0_8p4lFr3g0A/edit?usp=sharing"
      class="div-doc-link" target="_blank" rel="noopener">📷 Photos &amp; Details — Engine 61</a>
-  <a href="Engine_61_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Engine_61_Shift_Rig_Check.pdf', 'Engine 61 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ ENGINE 61 CONTENT ═══════ -->
@@ -12494,11 +12552,11 @@ rigSearch('e61-search', 'e61-guide');
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Inventory &amp; Photos — Engine 60</a>
-  <a href="Engine_60_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Engine_60_Shift_Rig_Check.pdf', 'Engine 60 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ ENGINE 60 CONTENT ═══════ -->
@@ -14299,11 +14357,11 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1xCXYX-aBIeASgcdlg1qP5Qnf1vpS_daegIDIjfvtrzI/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📋 Details &amp; Photos — Engine 63</a>
-  <a href="Engine_63_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Engine_63_Shift_Rig_Check.pdf', 'Engine 63 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ ENGINE 63 CONTENT ═══════ -->
@@ -15805,11 +15863,11 @@ document.querySelectorAll('#e63-guide .comp-section').forEach((sec, i) => {
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1xftB7MNsOMUi93djsaS6r8Ad8Udh4xwpZ5EmQvCou5s/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📋 Click Here for more details and photos of Utility 62</a>
-  <a href="Utility_62_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Utility_62_Shift_Rig_Check.pdf', 'Utility 62 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ UTILITY 62 CONTENT ═══════ -->
@@ -16509,11 +16567,11 @@ rigSearch('u62-search', 'u62-guide');
   <div>
     <div class="div-label" style="color:#1A4B8C;">🏗️ Tower 62 — Compartment Study Guide
   <a href="https://docs.google.com/document/d/1Eyz7RJ8fFo6_x4tUaqbzZOUQlaVM6LVLDHoW0cOwV-I/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Tower 62</a>
-  <a href="Tower_62_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Tower_62_Shift_Rig_Check.pdf', 'Tower 62 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
     <div class="div-sub">Aerial platform · Bucket · Master stream · Hose · Ladders · Forcible entry</div>
   </div>
@@ -18508,11 +18566,11 @@ rigSearch('t62-search', 't62-guide');
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1fHzJ-8tGMlFT4tolnAyLlfXqSeNOFIas3i-pm4oUObg/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Snorkel 61</a>
-  <a href="Snorkel_61_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Snorkel_61_Shift_Rig_Check.pdf', 'Snorkel 61 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ SNORKEL 61 SCOPED STYLES ═══════ -->
@@ -20551,11 +20609,11 @@ rigSearch('t62-search', 't62-guide');
   <div>
     <div class="div-label" style="color:#1A6B2A;">🚑 Squad 61 — Compartment Study Guide
   <a href="https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Squad 61</a>
-  <a href="Squad_61_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Squad_61_Shift_Rig_Check.pdf', 'Squad 61 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
     <div class="div-sub">Heavy rescue / EMS operations · Driver's side · Officer's side · Rear · Coffins · Cab</div>
   </div>
@@ -22800,11 +22858,11 @@ rigSearch('sq61-search', 'sq61-guide');
   </div>
   <a href="#home" class="div-back">↑ Back to Home</a>
   <a href="https://docs.google.com/document/d/1VxU_in1INBJtpRlOhfvu2LqmlTuTsnZP4DU_vXzQCxE/edit?usp=sharing" class="div-doc-link" target="_blank" rel="noopener">📄 Click Here for more details and photos of Medic 62</a>
-  <a href="Medic_62_Shift_Rig_Check.pdf" target="_blank" rel="noopener"
+  <button type="button" onclick="openPdfLightbox('Medic_62_Shift_Rig_Check.pdf', 'Medic 62 — Shift Rig Check')"
      style="background:rgba(0,0,0,.55); color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px; border:1px solid rgba(255,255,255,.30);
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
+            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; cursor:pointer; appearance:none; -webkit-appearance:none;">
     📄 Shift Rig Check
-  </a>
+  </button>
 </div>
 
 <!-- ═══════ MEDIC 62 SCOPED STYLES ═══════ -->
@@ -24256,6 +24314,41 @@ rigSearch('mp62-search', 'mp62-guide');
 
   </div>
 </div>
+
+<!-- ═══════ PDF LIGHTBOX (Shift Rig Check) ═══════ -->
+<div id="pdf-lightbox" class="pdf-lightbox" role="dialog" aria-modal="true" aria-label="Shift Rig Check PDF viewer">
+  <div class="pdf-lightbox-bar">
+    <span class="pdf-lightbox-title" id="pdf-lightbox-title">Shift Rig Check</span>
+    <div class="pdf-lightbox-actions">
+      <a id="pdf-lightbox-open-new" class="pdf-lightbox-open-new" href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
+      <button type="button" class="pdf-lightbox-close" onclick="closePdfLightbox()">✕ Close</button>
+    </div>
+  </div>
+  <iframe id="pdf-lightbox-frame" src="" title="Shift Rig Check PDF"></iframe>
+</div>
+<script>
+  window.openPdfLightbox = function(url, title) {
+    var lb = document.getElementById('pdf-lightbox');
+    var frame = document.getElementById('pdf-lightbox-frame');
+    var titleEl = document.getElementById('pdf-lightbox-title');
+    var openNew = document.getElementById('pdf-lightbox-open-new');
+    frame.src = url;
+    titleEl.textContent = title || 'Shift Rig Check';
+    openNew.href = url;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closePdfLightbox = function() {
+    var lb = document.getElementById('pdf-lightbox');
+    var frame = document.getElementById('pdf-lightbox-frame');
+    lb.classList.remove('open');
+    frame.src = '';
+    document.body.style.overflow = '';
+  };
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { window.closePdfLightbox(); }
+  });
+</script>
 
 <!-- ═══════ DOCUMENT BUILD INFO + CONTACT ═══════ -->
 <footer id="doc-build-footer" style="background:#1A1614; color:#F5F0E8; text-align:center; padding:32px 24px; border-top:4px solid #D9291A; font-family:'JetBrains Mono',monospace;">
