@@ -1085,6 +1085,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  scroll-margin-top: 60px;
 }
 .guide-section-divider .div-label {
   font-family: 'Oswald', sans-serif;
@@ -3919,7 +3920,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/10/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/11/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -4142,7 +4143,7 @@ window.rigSearch = function(searchInputId, guideId) {
   <hr class="nav-divider">
   <div class="nav-section-label">Cab &amp; Top</div>
   <a class="nav-link" href="#cab">Inside Cab</a>
-  <a class="nav-link" href="#top">Top of Engine</a>
+  <a class="nav-link" href="#top-of-engine">Top of Engine</a>
   <hr class="nav-divider">
   <div class="nav-section-label">Reference</div>
   <a class="nav-link" href="#e61diff">E62 vs. E61 Differences</a>
@@ -4634,7 +4635,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -5103,7 +5104,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -5515,7 +5516,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -5881,7 +5882,7 @@ window.rigSearch = function(searchInputId, guideId) {
         </div>
   </div>
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -6312,7 +6313,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -6675,7 +6676,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -6874,7 +6875,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7145,7 +7146,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7258,7 +7259,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7791,7 +7792,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7829,7 +7830,7 @@ window.rigSearch = function(searchInputId, guideId) {
   </div>
 
 
-  <a href="#top" class="back-top">↑ Back to top</a>
+  <a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7869,7 +7870,7 @@ window.rigSearch = function(searchInputId, guideId) {
     Cross-trained firefighters who know E62 cold have been caught flat-footed reaching for air bags over the wheel on E61 and finding an officer's tool instead. <strong>Before every shift, confirm which engine you're riding and verify the differences.</strong> A 30-second orientation on the ramp is worth 30 seconds of confusion at an incident.
   </div>
   </section>
-<a href="#top" class="back-top">↑ Back to top</a>
+<a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   
@@ -7913,7 +7914,7 @@ window.e62Toggle = function(header) {
 
 
   </section>
-<a href="#top" class="back-top">↑ Back to top</a>
+<a href="#engine62-guide" class="back-top">↑ Back to top</a>
 
 
   <!-- FINAL NOTE -->
@@ -8076,7 +8077,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>PA beats rolling down a window and shouting. You control volume, you're audible over engine noise, and you keep both hands free.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-glove" class="comp-section">
   <div class="section-header">
@@ -8168,7 +8169,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Your tag goes on the passport board when you enter. It comes off when you exit. No exceptions.</li><li>If your tag is missing from the board and you're not on scene, someone will be looking for you.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-erg" class="comp-section">
   <div class="section-header">
@@ -8253,7 +8254,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Most placards show UN numbers. NA numbers appear primarily on domestic shipments of specific materials.</li><li>Either way, four digits, yellow pages, guide number, orange pages — same drill.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-doors" class="comp-section">
   <div class="section-header">
@@ -8290,7 +8291,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Put it on BEFORE you exit the vehicle on any roadway call — not after.</li><li>Both vests should be on the rig after every call. If one got left on-scene, restock it immediately.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-bench" class="comp-section">
   <div class="section-header">
@@ -8462,7 +8463,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>If a dash warning light comes on that you don't recognize, the answer is in this manual.</li><li>Don't try to Google it while driving. Know where the manual is so you can reference it safely.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-backseat" class="comp-section">
   <div class="section-header">
@@ -8598,7 +8599,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Clear ALL windows — not just the windshield. Check mirrors and lights too.</li><li>If you're slow clearing the windows, you're slowing down response time. Be efficient.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-backdoor" class="comp-section">
   <div class="section-header">
@@ -8630,7 +8631,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Small thing. Know where it is.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-bed-tools" class="comp-section">
   <div class="section-header">
@@ -8804,7 +8805,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>PASS — Pull, Aim, Squeeze, Sweep.</li><li>Check pressure gauge on rig check. Green zone = good. Red zone = out of service.</li><li>After any use, even partial, it needs inspection and likely recharge before going back in service.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-bed-packs" class="comp-section">
   <div class="section-header">
@@ -8872,7 +8873,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Wrong size collar creates movement rather than restricting it — size correctly.</li><li>Document C-collar application time and mechanism of injury for the hospital team.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section id="u61-bed-other" class="comp-section">
   <div class="section-header">
@@ -8925,7 +8926,7 @@ window.e62Toggle = function(header) {
     <ul class="callouts"><li>Know how to set it up and break it down efficiently.</li><li>Secure everything before moving the vehicle. Loose equipment in a moving truck is a hazard to everyone it passes.</li></ul>
   </div>
 </div>
-  <a class="back-link" href="#u61-guide">↑ Back to top</a>
+  <a class="back-link" href="#utility61-guide">↑ Back to top</a>
 </section>
 <section class="comp-section" id="u61-checklist">
     <div class="section-header">
@@ -9981,7 +9982,7 @@ rigSearch('u61-search', 'u61-guide');
   <hr class="nav-divider">
   <div class="nav-section-label">Cab</div>
   <a class="nav-link" href="#cab">Inside Cab</a>
-  <a class="nav-link" href="#top">Top of Engine</a>
+  <a class="nav-link" href="#e61-top">Top of Engine</a>
   <hr class="nav-divider">
   <div class="nav-section-label">Quick Reference</div>
   <a class="nav-link" href="#diff61-62">E61 vs. E62 Differences</a>
@@ -23901,7 +23902,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Confusing the burst disc and the relief valve.</strong> Relief valve resets. Burst disc does not — once it's blown, the bottle is empty and the disc gets replaced.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-harness">2. The Harness &amp; Carrier Assembly</h2>
@@ -23938,7 +23939,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Hanging the regulator off the hose instead of the keeper.</strong> The hose isn't a strap. It's a pressurized line. Treat it that way.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-regulator">3. The Second-Stage Regulator</h2>
@@ -23971,7 +23972,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Not knowing your bypass works until you need it.</strong> Test it during your morning check, not in a hallway full of smoke.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-facepiece">4. The Facepiece</h2>
@@ -24005,7 +24006,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Storing the mask loose in a turnout coat or compartment.</strong> Lens scratches. Skirt deformation. Find your designated mask bag and use it.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-hud">5. The HUD (Heads-Up Display)</h2>
@@ -24028,7 +24029,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Forgetting which side is which under stress.</strong> Drill it now. In smoke, in the dark, sweating, with adrenaline up — you should not be trying to remember if red on the left means low air or low battery.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-icm">6. The Control Module (ICM)</h2>
@@ -24061,7 +24062,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Ignoring the digital time-remaining number.</strong> It's a real number based on how hard you're sucking air. If it drops fast, it's because <em>you're</em> drinking air fast. Slow your breathing.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-power">7. The Power Module</h2>
@@ -24087,7 +24088,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Assuming the UAC light is a flashlight.</strong> It's specifically the low-air-alarm UAC indicator. If it's lit, you're in low-air alarm. That is not a small thing.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-alarms">8. PASS &amp; Bell Alarms</h2>
@@ -24125,7 +24126,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Not knowing the difference between bells and PASS in the dark.</strong> Bells are mechanical, slow, ringing. PASS is electronic, piercing, escalating. They mean different things. Know them by ear.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-buddy">9. Buddy Breather (EBSS)</h2>
@@ -24152,7 +24153,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Not practicing the connection.</strong> First time you fumble for the male end shouldn't be in zero visibility with someone gasping next to you.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <!-- ============================== -->
   <h2 class="scba-section" id="scba-rit">10. The RIT Pack</h2>
@@ -24178,7 +24179,7 @@ rigSearch('mp62-search', 'mp62-guide');
     <li><strong>Forgetting that the UAC light on the SCBA points right at the connection.</strong> When you're the RIT and you're locating a downed firefighter's fill port in smoke, that LED is your friend.</li>
     </ul>
   </div>
-  <a href="#scba-top" class="scba-back-top">↑ Back to top</a>
+  <a href="#scba-guide" class="scba-back-top">↑ Back to top</a>
 
   <hr class="scba-scene">
 
