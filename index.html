@@ -3233,6 +3233,8 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .pdf-lightbox-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .pdf-lightbox-open-new {
@@ -3244,6 +3246,10 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
   padding: 8px 12px;
   border-radius: 6px;
   white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .pdf-lightbox-title { font-size: 0.72rem; }
+  .pdf-lightbox-open-new { display: none; }
 }
 .pdf-lightbox-open-new:hover { border-color: #f5a623; color: #f5a623; }
 .pdf-lightbox-close {
