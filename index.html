@@ -3716,6 +3716,26 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
   }
   #access-gate-agree:hover { background: #ffbb4d; }
   #access-gate-agree:active { background: #d98f10; }
+  #access-gate-notify {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f5a623;
+    background: transparent;
+    border: 1px solid rgba(245,166,35,0.45);
+    padding: 0.85rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    margin-top: 0.75rem;
+  }
+  #access-gate-notify:hover { background: rgba(245,166,35,0.1); border-color: #f5a623; }
   body.gate-locked { overflow: hidden; }
   #u61-guide .compartment-photo { margin: 0 0 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 4px 14px rgba(0,0,0,.35); }
   #u61-guide .compartment-photo img { display: block; width: 100%; height: auto; max-height: 400px; object-fit: contain; background: var(--surface); }
@@ -3847,6 +3867,7 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
         <p class="gate-warn">If you do not contribute to this guide to keep it up to date, you may be blocked from using it.</p>
       </div>
       <button id="access-gate-agree" type="button">Agree — Enter Study Guide</button>
+      <a id="access-gate-notify" href="https://docs.google.com/spreadsheets/d/1FnMR0T9leNfKqgSfGhgS7gW4kulQWX8b_ydJTpoGaJ0/edit?usp=sharing" target="_blank" rel="noopener">🔔 Notify Me of Changes</a>
     </div>
   </div>
 </div>
@@ -4148,13 +4169,6 @@ window.rigSearch = function(searchInputId, guideId) {
     style="flex:1; min-width:200px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8;
            font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1dW8aJsXDRE2Rqu5Yo7g34g-5YYiW9M6mszpTycElrNc/edit?usp=sharing"
-     target="_blank"
-     style="background:var(--accent); color:#111; text-decoration:none; padding:8px 16px;
-            border-radius:6px; font-family:'Oswald',sans-serif; font-size:13px;
-            letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📷 E62 Photos &amp; Details
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">
     🚒 ENGINE 62
   </span>
@@ -4203,7 +4217,6 @@ window.rigSearch = function(searchInputId, guideId) {
     <h3 style="color:#D4A017;">🚒 Engine 62 — Compartment Study Guide</h3>
     <p>This guide covers every piece of equipment on Engine 62, organized exactly the way you'd walk the rig — front hose bays first, then Driver's side (Comps 1–3), rear, Officer's side (Comps 5–7), cab, and top. Each entry tells you <strong>what the tool is, how to use it, why it's on the rig,</strong> and <strong>what else people call it</strong> — because nothing is more embarrassing than a Lieutenant calling for a tool and you not knowing it by that name.</p>
     <p>When you see a <strong style="color:#f06040">⚠ CRITICAL SAFETY</strong> or <strong style="color:#f06040">🔰 ROOKIE MISTAKE</strong> box, read it twice. Those are the things veterans have watched new folks mess up, and the ones that matter most on test day and on the fireground.</p>
-    <p style="margin-top:10px;"><a href="https://docs.google.com/document/d/1dW8aJsXDRE2Rqu5Yo7g34g-5YYiW9M6mszpTycElrNc/edit?usp=sharing" target="_blank" style="color:#D4A017; font-weight:600;">📷 Click Here for more details and photos of Engine 62</a></p>
   </div>
 
 <!-- ====================================================
@@ -8040,11 +8053,6 @@ window.e62Toggle = function(header) {
   <input type="search" id="u61-search" placeholder="Search Utility 61 equipment…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1KP5aUp1LBCrW2VOvqhBcK6DKArHViVMwG1CN2GgA5-4/edit?usp=sharing" target="_blank"
-     style="background:#D9291A; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 U61 Details &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">🚗 UTILITY 61</span>
 </div>
 <div class="layout">
@@ -8070,7 +8078,6 @@ window.e62Toggle = function(header) {
   <div class="intro-banner" style="background:linear-gradient(135deg,#2C1210 0%,#3C2010 100%); border-left:5px solid #D9291A;">
     <h3 style="color:#D4A017;">📚 Utility 61 — Compartment Study Guide</h3>
     <p>Utility 61 is the department's multi-purpose support vehicle — water rescue capability, technical rescue tools, scene support, and hazmat initial response all in one platform. Know every bag, every bin, and every tool before you ride it.</p>
-    <p style="margin-top:10px;"><a href="https://docs.google.com/document/d/1KP5aUp1LBCrW2VOvqhBcK6DKArHViVMwG1CN2GgA5-4/edit?usp=sharing" target="_blank" style="color:#D4A017; font-weight:600;">📋 Click Here for more details and photos of Utility 61</a></p>
   </div>
   <section id="u61-dash" class="comp-section">
   <div class="section-header">
@@ -9993,13 +10000,6 @@ rigSearch('u61-search', 'u61-guide');
     style="flex:1; min-width:200px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8;
            font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1neTfSyfWCf6KAjAtsEhKJ6kjlzRdLfL0_8p4lFr3g0A/edit?usp=sharing"
-     target="_blank"
-     style="background:#C8202D; color:#fff; text-decoration:none; padding:8px 16px;
-            border-radius:6px; font-family:'Oswald',sans-serif; font-size:13px;
-            letter-spacing:1px; text-transform:uppercase; white-space:nowrap; border:2px solid #D4A017;">
-    📷 E61 Photos &amp; Details
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">
     🚒 ENGINE 61
   </span>
@@ -10055,7 +10055,6 @@ rigSearch('u61-search', 'u61-guide');
     <h3>📚 How to Use This Guide</h3>
     <p>Every piece of equipment on Engine 61 has a job. Your job is to know where it lives, what it does, and how to put it to work before someone tells you to. Use this guide before every compartment check until you can walk the rig blindfolded.</p>
     <p>Click any card title to expand the full study entry. Use the search bar to find any tool instantly. <strong style="color:var(--gold)">Gold callouts = safety-critical.</strong> <strong style="color:#6CA06C">Green callouts = rookie tips.</strong> <strong style="color:#8AABDA">Blue callouts = pro knowledge.</strong></p>
-    <p><a href="https://docs.google.com/document/d/1neTfSyfWCf6KAjAtsEhKJ6kjlzRdLfL0_8p4lFr3g0A/edit?usp=sharing" target="_blank" style="color:var(--gold); font-weight:600;">📷 Click Here for More Details and Photos of Engine 61</a></p>
   </div>
 
   <!-- ════════════════════════════════════ -->
@@ -12013,13 +12012,6 @@ rigSearch('u61-search', 'u61-guide');
       </div>
     </div>
 
-  </section>
-
-          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Struck-by incidents from passing vehicles kill firefighters. Cones placed quickly on arrival help define the scene perimeter. Work with law enforcement to establish full scene control, but don't wait for them to place your first cone.</p></div>
-        </div>
-      </div>
-    </div>
-
     <div class="equip-card">
       <div class="card-header" onclick="e61ToggleCard(this)">
         <div><div class="card-title">Snow Shovel</div><span class="card-aka">AKA: Push shovel, scoop shovel, snow pusher</span></div>
@@ -12432,7 +12424,6 @@ rigSearch('u61-search', 'u61-guide');
     <p>A few entries in the source document still carry open questions — the SCBA mask sizes in the cab top shelf, utility rope exact length, LOTO bag contents, and some tool box metric wrench sizes. Every time you do a rig check and confirm one of these, report it to your company officer to get the document updated.</p>
     <p>The source document itself says it best: <em style="color:var(--gold)">"There will always be changes to where things go — so check first."</em> This guide gives you the foundation. The actual rig gives you the truth. Walk it. Every. Shift.</p>
     <p style="margin-top:12px;">Remember the three habits that separate good probies from great ones: <strong style="color:var(--gold)">check the rig, know where everything is, and put it back exactly where you found it.</strong></p>
-    <p style="margin-top:16px;"><a href="https://docs.google.com/document/d/1neTfSyfWCf6KAjAtsEhKJ6kjlzRdLfL0_8p4lFr3g0A/edit?usp=sharing" target="_blank" style="color:var(--gold); font-size:17px; font-weight:700;">📷 Click Here for More Details and Photos of Engine 61</a></p>
   </div>
 
   </div>
@@ -12494,12 +12485,6 @@ rigSearch('e61-search', 'e61-guide');
     style="flex:1; min-width:200px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8;
            font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank"
-     style="background:#1A6BC8; color:#fff; text-decoration:none; padding:8px 16px;
-            border-radius:6px; font-family:'Oswald',sans-serif; font-size:13px;
-            letter-spacing:1px; text-transform:uppercase; white-space:nowrap; border:2px solid #D4A017;">
-    📄 E60 Inventory &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">
     🚒 ENGINE 60
   </span>
@@ -12545,7 +12530,6 @@ rigSearch('e61-search', 'e61-guide');
     <h3>📚 Engine 60 — Study Guide</h3>
     <p>Engine 60 has several items not found on other rigs — including the Hurst Combi Tool (cuts AND spreads in one unit), a 10KW generator, Chief Eductor foam system, thermal imaging camera, OB kit, and dedicated decon equipment. Pay particular attention to the ⭐ E60 Unique Items section before your first shift.</p>
     <p>Click any card to expand. Use the search bar to find any tool instantly. <strong style="color:var(--e60-gold)">Gold = safety-critical.</strong> <strong style="color:#6CA06C">Green = rookie tips.</strong> <strong style="color:#8AABDA">Blue = pro knowledge.</strong></p>
-    <p style="margin-top:12px;"><a href="https://docs.google.com/document/d/1IYqSfvEa0FOijdGPnZtzWxvYw_8lxiv2HqR8VMTqpFw/edit?usp=sharing" target="_blank" style="color:var(--e60-gold); font-weight:600;">📄 Click Here for Inventory, Details, and Photos of Engine 60</a></p>
   </div>
 
   <section class="comp-section" id="e60-cabin">
@@ -14303,11 +14287,6 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   <input type="search" id="e63-search" placeholder="Search Engine 63 equipment…" autocomplete="off"
     style="flex:1; min-width:200px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1xCXYX-aBIeASgcdlg1qP5Qnf1vpS_daegIDIjfvtrzI/edit?usp=sharing" target="_blank"
-     style="background:#1A7A40; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap; border:2px solid #D4A017;">
-    📋 E63 Details &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">🚒 ENGINE 63</span>
 </div>
 <div class="layout">
@@ -14356,7 +14335,6 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
     <h3>📚 Engine 63 — Compartment Study Guide</h3>
     <p>Engine 63 sets itself apart with 50 ft of 5" LDH on the <em>front bumper</em>, a gate valve and hydrant wrench mounted directly on top of the bumper, a 28-foot extension ladder, a dual foam system (Eco-Gel + Chief Eductor), a standalone HCN meter, SCBA in the cab, and the Hurst Combi Tool. Pay special attention to the ⭐ E63 Unique Items section before your first shift.</p>
     <p>Click any card to expand. Use search to find any tool instantly.</p>
-    <p style="margin-top:12px;"><a href="https://docs.google.com/document/d/1xCXYX-aBIeASgcdlg1qP5Qnf1vpS_daegIDIjfvtrzI/edit?usp=sharing" target="_blank" style="color:var(--e63-gold); font-weight:600;">📋 Click Here for More Details and Photos of Engine 63</a></p>
   </div>
   <section class="comp-section" id="e63-front">
     <div class="section-header">
@@ -14429,18 +14407,19 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
       <div><h2>Engineer's Compartment</h2><div class="sub">Top · Middle · Bottom — Fittings, hydrant bag, eductor, hose roller</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/engine63/e63-engineer.jpg" width="825" height="1100" alt="Engine 63 engineer's compartment POK chief eductor 125 gpm" loading="lazy">
+    <img src="images/engine63/e63-engineer-hosereel.jpg" width="600" height="800" alt="Engine 63 engineer's compartment top shelf with hose reel, fittings, and toolbox" loading="lazy">
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Engineer's compartment, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t01.jpg')"><img src="images/engine63/thumbs/e63-engineer-t01.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (1 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t02.jpg')"><img src="images/engine63/thumbs/e63-engineer-t02.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (2 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t03.jpg')"><img src="images/engine63/thumbs/e63-engineer-t03.jpg" width="800" height="600" alt="Additional Engineer's Compartment photo (3 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t04.jpg')"><img src="images/engine63/thumbs/e63-engineer-t04.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (4 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t05.jpg')"><img src="images/engine63/thumbs/e63-engineer-t05.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (5 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t06.jpg')"><img src="images/engine63/thumbs/e63-engineer-t06.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (6 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t07.jpg')"><img src="images/engine63/thumbs/e63-engineer-t07.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (7 of 8)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t08.jpg')"><img src="images/engine63/thumbs/e63-engineer-t08.jpg" width="800" height="600" alt="Additional Engineer's Compartment photo (8 of 8)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t01.jpg')"><img src="images/engine63/thumbs/e63-engineer-t01.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (1 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t02.jpg')"><img src="images/engine63/thumbs/e63-engineer-t02.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (2 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t03.jpg')"><img src="images/engine63/thumbs/e63-engineer-t03.jpg" width="800" height="600" alt="Additional Engineer's Compartment photo (3 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t04.jpg')"><img src="images/engine63/thumbs/e63-engineer-t04.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (4 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t05.jpg')"><img src="images/engine63/thumbs/e63-engineer-t05.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (5 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t06.jpg')"><img src="images/engine63/thumbs/e63-engineer-t06.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (6 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t07.jpg')"><img src="images/engine63/thumbs/e63-engineer-t07.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (7 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t08.jpg')"><img src="images/engine63/thumbs/e63-engineer-t08.jpg" width="800" height="600" alt="Additional Engineer's Compartment photo (8 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="e63OpenLightbox('images/engine63/thumbs/e63-engineer-t09.jpg')"><img src="images/engine63/thumbs/e63-engineer-t09.jpg" width="600" height="800" alt="Additional Engineer's Compartment photo (9 of 9 — previous lead photo)" loading="lazy"></button>
   </div>
 
     <div class="subsection"><div class="subsection-title">Top Shelf</div></div>
@@ -15813,11 +15792,6 @@ document.querySelectorAll('#e63-guide .comp-section').forEach((sec, i) => {
   <input type="search" id="u62-search" placeholder="Search Utility 62 equipment…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1xftB7MNsOMUi93djsaS6r8Ad8Udh4xwpZ5EmQvCou5s/edit?usp=sharing" target="_blank"
-     style="background:#E07B20; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 U62 Details &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A7F74; white-space:nowrap;">🚗 UTILITY 62</span>
 </div>
 <div class="layout">
@@ -15857,7 +15831,6 @@ document.querySelectorAll('#e63-guide .comp-section').forEach((sec, i) => {
        border-radius:12px; border-left:5px solid #E07B20; padding:28px 32px; margin-bottom:40px;">
     <h3 style="font-family:'Oswald',sans-serif; font-size:20px; letter-spacing:2px; text-transform:uppercase; color:#D4A017; margin-bottom:12px;">📚 Utility 62 — Compartment Study Guide</h3>
     <p style="font-size:15px; line-height:1.7; color:#D8CFC4;">Utility 62 is a multi-role support vehicle carrying water rescue gear, technical rescue tools, respiratory protection, scene support equipment, and hazmat initial-response capability. Know every bag, every bin, and every tool before you ride it.</p>
-    <p style="margin-top:12px;"><a href="https://docs.google.com/document/d/1xftB7MNsOMUi93djsaS6r8Ad8Udh4xwpZ5EmQvCou5s/edit?usp=sharing" target="_blank" style="color:#D4A017; font-weight:600;">📋 Click Here for more details and photos of Utility 62</a></p>
   </div>
   <section class="comp-section" id="u62-dash">
     <div class="section-header">
@@ -16590,11 +16563,6 @@ rigSearch('u62-search', 'u62-guide');
   <input type="search" id="t62-search" placeholder="Search Tower 62 equipment, tools, nicknames…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1Eyz7RJ8fFo6_x4tUaqbzZOUQlaVM6LVLDHoW0cOwV-I/edit?usp=sharing" target="_blank" rel="noopener"
-     style="background:#1A4B8C; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 Tower 62 Inventory &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#A8B8D0; white-space:nowrap;">🏗️ TOWER 62 · AERIAL PLATFORM</span>
 </div>
 <div class="layout">
@@ -18590,11 +18558,6 @@ rigSearch('t62-search', 't62-guide');
   <input type="search" id="sn61-search" placeholder="Search Snorkel 61 equipment, tools, nicknames…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1fHzJ-8tGMlFT4tolnAyLlfXqSeNOFIas3i-pm4oUObg/edit?usp=sharing" target="_blank" rel="noopener"
-     style="background:#8B1A1A; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 Snorkel 61 Inventory &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D0A8A8; white-space:nowrap;">🚒 SNORKEL 61 · AERIAL SNORKEL</span>
 </div>
 <div class="layout">
@@ -20645,11 +20608,6 @@ rigSearch('t62-search', 't62-guide');
   <input type="search" id="sq61-search" placeholder="Search Squad 61 equipment, tools, nicknames…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1Rh1wAPC6rb9l7Nrgv4L2C201YfCQRhAvPB7Y_NADOm4/edit?usp=sharing" target="_blank" rel="noopener"
-     style="background:#1A6B2A; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 Squad 61 Inventory &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#A8C8AC; white-space:nowrap;">🚑 SQUAD 61 · HEAVY RESCUE</span>
 </div>
 <div class="layout">
@@ -22892,11 +22850,6 @@ rigSearch('sq61-search', 'sq61-guide');
   <input type="search" id="mp62-search" placeholder="Search Medic 62 equipment, tools, nicknames…" autocomplete="off"
     style="flex:1; min-width:160px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
            border-radius:6px; padding:8px 14px; color:#F5F0E8; font-family:'Source Serif 4',serif; font-size:14px; outline:none;">
-  <a href="https://docs.google.com/document/d/1VxU_in1INBJtpRlOhfvu2LqmlTuTsnZP4DU_vXzQCxE/edit?usp=sharing" target="_blank" rel="noopener"
-     style="background:#8B2A6B; color:#fff; text-decoration:none; padding:8px 16px; border-radius:6px;
-            font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:1px; text-transform:uppercase; white-space:nowrap;">
-    📋 Medic 62 Inventory &amp; Photos
-  </a>
   <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#D9A8C4; white-space:nowrap;">❤️‍🩹 MEDIC 62 · ALS/BLS TRANSPORT</span>
 </div>
 <div class="layout">
