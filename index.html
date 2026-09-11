@@ -1113,6 +1113,40 @@
 }
 .div-back:hover { color: #f5a623; }
 
+/* ═══════ QUICK REFERENCE DISCLOSURE (per-vehicle, collapsed by default) ═══════ */
+details.quick-ref-toggle {
+  margin: 2.5rem 0 0;
+  border-top: 2px dashed #2a3050;
+  padding-top: 1.5rem;
+}
+details.quick-ref-toggle summary.quick-ref-btn {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1a1d2e;
+  border: 1px solid #3a4270;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f5a623;
+  transition: background 0.15s, border-color 0.15s;
+}
+details.quick-ref-toggle summary.quick-ref-btn::-webkit-details-marker { display: none; }
+details.quick-ref-toggle summary.quick-ref-btn:hover { background: #22263c; border-color: #f5a623; }
+details.quick-ref-toggle summary.quick-ref-btn::after {
+  content: "▸";
+  margin-left: 4px;
+  transition: transform 0.15s;
+}
+details.quick-ref-toggle[open] summary.quick-ref-btn::after { transform: rotate(90deg); }
+details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
+
 /* ═══════ BRUSHTRUCK 62 SCOPED STYLES ═══════ */
 
 /* toolbar */
@@ -10020,92 +10054,6 @@ rigSearch('u61-search', 'u61-guide');
   </div>
 
   <!-- ════════════════════════════════════ -->
-  <!-- SECTION: E61 vs E62 DIFFERENCES -->
-  <!-- ════════════════════════════════════ -->
-  <section class="comp-section" id="e61-diff">
-    <div class="section-header">
-      <div class="section-icon">⚡</div>
-      <div>
-        <h2>E61 vs. E62 — Know the Differences</h2>
-        <div class="sub">READ THIS FIRST — before you ever ride E61</div>
-      </div>
-    </div>
-
-    <div class="callout callout-warn">
-      <span class="callout-icon">⚠️</span>
-      <div class="callout-content">
-        <strong>Critical — Don't Mix These Up</strong>
-        If you've been training on E62, pay close attention here. Several compartments are in different spots, and the airbag system is different. Grabbing the wrong tool in the wrong spot costs lives.
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Driver's Side Over-Wheel Compartment</div><span class="card-aka">AKA: Wheel well compartment</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📋</span>E61 Has</div><p><strong>Pry Axe (Officer's Tool)</strong> — E61 stores the pry axe / officer's tool here, over the driver's-side wheel.</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">📋</span>E62 Has</div><p><strong>Air Bags</strong> — E62 stores its airbags in this same over-wheel location. E61 does NOT.</p></div>
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📍</span>Where are E61's Air Bags?</div><p>E61 stores its air bags in <strong>Compartment 3, bottom shelf</strong> — near the back on the driver's side. Don't go hunting for them over the wheel on this rig.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Air Bag Controllers — E61 vs. E62</div><span class="card-aka">AKA: Air bag control box, inflation controller</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What to Know</div><p>E61 and E62 use <strong>different air bag controller models</strong>. The controller stays with its bags — do not swap them between rigs. That said, both systems inflate to <strong>118 PSI maximum safe operating pressure</strong>.</p></div>
-        </div>
-        <div class="callout callout-warn">
-          <span class="callout-icon">⚠️</span>
-          <div class="callout-content">
-            <strong>Never Exceed 118 PSI</strong>
-            Overpressure can cause a bag to rupture or blow out from under a load. Always monitor the controller gauge and stop inflation when the load is stabilized, not when the gauge maxes out.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">RIT Pack — E62 Only</div><span class="card-aka">AKA: Rapid Intervention Team pack, PASS pack</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Know the Difference</div><p>E62 carries a <strong>RIT pack on the top shelf of the rear compartment (Comp 3, Driver's Side Rear)</strong>. E61 does <strong>not</strong> have a RIT pack. If you're riding E61 and get assigned a RIT role, coordinate with command regarding which rig is supplying that equipment.</p></div>
-        </div>
-        <div class="callout callout-warn">
-          <span class="callout-icon">⚠️</span>
-          <div class="callout-content">
-            <strong>Correction (8/16/2026) — E62 Carries ONE RIT Pack, Not Two</strong>
-            A brief source doc update on 8/15/2026 had added a second location — a RIT pack staged on the top shelf of E62's Engineer's Compartment (Comp 1). That's been corrected: E62 carries a single RIT pack, and it's in Comp 3 (Driver's Side Rear), as stated above. If you're riding E61 and get pulled onto a RIT assignment off E62, that's the only spot to check — don't waste time on the Engineer's Compartment.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="equip-card">
-      <div class="card-header" onclick="e61ToggleCard(this)">
-        <div><div class="card-title">Doc Note — "Cabin Compartment"</div><span class="card-aka">Flagged from source doc, undetailed</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>What This Is</div><p>The source compartment doc added a bare line item reading only "Cabin Compartment" under the E61-specific differences list, with no further detail on what changed or what it refers to. Rather than invent an explanation, this guide is flagging it as-is. If you know what this refers to, get it added to the doc properly — a one-word note like this helps nobody at 2 AM.</p></div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ════════════════════════════════════ -->
   <!-- SECTION: CABIN / HOSE BED -->
   <!-- ════════════════════════════════════ -->
   <section class="comp-section" id="e61-cabin">
@@ -12103,7 +12051,95 @@ rigSearch('u61-search', 'u61-guide');
 
   </section>
 
+  <details class="quick-ref-toggle">
+  <summary class="quick-ref-btn">📌 Quick Reference — E61 vs. E62 Diffs · Where Is It? · E61-Specific Items</summary>
+  <div class="quick-ref-body">
+
   <!-- ════════════════════════════════════ -->
+  <!-- SECTION: E61 vs E62 DIFFERENCES -->
+  <!-- ════════════════════════════════════ -->
+  <section class="comp-section" id="e61-diff">
+    <div class="section-header">
+      <div class="section-icon">⚡</div>
+      <div>
+        <h2>E61 vs. E62 — Know the Differences</h2>
+        <div class="sub">READ THIS FIRST — before you ever ride E61</div>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <div class="callout-content">
+        <strong>Critical — Don't Mix These Up</strong>
+        If you've been training on E62, pay close attention here. Several compartments are in different spots, and the airbag system is different. Grabbing the wrong tool in the wrong spot costs lives.
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">Driver's Side Over-Wheel Compartment</div><span class="card-aka">AKA: Wheel well compartment</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📋</span>E61 Has</div><p><strong>Pry Axe (Officer's Tool)</strong> — E61 stores the pry axe / officer's tool here, over the driver's-side wheel.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📋</span>E62 Has</div><p><strong>Air Bags</strong> — E62 stores its airbags in this same over-wheel location. E61 does NOT.</p></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📍</span>Where are E61's Air Bags?</div><p>E61 stores its air bags in <strong>Compartment 3, bottom shelf</strong> — near the back on the driver's side. Don't go hunting for them over the wheel on this rig.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">Air Bag Controllers — E61 vs. E62</div><span class="card-aka">AKA: Air bag control box, inflation controller</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What to Know</div><p>E61 and E62 use <strong>different air bag controller models</strong>. The controller stays with its bags — do not swap them between rigs. That said, both systems inflate to <strong>118 PSI maximum safe operating pressure</strong>.</p></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-content">
+            <strong>Never Exceed 118 PSI</strong>
+            Overpressure can cause a bag to rupture or blow out from under a load. Always monitor the controller gauge and stop inflation when the load is stabilized, not when the gauge maxes out.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">RIT Pack — E62 Only</div><span class="card-aka">AKA: Rapid Intervention Team pack, PASS pack</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>Know the Difference</div><p>E62 carries a <strong>RIT pack on the top shelf of the rear compartment (Comp 3, Driver's Side Rear)</strong>. E61 does <strong>not</strong> have a RIT pack. If you're riding E61 and get assigned a RIT role, coordinate with command regarding which rig is supplying that equipment.</p></div>
+        </div>
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-content">
+            <strong>Correction (8/16/2026) — E62 Carries ONE RIT Pack, Not Two</strong>
+            A brief source doc update on 8/15/2026 had added a second location — a RIT pack staged on the top shelf of E62's Engineer's Compartment (Comp 1). That's been corrected: E62 carries a single RIT pack, and it's in Comp 3 (Driver's Side Rear), as stated above. If you're riding E61 and get pulled onto a RIT assignment off E62, that's the only spot to check — don't waste time on the Engineer's Compartment.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">Doc Note — "Cabin Compartment"</div><span class="card-aka">Flagged from source doc, undetailed</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📋</span>What This Is</div><p>The source compartment doc added a bare line item reading only "Cabin Compartment" under the E61-specific differences list, with no further detail on what changed or what it refers to. Rather than invent an explanation, this guide is flagging it as-is. If you know what this refers to, get it added to the doc properly — a one-word note like this helps nobody at 2 AM.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
   <!-- ════════════════════════════════════ -->
   <!-- SECTION: QUICK REFERENCE — WHERE IS IT? -->
@@ -12393,6 +12429,9 @@ rigSearch('u61-search', 'u61-guide');
     <p style="margin-top:12px;">Remember the three habits that separate good probies from great ones: <strong style="color:var(--gold)">check the rig, know where everything is, and put it back exactly where you found it.</strong></p>
     <p style="margin-top:16px;"><a href="https://docs.google.com/document/d/1neTfSyfWCf6KAjAtsEhKJ6kjlzRdLfL0_8p4lFr3g0A/edit?usp=sharing" target="_blank" style="color:var(--gold); font-size:17px; font-weight:700;">📷 Click Here for More Details and Photos of Engine 61</a></p>
   </div>
+
+  </div>
+  </details>
 
 </main>
 </div>
@@ -13936,6 +13975,10 @@ rigSearch('e61-search', 'e61-guide');
 
   </section>
 
+  <details class="quick-ref-toggle">
+  <summary class="quick-ref-btn">📌 Quick Reference — Rig Check Checklist · E60 Unique Items</summary>
+  <div class="quick-ref-body">
+
   <section class="comp-section" id="e60-checklist">
     <div class="section-header">
       <div class="section-icon">✅</div>
@@ -14201,6 +14244,8 @@ rigSearch('e61-search', 'e61-guide');
 
   </section>
 
+  </div>
+  </details>
 
 <footer style="background:#2C2825; color:#8A7F74; text-align:center; padding:24px;
     font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:1px;
@@ -15504,6 +15549,10 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
     </div>
   </section>
 
+  <details class="quick-ref-toggle">
+  <summary class="quick-ref-btn">📌 Quick Reference — Rig Check Checklist · E63 Unique Items</summary>
+  <div class="quick-ref-body">
+
   <section class="comp-section" id="e63-checklist">
     <div class="section-header">
       <div class="section-icon">✅</div>
@@ -15711,6 +15760,9 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
       </div>
     </div>
   </section>
+
+  </div>
+  </details>
 
 <footer style="background:#2C2825; color:#8A7F74; text-align:center; padding:24px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:1px; border-top:3px solid #1A7A40; margin-top:40px;">ENGINE 63 COMPARTMENT STUDY GUIDE &nbsp;·&nbsp; FOR TRAINING PURPOSES ONLY — ALWAYS VERIFY ON THE ACTUAL RIG</footer>
 </main>
