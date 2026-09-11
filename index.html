@@ -3192,6 +3192,17 @@ details.quick-ref-toggle .quick-ref-body { margin-top: 1.5rem; }
   .intro-banner p { font-size: 13px !important; }
 }
 
+/* ── Tables: horizontal scroll wrapper so wide tables never get clipped on narrow screens ── */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll table { min-width: 480px; }
+@media (max-width: 640px) {
+  .table-scroll table { min-width: 560px; }
+}
+
 /* ── Sticky toolbar + mobile sidebar toggle button ── */
 .mob-nav-toggle {
   display: none;
@@ -4569,7 +4580,7 @@ window.rigSearch = function(searchInputId, guideId) {
   <div class="shelf-label">REAR HOSE BAYS — OVERVIEW</div>
   <div class="gear-group">
     <h4>Rear Bay Layout at a Glance</h4>
-    <table class="hose-table">
+    <div class="table-scroll"><table class="hose-table">
       <thead><tr><th>Bay</th><th>Contents</th><th>Load Type</th></tr></thead>
       <tbody>
         <tr><td>Left Bay</td><td>600 ft of 3" hose + 150 ft skid load of 2½"</td><td><span class="static">STATIC</span></td></tr>
@@ -4578,7 +4589,7 @@ window.rigSearch = function(searchInputId, guideId) {
         <tr><td>Blitz Fire</td><td>300 ft of 3" hose</td><td><span class="pre">PRECONNECTED</span></td></tr>
         <tr><td>Highrise Pack</td><td>150 ft of 1¾" hose</td><td><span class="static">STATIC</span></td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
       </div>
     </div>
@@ -10076,7 +10087,7 @@ rigSearch('u61-search', 'u61-guide');
 
     <div class="subsection">
       <div class="subsection-title">Hose Bed Layout</div>
-      <table class="hose-table">
+      <div class="table-scroll"><table class="hose-table">
         <thead><tr><th>Location</th><th>Load</th><th>Type</th><th>Notes</th></tr></thead>
         <tbody>
           <tr><td>Front – Trash Line</td><td>100 ft — 1¾"</td><td>Preconnected</td><td>Quick knockdown, small fires, trash</td></tr>
@@ -10090,7 +10101,7 @@ rigSearch('u61-search', 'u61-guide');
           <tr><td>Rear – Highrise Pack</td><td>150 ft — 1¾"</td><td>Static</td><td>Standpipe operations</td></tr>
           <tr><td>Rear – Highrise Bag</td><td>Pack w/ fittings</td><td>Static</td><td>See High Rise Pack card</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </div>
 
     <div class="subsection">
@@ -12164,7 +12175,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Quick small fire knockdown</td><td>Cabin — Trash line (front)</td><td>100 ft 1¾", preconnected</td></tr>
@@ -12179,7 +12190,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Smooth bore nozzle (spare)</td><td>Comp. 1 — Middle shelf</td><td>(1) available</td></tr>
             <tr><td>Deck gun nozzle (spare)</td><td>Comp. 1 — Top shelf (tool box)</td><td>Fits deck gun &amp; BlitzFire</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12189,7 +12200,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>The Irons (Halligan + Flat axe)</td><td>Comp. 2 / Comp. 5 — Top shelf</td><td>Comp. 2 = driver's side; Comp. 5 = officer</td></tr>
@@ -12202,7 +12213,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Crowbar</td><td>Comp. 5 — Top shelf; also officer rear</td><td>Full + small version in tool box</td></tr>
             <tr><td>Pick head axe</td><td>Comp. 5 — Top shelf</td><td>Roof vent, floor breaching</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12212,7 +12223,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Full hydrant kit</td><td>Comp. 1 — Bottom shelf, Hydrant bag</td><td>Grab the whole bag</td></tr>
@@ -12225,7 +12236,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Gated wye 2½"→(2) 1½"</td><td>Comp. 1 — Middle shelf</td><td>(2) available</td></tr>
             <tr><td>Spanner wrenches</td><td>Comp. 1 middle, Rear middle, Hydrant bag</td><td>Multiple sets throughout</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12235,7 +12246,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Hurst Cutter ("jaws")</td><td>Rear Middle — Bottom shelf</td><td>Use Hurst batteries from upper shelf</td></tr>
@@ -12250,7 +12261,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Cribbing</td><td>Comp. 3 — Bottom shelf</td><td>Crib as you go — always</td></tr>
             <tr><td>Backboards (×2)</td><td>Rear of truck</td><td>Patient immobilization</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12260,7 +12271,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Full water rescue kit</td><td>Comp. 6 — Middle officer</td><td>Grab helmet, PFD, Mustang as a set</td></tr>
@@ -12273,7 +12284,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Strap + 3 carabiners</td><td>Comp. 6</td><td>Quick anchor / haul system</td></tr>
             <tr><td>Water helmet</td><td>Comp. 6</td><td>Not the structural helmet</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12283,7 +12294,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Fire Type</th><th>Use This</th><th>Location</th><th>NEVER Use</th></tr></thead>
           <tbody>
             <tr><td>Class A — wood, paper, trash</td><td>Silver Bullet (water) or ABC dry chem</td><td>Comp. 7 upper</td><td>—</td></tr>
@@ -12292,7 +12303,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Class K — cooking oil / deep fat fryer</td><td>Class K wet chemical</td><td>Comp. 7 upper</td><td>Water (steam explosion!), ABC</td></tr>
             <tr><td>Electric vehicle (lithium battery)</td><td>EV fire blanket + mass water application</td><td>Comp. 7 bottom / hose lines</td><td>CO₂ (not effective on thermal runaway)</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="callout callout-warn">
           <span class="callout-icon">⚠️</span>
           <div class="callout-content"><strong>Know Your Fire Class Before You Pull the Pin</strong>Using the wrong extinguisher can make a fire dramatically worse — especially water on a cooking oil fire (violent steam/oil explosion) or water on energized electrical (electrocution). When in doubt, evacuate and use a hose line from a safe distance.</div>
@@ -12306,7 +12317,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Hazard</th><th>Meter to Use</th><th>Location in Cab</th><th>Critical Threshold</th></tr></thead>
           <tbody>
             <tr><td>Carbon Monoxide (CO)</td><td>4-Gas Monitor (Gas Track)</td><td>Third shelf, cab</td><td>Alarm at 35 ppm; evacuate at 200 ppm</td></tr>
@@ -12319,7 +12330,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Electrical — live conductor</td><td>Hot Stick</td><td>Third shelf, cab</td><td>Any reading = treat as energized</td></tr>
             <tr><td>Electrical — equipment/wiring</td><td>Voltage Tester (Comp. 5 tool box) ⭐</td><td>Comp. 5 bottom shelf, tool box</td><td>Any reading = de-energize before work</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12329,7 +12340,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>What You Need</th><th>Where It Is</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Search rope (200 ft RASP)</td><td>Comp. 5 — Middle shelf</td><td>Bead at 100 ft; knot stopper at 200 ft</td></tr>
@@ -12343,7 +12354,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Cellar nozzle</td><td>Comp. 3 — Top shelf</td><td>Below-floor/cellar fire attack</td></tr>
             <tr><td>Transformer nozzles</td><td>Comp. 3</td><td>Spray through small openings</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12353,7 +12364,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Bag / Item</th><th>Color</th><th>Primary Use</th><th>Location</th></tr></thead>
           <tbody>
             <tr><td>Jump bag / First In</td><td>Red</td><td>Primary EMS response — assessment &amp; stabilization</td><td>Cab — Middle shelf</td></tr>
@@ -12364,7 +12375,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Pet O₂ mask</td><td>—</td><td>Animal oxygen therapy (dog/cat)</td><td>Cab — Top shelf</td></tr>
             <tr><td>Backboards ×2</td><td>Orange/Yellow</td><td>Spinal immobilization / extrication</td><td>Rear of truck</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -12396,7 +12407,7 @@ rigSearch('u61-search', 'u61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Item / Location</th><th>E61</th><th>E62</th></tr></thead>
           <tbody>
             <tr><td>Driver's side over-wheel compartment</td><td>Pry Axe / Officer's Tool</td><td>Air Bags</td></tr>
@@ -12408,7 +12419,7 @@ rigSearch('u61-search', 'u61-guide');
             <tr><td>Officer side middle (over wheel)</td><td>Ice cleats for boots</td><td>Different — check E62 separately</td></tr>
             <tr><td>Hacksaw location</td><td>In tool box, Comp. 1</td><td>Different — check E62 separately</td></tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="callout callout-safe">
           <span class="callout-icon">✅</span>
           <div class="callout-content"><strong>One More Time — Air Bags on E61</strong>On E61, if you reach for the air bags over the wheel (like on E62), you'll grab the Officer's Tool instead. The air bags on E61 are in <strong>Comp. 3, bottom shelf, near the back on the driver's side.</strong> Drill this until it's reflexive.</div>
@@ -12546,7 +12557,7 @@ rigSearch('e61-search', 'e61-guide');
     <button type="button" class="photo-thumb" onclick="e60OpenLightbox('images/engine60/thumbs/e60-front-t02.jpg')"><img src="images/engine60/thumbs/e60-front-t02.jpg" width="600" height="800" alt="Additional Front — Hose Bays & Crosslays photo (2 of 2)" loading="lazy"></button>
   </div>
 
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Location</th><th>Load</th><th>Connection</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td>Front — Trash Line</td><td>100 ft — 1¾"</td><td>Preconnected</td><td>Quick knockdown, small fires</td></tr>
@@ -12555,7 +12566,7 @@ rigSearch('e61-search', 'e61-guide');
             <tr><td>Rear Top — Middle</td><td>150 ft — 2½" skid + 400 ft — 3"</td><td>Smooth bore on skid</td><td>Skid load feeds off 3" supply</td></tr>
             <tr><td>Rear Top — Right</td><td>150 ft — 1¾" skid + 550 ft — 3"</td><td>Breakaway fog nozzle, 75 psi, 150 gpm</td><td>Attack line off 3" supply</td></tr>
           </tbody>
-        </table>
+        </table></div>
 
     <div class="callout callout-warn">
       <span class="callout-icon">⚠️</span>
@@ -13602,7 +13613,7 @@ rigSearch('e61-search', 'e61-guide');
           <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A physical clipboard mounted in the cab (or rear compartment area) tracking every individual hose section on E60 by its unique ID number, length, location on the rig, and annual service test status. Sections marked with <strong>"T"</strong> have been tested in the current year. The record is a legal compliance document and a tool for accurate accountability during rig checks.</p></div>
           <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>NFPA 1962 requires fire hose to be service-tested annually. The Hose Card is E60's evidence of compliance — it shows which sections have been tested and which are due. If a section is swapped out or replaced (damaged, failed test), the record must be updated immediately. During a rig check, comparing the clipboard to the actual hose loads confirms that every section is accounted for and in its correct position.</p></div>
           <div class="entry-block full"><div class="entry-label"><span class="icon">🗂️</span>E60 Hose Section Layout</div>
-            <table class="hose-table">
+            <div class="table-scroll"><table class="hose-table">
               <thead><tr><th>Location</th><th>Key Sections</th><th>Totals</th><th>Notes</th></tr></thead>
               <tbody>
                 <tr><td>Left Hose Bed</td><td>D-64 (50'), D-183 (100'), D-244–D-264 (up to 400')</td><td>400 ft</td><td>Main left bay supply</td></tr>
@@ -13615,7 +13626,7 @@ rigSearch('e61-search', 'e61-guide');
                 <tr><td>1¾" Skid Load</td><td>B-189 (50'), B-206 (100'), B-199 (150')</td><td>150 ft skid</td><td>Breakaway fog nozzle attached</td></tr>
                 <tr><td>Middle Hose Bed</td><td>G-132 (100') through G-199 (1,000')</td><td>1,000 ft</td><td>5" LDH supply</td></tr>
               </tbody>
-            </table>
+            </table></div>
           </div>
         </div>
         <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>T = Tested This Year</strong>Sections marked "T" on the clipboard have passed their annual service test. Any section without a "T" is either due for testing or has failed. During your rig check, you don't need to memorize every ID — but you should know where the clipboard is and be able to verify that the hose loads match the record. If something doesn't add up, flag it to your company officer before going available.</div></div>
@@ -13737,14 +13748,14 @@ rigSearch('e61-search', 'e61-guide');
     </div>
     <div class="subsection"><div class="subsection-title">Rear Hose Bays</div></div>
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">🚒</span>Rear Hose Bay Summary</div><table class="hose-table">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🚒</span>Rear Hose Bay Summary</div><div class="table-scroll"><table class="hose-table">
             <thead><tr><th>Bay</th><th>Load</th><th>Type</th><th>Notes</th></tr></thead>
             <tbody>
               <tr><td>Top — Left</td><td>1,000 ft — 5"</td><td>Static</td><td>Long relay supply; Storz couplings</td></tr>
               <tr><td>Top — Middle</td><td>150 ft 2½" skid + 400 ft 3"</td><td>Skid load w/ smooth bore nozzle</td><td>Skid deploys off 3" supply bed</td></tr>
               <tr><td>Top — Right</td><td>150 ft 1¾" skid + 550 ft 3"</td><td>Breakaway fog nozzle, 75 psi, 150 gpm</td><td>Attack line off 3" supply</td></tr>
             </tbody>
-          </table></div>
+          </table></div></div>
         </div>
 
   </section>
@@ -13847,7 +13858,7 @@ rigSearch('e61-search', 'e61-guide');
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What it detects</div><table class="hose-table"><thead><tr><th>Gas</th><th>Alarm At</th><th>IDLH</th></tr></thead><tbody><tr><td>CO (carbon monoxide)</td><td>35 ppm</td><td>1,200 ppm</td></tr><tr><td>O₂ (oxygen)</td><td>&lt;19.5% or &gt;23.5%</td><td>&lt;16%</td></tr><tr><td>H₂S (hydrogen sulfide)</td><td>10 ppm</td><td>50 ppm</td></tr><tr><td>Combustible gas (%LEL)</td><td>10% LEL</td><td>Varies</td></tr></tbody></table></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What it detects</div><div class="table-scroll"><table class="hose-table"><thead><tr><th>Gas</th><th>Alarm At</th><th>IDLH</th></tr></thead><tbody><tr><td>CO (carbon monoxide)</td><td>35 ppm</td><td>1,200 ppm</td></tr><tr><td>O₂ (oxygen)</td><td>&lt;19.5% or &gt;23.5%</td><td>&lt;16%</td></tr><tr><td>H₂S (hydrogen sulfide)</td><td>10 ppm</td><td>50 ppm</td></tr><tr><td>Combustible gas (%LEL)</td><td>10% LEL</td><td>Varies</td></tr></tbody></table></div></div>
         </div>        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Bump-Test Before Every Shift</strong>A gas monitor with failed sensors reads safe when it isn't. Bump-test (brief exposure to known gas) to confirm sensor response. Never trust an untested meter.</div></div>
       </div>
     </div>
@@ -14205,7 +14216,7 @@ rigSearch('e61-search', 'e61-guide');
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Item</th><th>E60</th><th>E61/E62 (typical)</th></tr></thead>
           <tbody>
             <tr><td>Extrication hydraulics</td><td><strong>Hurst Combi Tool</strong> (cuts + spreads in one tool)</td><td>Separate Hurst Cutter + Spreader</td></tr>
@@ -14227,7 +14238,7 @@ rigSearch('e61-search', 'e61-guide');
             <tr><td>Front intake port</td><td><strong>None — E60 has no front intake</strong></td><td>E61/E62 have front suction ports</td></tr>
             <tr><td>Hose tracking</td><td><strong>Hose Card clipboard</strong> with individual section IDs</td><td>Not a standard feature on all engines</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
 
@@ -15118,7 +15129,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
     </div>
     <div class="subsection"><div class="subsection-title">Rear Hose Bays</div></div>
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">🚒</span>Rear Hose Bay Summary</div>        <table class="hose-table"><thead><tr><th>Location</th><th>Load</th><th>Nozzle/Type</th><th>Notes</th></tr></thead><tbody><tr><td>Top — Left</td><td>1,000 ft — 5"</td><td>Static</td><td>Long relay supply; Storz couplings</td></tr><tr><td>Top — Middle</td><td>150 ft 2½" skid + 400 ft 3"</td><td>Smooth bore on skid</td><td>Skid deploys off 3" supply bed</td></tr><tr><td>Top — Right</td><td>150 ft 1¾" skid + 500 ft 3"</td><td>Breakaway fog (75 psi, 150 gpm)</td><td>Attack line off 3" supply</td></tr><tr><td>Middle — Crosslays ×2</td><td>200 ft 1¾" (top + bottom)</td><td>Preconnected</td><td>Top crosslay AND bottom crosslay</td></tr></tbody></table>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🚒</span>Rear Hose Bay Summary</div>        <div class="table-scroll"><table class="hose-table"><thead><tr><th>Location</th><th>Load</th><th>Nozzle/Type</th><th>Notes</th></tr></thead><tbody><tr><td>Top — Left</td><td>1,000 ft — 5"</td><td>Static</td><td>Long relay supply; Storz couplings</td></tr><tr><td>Top — Middle</td><td>150 ft 2½" skid + 400 ft 3"</td><td>Smooth bore on skid</td><td>Skid deploys off 3" supply bed</td></tr><tr><td>Top — Right</td><td>150 ft 1¾" skid + 500 ft 3"</td><td>Breakaway fog (75 psi, 150 gpm)</td><td>Attack line off 3" supply</td></tr><tr><td>Middle — Crosslays ×2</td><td>200 ft 1¾" (top + bottom)</td><td>Preconnected</td><td>Top crosslay AND bottom crosslay</td></tr></tbody></table></div>
 </div>
         </div>
 
@@ -15369,7 +15380,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What it detects</div><table class="hose-table"><thead><tr><th>Gas</th><th>Alarm</th><th>IDLH</th></tr></thead><tbody><tr><td>CO</td><td>35 ppm</td><td>1,200 ppm</td></tr><tr><td>O₂</td><td>&lt;19.5% / &gt;23.5%</td><td>&lt;16%</td></tr><tr><td>H₂S</td><td>10 ppm</td><td>50 ppm</td></tr><tr><td>Combustible (%LEL)</td><td>10% LEL</td><td>varies</td></tr></tbody></table></div>
+          <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>What it detects</div><div class="table-scroll"><table class="hose-table"><thead><tr><th>Gas</th><th>Alarm</th><th>IDLH</th></tr></thead><tbody><tr><td>CO</td><td>35 ppm</td><td>1,200 ppm</td></tr><tr><td>O₂</td><td>&lt;19.5% / &gt;23.5%</td><td>&lt;16%</td></tr><tr><td>H₂S</td><td>10 ppm</td><td>50 ppm</td></tr><tr><td>Combustible (%LEL)</td><td>10% LEL</td><td>varies</td></tr></tbody></table></div></div>
         </div>
         <div class="entry-grid">
           <div class="entry-block full"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>CO, H₂S, and combustible gases are invisible at lethal concentrations. O₂ deficiency incapacitates in seconds. The 4-gas meter detects what your senses cannot.</p></div>
@@ -15722,7 +15733,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
-        <table class="hose-table">
+        <div class="table-scroll"><table class="hose-table">
           <thead><tr><th>Item</th><th>E63</th><th>Other Engines (typical)</th></tr></thead>
           <tbody>
             <tr><td>Front LDH</td><td><strong>50 ft of 5" on FRONT BUMPER</strong></td><td>In eng. compartment or rear bay</td></tr>
@@ -15740,7 +15751,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
             <tr><td>Left side rear</td><td><strong>Pike poles: 6 ft, 8 ft, 10 ft (all three)</strong></td><td>Varies by rig</td></tr>
             <tr><td>Tools added post-photos</td><td><strong>K-tool, officer's tool, sledge, pick axe — confirm locations</strong></td><td>All tools documented in photos</td></tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
     </div>
   </section>
@@ -24124,12 +24135,12 @@ rigSearch('mp62-search', 'mp62-guide');
   <h4 class="scba-h4">PASS — Personal Alert Safety System</h4>
   <p>Motion-activated electronic alarm. If you stop moving for a set period, the SCBA assumes you might be down. It progresses through <strong>4 levels</strong>:</p>
 
-  <table class="scba-specs">
+  <div class="table-scroll"><table class="scba-specs">
     <tr><th>Stage</th><th>What happens</th></tr>
     <tr><td>Level 1</td><td>Pre-alarm starts at <strong>15–20 seconds</strong> of no motion. Soft chirp. Move and it resets.</td></tr>
     <tr><td>Level 2 &amp; 3</td><td>Escalating alerts as time passes without motion.</td></tr>
     <tr><td>Level 4 (Full Alarm)</td><td>Triggers after <strong>30 seconds</strong> of no motion. <strong>Cannot be reset by movement.</strong> Requires manual reset by clicking the green buttons.</td></tr>
-  </table>
+  </table></div>
 
   <p>You can also <strong>manually trigger the PASS</strong> at any moment by pushing the red ALARM button on the ICM. That's your panic button. If you're trapped, lost, pinned, hurt — you make this thing scream.</p>
 
