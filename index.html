@@ -4068,7 +4068,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/14/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/15/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -6539,11 +6539,8 @@ window.rigSearch = function(searchInputId, guideId) {
     </div>
   </div>
   <div class="compartment-photo">
-    <img src="images/engine62/e62-compartment-7.jpg" width="1012" height="746" alt="Hose hoist and traffic cone stored in Compartment 7" loading="lazy">
+    <img src="images/engine62/thumbs/e62-comp7-t01.jpg" width="707" height="800" alt="Fire extinguishers (K-class, CO2, ABC dry chemical) and spill-control absorbent in Compartment 7" loading="lazy">
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Compartment 7 &mdash; officer's side front</div>
-  </div>
-  <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="e62OpenLightbox('images/engine62/thumbs/e62-comp7-t01.jpg')"><img src="images/engine62/thumbs/e62-comp7-t01.jpg" width="707" height="800" alt="Additional Compartment 7 photo (1 of 1)" loading="lazy"></button>
   </div>
   <div class="callout callout-tip">
     <div class="callout-title">💡 THE FOUR CLASSES OF FIRE — REVIEW</div>
@@ -6762,7 +6759,7 @@ window.rigSearch = function(searchInputId, guideId) {
 
   </div>
   <div class="compartment-photo">
-    <img src="images/engine62/e62-top-of-engine.jpg" width="749" height="1100" alt="Extension ladder and pike poles mounted above the compartments" loading="lazy">
+    <img src="images/engine62/e62-compartment-7.jpg" width="1012" height="746" alt="Extension ladder and pike poles mounted above the compartments" loading="lazy">
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Above the compartments &mdash; ladder rack</div>
   </div>
   <div class="photo-thumb-grid">
@@ -7296,22 +7293,195 @@ window.rigSearch = function(searchInputId, guideId) {
       <div class="section-sub">Snow Shovel, Traffic Cones, Fire Paddle, Manifold, Dawn Soap</div>
     </div>
   </div>
+  <div class="compartment-photo">
+    <img src="images/engine62/e62-top-of-engine.jpg" width="749" height="1100" alt="Traffic cone and deck gun manifold valve on top of the apparatus" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Top of the engine &mdash; deck gun &amp; traffic cone</div>
+  </div>
   <div class="photo-thumb-grid">
     <button type="button" class="photo-thumb" onclick="e62OpenLightbox('images/engine62/thumbs/e62-topofengine-t01.jpg')"><img src="images/engine62/thumbs/e62-topofengine-t01.jpg" width="379" height="800" alt="Additional Top of the Engine photo (1 of 1)" loading="lazy"></button>
   </div>
 
 
 
-  <div class="gear-group">
-    <h4>Top-of-Engine Equipment</h4>
-    <ul class="gear-list">
-      <li><strong>Snow Shovel:</strong> For clearing snow from hydrant caps and access paths in winter. Always know where your hydrants are in snow — buried hydrants add precious minutes to water supply operations. Your district has them; know them.</li>
-      <li><strong>1" Garden Hose:</strong> Secondary utility hose stored on top for quick access. Same use as the one in the Engineer's compartment.</li>
-      <li><strong>Traffic Cones:</strong> Scene perimeter and traffic management on road incidents. Place them immediately on arrival at any roadway incident — your rig protects you; cones extend that protection zone. Never underestimate traffic.</li>
-      <li><strong>Fire Paddle:</strong> A flat paddle-style tool for patting out or smothering small ground fires — brush fires, grass fires, small flare-ups. Swatting/paddling beats a hose line for small spot fires in open terrain. Also called a Fire Swatter, flap, or beater.</li>
-      <li><strong>Manifold for Fire Gun / Deck Gun:</strong> The supply manifold for the deck gun (master stream mounted on top of the apparatus). Multiple inlets allow multiple supply lines to feed the deck gun for maximum flow. This is your defensive exterior master stream — flows 500–1000+ GPM.</li>
-      <li><strong>Dawn Soap and Brush in Bucket:</strong> For cleaning hose, equipment, and the apparatus itself. Also used as a foam additive for certain wetting applications on Class A materials (though Class A foam concentrate is preferred). The bucket and brush are the end-of-shift cleanup kit.</li>
-    </ul>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">Snow Shovel</div>
+          <span class="card-aka">AKA: Ice shovel, hydrant shovel.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>A standard flat-blade shovel carried on top of the apparatus for clearing snow and ice.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Clear snow from hydrant caps and the access path around the hydrant before connecting supply lines, and clear ice or snow from staging and approach areas as needed.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>Buried hydrants add precious minutes to water supply operations. Always know where your hydrants are in snow — your district has them; know them.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Ice shovel, hydrant shovel.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">1&quot; Garden Hose</div>
+          <span class="card-aka">AKA: Booster hose, utility hose, wash-down hose.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>A secondary 1-inch utility hose stored on top of the apparatus for quick access.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Same use as the one carried in the Engineer's compartment — connect it for washdown, small fires, or utility water needs without committing a full hose line.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>Gives you a quick, low-flow water source for minor tasks around the rig and scene cleanup.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Booster hose, utility hose, wash-down hose.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">Traffic Cones</div>
+          <span class="card-aka">AKA: Road cones, safety cones, warning cones.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>A set of reflective traffic cones carried on top of the apparatus for scene control.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Place them immediately on arrival at any roadway incident to establish a perimeter and manage traffic flow around the scene.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>Your rig protects you; cones extend that protection zone. Never underestimate traffic.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Road cones, safety cones, warning cones.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">Fire Paddle</div>
+          <span class="card-aka">AKA: Fire swatter, flap, beater.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>A flat paddle-style tool used for patting out or smothering small ground fires — brush fires, grass fires, small flare-ups.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Swat or paddle the tool against the edge of a small spot fire to smother it out.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>Swatting/paddling beats deploying a hose line for small spot fires in open terrain.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Fire swatter, flap, beater.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">Manifold for Fire Gun / Deck Gun</div>
+          <span class="card-aka">AKA: Deck gun manifold, master stream inlet manifold.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>The supply manifold for the deck gun — the master stream mounted on top of the apparatus.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Connect supply lines to the manifold's multiple inlets to feed the deck gun for maximum flow.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>This is your defensive exterior master stream — flows 500–1000+ GPM.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Deck gun manifold, master stream inlet manifold.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="equip-card">
+    <div class="card-header" onclick="e62Toggle(this)">
+        <div>
+          <div class="card-title">Dawn Soap &amp; Brush in Bucket</div>
+          <span class="card-aka">AKA: Wash bucket, cleaning kit.</span>
+        </div>
+        <div class="toggle-btn">+</div></div>
+    <div class="card-body">
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">📖</span>What It Is</div>
+            <p>A bucket containing Dawn dish soap and a brush, carried on top of the apparatus.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">🔧</span>How to Use It</div>
+            <p>Use for cleaning hose, equipment, and the apparatus itself at the end of a call. Also used as a foam additive for certain wetting applications on Class A materials, though Class A foam concentrate is preferred when available.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block ">
+            <div class="entry-label"><span class="icon">❓</span>Why It's Needed</div>
+            <p>This is the end-of-shift cleanup kit — hose, equipment, and the rig all get cleaned with it.</p></div>
+      </div>
+      <div class="entry-grid">
+        <div class="entry-block full">
+            <div class="entry-label"><span class="icon">🏷️</span>Also Known As</div>
+            <p>Wash bucket, cleaning kit.</p></div>
+      </div>
+    </div>
   </div>
 
 
