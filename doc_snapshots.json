@@ -215,9 +215,10 @@
     }
   },
   "Engine 61": {
-    "saved_at": "2026-08-16T16:54:20.912684+00:00",
+    "saved_at": "2026-09-16T12:19:32.769955+00:00",
     "compartments": {
       "Engine 61 Compartments": [
+        "750g tank",
         "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
         "Drivers side compartment E62 over the wheel contains air bags",
         "E61 stores airbags in the compartment near the back on the drivers side",
@@ -249,7 +250,7 @@
         "High Rise Bag",
         "2 Backboards in rear"
       ],
-      "**Compartment 1** - (Engineers comp)": [
+      "**Engineers Compartment**": [
         "1\u201d green garden hose - Length?",
         "2 Storz connectors (1 is a reducer) at 30 degree angle need mode info",
         "Nozzle - fits on deck gun and blitzfire",
@@ -289,7 +290,7 @@
         "Rope to move hose",
         "25\u2019 of 5\u201d hose"
       ],
-      "Compartment 2 Driver Side Middle": [
+      "Driver Side Middle Compartment": [
         "Closet pike pole",
         "Maul",
         "Haligan",
@@ -303,7 +304,7 @@
       "Outside of Drivers Side Moddle Compartment": [
         "3 air tanks"
       ],
-      "Compartment 3 Drivers Side Rear Compartment": [
+      "Drivers Side Rear Compartment": [
         "Cellar Nozzle on a cellar pipe",
         "2 battery powered portable work lights",
         "Small step ladder",
@@ -338,7 +339,7 @@
         "Hurst Rescue Cutter",
         "Hurst Rescue spreader"
       ],
-      "Compartment 5 Passenger Side Rear": [
+      "Officers Side Rear  Compartment": [
         "Flat Head Axe",
         "Haligan",
         "Crowbar",
@@ -368,10 +369,9 @@
         "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
         "Allen Key wrench",
         "Pliers",
-        "Punch",
-        "3 metric box wrenches 18mm, \\, \\"
+        "Punch"
       ],
-      "Compartment 6 Middle Passenger Side": [
+      "Middle Officers Side  Compartment": [
         "Water helmet",
         "PFD",
         "Mustang Suit",
@@ -382,7 +382,7 @@
         "Ice Cleats",
         "4 Air bottles (2 per side)"
       ],
-      "Compartment 7 Front Passenger Side": [
+      "Front Officers Side  Compartment": [
         "Silver bullet - pressurized water",
         "ABC Dry Chemical",
         "C02",
@@ -438,7 +438,8 @@
         "Traffic cones",
         "Fire Swatter",
         "Manifold for fire gun",
-        "Dawn Soap and Brush in bucket"
+        "Dawn Soap and Brush in bucket",
+        "Push Broom"
       ]
     }
   },
@@ -683,18 +684,18 @@
     }
   },
   "Utility 61": {
-    "saved_at": "2026-05-26T12:57:19.366395+00:00",
+    "saved_at": "2026-09-13T16:11:24.104985+00:00",
     "compartments": {
       "**Yellow Pages (number)**": [
         "Lists in numerical order 4-digit UN/NA identification identifies the appropriate guide number to reference in the Orange Section",
-        "Materials highlighted in green indicate they are Toxic Inhalation Hazard, Dangerous Water Reactive Materials that produce toxic gas upon contact with water"
+        "Materials highlighted in green indicate they are Toxic Inhalation Hazard, Dangerous Water Reactive Materials that produce toxic gas upon contact with water[  ](https://bunkerfiresafety.com/product-category/respiratory/scba-respiratory/msa-scba/)"
       ],
       "**Blue Pages (name)**": [
         "Lists in alphabetical order by name, identifies the appropriate guide number to reference in the Orange Section and the 4-digit UN/NA",
         "Materials highlighted in green will have evacuation distances in the Green Section"
       ],
       "**Orange Pages(response)**": [
-        "Contains response guides, safety recommendations and directions on how to proceed during the initial response phase of the incident",
+        "Contains response guides, safety recommendations and directions on how to proceed during the initial response phase of the incident[ ](https://us.msasafety.com/Supplied-Air-Respirators-\\(SCBA\\)/SCBA-Parts-&-Accessories/c/11702?locale=en)",
         "Provides information on potential hazards to health, risk of fire or explosion, emergency response procedures, personal protective equipment (PPE), evacuation procedures, first aid, and spill and fire control measures"
       ],
       "**Green Pages(evacuation)**": [
@@ -703,9 +704,9 @@
         "Fire East is the first  channel",
         "Fire White is channel 3",
         "Microphone can change channels",
-        "Push red button for emergency, \"ACCIDENTAL ACTIVATION\" if you click by mistake",
+        "Push red button for emergency, \u201cACCIDENTAL ACTIVATION\u201d if you click by mistake",
         "Voice recognition for changing channels on front",
-        "\"Hey you, Its Me\"",
+        "\u201cHey you, Its Me\u201d",
         "Don't scan channels, keep volume low when in groups",
         "Pocket mask also included",
         "Screen should show green not red",
@@ -713,10 +714,10 @@
         "Contains tape measure,",
         "Folders"
       ],
-      "The Bed (6 containers loose tools count as 1\"container\")": [
-        "Shears for cutting clothing",
-        "Glucose level measuring",
-        "Medical drugs and narcan",
+      "The Bed (6 containers loose tools count as 1\u201dcontainer\u201d)": [
+        "Shears for cutting clothing,",
+        "Glucose level measuring,",
+        "Medical drugs and narcan,",
         "Personal protective equipment",
         "Sharps container",
         "BP cuff",
@@ -726,7 +727,7 @@
         "Markers",
         "Contains Breathing equipment and",
         "Oxygen tank",
-        "AMBU [artificial manual breathing unit] masks (bagging someone)",
+        "AMBU \\[artificial manual breathing unit\\] masks (bagging someone),",
         "BVM (Bag, Valve, Mask)",
         "Pediatric breathing tubes",
         "Intubation tubes/air way tube",
@@ -738,9 +739,9 @@
         "One Airpack",
         "Air bottle (In black case)",
         "Medium sized face piece",
-        "Contains stabilization hardware and neck braces (two styles) (may need to know how to put together and deploy)",
-        "Foam head-locks (unrolled on the board and between board and head, will be taped to board and person's forehead)",
-        "Red/Orange with white stripe - mass casualties tag bag (Triage bag)",
+        "Contains stabilization hardware and neck braces (two styles) (may need to know how to put together and deploy - measure with fingers from blue section on collar \\[from bottom of the shoulder blade to the top of the jaw\\]) (pin to chin collar - move black pin to hole to form jaw rest),",
+        "Foam head-locks (unrolled on the board and between board and head, will be taped to board and person\u2019s forehead",
+        "Red/Orange with white stripe - mass casualties tag bag (Triage bag) (used to id patient severity by 4 colors, has tags and cards with numbers and colors)",
         "Orange bag with black zipper - traction materials i.e. straps, tubes for splints"
       ]
     }

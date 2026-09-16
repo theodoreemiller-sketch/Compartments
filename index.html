@@ -4068,7 +4068,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/15/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 9/16/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -9501,6 +9501,7 @@ rigSearch('u61-search', 'u61-guide');
     <h3>📚 How to Use This Guide</h3>
     <p>Every piece of equipment on Engine 61 has a job. Your job is to know where it lives, what it does, and how to put it to work before someone tells you to. Use this guide before every compartment check until you can walk the rig blindfolded.</p>
     <p>Click any card title to expand the full study entry. Use the search bar to find any tool instantly. <strong style="color:var(--gold)">Gold callouts = safety-critical.</strong> <strong style="color:#6CA06C">Green callouts = rookie tips.</strong> <strong style="color:#8AABDA">Blue callouts = pro knowledge.</strong></p>
+    <p><strong style="color:var(--gold)">🔢 Quick Spec:</strong> Engine 61 carries a 750-gallon booster tank. Know your water before you commit to an interior line without a supply established.</p>
   </div>
 
   <!-- ════════════════════════════════════ -->
@@ -10515,7 +10516,7 @@ rigSearch('u61-search', 'u61-guide');
       <div class="card-body">
         <div class="entry-grid">
           <div class="entry-block"><div class="entry-label"><span class="icon">🔧</span>Contents (full list)</div><ul>
-            <li>Screwdrivers (various sizes)</li><li>Socket wrench + sockets</li><li>Hacksaw</li><li>Box cutter</li><li>Zip ties</li><li>Tape measure</li><li>Pipe wrench</li><li>Hammer</li><li>Teflon tape</li><li>Adjustable crescent wrench</li><li>Small crowbar</li><li>Wire cutters</li><li>Window glazing tool</li><li>Razor scraper</li><li>Small sledgehammer</li><li>Voltage tester ⚡⚡⚡</li><li>Allen key wrench set</li><li>Pliers</li><li>Punch</li><li>3 metric box wrenches (18mm + 2 others)</li>
+            <li>Screwdrivers (various sizes)</li><li>Socket wrench + sockets</li><li>Hacksaw</li><li>Box cutter</li><li>Zip ties</li><li>Tape measure</li><li>Pipe wrench</li><li>Hammer</li><li>Teflon tape</li><li>Adjustable crescent wrench</li><li>Small crowbar</li><li>Wire cutters</li><li>Window glazing tool</li><li>Razor scraper</li><li>Small sledgehammer</li><li>Voltage tester ⚡⚡⚡</li><li>Allen key wrench set</li><li>Pliers</li><li>Punch</li>
           </ul></div>
           <div class="entry-block"><div class="entry-label"><span class="icon">⚠️</span>Voltage Tester — Critical Item</div><p>The asterisks (***) in the document flag the <strong>voltage tester</strong> as especially important. Used to verify whether electrical systems are energized before cutting, breaching, or working near them. <strong>Always test before you touch anything electrical.</strong></p></div>
         </div>
@@ -11394,7 +11395,7 @@ rigSearch('u61-search', 'u61-guide');
       <div class="section-icon">☀️</div>
       <div>
         <h2>Top of Engine</h2>
-        <div class="sub">Snow shovel · Traffic cones · Fire paddle · Dawn soap</div>
+        <div class="sub">Snow shovel · Traffic cones · Fire paddle · Dawn soap · Push broom</div>
       </div>
     </div>
   <div class="compartment-photo">
@@ -11492,6 +11493,19 @@ rigSearch('u61-search', 'u61-guide');
         <div class="callout callout-safe">
           <span class="callout-icon">✅</span>
           <div class="callout-content"><strong>Decon Station in 30 Seconds</strong>Garden hose + Dawn soap + brush bucket = a complete field decon station. After any working fire, take 60 seconds to rinse tools, gloves, and boots before stowing them. Contaminated tools re-contaminate your gloves every time you handle them. Break the cycle.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="equip-card">
+      <div class="card-header" onclick="e61ToggleCard(this)">
+        <div><div class="card-title">Push Broom</div><span class="card-aka">AKA: Street broom, shop broom</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A wide, stiff-bristled push broom stored on top of the apparatus alongside the snow shovel and garden hose.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Not every mess on scene calls for a hose. Glass, debris, dirt, and gravel tracked across a roadway or driveway after an accident or fire need to be swept clear before you leave — leaving a hazard behind for the next car or pedestrian is not how this job ends. Pair it with the shovel and the decon bucket and you've got everything you need to leave a scene the way you found it.</p></div>
         </div>
       </div>
     </div>

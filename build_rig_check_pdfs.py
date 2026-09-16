@@ -396,6 +396,7 @@ VEHICLES['e61'] = {
             "Fire Swatter / Paddle",
             "Manifold for Fire Gun",
             "Dawn Soap & Brush in Bucket",
+            "Push Broom",
         ]),
     ]
 }
