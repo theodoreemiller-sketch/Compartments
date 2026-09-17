@@ -7603,7 +7603,7 @@ window.e62Toggle = function(header) {
 </nav>
 <main id="u61-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - 280px); overflow-x:hidden;">
   <div class="rig-hero-photo">
-    <img src="images/utility61/u61-cover.jpg" width="825" height="1100" alt="Utility 61 exterior, front three-quarter view in quarters" loading="lazy">
+    <img src="images/utility61/u61-cover.jpg" width="1100" height="825" alt="Utility 61 exterior, rear three-quarter view in quarters" loading="lazy">
     <div class="rig-hero-caption">📷 Utility 61, as photographed in quarters. Full photo set: <a href="https://docs.google.com/document/d/1KP5aUp1LBCrW2VOvqhBcK6DKArHViVMwG1CN2GgA5-4/edit?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent);">view the source doc →</a></div>
   </div>
   <div class="intro-banner" style="background:linear-gradient(135deg,#2C1210 0%,#3C2010 100%); border-left:5px solid #D9291A;">
@@ -7615,41 +7615,43 @@ window.e62Toggle = function(header) {
     <div class="section-icon">📻</div>
     <div><h2>Front Dash — Communications</h2><div class="sub">DU-COMM · Fireground radio · PA system</div></div>
   </div>
+  <div class="compartment-photo">
+    <img src="images/utility61/u61-dash.jpg" width="825" height="1100" alt="Utility 61 front dashboard with DU-COMM and fireground radios" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Front dash, as installed</div>
+  </div>
+
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>DU-COMM (Gray Microphone)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">DU-COMM (Gray Microphone)</div><span class="card-aka">AKA: DU-COMM, dispatch radio, main radio, county radio</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> DU-COMM, dispatch radio, main radio, county radio</div>
-    <p><strong>What it is:</strong> A gray push-to-talk microphone connected to the DuPage County interoperable communications (DU-COMM) radio system. This is your primary channel for dispatch — assignments, updates, scene reports, resource requests.</p>
-    <p><strong>Why you need it:</strong> Dispatch communication is your lifeline. Every assignment, address change, and resource request runs through DU-COMM. Losing contact with dispatch on a working incident is a safety problem.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Know which channel is assigned for your district before the call.</li><li>Press and hold the PTT (push-to-talk) button.</li><li>Wait 1 second after pressing before speaking — gives the repeater time to key up.</li><li>Speak clearly: unit ID → message. Example: "Utility 61 to DU-COMM..."</li><li>Release and wait for response.</li><li>Never talk over another unit — listen first.</li></ol>
-    <ul class="callouts"><li>Wait 1 second before speaking. Keying and immediately talking clips the first word. "Utility 61" becomes "tility 61" — pause, then speak.</li><li>Gray = County/dispatch. Black left = Fireground. Black right = PA. Three mics, three channels — do not mix them up on scene.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A gray push-to-talk microphone connected to the DuPage County interoperable communications (DU-COMM) radio system. This is your primary channel for dispatch — assignments, updates, scene reports, resource requests.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Dispatch communication is your lifeline. Every assignment, address change, and resource request runs through DU-COMM. Losing contact with dispatch on a working incident is a safety problem.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Know which channel is assigned for your district before the call.</li><li>Press and hold the PTT (push-to-talk) button.</li><li>Wait 1 second after pressing before speaking — gives the repeater time to key up.</li><li>Speak clearly: unit ID → message. Example: "Utility 61 to DU-COMM..."</li><li>Release and wait for response.</li><li>Never talk over another unit — listen first.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>DU-COMM, dispatch radio, main radio, county radio</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Your Mic</strong><ul><li>Wait 1 second before speaking. Keying and immediately talking clips the first word. "Utility 61" becomes "tility 61" — pause, then speak.</li><li>Gray = County/dispatch. Black left = Fireground. Black right = PA. Three mics, three channels — do not mix them up on scene.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Fireground Microphone (Black — Lower Left)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Fireground Microphone (Black — Lower Left)</div><span class="card-aka">AKA: Tac mic, tactical channel mic, fireground radio</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Tac mic, tactical channel mic, fireground radio</div>
-    <p><strong>What it is:</strong> The black push-to-talk microphone at the lower left of the dash, connected to the fireground (tactical) channel. Used for crew-to-crew communication at a working incident.</p>
-    <p><strong>Why you need it:</strong> Fireground communication is separated from dispatch to avoid cluttering the county channel during operations. Command and crews talk on tac; dispatch stays on DU-COMM.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Confirm you're on the correct tac channel for the incident before transmitting.</li><li>PTT, wait 1 second, speak: unit/location → message.</li><li>Keep transmissions short and specific.</li><li>Critical messages get three words first: Mayday, Emergency, or Emergency Traffic.</li></ol>
-    <ul class="callouts"><li>MAYDAY PROTOCOL: If a firefighter is lost, trapped, or injured — LOUD: "Mayday, Mayday, Mayday, [name], [company], [location], [situation]." Do not hesitate. Do not minimize. Key up and transmit.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The black push-to-talk microphone at the lower left of the dash, connected to the fireground (tactical) channel. Used for crew-to-crew communication at a working incident.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Fireground communication is separated from dispatch to avoid cluttering the county channel during operations. Command and crews talk on tac; dispatch stays on DU-COMM.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Confirm you're on the correct tac channel for the incident before transmitting.</li><li>PTT, wait 1 second, speak: unit/location → message.</li><li>Keep transmissions short and specific.</li><li>Critical messages get three words first: Mayday, Emergency, or Emergency Traffic.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Tac mic, tactical channel mic, fireground radio</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Mayday Protocol</strong>MAYDAY PROTOCOL: If a firefighter is lost, trapped, or injured — LOUD: "Mayday, Mayday, Mayday, [name], [company], [location], [situation]." Do not hesitate. Do not minimize. Key up and transmit.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>PA System Microphone (Black — Upper Right)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">PA System Microphone (Black — Upper Right)</div><span class="card-aka">AKA: PA, public address, exterior speaker</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> PA, public address, exterior speaker</div>
-    <p><strong>What it is:</strong> The black microphone at the upper right connected to the external public address speaker. Broadcasts your voice to people outside the apparatus without opening a window.</p>
-    <p><strong>Why you need it:</strong> Scene control at roadway incidents — directing bystanders, alerting pedestrians, instructing people to clear an area. Also useful for directing traffic or providing info to waiting family members.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The black microphone at the upper right connected to the external public address speaker. Broadcasts your voice to people outside the apparatus without opening a window.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Scene control at roadway incidents — directing bystanders, alerting pedestrians, instructing people to clear an area. Also useful for directing traffic or providing info to waiting family members.</p></div></div>
     
-    <ul class="callouts"><li>PA beats rolling down a window and shouting. You control volume, you're audible over engine noise, and you keep both hands free.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>PA, public address, exterior speaker</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Use the PA</strong>PA beats rolling down a window and shouting. You control volume, you're audible over engine noise, and you keep both hands free.</div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -7659,89 +7661,90 @@ window.e62Toggle = function(header) {
     <div class="section-icon">🧤</div>
     <div><h2>Glove Compartment</h2><div class="sub">Maps · Loading paper · Patient forms · Keys · Flares · Accountability</div></div>
   </div>
+  <div class="compartment-photo">
+    <img src="images/utility61/u61-glove.jpg" width="825" height="1100" alt="Utility 61 glove compartment contents including ID tags and keys" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Glove compartment, as installed</div>
+  </div>
+  <div class="photo-thumb-grid">
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-glove-t01.jpg')"><img src="images/utility61/thumbs/u61-glove-t01.jpg" width="800" height="600" alt="Additional Glove Compartment photo (1 of 1)" loading="lazy"></button>
+  </div>
+
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Maps — District Street Maps</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Maps — District Street Maps</div><span class="card-aka">AKA: Street atlas, paper nav, district maps, A-to-Z</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Street atlas, paper nav, district maps, A-to-Z</div>
-    <p><strong>What it is:</strong> Paper street maps of Glen Ellyn and surrounding mutual-aid districts. Your GPS will fail — this won't.</p>
-    <p><strong>Why you need it:</strong> When MDT or GPS goes down mid-run, you cannot lose time searching. The driver needs a backup nav option immediately.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Paper street maps of Glen Ellyn and surrounding mutual-aid districts. Your GPS will fail — this won't.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When MDT or GPS goes down mid-run, you cannot lose time searching. The driver needs a backup nav option immediately.</p></div></div>
     
-    <ul class="callouts"><li>Know where these are BEFORE you need them. In a real mayday you won't have time to dig.</li><li>Cross-reference the laminated district map on the MDT mount for quick orientation.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Street atlas, paper nav, district maps, A-to-Z</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Where They Are</strong><ul><li>Know where these are BEFORE you need them. In a real mayday you won't have time to dig.</li><li>Cross-reference the laminated district map on the MDT mount for quick orientation.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Truck Loading Instruction Paper</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Truck Loading Instruction Paper</div><span class="card-aka">AKA: Load chart, weight distribution sheet, apparatus loading guide</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Load chart, weight distribution sheet, apparatus loading guide</div>
-    <p><strong>What it is:</strong> A reference sheet showing how the rig is loaded — weight distribution, item placement, and loading sequence.</p>
-    <p><strong>Why you need it:</strong> Improper loading shifts the vehicle's center of gravity. It also creates liability if something shifts and injures crew. Know how this rig is supposed to be loaded.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A reference sheet showing how the rig is loaded — weight distribution, item placement, and loading sequence.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Improper loading shifts the vehicle's center of gravity. It also creates liability if something shifts and injures crew. Know how this rig is supposed to be loaded.</p></div></div>
     
-    <ul class="callouts"><li>If something gets moved, reference this before you make assumptions about where it goes back.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Load chart, weight distribution sheet, apparatus loading guide</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Check Before You Assume</strong>If something gets moved, reference this before you make assumptions about where it goes back.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Patient Prepare Reports (Blank)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Patient Prepare Reports (Blank)</div><span class="card-aka">AKA: PCR, patient care reports, run reports, medical forms, PRR</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> PCR, patient care reports, run reports, medical forms, PRR</div>
-    <p><strong>What it is:</strong> Pre-printed patient report forms for documenting medical calls when the MDT is unavailable.</p>
-    <p><strong>Why you need it:</strong> Documentation is required by law. If the MDT crashes mid-call, you still need to document. These are your backup.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Pre-printed patient report forms for documenting medical calls when the MDT is unavailable.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Documentation is required by law. If the MDT crashes mid-call, you still need to document. These are your backup.</p></div></div>
     
-    <ul class="callouts"><li>Date and time them accurately. Inaccurate EMS documentation is a legal problem, not just a paperwork problem.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>PCR, patient care reports, run reports, medical forms, PRR</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Date and Time Accurately</strong>Date and time them accurately. Inaccurate EMS documentation is a legal problem, not just a paperwork problem.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Vehicle Name Laminate</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Vehicle Name Laminate</div><span class="card-aka">AKA: Rig ID tag, apparatus card, unit identifier</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Rig ID tag, apparatus card, unit identifier</div>
-    <p><strong>What it is:</strong> A laminated card identifying this vehicle as "Utility 61" — used for accountability and radio checks.</p>
-    <p><strong>Why you need it:</strong> In a multi-agency incident, unit identification matters for command accountability and resource tracking.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A laminated card identifying this vehicle as "Utility 61" — used for accountability and radio checks.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>In a multi-agency incident, unit identification matters for command accountability and resource tracking.</p></div></div>
     
-    <ul class="callouts"><li>Do not remove this from the vehicle. It stays in the glove box.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Rig ID tag, apparatus card, unit identifier</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Stays in the Glove Box</strong>Do not remove this from the vehicle. It stays in the glove box.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Spare Tire Lock Key (In Bag)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Spare Tire Lock Key (In Bag)</div><span class="card-aka">AKA: Spare tire key, lug lock key, anti-theft key</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Spare tire key, lug lock key, anti-theft key</div>
-    <p><strong>What it is:</strong> A key that releases the locking lug nut securing the spare tire under the vehicle.</p>
-    <p><strong>Why you need it:</strong> Without this key, you cannot access the spare tire. A flat tire on-scene with no spare is a crew-safety problem.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A key that releases the locking lug nut securing the spare tire under the vehicle.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Without this key, you cannot access the spare tire. A flat tire on-scene with no spare is a crew-safety problem.</p></div></div>
     
-    <ul class="callouts"><li>The bag it's in — know exactly where it is. This is not the time to discover you can't find it.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Spare tire key, lug lock key, anti-theft key</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Exactly Where It Is</strong>The bag it's in — know exactly where it is. This is not the time to discover you can't find it.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Road Flares (×2)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Road Flares (×2)</div><span class="card-aka">AKA: Highway flares, fusees, emergency flares, road signals</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Highway flares, fusees, emergency flares, road signals</div>
-    <p><strong>What it is:</strong> Pyrotechnic warning devices that burn bright red/orange to alert oncoming traffic to a hazard zone.</p>
-    <p><strong>Why you need it:</strong> Traffic is one of the leading killers of emergency responders on-scene. Flares establish a visible perimeter before cones and tape go up.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Strike the cap firmly against the igniter end — it lights like a match.</li><li>Place upwind and uphill from any fuel or spill hazard.</li><li>Never hold a lit flare near your face or over a fuel source.</li></ol>
-    <ul class="callouts"><li>Flares burn extremely hot. Do NOT throw them — walk them into position.</li><li>Check count on every rig check. Missing flares need to be restocked.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Pyrotechnic warning devices that burn bright red/orange to alert oncoming traffic to a hazard zone.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Traffic is one of the leading killers of emergency responders on-scene. Flares establish a visible perimeter before cones and tape go up.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Strike the cap firmly against the igniter end — it lights like a match.</li><li>Place upwind and uphill from any fuel or spill hazard.</li><li>Never hold a lit flare near your face or over a fuel source.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Highway flares, fusees, emergency flares, road signals</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Handle and Check Flares</strong><ul><li>Flares burn extremely hot. Do NOT throw them — walk them into position.</li><li>Check count on every rig check. Missing flares need to be restocked.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Passport Accountability Tags (Velcro)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Passport Accountability Tags (Velcro)</div><span class="card-aka">AKA: Passport, accountability tags, name tags, velcro tags, ICS accountability</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Passport, accountability tags, name tags, velcro tags, ICS accountability</div>
-    <p><strong>What it is:</strong> Velcro-backed name tags used in the Passport accountability system to track personnel entering and exiting a hazard zone.</p>
-    <p><strong>Why you need it:</strong> The Passport system is how command knows who is in a hot zone. Without your tag on the board, command doesn't know you're in there.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Velcro-backed name tags used in the Passport accountability system to track personnel entering and exiting a hazard zone.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The Passport system is how command knows who is in a hot zone. Without your tag on the board, command doesn't know you're in there.</p></div></div>
     
-    <ul class="callouts"><li>Your tag goes on the passport board when you enter. It comes off when you exit. No exceptions.</li><li>If your tag is missing from the board and you're not on scene, someone will be looking for you.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Passport, accountability tags, name tags, velcro tags, ICS accountability</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Passport Discipline</strong><ul><li>Your tag goes on the passport board when you enter. It comes off when you exit. No exceptions.</li><li>If your tag is missing from the board and you're not on scene, someone will be looking for you.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -7758,75 +7761,69 @@ window.e62Toggle = function(header) {
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — Overview</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — Overview</div><span class="card-aka">AKA: Emergency Response Guidebook, orange book, DOT book, hazmat bible</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Emergency Response Guidebook, orange book, DOT book, hazmat bible</div>
-    <p><strong>What it is:</strong> The Emergency Response Guidebook (ERG) is published by PHMSA and is the first-responder reference for identifying hazardous materials and taking initial protective actions.</p>
-    <p><strong>Why you need it:</strong> On a hazmat call, you have minutes to identify a chemical and establish a safe perimeter. The ERG gets you moving in the right direction while specialists are called.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The Emergency Response Guidebook (ERG) is published by PHMSA and is the first-responder reference for identifying hazardous materials and taking initial protective actions.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>On a hazmat call, you have minutes to identify a chemical and establish a safe perimeter. The ERG gets you moving in the right direction while specialists are called.</p></div></div>
     
-    <ul class="callouts"><li>The ERG is a guide for INITIAL response only — not a substitute for a hazmat team.</li><li>Know the three-step lookup: 4-digit ID number → orange section → isolation distances in green or orange tables.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Emergency Response Guidebook, orange book, DOT book, hazmat bible</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>How the ERG Works</strong><ul><li>The ERG is a guide for INITIAL response only — not a substitute for a hazmat team.</li><li>Know the three-step lookup: 4-digit ID number → orange section → isolation distances in green or orange tables.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — Yellow Pages (ID Number Index)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — Yellow Pages (ID Number Index)</div><span class="card-aka">AKA: Yellow section, material ID index, four-digit lookup</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Yellow section, material ID index, four-digit lookup</div>
-    <p><strong>What it is:</strong> An index sorted by the 4-digit UN/NA identification number found on placards, shipping papers, and containers.</p>
-    <p><strong>Why you need it:</strong> When you arrive on scene and can read the placard number from a safe distance, yellow pages get you to the right guide number fast.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Find the 4-digit number on the placard.</li><li>Look it up in the yellow pages.</li><li>Note the guide number (e.g., Guide 128).</li><li>Turn to that guide in the orange pages.</li></ol>
-    <ul class="callouts"><li>Do not approach to read the placard if you don't know what you're dealing with. Use binoculars first.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>An index sorted by the 4-digit UN/NA identification number found on placards, shipping papers, and containers.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When you arrive on scene and can read the placard number from a safe distance, yellow pages get you to the right guide number fast.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Find the 4-digit number on the placard.</li><li>Look it up in the yellow pages.</li><li>Note the guide number (e.g., Guide 128).</li><li>Turn to that guide in the orange pages.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Yellow section, material ID index, four-digit lookup</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Don't Approach Blind</strong>Do not approach to read the placard if you don't know what you're dealing with. Use binoculars first.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — Blue Pages (Material Name Index)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — Blue Pages (Material Name Index)</div><span class="card-aka">AKA: Blue section, chemical name index, alphabetical lookup</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Blue section, chemical name index, alphabetical lookup</div>
-    <p><strong>What it is:</strong> An alphabetical index of hazardous material names linking to their guide number.</p>
-    <p><strong>Why you need it:</strong> If you have a shipping manifest or can identify the substance by name, the blue pages let you skip the placard lookup.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>An alphabetical index of hazardous material names linking to their guide number.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>If you have a shipping manifest or can identify the substance by name, the blue pages let you skip the placard lookup.</p></div></div>
     
-    <ul class="callouts"><li>Blue pages are your backup when the placard number is obscured or you have verbal information about the material.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Blue section, chemical name index, alphabetical lookup</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Backup Lookup Method</strong>Blue pages are your backup when the placard number is obscured or you have verbal information about the material.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — Orange Pages (Action Guides)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — Orange Pages (Action Guides)</div><span class="card-aka">AKA: Orange section, response guides, numbered guides</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Orange section, response guides, numbered guides</div>
-    <p><strong>What it is:</strong> The core of the ERG — numbered guides (1–172+) each covering a category of hazardous materials with isolation distances, PPE requirements, fire response, and spill response.</p>
-    <p><strong>Why you need it:</strong> Once you have a guide number from yellow or blue, the orange pages tell you: how far to isolate, what PPE is needed, and what not to do.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The core of the ERG — numbered guides (1–172+) each covering a category of hazardous materials with isolation distances, PPE requirements, fire response, and spill response.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Once you have a guide number from yellow or blue, the orange pages tell you: how far to isolate, what PPE is needed, and what not to do.</p></div></div>
     
-    <ul class="callouts"><li>Read the highlighted FIRE and SPILL sections first — those are your immediate action priorities.</li><li>Potential hazards are listed from most to least severe. Read them all before you act.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Orange section, response guides, numbered guides</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Read It In Order</strong><ul><li>Read the highlighted FIRE and SPILL sections first — those are your immediate action priorities.</li><li>Potential hazards are listed from most to least severe. Read them all before you act.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — Green Pages (Initial Isolation Distances)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — Green Pages (Initial Isolation Distances)</div><span class="card-aka">AKA: Green section, isolation tables, protective action distances, TIH table</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Green section, isolation tables, protective action distances, TIH table</div>
-    <p><strong>What it is:</strong> Tables giving specific isolation and protective action distances for materials that are toxic-inhalation hazards (TIH) or water-reactive.</p>
-    <p><strong>Why you need it:</strong> For the most dangerous materials — chlorine, ammonia, phosgene — the orange guide alone isn't enough. The green pages give precise downwind evacuation distances.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Tables giving specific isolation and protective action distances for materials that are toxic-inhalation hazards (TIH) or water-reactive.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>For the most dangerous materials — chlorine, ammonia, phosgene — the orange guide alone isn't enough. The green pages give precise downwind evacuation distances.</p></div></div>
     
-    <ul class="callouts"><li>Small vs. Large spill distances matter enormously — don't confuse them.</li><li>Day vs. night conditions change protective action distances. Check both columns and use the larger distance if unsure.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Green section, isolation tables, protective action distances, TIH table</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Don't Confuse the Columns</strong><ul><li>Small vs. Large spill distances matter enormously — don't confuse them.</li><li>Day vs. night conditions change protective action distances. Check both columns and use the larger distance if unsure.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ERG — UN vs. NA Numbers</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ERG — UN vs. NA Numbers</div><span class="card-aka">AKA: UN number, NA number, United Nations, North American, DOT placard number</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> UN number, NA number, United Nations, North American, DOT placard number</div>
-    <p><strong>What it is:</strong> UN numbers are international 4-digit codes for hazardous materials. NA numbers are North America-specific variants, often for materials not recognized internationally.</p>
-    <p><strong>Why you need it:</strong> The ERG covers both. If you see a placard starting with "NA" it's still a valid lookup — same process.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>UN numbers are international 4-digit codes for hazardous materials. NA numbers are North America-specific variants, often for materials not recognized internationally.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The ERG covers both. If you see a placard starting with "NA" it's still a valid lookup — same process.</p></div></div>
     
-    <ul class="callouts"><li>Most placards show UN numbers. NA numbers appear primarily on domestic shipments of specific materials.</li><li>Either way, four digits, yellow pages, guide number, orange pages — same drill.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>UN number, NA number, United Nations, North American, DOT placard number</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Same Drill Either Way</strong><ul><li>Most placards show UN numbers. NA numbers appear primarily on domestic shipments of specific materials.</li><li>Either way, four digits, yellow pages, guide number, orange pages — same drill.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -7843,27 +7840,25 @@ window.e62Toggle = function(header) {
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Tape Measure</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Tape Measure</div><span class="card-aka">AKA: Measuring tape, retractable tape, construction tape</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Measuring tape, retractable tape, construction tape</div>
-    <p><strong>What it is:</strong> A standard retractable measuring tape stored in the driver or officer door pocket.</p>
-    <p><strong>Why you need it:</strong> Used at structural incidents, water rescue, and any scene requiring dimension measurement — room size, collapse zones, standpipe connections.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A standard retractable measuring tape stored in the driver or officer door pocket.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Used at structural incidents, water rescue, and any scene requiring dimension measurement — room size, collapse zones, standpipe connections.</p></div></div>
     
-    <ul class="callouts"><li>Return it to the door pocket every time. It's small and easy to lose on scene.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Measuring tape, retractable tape, construction tape</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Return It Every Time</strong>Return it to the door pocket every time. It's small and easy to lose on scene.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Roadway Safety Vest (×2 — One Per Door)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Roadway Safety Vest (×2 — One Per Door)</div><span class="card-aka">AKA: Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</div>
-    <p><strong>What it is:</strong> High-visibility ANSI-rated safety vests — one in each door pocket. These go on before you step into a traffic environment.</p>
-    <p><strong>Why you need it:</strong> Traffic is the #1 cause of on-scene firefighter fatalities. Hi-vis gear makes you visible to oncoming drivers and reduces strike risk.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>High-visibility ANSI-rated safety vests — one in each door pocket. These go on before you step into a traffic environment.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Traffic is the #1 cause of on-scene firefighter fatalities. Hi-vis gear makes you visible to oncoming drivers and reduces strike risk.</p></div></div>
     
-    <ul class="callouts"><li>Put it on BEFORE you exit the vehicle on any roadway call — not after.</li><li>Both vests should be on the rig after every call. If one got left on-scene, restock it immediately.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Vest On Before You're Out</strong><ul><li>Put it on BEFORE you exit the vehicle on any roadway call — not after.</li><li>Both vests should be on the rig after every call. If one got left on-scene, restock it immediately.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -7878,164 +7873,153 @@ window.e62Toggle = function(header) {
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Front bench, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-frontbench-t01.jpg')"><img src="images/utility61/thumbs/u61-frontbench-t01.jpg" width="600" height="800" alt="Additional Front Bench photo (1 of 1)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-frontbench-t01.jpg')"><img src="images/utility61/thumbs/u61-frontbench-t01.jpg" width="600" height="800" alt="Additional Front Bench photo (1 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-frontbench-t02.jpg')"><img src="images/utility61/thumbs/u61-frontbench-t02.jpg" width="600" height="800" alt="Additional Front Bench photo (2 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-frontbench-t03.jpg')"><img src="images/utility61/thumbs/u61-frontbench-t03.jpg" width="600" height="800" alt="Additional Front Bench photo (3 of 3)" loading="lazy"></button>
   </div>
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>MDT — Mobile Data Terminal</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">MDT — Mobile Data Terminal</div><span class="card-aka">AKA: MDT, onboard computer, CAD terminal, dispatch terminal, in-cab computer</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> MDT, onboard computer, CAD terminal, dispatch terminal, in-cab computer</div>
-    <p><strong>What it is:</strong> The ruggedized in-cab computer running the CAD (Computer-Aided Dispatch) system. Shows run cards, maps, hydrant locations, and pre-plans.</p>
-    <p><strong>Why you need it:</strong> The MDT is your primary source for incident address, cross streets, building pre-plans, prior incident history, and GPS navigation.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The ruggedized in-cab computer running the CAD (Computer-Aided Dispatch) system. Shows run cards, maps, hydrant locations, and pre-plans.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The MDT is your primary source for incident address, cross streets, building pre-plans, prior incident history, and GPS navigation.</p></div></div>
     
-    <ul class="callouts"><li>If the MDT goes dark mid-run, switch to paper maps immediately — don't waste time troubleshooting.</li><li>Never mount anything on or over the MDT screen. Obstructed displays cost lives.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>MDT, onboard computer, CAD terminal, dispatch terminal, in-cab computer</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Have a Backup Plan</strong><ul><li>If the MDT goes dark mid-run, switch to paper maps immediately — don't waste time troubleshooting.</li><li>Never mount anything on or over the MDT screen. Obstructed displays cost lives.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Map Binders</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Map Binders</div><span class="card-aka">AKA: District maps, map book, plat book, street binders</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> District maps, map book, plat book, street binders</div>
-    <p><strong>What it is:</strong> Binders containing printed maps of the response district, hydrant locations, and mutual-aid coverage areas.</p>
-    <p><strong>Why you need it:</strong> Backup navigation when the MDT fails. Also useful for command briefings when you need to physically show coverage areas.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Binders containing printed maps of the response district, hydrant locations, and mutual-aid coverage areas.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Backup navigation when the MDT fails. Also useful for command briefings when you need to physically show coverage areas.</p></div></div>
     
-    <ul class="callouts"><li>Keep them organized and in the right binder. A mis-filed map is as useful as no map.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>District maps, map book, plat book, street binders</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Keep Them Organized</strong>Keep them organized and in the right binder. A mis-filed map is as useful as no map.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Maintenance QR Code</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Maintenance QR Code</div><span class="card-aka">AKA: Maintenance code, apparatus maintenance scan, repair QR</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Maintenance code, apparatus maintenance scan, repair QR</div>
-    <p><strong>What it is:</strong> A QR code linking to the apparatus maintenance request or log system.</p>
-    <p><strong>Why you need it:</strong> Any deficiency found during a rig check must be documented. The QR code gets you there fast without digging for paper forms.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A QR code linking to the apparatus maintenance request or log system.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Any deficiency found during a rig check must be documented. The QR code gets you there fast without digging for paper forms.</p></div></div>
     
-    <ul class="callouts"><li>If you find something broken on rig check, scan and report it BEFORE that rig goes back in service.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Maintenance code, apparatus maintenance scan, repair QR</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Report It Before Return to Service</strong>If you find something broken on rig check, scan and report it BEFORE that rig goes back in service.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Insurance QR Code</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Insurance QR Code</div><span class="card-aka">AKA: Insurance scan, apparatus insurance, vehicle insurance QR</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Insurance scan, apparatus insurance, vehicle insurance QR</div>
-    <p><strong>What it is:</strong> A QR code linking to the apparatus insurance documentation.</p>
-    <p><strong>Why you need it:</strong> Required if the vehicle is involved in an accident. Having fast access prevents delays with law enforcement or other parties.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A QR code linking to the apparatus insurance documentation.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Required if the vehicle is involved in an accident. Having fast access prevents delays with law enforcement or other parties.</p></div></div>
     
-    <ul class="callouts"><li>Know where this is. You won't be calm when you need it, so find it now while you are.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Insurance scan, apparatus insurance, vehicle insurance QR</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Where This Is</strong>Know where this is. You won't be calm when you need it, so find it now while you are.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Fuel Key</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Fuel Key</div><span class="card-aka">AKA: Fuel card, gas key, fleet card, apparatus fuel key</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Fuel card, gas key, fleet card, apparatus fuel key</div>
-    <p><strong>What it is:</strong> A key or card used to access the department fuel station.</p>
-    <p><strong>Why you need it:</strong> U61 takes diesel. Without the fuel key you cannot refuel the rig, which means it goes out of service. This is not optional.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A key or card used to access the department fuel station.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>U61 takes diesel. Without the fuel key you cannot refuel the rig, which means it goes out of service. This is not optional.</p></div></div>
     
-    <ul class="callouts"><li>Return the key to the bench after every fuel stop. It does not leave the vehicle.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Fuel card, gas key, fleet card, apparatus fuel key</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Stays With the Vehicle</strong>Return the key to the bench after every fuel stop. It does not leave the vehicle.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Prairie Path Key</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Prairie Path Key</div><span class="card-aka">AKA: Prairie path gate key, trail access key, bike path gate key</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Prairie path gate key, trail access key, bike path gate key</div>
-    <p><strong>What it is:</strong> A key that opens gates along the Illinois Prairie Path and similar restricted-access trails in the district.</p>
-    <p><strong>Why you need it:</strong> The Prairie Path runs through our response area. Medical emergencies on the path require off-road access. Without this key, you're on foot for a distance that can cost a patient their life.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A key that opens gates along the Illinois Prairie Path and similar restricted-access trails in the district.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The Prairie Path runs through our response area. Medical emergencies on the path require off-road access. Without this key, you're on foot for a distance that can cost a patient their life.</p></div></div>
     
-    <ul class="callouts"><li>This is a unique key — losing it means gates stay locked until a replacement is cut. Don't lose it.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Prairie path gate key, trail access key, bike path gate key</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>A Unique Key — Don't Lose It</strong>This is a unique key — losing it means gates stay locked until a replacement is cut. Don't lose it.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Knox Box Key</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Knox Box Key</div><span class="card-aka">AKA: Knox key, master key, rapid entry key, Supra key</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Knox key, master key, rapid entry key, Supra key</div>
-    <p><strong>What it is:</strong> The Knox Box master key that opens Knox Boxes installed at commercial buildings, allowing rapid entry without forcing doors.</p>
-    <p><strong>Why you need it:</strong> Breaking a door costs time and money. Knox Box access is faster, cleaner, and required by code in many commercial properties. This key must be on the rig at all times.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The Knox Box master key that opens Knox Boxes installed at commercial buildings, allowing rapid entry without forcing doors.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Breaking a door costs time and money. Knox Box access is faster, cleaner, and required by code in many commercial properties. This key must be on the rig at all times.</p></div></div>
     
-    <ul class="callouts"><li>This key is strictly controlled. It NEVER leaves the vehicle except in the hands of an officer.</li><li>If you use it, log it. Knox key use is tracked and audited.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Knox key, master key, rapid entry key, Supra key</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Strictly Controlled</strong><ul><li>This key is strictly controlled. It NEVER leaves the vehicle except in the hands of an officer.</li><li>If you use it, log it. Knox key use is tracked and audited.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Key Tags</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Key Tags</div><span class="card-aka">AKA: Spare key tags, key labels, key identifiers</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Spare key tags, key labels, key identifiers</div>
-    <p><strong>What it is:</strong> Blank or labeled tags used to identify keys on the key ring.</p>
-    <p><strong>Why you need it:</strong> With multiple keys on the ring, unlabeled keys cause confusion and delay. Key tags keep the set organized.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Blank or labeled tags used to identify keys on the key ring.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>With multiple keys on the ring, unlabeled keys cause confusion and delay. Key tags keep the set organized.</p></div></div>
     
-    <ul class="callouts"><li>If a tag falls off a key, replace it immediately. "I think this is the fuel key" is not good enough.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Spare key tags, key labels, key identifiers</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Replace a Missing Tag Immediately</strong>If a tag falls off a key, replace it immediately. "I think this is the fuel key" is not good enough.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Gas Instructions</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Gas Instructions</div><span class="card-aka">AKA: Fueling instructions, fuel procedure card, diesel fill guide</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Fueling instructions, fuel procedure card, diesel fill guide</div>
-    <p><strong>What it is:</strong> A laminated card or sheet outlining the fueling procedure for U61.</p>
-    <p><strong>Why you need it:</strong> U61 runs on diesel. Putting gasoline in a diesel engine destroys it. New crew members and probies need to verify before they pump.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A laminated card or sheet outlining the fueling procedure for U61.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>U61 runs on diesel. Putting gasoline in a diesel engine destroys it. New crew members and probies need to verify before they pump.</p></div></div>
     
-    <ul class="callouts"><li>DIESEL ONLY. Read the nozzle, read the label, confirm before you pump.</li><li>If you're ever unsure, stop and ask. A ruined engine is a far worse outcome than a delayed fuel stop.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Fueling instructions, fuel procedure card, diesel fill guide</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Diesel Only</strong><ul><li>DIESEL ONLY. Read the nozzle, read the label, confirm before you pump.</li><li>If you're ever unsure, stop and ask. A ruined engine is a far worse outcome than a delayed fuel stop.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Nitrile Gloves (Box)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Nitrile Gloves (Box)</div><span class="card-aka">AKA: Exam gloves, medical gloves, purple gloves, BSI gloves</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Exam gloves, medical gloves, purple gloves, BSI gloves</div>
-    <p><strong>What it is:</strong> A box of nitrile examination gloves for medical call use.</p>
-    <p><strong>Why you need it:</strong> Body Substance Isolation (BSI) is standard on every medical call. These go on before you touch a patient — every time, no exceptions.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A box of nitrile examination gloves for medical call use.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Body Substance Isolation (BSI) is standard on every medical call. These go on before you touch a patient — every time, no exceptions.</p></div></div>
     
-    <ul class="callouts"><li>Glove up BEFORE patient contact. If you're already in it, you're already exposed.</li><li>Check the box count on rig check. Running out of gloves mid-call is a BSI failure.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Exam gloves, medical gloves, purple gloves, BSI gloves</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>BSI Before Contact</strong><ul><li>Glove up BEFORE patient contact. If you're already in it, you're already exposed.</li><li>Check the box count on rig check. Running out of gloves mid-call is a BSI failure.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Do-Not-Cross Tape</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Do-Not-Cross Tape</div><span class="card-aka">AKA: Scene tape, perimeter tape, barrier tape, black and yellow tape</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Scene tape, perimeter tape, barrier tape, black and yellow tape</div>
-    <p><strong>What it is:</strong> Black-and-yellow "DO NOT CROSS" barrier tape used to establish a perimeter at fire or hazmat scenes.</p>
-    <p><strong>Why you need it:</strong> Scene control starts with a perimeter. Tape keeps civilians, media, and bystanders out of the hot zone before cones and barriers are in place.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Black-and-yellow "DO NOT CROSS" barrier tape used to establish a perimeter at fire or hazmat scenes.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Scene control starts with a perimeter. Tape keeps civilians, media, and bystanders out of the hot zone before cones and barriers are in place.</p></div></div>
     
-    <ul class="callouts"><li>Use generously. A tight perimeter that keeps getting breached is worse than a wide one.</li><li>Secure the ends to something solid — tape that blows away in the wind does nothing.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Scene tape, perimeter tape, barrier tape, black and yellow tape</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Build a Real Perimeter</strong><ul><li>Use generously. A tight perimeter that keeps getting breached is worse than a wide one.</li><li>Secure the ends to something solid — tape that blows away in the wind does nothing.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Fire / Scene Tape</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Fire / Scene Tape</div><span class="card-aka">AKA: Fire line tape, red fire tape, incident tape</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Fire line tape, red fire tape, incident tape</div>
-    <p><strong>What it is:</strong> Red or red-and-white "FIRE LINE — DO NOT CROSS" tape for post-fire and extended scene control.</p>
-    <p><strong>Why you need it:</strong> After fire operations, fire tape establishes the investigation perimeter and keeps the public out while overhaul and investigation continue.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Red or red-and-white "FIRE LINE — DO NOT CROSS" tape for post-fire and extended scene control.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>After fire operations, fire tape establishes the investigation perimeter and keeps the public out while overhaul and investigation continue.</p></div></div>
     
-    <ul class="callouts"><li>Different departments use different tape colors. Know which tape is which on this rig.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Fire line tape, red fire tape, incident tape</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Which Tape Is Which</strong>Different departments use different tape colors. Know which tape is which on this rig.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Owner's Manual</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Owner's Manual</div><span class="card-aka">AKA: Vehicle manual, apparatus manual, operator's manual</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Vehicle manual, apparatus manual, operator's manual</div>
-    <p><strong>What it is:</strong> The OEM owner's manual for the U61 chassis.</p>
-    <p><strong>Why you need it:</strong> Contains vehicle-specific information including warning indicators, fluid specs, tire pressures, and emergency shutdown procedures.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>The OEM owner's manual for the U61 chassis.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Contains vehicle-specific information including warning indicators, fluid specs, tire pressures, and emergency shutdown procedures.</p></div></div>
     
-    <ul class="callouts"><li>If a dash warning light comes on that you don't recognize, the answer is in this manual.</li><li>Don't try to Google it while driving. Know where the manual is so you can reference it safely.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Vehicle manual, apparatus manual, operator's manual</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Reference It Safely</strong><ul><li>If a dash warning light comes on that you don't recognize, the answer is in this manual.</li><li>Don't try to Google it while driving. Know where the manual is so you can reference it safely.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -8050,128 +8034,119 @@ window.e62Toggle = function(header) {
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Back seat, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-backseat-t01.jpg')"><img src="images/utility61/thumbs/u61-backseat-t01.jpg" width="600" height="800" alt="Additional Back Seat photo (1 of 1)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-backseat-t01.jpg')"><img src="images/utility61/thumbs/u61-backseat-t01.jpg" width="600" height="800" alt="Additional Back Seat photo (1 of 2)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-backseat-t02.jpg')"><img src="images/utility61/thumbs/u61-backseat-t02.jpg" width="600" height="800" alt="Additional Back Seat photo (2 of 2)" loading="lazy"></button>
   </div>
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Portable Radios (×4 total — 2 per side)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Portable Radios (×4 total — 2 per side)</div><span class="card-aka">AKA: Portables, handie-talkies, HTs, walkie-talkies, hand-helds</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Portables, handie-talkies, HTs, walkie-talkies, hand-helds</div>
-    <p><strong>What it is:</strong> Four portable radios (green) stowed in holsters in the back seat area — two on the driver side, two on the officer side. Pre-programmed with DU-COMM channels — Fire East is channel 1, Fire White is channel 3.</p>
-    <p><strong>Why you need it:</strong> When crew splits up on scene, everyone needs radio communication. Portables are how you stay connected to command and to each other.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Grab a portable from its holster and confirm your channel before you dismount.</li><li>Change channels with the microphone, or use voice recognition to switch hands-free.</li><li>Push the red button for a genuine emergency. If you hit it by mistake, key up immediately and say "ACCIDENTAL ACTIVATION" so command doesn't launch a response for nothing.</li><li>A quick "Hey you, it's me" lets the other person know you heard them without tying up the channel.</li></ol>
-    <ul class="callouts"><li>Grab a portable every time you dismount — even on "routine" calls.</li><li>Check battery level on rig check. A dead radio is no radio.</li><li>Know your channel assignment before you get out of the rig.</li><li>Don't scan channels, and keep the volume low when you're standing in a group — you'll talk over traffic you can't hear clearly.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Four portable radios (green) stowed in holsters in the back seat area — two on the driver side, two on the officer side. Pre-programmed with DU-COMM channels — Fire East is channel 1, Fire White is channel 3.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When crew splits up on scene, everyone needs radio communication. Portables are how you stay connected to command and to each other.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Grab a portable from its holster and confirm your channel before you dismount.</li><li>Change channels with the microphone, or use voice recognition to switch hands-free.</li><li>Push the red button for a genuine emergency. If you hit it by mistake, key up immediately and say "ACCIDENTAL ACTIVATION" so command doesn't launch a response for nothing.</li><li>A quick "Hey you, it's me" lets the other person know you heard them without tying up the channel.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Portables, handie-talkies, HTs, walkie-talkies, hand-helds</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Radio Discipline</strong><ul><li>Grab a portable every time you dismount — even on "routine" calls.</li><li>Check battery level on rig check. A dead radio is no radio.</li><li>Know your channel assignment before you get out of the rig.</li><li>Don't scan channels, and keep the volume low when you're standing in a group — you'll talk over traffic you can't hear clearly.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>AED — Automated External Defibrillator</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">AED — Automated External Defibrillator</div><span class="card-aka">AKA: AED, defibrillator, shock box, defib</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> AED, defibrillator, shock box, defib</div>
-    <p><strong>What it is:</strong> A portable defibrillator that analyzes heart rhythm and delivers a shock to restore a normal rhythm in cardiac arrest.</p>
-    <p><strong>Why you need it:</strong> Early defibrillation is the single most important intervention in ventricular fibrillation cardiac arrest. Every minute without it drops survival by 10%.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Power it on immediately on arrival at a cardiac arrest.</li><li>Attach pads per diagram — upper right chest, lower left side.</li><li>Clear the patient before analyzing and before shock.</li><li>Follow AED prompts — it walks you through every step.</li></ol>
-    <ul class="callouts"><li>AED pads have an expiration date. Check it on rig check.</li><li>AED goes on the patient while CPR continues — do not stop compressions to set up unless you have to.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A portable defibrillator that analyzes heart rhythm and delivers a shock to restore a normal rhythm in cardiac arrest.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Early defibrillation is the single most important intervention in ventricular fibrillation cardiac arrest. Every minute without it drops survival by 10%.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Power it on immediately on arrival at a cardiac arrest.</li><li>Attach pads per diagram — upper right chest, lower left side.</li><li>Clear the patient before analyzing and before shock.</li><li>Follow AED prompts — it walks you through every step.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>AED, defibrillator, shock box, defib</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Don't Stop Compressions to Set Up</strong><ul><li>AED pads have an expiration date. Check it on rig check.</li><li>AED goes on the patient while CPR continues — do not stop compressions to set up unless you have to.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>FIU Tub</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">FIU Tub</div><span class="card-aka">AKA: Fire Investigation Unit tub, FIU supplies, investigation bin</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Fire Investigation Unit tub, FIU supplies, investigation bin</div>
-    <p><strong>What it is:</strong> A tub containing Fire Investigation Unit supplies — used to support scene documentation and cause-and-origin investigation.</p>
-    <p><strong>Why you need it:</strong> Utility 61 supports the FIU. When FIU responds, they need their supplies on-scene. Know what's in this tub so you can hand them exactly what they need.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A tub containing Fire Investigation Unit supplies — used to support scene documentation and cause-and-origin investigation.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Utility 61 supports the FIU. When FIU responds, they need their supplies on-scene. Know what's in this tub so you can hand them exactly what they need.</p></div></div>
     
-    <ul class="callouts"><li>Don't go through the FIU tub unless directed by FIU personnel or your officer.</li><li>Report to your officer if anything looks damaged, depleted, or out of place.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Fire Investigation Unit tub, FIU supplies, investigation bin</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Not Yours to Open</strong><ul><li>Don't go through the FIU tub unless directed by FIU personnel or your officer.</li><li>Report to your officer if anything looks damaged, depleted, or out of place.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>SMO Binder</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">SMO Binder</div><span class="card-aka">AKA: Standard Medical Operating binder, SMO reference, protocol binder</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Standard Medical Operating binder, SMO reference, protocol binder</div>
-    <p><strong>What it is:</strong> A binder containing Standard Medical Operating procedures and protocols for EMS calls.</p>
-    <p><strong>Why you need it:</strong> When you have a protocol question mid-call and no time to look things up online, the SMO binder is your answer.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A binder containing Standard Medical Operating procedures and protocols for EMS calls.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When you have a protocol question mid-call and no time to look things up online, the SMO binder is your answer.</p></div></div>
     
-    <ul class="callouts"><li>This is not casual reading material — it's an on-scene reference. Return it to the back seat after use.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Standard Medical Operating binder, SMO reference, protocol binder</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>On-Scene Reference Only</strong>This is not casual reading material — it's an on-scene reference. Return it to the back seat after use.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Med Log Binder</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Med Log Binder</div><span class="card-aka">AKA: Medical log, EMS run log, call log binder</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Medical log, EMS run log, call log binder</div>
-    <p><strong>What it is:</strong> A binder for logging medical calls — run numbers, patient info, disposition.</p>
-    <p><strong>Why you need it:</strong> Documentation is legally required and operationally essential. The med log binder is how U61's EMS activity gets tracked.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A binder for logging medical calls — run numbers, patient info, disposition.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Documentation is legally required and operationally essential. The med log binder is how U61's EMS activity gets tracked.</p></div></div>
     
-    <ul class="callouts"><li>Fill it out on every medical call. Missing entries get noticed during audits.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Medical log, EMS run log, call log binder</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Fill It Out Every Call</strong>Fill it out on every medical call. Missing entries get noticed during audits.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Grey Clipboard</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Grey Clipboard</div><span class="card-aka">AKA: Clipboard, scene clipboard, command clipboard</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Clipboard, scene clipboard, command clipboard</div>
-    <p><strong>What it is:</strong> A standard hard-back clipboard, grey in color, used for scene paperwork and patient documentation.</p>
-    <p><strong>Why you need it:</strong> You need a hard surface to write on at every call. The clipboard goes with you when you're managing scene documentation.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A standard hard-back clipboard, grey in color, used for scene paperwork and patient documentation.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>You need a hard surface to write on at every call. The clipboard goes with you when you're managing scene documentation.</p></div></div>
     
-    <ul class="callouts"><li>Keep blank paper stocked on it. A clipboard with no paper is dead weight.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Clipboard, scene clipboard, command clipboard</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Keep Paper Stocked</strong>Keep blank paper stocked on it. A clipboard with no paper is dead weight.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Box Light</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Box Light</div><span class="card-aka">AKA: Scene light, box lamp, portable scene lamp, work light</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Scene light, box lamp, portable scene lamp, work light</div>
-    <p><strong>What it is:</strong> A portable battery-powered box light that provides broad illumination for working in low-light conditions.</p>
-    <p><strong>Why you need it:</strong> Night calls, interior scenes, and dark environments require portable lighting. The box light hands-free illuminates a working area.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A portable battery-powered box light that provides broad illumination for working in low-light conditions.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Night calls, interior scenes, and dark environments require portable lighting. The box light hands-free illuminates a working area.</p></div></div>
     
-    <ul class="callouts"><li>Check battery charge on rig check.</li><li>Point it at the work surface, not at your crew's faces.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Scene light, box lamp, portable scene lamp, work light</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Point It At the Work</strong><ul><li>Check battery charge on rig check.</li><li>Point it at the work surface, not at your crew's faces.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Nitrile Gloves (Back Seat)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Nitrile Gloves (Back Seat)</div><span class="card-aka">AKA: Exam gloves, BSI gloves, medical gloves, rear seat gloves</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Exam gloves, BSI gloves, medical gloves, rear seat gloves</div>
-    <p><strong>What it is:</strong> A supply of nitrile gloves stored in the back seat for immediate access by rear-seat crew.</p>
-    <p><strong>Why you need it:</strong> Rear-seat crew should be gloving up as the rig pulls up — these are here so they don't have to reach to the front bench.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A supply of nitrile gloves stored in the back seat for immediate access by rear-seat crew.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Rear-seat crew should be gloving up as the rig pulls up — these are here so they don't have to reach to the front bench.</p></div></div>
     
-    <ul class="callouts"><li>Always check the count. Running out mid-call is not acceptable.</li><li>If the box gets wet, replace it — damp gloves tear when you're trying to glove up fast.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Exam gloves, BSI gloves, medical gloves, rear seat gloves</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Check and Replace</strong><ul><li>Always check the count. Running out mid-call is not acceptable.</li><li>If the box gets wet, replace it — damp gloves tear when you're trying to glove up fast.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>OB Bag</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">OB Bag</div><span class="card-aka">AKA: Obstetrics bag, OB kit, delivery kit, childbirth bag</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Obstetrics bag, OB kit, delivery kit, childbirth bag</div>
-    <p><strong>What it is:</strong> A kit containing supplies for emergency field delivery — gloves, clamps, blankets, bulb syringe, and related items.</p>
-    <p><strong>Why you need it:</strong> Babies don't wait for the hospital. If a delivery is imminent in the field, this kit is how you support mom and protect the baby.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A kit containing supplies for emergency field delivery — gloves, clamps, blankets, bulb syringe, and related items.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Babies don't wait for the hospital. If a delivery is imminent in the field, this kit is how you support mom and protect the baby.</p></div></div>
     
-    <ul class="callouts"><li>Know what's in it before you ever need it. Open it up and look during a downtime.</li><li>After any use, report to your officer immediately for restocking — this kit must be ready for the next call.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Obstetrics bag, OB kit, delivery kit, childbirth bag</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know It Before You Need It</strong><ul><li>Know what's in it before you ever need it. Open it up and look during a downtime.</li><li>After any use, report to your officer immediately for restocking — this kit must be ready for the next call.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Snow Brush / Ice Scraper</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Snow Brush / Ice Scraper</div><span class="card-aka">AKA: Snow brush, ice scraper, windshield brush</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Snow brush, ice scraper, windshield brush</div>
-    <p><strong>What it is:</strong> A brush and scraper combination for clearing snow and ice from the vehicle before response.</p>
-    <p><strong>Why you need it:</strong> You cannot safely drive a vehicle you can't see out of. In winter months, this is a pre-response essential.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A brush and scraper combination for clearing snow and ice from the vehicle before response.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>You cannot safely drive a vehicle you can't see out of. In winter months, this is a pre-response essential.</p></div></div>
     
-    <ul class="callouts"><li>Clear ALL windows — not just the windshield. Check mirrors and lights too.</li><li>If you're slow clearing the windows, you're slowing down response time. Be efficient.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Snow brush, ice scraper, windshield brush</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Clear Every Window</strong><ul><li>Clear ALL windows — not just the windshield. Check mirrors and lights too.</li><li>If you're slow clearing the windows, you're slowing down response time. Be efficient.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -8181,41 +8156,43 @@ window.e62Toggle = function(header) {
     <div class="section-icon">🚪</div>
     <div><h2>Back Left Door</h2><div class="sub">Duct tape · Post-it notes · Safety vest</div></div>
   </div>
+  <div class="compartment-photo">
+    <img src="images/utility61/u61-backdoor.jpg" width="825" height="1100" alt="Utility 61 back left door pocket with duct tape and safety vest" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Back left door, as installed</div>
+  </div>
+
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Duct Tape (×2 rolls)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Duct Tape (×2 rolls)</div><span class="card-aka">AKA: Duck tape, hundred-mile-an-hour tape, mil tape, gorilla tape</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Duck tape, hundred-mile-an-hour tape, mil tape, gorilla tape</div>
-    <p><strong>What it is:</strong> Two rolls of heavy-duty duct tape stored in the back left door pocket.</p>
-    <p><strong>Why you need it:</strong> Duct tape is a universal field fix — sealing bags, securing equipment, temporary repairs on-scene, and patient packaging.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Two rolls of heavy-duty duct tape stored in the back left door pocket.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Duct tape is a universal field fix — sealing bags, securing equipment, temporary repairs on-scene, and patient packaging.</p></div></div>
     
-    <ul class="callouts"><li>Two rolls because one always runs low. Check both on rig check.</li><li>If you pull a full roll, try to put it back with at least something left — communicate to your officer if it's low.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Duck tape, hundred-mile-an-hour tape, mil tape, gorilla tape</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Check Both Rolls</strong><ul><li>Two rolls because one always runs low. Check both on rig check.</li><li>If you pull a full roll, try to put it back with at least something left — communicate to your officer if it's low.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Post-It Notes</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Post-It Notes</div><span class="card-aka">AKA: Sticky notes, adhesive notes, note pads</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Sticky notes, adhesive notes, note pads</div>
-    <p><strong>What it is:</strong> Small adhesive notepad stored in the back left door.</p>
-    <p><strong>Why you need it:</strong> Quick notes, labeling, leaving information on scene — Post-Its are surprisingly useful in the field.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Small adhesive notepad stored in the back left door.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Quick notes, labeling, leaving information on scene — Post-Its are surprisingly useful in the field.</p></div></div>
     
-    <ul class="callouts"><li>Small thing. Know where it is.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Sticky notes, adhesive notes, note pads</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Small Thing, Know Where It Is</strong>Small thing. Know where it is.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Safety Vest (Back Left Door)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Safety Vest (Back Left Door)</div><span class="card-aka">AKA: Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</div>
-    <p><strong>What it is:</strong> A third high-visibility safety vest, stored in the back left door pocket — separate from the two front-door vests.</p>
-    <p><strong>Why you need it:</strong> Back-seat crew getting out on a roadway call need hi-vis just as much as the front seat does. This vest is here so they don't have to reach forward for one.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A third high-visibility safety vest, stored in the back left door pocket — separate from the two front-door vests.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Back-seat crew getting out on a roadway call need hi-vis just as much as the front seat does. This vest is here so they don't have to reach forward for one.</p></div></div>
     
-    <ul class="callouts"><li>Put it on BEFORE you exit the vehicle on any roadway call.</li><li>Three vests on the rig, three door pockets — know all three locations, not just the front two.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Three Vests, Three Pockets</strong><ul><li>Put it on BEFORE you exit the vehicle on any roadway call.</li><li>Three vests on the rig, three door pockets — know all three locations, not just the front two.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -8230,166 +8207,154 @@ window.e62Toggle = function(header) {
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Truck bed &mdash; tools, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t01.jpg')"><img src="images/utility61/thumbs/u61-tools-t01.jpg" width="600" height="800" alt="Additional Truck Bed Tools photo (1 of 3)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t02.jpg')"><img src="images/utility61/thumbs/u61-tools-t02.jpg" width="306" height="800" alt="Additional Truck Bed Tools photo (2 of 3)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t03.jpg')"><img src="images/utility61/thumbs/u61-tools-t03.jpg" width="600" height="800" alt="Additional Truck Bed Tools photo (3 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t01.jpg')"><img src="images/utility61/thumbs/u61-tools-t01.jpg" width="600" height="800" alt="Additional Truck Bed Tools photo (1 of 4)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t02.jpg')"><img src="images/utility61/thumbs/u61-tools-t02.jpg" width="306" height="800" alt="Additional Truck Bed Tools photo (2 of 4)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t04.jpg')"><img src="images/utility61/thumbs/u61-tools-t04.jpg" width="800" height="600" alt="Additional Truck Bed Tools photo (3 of 4)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-tools-t05.jpg')"><img src="images/utility61/thumbs/u61-tools-t05.jpg" width="600" height="800" alt="Additional Truck Bed Tools photo (4 of 4)" loading="lazy"></button>
   </div>
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Halligan Bar</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Halligan Bar</div><span class="card-aka">AKA: Hooligan, Pro-bar, the bar, Halligan tool, irons</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Hooligan, Pro-bar, the bar, Halligan tool, irons</div>
-    <p><strong>What it is:</strong> A forged steel forcible entry tool with a fork, adze, and pick. One of the most versatile tools on the rig.</p>
-    <p><strong>Why you need it:</strong> Forcible entry, breaching, prying, ventilation — the Halligan does it all. Know how to use it before you need to.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A forged steel forcible entry tool with a fork, adze, and pick. One of the most versatile tools on the rig.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Forcible entry, breaching, prying, ventilation — the Halligan does it all. Know how to use it before you need to.</p></div></div>
     
-    <ul class="callouts"><li>Never use it as a step or seat — it's a precision tool, not a step stool.</li><li>The irons set (Halligan + flathead axe) are the standard forcible entry combination.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hooligan, Pro-bar, the bar, Halligan tool, irons</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Precision Tool, Not a Step Stool</strong><ul><li>Never use it as a step or seat — it's a precision tool, not a step stool.</li><li>The irons set (Halligan + flathead axe) are the standard forcible entry combination.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Flat Head Axe</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Flat Head Axe</div><span class="card-aka">AKA: Flat axe, striking axe, fire axe, flathead</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Flat axe, striking axe, fire axe, flathead</div>
-    <p><strong>What it is:</strong> A single-bit axe with a flat poll (back face) used for striking the Halligan and for cutting.</p>
-    <p><strong>Why you need it:</strong> The axe drives the Halligan during forcible entry — that's the irons technique. The cutting edge is for wood, not metal.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A single-bit axe with a flat poll (back face) used for striking the Halligan and for cutting.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The axe drives the Halligan during forcible entry — that's the irons technique. The cutting edge is for wood, not metal.</p></div></div>
     
-    <ul class="callouts"><li>The poll drives the Halligan — use the flat back, not the blade edge.</li><li>Keep the blade covered when not in use. Exposed axe blades in a moving truck are a safety hazard.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Flat axe, striking axe, fire axe, flathead</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Poll Drives, Blade Cuts</strong><ul><li>The poll drives the Halligan — use the flat back, not the blade edge.</li><li>Keep the blade covered when not in use. Exposed axe blades in a moving truck are a safety hazard.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Closet Pike Pole</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Closet Pike Pole</div><span class="card-aka">AKA: Short pike pole, closet hook, little pike, 4-foot hook</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Short pike pole, closet hook, little pike, 4-foot hook</div>
-    <p><strong>What it is:</strong> A shorter pike pole (approximately 4 feet) for working in confined spaces, closets, and interiors.</p>
-    <p><strong>Why you need it:</strong> The full-size pike poles don't fit in tight spaces. The closet pike goes where the long ones can't — ceiling work in hallways, closets, and tight rooms.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A shorter pike pole (approximately 4 feet) for working in confined spaces, closets, and interiors.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>The full-size pike poles don't fit in tight spaces. The closet pike goes where the long ones can't — ceiling work in hallways, closets, and tight rooms.</p></div></div>
     
-    <ul class="callouts"><li>Never push or stab with a pike pole toward a crew member on the other side of a ceiling.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Short pike pole, closet hook, little pike, 4-foot hook</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Never Point It At a Crew Member</strong>Never push or stab with a pike pole toward a crew member on the other side of a ceiling.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>AC Hot Stick</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">AC Hot Stick</div><span class="card-aka">AKA: Hot stick, voltage detector, non-contact voltage tester, live wire tool</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Hot stick, voltage detector, non-contact voltage tester, live wire tool</div>
-    <p><strong>What it is:</strong> An insulated extension tool used to safely probe or move energized electrical components from a safe distance.</p>
-    <p><strong>Why you need it:</strong> Active electrical hazards can be invisible. The hot stick lets you test or move a suspected energized component without touching it.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Never assume a wire is dead.</li><li>Use the hot stick to probe before touching any unknown wire.</li><li>If it lights up or clicks — energized. Back out and call the utility company.</li></ol>
-    <ul class="callouts"><li>This is not a tool to improvise with. If you haven't been trained on it, do not use it without supervision.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>An insulated extension tool used to safely probe or move energized electrical components from a safe distance.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Active electrical hazards can be invisible. The hot stick lets you test or move a suspected energized component without touching it.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Never assume a wire is dead.</li><li>Use the hot stick to probe before touching any unknown wire.</li><li>If it lights up or clicks — energized. Back out and call the utility company.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hot stick, voltage detector, non-contact voltage tester, live wire tool</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Not a Tool to Improvise With</strong>This is not a tool to improvise with. If you haven't been trained on it, do not use it without supervision.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Umbrellas (×3)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Umbrellas (×3)</div><span class="card-aka">AKA: Personal umbrella, crew umbrella, rain cover</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Personal umbrella, crew umbrella, rain cover</div>
-    <p><strong>What it is:</strong> Three full-size umbrellas stored in the truck bed for crew use in wet conditions.</p>
-    <p><strong>Why you need it:</strong> Working a scene in the rain for an extended period is uncomfortable and can affect crew performance. Umbrellas protect paperwork, equipment, and crew during rehab.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Three full-size umbrellas stored in the truck bed for crew use in wet conditions.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Working a scene in the rain for an extended period is uncomfortable and can affect crew performance. Umbrellas protect paperwork, equipment, and crew during rehab.</p></div></div>
     
-    <ul class="callouts"><li>Three umbrellas for a reason — check count on rig check.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Personal umbrella, crew umbrella, rain cover</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Check Count on Rig Check</strong>Three umbrellas for a reason — check count on rig check.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Shovel</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Shovel</div><span class="card-aka">AKA: Scoop shovel, flathead shovel, digging shovel</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Scoop shovel, flathead shovel, digging shovel</div>
-    <p><strong>What it is:</strong> A full-size shovel stored in the truck bed for digging, debris movement, and utility work.</p>
-    <p><strong>Why you need it:</strong> Used for trench operations, ground-level fire control, uncovering utilities, and debris management.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A full-size shovel stored in the truck bed for digging, debris movement, and utility work.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Used for trench operations, ground-level fire control, uncovering utilities, and debris management.</p></div></div>
     
-    <ul class="callouts"><li>Check that the handle is solid. A broken handle mid-dig is a hand injury waiting to happen.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Scoop shovel, flathead shovel, digging shovel</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Check the Handle</strong>Check that the handle is solid. A broken handle mid-dig is a hand injury waiting to happen.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Jumper Cables</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Jumper Cables</div><span class="card-aka">AKA: Booster cables, jump cables, jump start cables</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Booster cables, jump cables, jump start cables</div>
-    <p><strong>What it is:</strong> Heavy-duty jumper cables for jump-starting vehicles with dead batteries.</p>
-    <p><strong>Why you need it:</strong> At MVAs, assists, and breakdowns, dead batteries are common. The jumper cables let U61 solve the problem directly.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Red to dead positive, red to good positive.</li><li>Black to good negative, black to unpainted metal on the dead vehicle (not the battery terminal).</li><li>Start the good vehicle, let it run 2 minutes, then attempt to start the dead vehicle.</li><li>Remove in reverse order: black from unpainted metal, black from good negative, red from good positive, red from dead positive.</li></ol>
-    <ul class="callouts"><li>Never connect black to the dead battery's negative — arc risk and battery hydrogen gas explosion risk.</li><li>If the battery is cracked or leaking, do not jump it. Call a wrecker.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Heavy-duty jumper cables for jump-starting vehicles with dead batteries.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>At MVAs, assists, and breakdowns, dead batteries are common. The jumper cables let U61 solve the problem directly.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Red to dead positive, red to good positive.</li><li>Black to good negative, black to unpainted metal on the dead vehicle (not the battery terminal).</li><li>Start the good vehicle, let it run 2 minutes, then attempt to start the dead vehicle.</li><li>Remove in reverse order: black from unpainted metal, black from good negative, red from good positive, red from dead positive.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Booster cables, jump cables, jump start cables</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Hookup Order Matters</strong><ul><li>Never connect black to the dead battery's negative — arc risk and battery hydrogen gas explosion risk.</li><li>If the battery is cracked or leaking, do not jump it. Call a wrecker.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Measuring Wheel</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Measuring Wheel</div><span class="card-aka">AKA: Distance wheel, rolling tape, surveyor's wheel, click wheel</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Distance wheel, rolling tape, surveyor's wheel, click wheel</div>
-    <p><strong>What it is:</strong> A rolling measuring device that counts distance as it rolls — used for scene documentation and mapping.</p>
-    <p><strong>Why you need it:</strong> At large incidents, water rescue, and investigations, measuring distances accurately matters for reporting and scene reconstruction.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A rolling measuring device that counts distance as it rolls — used for scene documentation and mapping.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>At large incidents, water rescue, and investigations, measuring distances accurately matters for reporting and scene reconstruction.</p></div></div>
     
-    <ul class="callouts"><li>Zero it before you start. A wheel with a number on it from the last call gives you garbage data.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Distance wheel, rolling tape, surveyor's wheel, click wheel</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Zero It First</strong>Zero it before you start. A wheel with a number on it from the last call gives you garbage data.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>PPE Masks (Box)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">PPE Masks (Box)</div><span class="card-aka">AKA: N95 masks, surgical masks, respiratory protection, dust masks</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> N95 masks, surgical masks, respiratory protection, dust masks</div>
-    <p><strong>What it is:</strong> A supply of disposable masks (N95 or surgical grade) for respiratory protection at medical, overhaul, and hazmat initial-response situations.</p>
-    <p><strong>Why you need it:</strong> Overhaul creates carcinogenic smoke and dust. Medical calls may involve infectious patients. Masks are the minimum respiratory barrier for both.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A supply of disposable masks (N95 or surgical grade) for respiratory protection at medical, overhaul, and hazmat initial-response situations.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Overhaul creates carcinogenic smoke and dust. Medical calls may involve infectious patients. Masks are the minimum respiratory barrier for both.</p></div></div>
     
-    <ul class="callouts"><li>N95 must be properly fitted — a loose N95 is a surgical mask.</li><li>Check count on rig check. A box that's down to three masks is a restocking problem.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>N95 masks, surgical masks, respiratory protection, dust masks</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Fit Matters</strong><ul><li>N95 must be properly fitted — a loose N95 is a surgical mask.</li><li>Check count on rig check. A box that's down to three masks is a restocking problem.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>SurpressAll Fire Suppressant</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">SurpressAll Fire Suppressant</div><span class="card-aka">AKA: SurpressAll, fire suppressant, foam alternative, Class A additive, wet stuff</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> SurpressAll, fire suppressant, foam alternative, Class A additive, wet stuff</div>
-    <p><strong>What it is:</strong> A concentrated fire suppressant additive that increases water's effectiveness at penetrating and knocking down Class A fires.</p>
-    <p><strong>Why you need it:</strong> SurpressAll allows a small amount of water to do what a large amount of plain water cannot — penetrate deep-seated fire in wood, debris, and dense material.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Mix per manufacturer ratio — usually a small amount per gallon.</li><li>Apply through a nozzle with appropriate fog pattern.</li><li>Let it work — this isn't a high-pressure flush, it's penetrating suppression.</li></ol>
-    <ul class="callouts"><li>Check the container seal on rig check — dried or crystallized suppresant is wasted product.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A concentrated fire suppressant additive that increases water's effectiveness at penetrating and knocking down Class A fires.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>SurpressAll allows a small amount of water to do what a large amount of plain water cannot — penetrate deep-seated fire in wood, debris, and dense material.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Mix per manufacturer ratio — usually a small amount per gallon.</li><li>Apply through a nozzle with appropriate fog pattern.</li><li>Let it work — this isn't a high-pressure flush, it's penetrating suppression.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>SurpressAll, fire suppressant, foam alternative, Class A additive, wet stuff</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Check the Seal</strong>Check the container seal on rig check — dried or crystallized suppresant is wasted product.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Hydrant Wrench</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Hydrant Wrench</div><span class="card-aka">AKA: Hydrant key, pentagon wrench, spanner, hydrant spanner</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Hydrant key, pentagon wrench, spanner, hydrant spanner</div>
-    <p><strong>What it is:</strong> A pentagonal wrench used to open and close fire hydrant operating nuts.</p>
-    <p><strong>Why you need it:</strong> Without a hydrant wrench, you cannot open a hydrant manually. If the apparatus wrench is in use, this is your backup.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A pentagonal wrench used to open and close fire hydrant operating nuts.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Without a hydrant wrench, you cannot open a hydrant manually. If the apparatus wrench is in use, this is your backup.</p></div></div>
     
-    <ul class="callouts"><li>Different hydrants have different operating directions — know your local hydrant type.</li><li>Don't overtighten when closing. You'll strip the nut and create a maintenance problem.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hydrant key, pentagon wrench, spanner, hydrant spanner</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Your Hydrants</strong><ul><li>Different hydrants have different operating directions — know your local hydrant type.</li><li>Don't overtighten when closing. You'll strip the nut and create a maintenance problem.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Blanket</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Blanket</div><span class="card-aka">AKA: Emergency blanket, patient blanket, utility blanket, wool blanket</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Emergency blanket, patient blanket, utility blanket, wool blanket</div>
-    <p><strong>What it is:</strong> A utility blanket stored in the truck bed for patient comfort, hypothermia prevention, or equipment protection.</p>
-    <p><strong>Why you need it:</strong> Hypothermia can complicate almost any patient presentation. A blanket buys time until ALS or hospital care.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A utility blanket stored in the truck bed for patient comfort, hypothermia prevention, or equipment protection.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Hypothermia can complicate almost any patient presentation. A blanket buys time until ALS or hospital care.</p></div></div>
     
-    <ul class="callouts"><li>After patient use, it goes for laundry — do not put a used patient blanket back in the truck bed unsealed.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Emergency blanket, patient blanket, utility blanket, wool blanket</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Laundry After Patient Use</strong>After patient use, it goes for laundry — do not put a used patient blanket back in the truck bed unsealed.</div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ABC Fire Extinguisher</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ABC Fire Extinguisher</div><span class="card-aka">AKA: Fire extinguisher, dry chem, multi-purpose extinguisher, handheld extinguisher</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Fire extinguisher, dry chem, multi-purpose extinguisher, handheld extinguisher</div>
-    <p><strong>What it is:</strong> A portable ABC-rated dry chemical fire extinguisher for small fires — Class A (ordinary combustibles), B (liquids), and C (energized electrical).</p>
-    <p><strong>Why you need it:</strong> Small fires caught early don't become big fires. The portable extinguisher handles incipient-stage fires before hose lines need to be deployed.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Pull the pin.</li><li>Aim at the base of the fire.</li><li>Squeeze the handle.</li><li>Sweep side to side.</li></ol>
-    <ul class="callouts"><li>PASS — Pull, Aim, Squeeze, Sweep.</li><li>Check pressure gauge on rig check. Green zone = good. Red zone = out of service.</li><li>After any use, even partial, it needs inspection and likely recharge before going back in service.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A portable ABC-rated dry chemical fire extinguisher for small fires — Class A (ordinary combustibles), B (liquids), and C (energized electrical).</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Small fires caught early don't become big fires. The portable extinguisher handles incipient-stage fires before hose lines need to be deployed.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Pull the pin.</li><li>Aim at the base of the fire.</li><li>Squeeze the handle.</li><li>Sweep side to side.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Fire extinguisher, dry chem, multi-purpose extinguisher, handheld extinguisher</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>PASS — Pull, Aim, Squeeze, Sweep</strong><ul><li>PASS — Pull, Aim, Squeeze, Sweep.</li><li>Check pressure gauge on rig check. Green zone = good. Red zone = out of service.</li><li>After any use, even partial, it needs inspection and likely recharge before going back in service.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -8404,84 +8369,83 @@ window.e62Toggle = function(header) {
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Truck bed &mdash; medical packs, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t01.jpg')"><img src="images/utility61/thumbs/u61-medical-t01.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (1 of 5)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t02.jpg')"><img src="images/utility61/thumbs/u61-medical-t02.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (2 of 5)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t03.jpg')"><img src="images/utility61/thumbs/u61-medical-t03.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (3 of 5)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t04.jpg')"><img src="images/utility61/thumbs/u61-medical-t04.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (4 of 5)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t05.jpg')"><img src="images/utility61/thumbs/u61-medical-t05.jpg" width="712" height="524" alt="Additional Truck Bed Medical Packs photo (5 of 5)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t01.jpg')"><img src="images/utility61/thumbs/u61-medical-t01.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (1 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t02.jpg')"><img src="images/utility61/thumbs/u61-medical-t02.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (2 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t03.jpg')"><img src="images/utility61/thumbs/u61-medical-t03.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (3 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t04.jpg')"><img src="images/utility61/thumbs/u61-medical-t04.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (4 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t05.jpg')"><img src="images/utility61/thumbs/u61-medical-t05.jpg" width="712" height="524" alt="Additional Truck Bed Medical Packs photo (5 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t06.jpg')"><img src="images/utility61/thumbs/u61-medical-t06.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (6 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t08.jpg')"><img src="images/utility61/thumbs/u61-medical-t08.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (7 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t09.jpg')"><img src="images/utility61/thumbs/u61-medical-t09.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (8 of 9)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-medical-t10.jpg')"><img src="images/utility61/thumbs/u61-medical-t10.jpg" width="600" height="800" alt="Additional Truck Bed Medical Packs photo (9 of 9)" loading="lazy"></button>
   </div>
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Red Bag — Trauma Pack</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Red Bag — Trauma Pack</div><span class="card-aka">AKA: Trauma bag, red pack, first-in bag, trauma kit</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Trauma bag, red pack, first-in bag, trauma kit</div>
-    <p><strong>What it is:</strong> A red-colored bag containing trauma supplies — bandaging, tourniquets, chest seals, hemostatic gauze, airways, and trauma assessment tools.</p>
-    <p><strong>Why you need it:</strong> When you arrive at a traumatic injury — MVC, penetrating trauma, fall — the red trauma bag has everything you need for initial assessment and hemorrhage control.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A red-colored bag containing trauma supplies — bandaging, tourniquets, chest seals, hemostatic gauze, airways, and trauma assessment tools.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When you arrive at a traumatic injury — MVC, penetrating trauma, fall — the red trauma bag has everything you need for initial assessment and hemorrhage control.</p></div></div>
     
-    <ul class="callouts"><li>Know what's in it. Don't open it for the first time on scene.</li><li>After every call, restock immediately. An incomplete trauma bag is a patient safety failure.</li><li>Tourniquets first for extremity bleeding. Don't mess around with pressure and bandaging on arterial bleeds.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Trauma bag, red pack, first-in bag, trauma kit</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Tourniquets First</strong><ul><li>Know what's in it. Don't open it for the first time on scene.</li><li>After every call, restock immediately. An incomplete trauma bag is a patient safety failure.</li><li>Tourniquets first for extremity bleeding. Don't mess around with pressure and bandaging on arterial bleeds.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Green Bag — Airway Pack</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Green Bag — Airway Pack</div><span class="card-aka">AKA: Airway bag, green pack, BLS airway bag, ventilation bag</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Airway bag, green pack, BLS airway bag, ventilation bag</div>
-    <p><strong>What it is:</strong> A green-colored bag containing airway management equipment — BVM (bag-valve-mask), oral and nasal airways, suction, oxygen, and related supplies.</p>
-    <p><strong>Why you need it:</strong> Airway is always first. If the patient can't breathe, nothing else matters until you fix it. The green bag is dedicated to that job.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A green-colored bag containing airway management equipment — BVM (bag-valve-mask), oral and nasal airways, suction, oxygen, and related supplies.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Airway is always first. If the patient can't breathe, nothing else matters until you fix it. The green bag is dedicated to that job.</p></div></div>
     
-    <ul class="callouts"><li>Know every item and how to use it before your first call.</li><li>BVM mask sizing matters — have the right size on before you need it.</li><li>Check O2 cylinder pressure on rig check. A low O2 bottle needs to be swapped.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Airway bag, green pack, BLS airway bag, ventilation bag</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Airway Is Always First</strong><ul><li>Know every item and how to use it before your first call.</li><li>BVM mask sizing matters — have the right size on before you need it.</li><li>Check O2 cylinder pressure on rig check. A low O2 bottle needs to be swapped.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Red Bag — Water Rescue</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Red Bag — Water Rescue</div><span class="card-aka">AKA: Water rescue bag, throw bag, water ops bag, swift water bag</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Water rescue bag, throw bag, water ops bag, swift water bag</div>
-    <p><strong>What it is:</strong> A red bag with a black zipper containing water rescue supplies — a life preserver vest (PFD) and a 75-foot throw rope, packed together as a ready-to-grab set.</p>
-    <p><strong>Why you need it:</strong> When U61 responds to water rescue incidents, this bag goes with you. The throw bag alone can be the difference between a rescue and a recovery.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Unpack and identify every item before any water rescue assignment.</li><li>PFD goes on before you approach the water's edge.</li><li>Throw bag: hold one end, throw the bag — not the rope.</li><li>Shout to the victim to grab the bag and hold on.</li></ol>
-    <ul class="callouts"><li>Never enter the water without a PFD on. Ever.</li><li>A rescuer who becomes a victim doubles the problem and may cost two lives.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A red bag with a black zipper containing water rescue supplies — a life preserver vest (PFD) and a 75-foot throw rope, packed together as a ready-to-grab set.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>When U61 responds to water rescue incidents, this bag goes with you. The throw bag alone can be the difference between a rescue and a recovery.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Unpack and identify every item before any water rescue assignment.</li><li>PFD goes on before you approach the water's edge.</li><li>Throw bag: hold one end, throw the bag — not the rope.</li><li>Shout to the victim to grab the bag and hold on.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Water rescue bag, throw bag, water ops bag, swift water bag</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Never Without a PFD</strong><ul><li>Never enter the water without a PFD on. Ever.</li><li>A rescuer who becomes a victim doubles the problem and may cost two lives.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Blue Bag — Cervical Collars</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Blue Bag — Cervical Collars</div><span class="card-aka">AKA: C-collar bag, blue bag, collar kit, cervical collar set</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> C-collar bag, blue bag, collar kit, cervical collar set</div>
-    <p><strong>What it is:</strong> A blue bag with black straps containing two styles of cervical collars in multiple sizes, plus foam head-locks for spinal immobilization.</p>
-    <p><strong>Why you need it:</strong> Mechanism of injury alone can indicate spinal precautions. C-collars stabilize the cervical spine during movement and packaging.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Measure collar size: measure from the patient's chin to the top of the shoulder with fingers, then match to collar sizing guide.</li><li>Apply with assistance — one person holds neutral alignment while the other places the collar.</li><li>Check for a good fit — collar should not restrict breathing.</li></ol>
-    <ul class="callouts"><li>Wrong size collar creates movement rather than restricting it — size correctly.</li><li>Document C-collar application time and mechanism of injury for the hospital team.</li><li>The foam head-locks unroll onto the board and sit between the board and the patient's head — tape them to the board and across the patient's forehead. A collar alone does not fully immobilize the spine; the head-locks complete it.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A blue bag with black straps containing two styles of cervical collars in multiple sizes, plus foam head-locks for spinal immobilization.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Mechanism of injury alone can indicate spinal precautions. C-collars stabilize the cervical spine during movement and packaging.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Measure collar size: measure from the patient's chin to the top of the shoulder with fingers, then match to collar sizing guide.</li><li>Apply with assistance — one person holds neutral alignment while the other places the collar.</li><li>Check for a good fit — collar should not restrict breathing.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>C-collar bag, blue bag, collar kit, cervical collar set</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Size It Right, Document It</strong><ul><li>Wrong size collar creates movement rather than restricting it — size correctly.</li><li>Document C-collar application time and mechanism of injury for the hospital team.</li><li>The foam head-locks unroll onto the board and sit between the board and the patient's head — tape them to the board and across the patient's forehead. A collar alone does not fully immobilize the spine; the head-locks complete it.</li></ul></div></div>
   </div>
 </div>
 <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Triage Tag Bag</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Triage Tag Bag</div><span class="card-aka">AKA: Mass casualty tag bag, triage bag, MCI tags, START tags</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Mass casualty tag bag, triage bag, MCI tags, START tags</div>
-    <p><strong>What it is:</strong> A red-and-orange bag with a white stripe holding triage tags and cards used to identify patient severity by four colors at a mass casualty incident.</p>
-    <p><strong>Why you need it:</strong> In a multi-patient incident, triage sorts patients by severity so limited resources go to whoever needs them most urgently. Without tags, that sorting gets lost the moment a second crew takes over a patient.</p>
-    <div class="use-label">How to use:</div><ol class="steps"><li>Tag every patient during triage — even the "green" walking wounded.</li><li>Mark each tag with the correct severity color: red (immediate), yellow (delayed), green (minor), black (deceased/expectant).</li><li>Fill out the numbered card attached to the tag so the patient can be tracked from triage through transport.</li><li>Attach the tag where it will be seen — wrist or clothing, not buried in a pocket.</li></ol>
-    <ul class="callouts"><li>Tag first, treat second. In a true MCI, stopping to fully treat one patient before tagging can cost lives elsewhere on scene.</li><li>Know where this bag is before you need it. An MCI is the wrong time to be searching the truck bed.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A red-and-orange bag with a white stripe holding triage tags and cards used to identify patient severity by four colors at a mass casualty incident.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>In a multi-patient incident, triage sorts patients by severity so limited resources go to whoever needs them most urgently. Without tags, that sorting gets lost the moment a second crew takes over a patient.</p></div></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🔧</span>How to use</div><ol class="steps"><li>Tag every patient during triage — even the "green" walking wounded.</li><li>Mark each tag with the correct severity color: red (immediate), yellow (delayed), green (minor), black (deceased/expectant).</li><li>Fill out the numbered card attached to the tag so the patient can be tracked from triage through transport.</li><li>Attach the tag where it will be seen — wrist or clothing, not buried in a pocket.</li></ol></div>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Mass casualty tag bag, triage bag, MCI tags, START tags</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Tag First, Treat Second</strong><ul><li>Tag first, treat second. In a true MCI, stopping to fully treat one patient before tagging can cost lives elsewhere on scene.</li><li>Know where this bag is before you need it. An MCI is the wrong time to be searching the truck bed.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Traction Splint Bag</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Traction Splint Bag</div><span class="card-aka">AKA: Traction bag, splint bag, femur traction kit</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Traction bag, splint bag, femur traction kit</div>
-    <p><strong>What it is:</strong> An orange bag with a black zipper containing traction splinting materials — straps and tubes used to apply and maintain in-line traction on a splint.</p>
-    <p><strong>Why you need it:</strong> A suspected femur fracture needs traction to control bleeding and pain and to limit further soft-tissue damage from bone-end movement. This bag carries the hardware to rig that traction correctly.</p>
-    <ul class="callouts"><li>Traction splinting takes practice — know where the straps and tubes are and how they assemble before you're doing it on a patient in pain.</li><li>Check contents on rig check. A traction splint bag missing a strap is a traction splint bag you can't use.</li></ul>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>An orange bag with a black zipper containing traction splinting materials — straps and tubes used to apply and maintain in-line traction on a splint.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>A suspected femur fracture needs traction to control bleeding and pain and to limit further soft-tissue damage from bone-end movement. This bag carries the hardware to rig that traction correctly.</p></div></div>
+    
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Traction bag, splint bag, femur traction kit</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know the Assembly Before You Need It</strong><ul><li>Traction splinting takes practice — know where the straps and tubes are and how they assemble before you're doing it on a patient in pain.</li><li>Check contents on rig check. A traction splint bag missing a strap is a traction splint bag you can't use.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
@@ -8496,45 +8460,43 @@ window.e62Toggle = function(header) {
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Truck bed &mdash; other equipment, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-other-t01.jpg')"><img src="images/utility61/thumbs/u61-other-t01.jpg" width="600" height="800" alt="Additional Truck Bed Other Equipment photo (1 of 2)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-other-t02.jpg')"><img src="images/utility61/thumbs/u61-other-t02.jpg" width="600" height="800" alt="Additional Truck Bed Other Equipment photo (2 of 2)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-other-t01.jpg')"><img src="images/utility61/thumbs/u61-other-t01.jpg" width="600" height="800" alt="Additional Truck Bed Other Equipment photo (1 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-other-t02.jpg')"><img src="images/utility61/thumbs/u61-other-t02.jpg" width="600" height="800" alt="Additional Truck Bed Other Equipment photo (2 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="u61OpenLightbox('images/utility61/thumbs/u61-other-t03.jpg')"><img src="images/utility61/thumbs/u61-other-t03.jpg" width="600" height="800" alt="Additional Truck Bed Other Equipment photo (3 of 3)" loading="lazy"></button>
   </div>
 
   <div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>MSA Airpack Case — SCBA, Air Bottle, Face Piece (Size M)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">MSA Airpack Case — SCBA, Air Bottle, Face Piece (Size M)</div><span class="card-aka">AKA: MSA case, SCBA case, breathing apparatus case, self-contained breathing apparatus</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> MSA case, SCBA case, breathing apparatus case, self-contained breathing apparatus</div>
-    <p><strong>What it is:</strong> A hard-sided case containing an MSA SCBA unit — including the pack harness, air cylinder, and a size-M face piece.</p>
-    <p><strong>Why you need it:</strong> Utility 61 carries an SCBA for incidents requiring respiratory protection — hazmat initial response, confined space, or situations where the crew needs air.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A hard-sided case containing an MSA SCBA unit — including the pack harness, air cylinder, and a size-M face piece.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Utility 61 carries an SCBA for incidents requiring respiratory protection — hazmat initial response, confined space, or situations where the crew needs air.</p></div></div>
     
-    <ul class="callouts"><li>The face piece is Size M. If you wear a different size and need SCBA, communicate that early.</li><li>Check cylinder pressure on rig check — a partial bottle needs to be swapped.</li><li>If this SCBA is deployed, notify your officer. It must be inspected and refilled before the next call.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>MSA case, SCBA case, breathing apparatus case, self-contained breathing apparatus</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Size M — Communicate If Different</strong><ul><li>The face piece is Size M. If you wear a different size and need SCBA, communicate that early.</li><li>Check cylinder pressure on rig check — a partial bottle needs to be swapped.</li><li>If this SCBA is deployed, notify your officer. It must be inspected and refilled before the next call.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>ABC Dry Chemical Extinguisher (Bed)</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">ABC Dry Chemical Extinguisher (Bed)</div><span class="card-aka">AKA: Second extinguisher, fire extinguisher, dry chem, backup extinguisher</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Second extinguisher, fire extinguisher, dry chem, backup extinguisher</div>
-    <p><strong>What it is:</strong> A second portable ABC-rated dry chemical fire extinguisher stored in the truck bed — backup to the in-cab extinguisher.</p>
-    <p><strong>Why you need it:</strong> One extinguisher can be depleted. Having a second means you still have options if the first is spent or unavailable.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>A second portable ABC-rated dry chemical fire extinguisher stored in the truck bed — backup to the in-cab extinguisher.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>One extinguisher can be depleted. Having a second means you still have options if the first is spent or unavailable.</p></div></div>
     
-    <ul class="callouts"><li>Treat this like the primary — check pressure gauge on every rig check.</li><li>Two extinguishers, two separate checks. Don't assume one is good because the other is.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Second extinguisher, fire extinguisher, dry chem, backup extinguisher</p></div>
+    <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Two Extinguishers, Two Checks</strong><ul><li>Treat this like the primary — check pressure gauge on every rig check.</li><li>Two extinguishers, two separate checks. Don't assume one is good because the other is.</li></ul></div></div>
   </div>
 </div><div class="equip-card">
   <div class="card-header" onclick="u61Toggle(this)">
-    <span>Tailgate Setup</span>
-    <span class="toggle-btn">+</span>
+    <div><div class="card-title">Tailgate Setup</div><span class="card-aka">AKA: Tailgate gear, tailgate equipment, truck bed extension setup</span></div>
+    <div class="toggle-btn">+</div>
   </div>
   <div class="card-body">
-    <div class="aka"><strong>AKA:</strong> Tailgate gear, tailgate equipment, truck bed extension setup</div>
-    <p><strong>What it is:</strong> Items and rigging associated with setting up the tailgate area for operations — staging, work surface, or equipment deployment.</p>
-    <p><strong>Why you need it:</strong> Utility 61 functions as a support and utility platform. The tailgate setup allows the truck bed to serve as a staging and working area at extended incidents.</p>
+    <div class="entry-grid"><div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is</div><p>Items and rigging associated with setting up the tailgate area for operations — staging, work surface, or equipment deployment.</p></div><div class="entry-block"><div class="entry-label"><span class="icon">❓</span>Why it's needed</div><p>Utility 61 functions as a support and utility platform. The tailgate setup allows the truck bed to serve as a staging and working area at extended incidents.</p></div></div>
     
-    <ul class="callouts"><li>Know how to set it up and break it down efficiently.</li><li>Secure everything before moving the vehicle. Loose equipment in a moving truck is a hazard to everyone it passes.</li></ul>
+    <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Tailgate gear, tailgate equipment, truck bed extension setup</p></div>
+    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Secure Before You Move</strong><ul><li>Know how to set it up and break it down efficiently.</li><li>Secure everything before moving the vehicle. Loose equipment in a moving truck is a hazard to everyone it passes.</li></ul></div></div>
   </div>
 </div>
   <a class="back-link" href="#utility61-guide">↑ Back to top</a>
