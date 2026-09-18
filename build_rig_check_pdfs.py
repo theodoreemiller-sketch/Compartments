@@ -323,7 +323,7 @@ VEHICLES['e61'] = {
             "Water Helmet",
             "PFD",
             "Mustang Suit",
-            "Rope Throw Bag",
+            "Rope Throw Bag — 250 ft",
             "Life Safety Ring",
             "Strap w/3 Carabiners",
             "Ice Spikes (for hands)",

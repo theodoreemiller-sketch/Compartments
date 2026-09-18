@@ -215,21 +215,13 @@
     }
   },
   "Engine 61": {
-    "saved_at": "2026-09-16T12:19:32.769955+00:00",
+    "saved_at": "2026-09-18T12:16:18.294431+00:00",
     "compartments": {
-      "Engine 61 Compartments": [
-        "750g tank",
-        "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
-        "Drivers side compartment E62 over the wheel contains air bags",
-        "E61 stores airbags in the compartment near the back on the drivers side",
-        "E61 and E62 have different air bag controllers. Both inflate to 118PSI for safety.",
-        "E62 has a RIT pack on top shelf rear compartment",
-        "Passenger side rear compartment E61 contains a crowbar",
-        "Passenger side rear compartment E61 contains 2 shovels (spade end and flat end)",
-        "Passenger side rear compartment E61 contains a Pig",
-        "Passenger side middle compartment E61 has cleats for bottom of boots to keep from sliding on ice",
-        "E61 Hacksaw in tool box",
-        "Cabin Compartment"
+      "Engine 61": [
+        "750 Gallon Tank",
+        "1750gpm Pump",
+        "Carrys 6 Fire personnel",
+        "Differences between E62 and E61 -\\>[Differences between E61/62 ](https://docs.google.com/document/d/1WhZ4rIrluGdkNffbwWPBAU_ZgIOXyRbtZI93T8pfOWM/edit?usp=sharing)"
       ],
       "Front Of Engine": [
         "Trash Line - 100ft - Preconnected",
@@ -366,7 +358,7 @@
         "Window glazing tool",
         "Razor scraper",
         "Small sledge hammer",
-        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\*",
         "Allen Key wrench",
         "Pliers",
         "Punch"
@@ -375,7 +367,7 @@
         "Water helmet",
         "PFD",
         "Mustang Suit",
-        "Rope throw bag",
+        "Rope throw bag 250\u2019",
         "Life Safety ring to put around victim",
         "Strap with 3 carabiners",
         "Ice Spikes (for hands)",
@@ -444,10 +436,10 @@
     }
   },
   "Engine 60": {
-    "saved_at": "2026-05-25T13:31:53.904330+00:00",
+    "saved_at": "2026-09-18T12:18:17.177274+00:00",
     "compartments": {
       "Front of engine": [
-        "100' 1 3/4' Trash line",
+        "100\u2019 1 \u00be\u2019 Trash line",
         "No intake"
       ],
       "Engineers Compartment": [
@@ -461,13 +453,13 @@
         "Nozzle for foam 125 gpm (orange)",
         "Gated Wye",
         "2 fog nozzles",
-        "Rope to move charged 5\" hose",
-        "Adaptors (m2m, f2f, CFD, 2 1/2 -1 3/4)",
+        "Rope to move charged 5\u201d hose",
+        "Adaptors (m2m, f2f, CFD, 2 \u00bd -1 3/4)",
         "Eye protection",
         "Chief Eductor",
         "Hydrant Bag",
         "Gate Valve",
-        "25'' of 5\"",
+        "25\u2019\u2019 of 5\u201d",
         "Smooth bore nozzles"
       ],
       "Middle Compartment Drivers Side": [
@@ -488,7 +480,7 @@
         "Cellar nozzle"
       ],
       "Rear Compartment Drivers Side": [
-        "200' Roll of electrical cord",
+        "200\u2019 Roll of electrical cord",
         "10KW Generator",
         "B post cover",
         "Plug in Lights",
@@ -501,8 +493,8 @@
         "Plug adaptors (can be plugged into 110v)"
       ],
       "First Compartment Passengers Side": [
-        "Akron Coping Tool (Hose hoist)",
-        "2x 150' Utility Rope Bags",
+        "Akron  Coping Tool (Hose hoist)",
+        "2x 150\u2019 Utility Rope Bags",
         "Spare Battery",
         "Cynch Collar Life Vest aka Horse Collar",
         "Mustang Suit",
@@ -513,7 +505,7 @@
         "Oil Dry",
         "Traffic Cones",
         "Life Vests",
-        "50' of 5\""
+        "50\u2019 of 5\u201d"
       ],
       "Middle Compartment Passengers Side": [
         "Small Bolt Cutter",
@@ -526,7 +518,7 @@
       "Rear Compartment Passengers Side": [
         "Tarps",
         "Blanket",
-        "High Rise Pack 150' with fog nozzle and Gated Wye",
+        "High Rise Pack 150\u2019 with fog nozzle and Gated Wye",
         "Silver Bullet",
         "ABC Extinguisher",
         "CO2 Extinguisher",
@@ -543,18 +535,18 @@
         "2 backboards",
         "Pry tool",
         "Pry bar",
-        "Hurst Combi tool cuts and spreads",
+        "Hurst Combi tool cuts and spreads(different than other engines)",
         "Ram jam to provide support to Ram",
-        "2 shovels (scoop shovel, pointed shovel)",
+        "2 shovels (scoop shovel, pointed shovel",
         "Braces for Ram tool",
-        "6' Pike",
-        "6' Pike",
-        "1000' 5\" LDH",
-        "150' 2 1/2\" skid load w/ smooth bore nozzle connected to 400' of 3 inch",
-        "150' 1 3/4\" skid load W/ breakaway fog nozzle connected to 550't of 3\""
+        "6\u2019 Pike",
+        "6\u2019  Pike",
+        "1000\u2019 5\u201d LDH",
+        "150\u2019 2 \u00bd\u201d skid load w/ smooth bore nozzle connected to 400\u2019 of 3 inch",
+        "150\u2019  1 \u00be\u201d  skid load W/ breakaway fog nozzle connected to 550\u2019t of 3\u201d 75 psi 150gpm"
       ],
       "Middle Cross Lays": [
-        "200 feet 1 3/4 crosslay (total of 2)",
+        "200 feet 1 \u00be crosslay (total of 2)",
         "Both pre-connected"
       ],
       "Cab Compartment": [
@@ -684,23 +676,12 @@
     }
   },
   "Utility 61": {
-    "saved_at": "2026-09-13T16:11:24.104985+00:00",
+    "saved_at": "2026-09-18T12:19:59.025221+00:00",
     "compartments": {
-      "**Yellow Pages (number)**": [
-        "Lists in numerical order 4-digit UN/NA identification identifies the appropriate guide number to reference in the Orange Section",
-        "Materials highlighted in green indicate they are Toxic Inhalation Hazard, Dangerous Water Reactive Materials that produce toxic gas upon contact with water[  ](https://bunkerfiresafety.com/product-category/respiratory/scba-respiratory/msa-scba/)"
-      ],
-      "**Blue Pages (name)**": [
-        "Lists in alphabetical order by name, identifies the appropriate guide number to reference in the Orange Section and the 4-digit UN/NA",
-        "Materials highlighted in green will have evacuation distances in the Green Section"
-      ],
-      "**Orange Pages(response)**": [
-        "Contains response guides, safety recommendations and directions on how to proceed during the initial response phase of the incident[ ](https://us.msasafety.com/Supplied-Air-Respirators-\\(SCBA\\)/SCBA-Parts-&-Accessories/c/11702?locale=en)",
-        "Provides information on potential hazards to health, risk of fire or explosion, emergency response procedures, personal protective equipment (PPE), evacuation procedures, first aid, and spill and fire control measures"
-      ],
-      "**Green Pages(evacuation)**": [
-        "Provides initial evacuation or shelter-in-place distances for spills of materials that are Toxic-by-Inhalation. Over 50 gal is a large spill",
-        "Distances vary based on the size of the spill (small or large) and whether the incident occurs during the day or at night",
+      "Front Seat": [
+        "DU_COMM is the grey microphone",
+        "Fireground White is the black microphone",
+        "Two portable officer radios (in holsters) (Green):",
         "Fire East is the first  channel",
         "Fire White is channel 3",
         "Microphone can change channels",
@@ -712,7 +693,17 @@
         "Screen should show green not red",
         "Pads attach to chest",
         "Contains tape measure,",
-        "Folders"
+        "Folders",
+        "OB Bag (Obstetrics):  For pregnancy related issues",
+        "Standing Medical Orders binder:  Contains info on how to proceed with medical issues",
+        "Glen Ellyn Fire \u2013 Utility 61 \u2013 Med Log Binder:  For med expiration tracking",
+        "Grey clipboard (patient notes/information):",
+        "Box Light (Orange):",
+        "Nitrile Gloves:",
+        "Snow Brush in back seat",
+        "Duct Tape:  2 rolls",
+        "Post-It notes:",
+        "Safety Vest"
       ],
       "The Bed (6 containers loose tools count as 1\u201dcontainer\u201d)": [
         "Shears for cutting clothing,",
@@ -727,7 +718,7 @@
         "Markers",
         "Contains Breathing equipment and",
         "Oxygen tank",
-        "AMBU \\[artificial manual breathing unit\\] masks (bagging someone),",
+        "AMBU [artificial manual breathing unit] masks (bagging someone),",
         "BVM (Bag, Valve, Mask)",
         "Pediatric breathing tubes",
         "Intubation tubes/air way tube",
@@ -736,11 +727,14 @@
         "Oral and nasal tubes",
         "PPE",
         "Advanced Airway",
+        "One throw rope 75 feet",
+        "One life preserver vest",
         "One Airpack",
         "Air bottle (In black case)",
         "Medium sized face piece",
-        "Contains stabilization hardware and neck braces (two styles) (may need to know how to put together and deploy - measure with fingers from blue section on collar \\[from bottom of the shoulder blade to the top of the jaw\\]) (pin to chin collar - move black pin to hole to form jaw rest),",
-        "Foam head-locks (unrolled on the board and between board and head, will be taped to board and person\u2019s forehead",
+        "Contains stabilization hardware",
+        "Neck braces (two styles) (may need to know how to put together and deploy -)",
+        "Foam head-locks (unrolled on the board and between board and head, will be taped to board and person's forehead",
         "Red/Orange with white stripe - mass casualties tag bag (Triage bag) (used to id patient severity by 4 colors, has tags and cards with numbers and colors)",
         "Orange bag with black zipper - traction materials i.e. straps, tubes for splints"
       ]
@@ -827,7 +821,7 @@
     }
   },
   "Brushtruck 62": {
-    "saved_at": "2026-07-29T14:14:19.414576+00:00",
+    "saved_at": "2026-09-18T12:20:45.933552+00:00",
     "compartments": {
       "Front Seat:": [
         "Radios"
@@ -1089,17 +1083,21 @@
     }
   },
   "Tower 62": {
-    "saved_at": "2026-06-10T14:18:05.345127+00:00",
+    "saved_at": "2026-09-17T12:58:27.011031+00:00",
     "compartments": {
+      "Tower 62": [
+        "2000gpm pump",
+        "300 gallon booster tank\u200b"
+      ],
       "Engineers Compartment": [
-        "25' of 5' LDH",
+        "25\u2019 of 5\u2019 LDH",
         "Duct Tape",
         "Caution Tape"
       ],
       "Cross Lay": [
-        "Center crosslay - 1 \u00be Hose 200' with fog nozzle pre-connected",
-        "Rear crosslay - 1 \u00be hose 200' with fog nozzle pre-connected",
-        "Front crosslay - 2 \u00bd hose 200' with smoothbore nozzle pre-connected"
+        "Center crosslay - 1 \u00be Hose 200\u2019  with fog nozzle pre-connected",
+        "Rear crosslay - 1 \u00be hose 200\u2019 with fog nozzle pre-connected",
+        "Front crosslay - 2 \u00bd hose 200\u2019 with smoothbore nozzle pre-connected"
       ],
       "Drivers Side Front Middle Compartment": [
         "Gated Wye",
@@ -1109,11 +1107,11 @@
         "Storz reducer",
         "Intake cap with chain",
         "Angled Connectors",
-        "High-rise Pack (150' of 1 \u00be hose, Gated Wye bundled in a shoulder carry pack)",
+        "High-rise Pack (150\u2019 of 1 \u00be hose, Gated Wye bundled in a shoulder carry pack)",
         "High-rise bag (Short length of 2 \u00bd, Pressuremeter T, Elbow connector, vise grips)",
         "2 Fog nozzles",
         "Hydrant Bag (hydrant wrench, spanners, mallet, gate valve, Storz connectors, LDH rope)",
-        "K-12 blades"
+        "K-12  blades"
       ],
       "Divers Side Rear Middle Compartment": [
         "Dewalt Sawzall",
@@ -1140,18 +1138,18 @@
         "Safety Harness for Tower Climbing"
       ],
       "Rear Engine Compartment": [
-        "3\" 350' hose",
-        "5\" 250' Hose",
-        "2 35' 2 Section Extension Ladders",
-        "28' 2 section Extension Ladder",
-        "2 20' Roof Ladders",
-        "16' Roof Ladder",
-        "12'Pike Pole",
-        "10' Pike Pole",
-        "2x 8' pike Poles",
-        "2x 6' Pike Poles",
-        "10' Folding Ladder",
-        "12' Folding Ladder",
+        "3\u201d 350\u2019 hose",
+        "5\u201d 250\u2019 Hose",
+        "2 35\u2019 2 Section Extension Ladders",
+        "28\u2019 2 section Extension Ladder",
+        "2 20\u2019 Roof Ladders",
+        "16\u2019 Roof Ladder",
+        "12\u2019Pike Pole",
+        "10\u2019 Pike Pole",
+        "2x 8\u2019 pike Poles",
+        "2x 6\u2019 Pike Poles",
+        "10\u2019 Folding Ladder",
+        "12\u2019 Folding Ladder",
         "5 New York Hooks",
         "2 Dry Wall Hooks"
       ],
@@ -1165,8 +1163,8 @@
       ],
       "Officers Side Rear Middle Compartment": [
         "Dewalt Powered Fan",
-        "2x 150' Utility Rope",
-        "130' Utility Rope"
+        "2x 150\u2019 Utility Rope",
+        "130\u2019 Utility Rope"
       ],
       "Officers Side Middle Compartment": [
         "2x Flat Head Axes",
@@ -1222,8 +1220,8 @@
         "Haligan"
       ],
       "Bucket Compartment": [
-        "2 50' 1 \u00be hoses",
-        "5' 1 \u00be hose",
+        "2 50\u2019 1 \u00be hoses",
+        "5\u2019 1 \u00be hose",
         "Fog nozzle",
         "Brackets to attach ladder to bucket",
         "Air hoses to allow direct connection to Tower air supply"
