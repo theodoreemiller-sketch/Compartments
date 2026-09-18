@@ -866,6 +866,11 @@ VEHICLES['u61'] = {
     'filename': 'Utility_61_Shift_Rig_Check.pdf',
     'label': 'UTILITY 61 SHIFT RIG CHECK',
     'compartments': [
+        ("Front Dash — Communications", [
+            "DU-COMM (Gray Microphone)",
+            "Fireground Microphone (Black — Lower Left)",
+            "PA System Microphone (Black — Upper Right)",
+        ]),
         ("Glove Compartment", [
             "Maps",
             "Truck Loading Instruction Paper",
@@ -933,6 +938,7 @@ VEHICLES['u61'] = {
             "Red Bag w/Black Zipper (Throw Rope, Life Preserver Vest)",
             "Black MSA Case (SCBA, Air Bottle, Face Piece)",
             "ABC Dry Chem Extinguisher",
+            "Tailgate Setup",
             "Blue Cervical-Collar Bag (Neck Braces, Foam Head-Locks, Triage Bag, Traction Straps)",
         ]),
         ("ERG Book", [
@@ -947,6 +953,11 @@ VEHICLES['u62'] = {
     'filename': 'Utility_62_Shift_Rig_Check.pdf',
     'label': 'UTILITY 62 SHIFT RIG CHECK',
     'compartments': [
+        ("Front Dash — Communications", [
+            "DU-COMM — Gray Microphone",
+            "Fireground Microphone — Black, Lower Left",
+            "PA System Microphone — Black, Upper Right",
+        ]),
         ("Glove Compartment", [
             "Maps",
             "Truck Loading Instruction Paper",
