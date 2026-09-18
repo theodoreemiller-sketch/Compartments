@@ -1,19 +1,12 @@
 {
   "Engine 62": {
-    "saved_at": "2026-08-16T16:54:20.895063+00:00",
+    "saved_at": "2026-09-18T14:16:08.194144+00:00",
     "compartments": {
-      "Engine 62 Compartments": [
-        "Drivers side compartment E61 over the wheel has a Pry Axe aka officers tool",
-        "Drivers side compartment E62 over the wheel contains air bags",
-        "E61 stores airbags in the compartment near the back on the drivers side",
-        "E61 and E62 have different air bag controllers. Both inflate to 118PSI for safety.",
-        "E62 has a RIT pack on top shelf rear compartment",
-        "Officer side rear compartment E61 contains a crowbar",
-        "Officer side rear compartment E61 contains 2 shovels (spade end and flat end)",
-        "Officer side rear compartment E61 contains a Pig",
-        "Officer side middle compartment E61 has cleats for bottom of boots to keep from sliding on ice",
-        "E61 Hacksaw in tool box",
-        "Cabin Compartment"
+      "Engine 62": [
+        "750 Gallon Tank",
+        "1750gpm Pump",
+        "Carrys 6 Fire personnel",
+        "Differences between E62 and E61 -\\> [Differences between E61/62 ](https://docs.google.com/document/d/1WhZ4rIrluGdkNffbwWPBAU_ZgIOXyRbtZI93T8pfOWM/edit?usp=sharing)"
       ],
       "Side /Middle Hose Bay": [
         "2x 1 \u00be crosslays - 200 ft w/fog nozzle - Both Preconnected",
@@ -28,7 +21,7 @@
         "High Rise Bag",
         "2 Backboards in rear"
       ],
-      "**Compartment 1** - (Engineers Compartment)": [
+      "Engineers Compartment": [
         "1\u201d green garden hose - Length?",
         "2 Storz connectors (1 is a reducer) at 30 degree angle need mode info",
         "Nozzle - fits on deck gun and blitzfire",
@@ -68,7 +61,7 @@
         "Rope to move hose",
         "25 ft of 5 inch hose"
       ],
-      "Compartment 2 Driver Side Middle": [
+      "Driver Side Middle Compartment": [
         "Closet pike pole (D handle)",
         "Maul  (wedge on one end and sledge on the other)",
         "Haligan",
@@ -80,7 +73,7 @@
         "K tool in a leather case",
         "3 air tanks"
       ],
-      "Compartment 3 Drivers Side Rear Of Engine": [
+      "Drivers Side Rear Compartment": [
         "RIT pack - Six foot hose, extra SCBA, UCA and buddy connectors, 60 minute, 4500",
         "Cable Cutters in RIT Pack Pocket",
         "Webbing in RIT Pack Pocket",
@@ -111,7 +104,7 @@
         "Hurst Rescue Cutter",
         "Hurst Rescue spreader"
       ],
-      "Compartment 5 Officer Side Rear": [
+      "Officer Side Rear Compartment": [
         "Flat Head Axe",
         "Haligan",
         "Pig axe",
@@ -142,22 +135,23 @@
         "Window glazing tool",
         "Razor scraper",
         "Small sledge hammer",
-        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",
+        "Voltage tester\\\\\\\\\\\\\\\\\\\\\\\\\\*",
         "Allen Key wrench",
         "Pliers",
         "Punch",
         "3 metric box wrenches 18mm, \\, \\"
       ],
-      "Compartment 6 Officer Side Middle": [
+      "Officer Side Middle Compartment": [
         "Water helmet",
         "PFD",
         "Mustang Suit",
-        "Rope throw bag",
+        "Rope Throw bag 75\u2019",
+        "Rope Throw bag 175\u2019",
         "Life Safety ring to put around victim",
         "Strap with 3 carabiners",
         "4 Air bottles"
       ],
-      "Compartment 7 Officer Side Front": [
+      "Officer Side Front Compartment": [
         "Silver bullet - pressurized water",
         "ABC Dry Chemical",
         "C02",
