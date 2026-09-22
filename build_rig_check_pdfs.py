@@ -953,66 +953,98 @@ VEHICLES['u62'] = {
     'filename': 'Utility_62_Shift_Rig_Check.pdf',
     'label': 'UTILITY 62 SHIFT RIG CHECK',
     'compartments': [
-        ("Front Dash — Communications", [
+        ("Front Dash", [
             "DU-COMM — Gray Microphone",
             "Fireground Microphone — Black, Lower Left",
             "PA System Microphone — Black, Upper Right",
+            "Passport Accountability System",
+        ]),
+        ("Officer's Side Compartment", [
+            "MDT — Mobile Data Terminal",
+            "Knox Box Key / Access",
+            "Safety Vest — Officer Side",
         ]),
         ("Glove Compartment", [
-            "Maps",
-            "Truck Loading Instruction Paper",
-            "Patient Prepare Reports (Blank)",
-            "Vehicle Name Laminate",
-            "Spare Tire Lock Key (in bag)",
-            "Road Flares (2×)",
-            "Passport Accountability System",
-            "ERG / Emergency Response Handbook",
+            "Vehicle Owner's Manual",
+            "Insurance Card",
+            "Spare Tire Lock Key (In Bag)",
+            "Public Relations Response Card",
         ]),
-        ("Front Passenger Side", [
-            "Roadway Vest (×1)",
+        ("Drivers Door", [
+            "Roadway Safety Vest — Driver's Side",
+        ]),
+        ("Middle Console Compartment", [
+            "2024 Emergency Response Guidebook — ERG",
+            "PPE — Mask, Fire Wipes, Safety Glasses",
+            "Gas Filling Instructions",
+            "Nitrile Gloves — Size Large",
+            "N95 Masks",
+            "Ear Protection",
+            "Fire Line Tape",
         ]),
         ("Back Seat", [
+            "AED — ZOLL",
             "Sterile Gloves and Masks",
-            "2 Radios",
-            "Vests",
-            "Ice Scraper",
+            "Portable Radios — ×2",
+            "Roadway Safety Vests",
+            "Ice Scrapers — ×2",
+            "Bottled Water",
         ]),
-        ("Truck Bed — MSA Case", [
-            "Air Bottle",
-            "SCBA",
-            "SCBA Face Piece Size M",
+        ("MSA Case", [
+            "MSA Case — SCBA + Air Bottle + Face Piece (Size M)",
         ]),
-        ("Truck Bed — Milk Crate", [
+        ("Milk Crate", [
             "Jumper Cables",
             "Wheel Chocks",
-            "Caution Tape",
-            "Receiver and Hitch Ball",
+            "Caution Tape (Milk Crate Stock)",
+            "Receiver with 2\" Hitch Ball",
+            "Duct Tape",
+            "Hot Stick",
+            "Ratchet Straps",
+            "Bungee Cords",
+            "Measuring Wheel",
+            "Garbage Bags",
+            "Door Wedges — ×2",
+            "Parking Sign",
         ]),
-        ("Truck Bed — Gray Bin (Black Top)", [
-            "4 Waders",
+        ("Gray Bin with Black Top", [
+            "Waders — Sizes 10, 10, 12, 13",
             "14\" Inner Tube",
-            "100 lb Lift Bag (Underwater Recovery)",
-            "250 lb Lift Bag (Underwater Recovery)",
+            "100 lb Lift Bag",
+            "250 lb Lift Bag",
             "PFD",
         ]),
-        ("Truck Bed — Other", [
-            "Orange Square Bag (Blanket)",
-            "Black Bag (Flood Light, Flood Light Stand, Dewalt Battery)",
-            "Orange/Red Bag w/White Trim (1 PFD, Throw Bag)",
-            "Rope Spool — 600'",
-            "ABC Fire Extinguisher",
-            "Sked (Foldable Stretcher)",
+        ("Orange Square Bag (Black Diamond Protective Equipment)", [
+            "Wool Blankets — ×2",
         ]),
-        ("Truck Bed — Tools", [
-            "2 Pike Poles",
+        ("Black Bag — Gator Frameworks", [
+            "Flood Light",
+            "Flood Light Stand (Yellow)",
+            "DeWalt Battery (Gator Bag)",
+        ]),
+        ("Orange/Red Bag w/White Trim", [
+            "PFD (Duffel Bag)",
+            "Throw Bag — 75 Feet of Rope",
+        ]),
+        ("Sked", [
+            "Foldable Stretcher (Sked)",
+            "30' Utility Rope (Sked Kit)",
+            "15' of Webbing (Sked Kit)",
+        ]),
+        ("Truckbed Tools and Items", [
+            "600' Spool of Utility Rope",
+            "ABC Fire Extinguisher",
+            "Pike Poles — ×2",
             "Halligan",
             "Flat Head Axe",
             "Umbrella",
-            "Snow Scraper",
+            "Clip Board (Truck Bed)",
+            "Bracket",
         ]),
-        ("Truck Bed — Misc", [
-            "Water Bottles",
-            "Spare Dewalt Batteries",
+        ("Black Square Bag — Dashboard Commander", [
+            "IC Vest",
+            "White Board for Incident Tracking",
+            "Clipboard (Dashboard Commander Bag)",
         ]),
     ]
 }

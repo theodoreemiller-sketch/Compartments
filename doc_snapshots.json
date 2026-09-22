@@ -670,18 +670,18 @@
     }
   },
   "Utility 61": {
-    "saved_at": "2026-09-18T12:19:59.025221+00:00",
+    "saved_at": "2026-09-22T12:08:36.872252+00:00",
     "compartments": {
       "Front Seat": [
-        "DU_COMM is the grey microphone",
+        "DU\\_COMM is the grey microphone",
         "Fireground White is the black microphone",
         "Two portable officer radios (in holsters) (Green):",
         "Fire East is the first  channel",
         "Fire White is channel 3",
         "Microphone can change channels",
-        "Push red button for emergency, \u201cACCIDENTAL ACTIVATION\u201d if you click by mistake",
+        "Push red button for emergency, \"ACCIDENTAL ACTIVATION\" if you click by mistake",
         "Voice recognition for changing channels on front",
-        "\u201cHey you, Its Me\u201d",
+        "\"Hey you, Its Me\"",
         "Don't scan channels, keep volume low when in groups",
         "Pocket mask also included",
         "Screen should show green not red",
@@ -699,7 +699,7 @@
         "Post-It notes:",
         "Safety Vest"
       ],
-      "The Bed (6 containers loose tools count as 1\u201dcontainer\u201d)": [
+      "The Bed (6 containers loose tools count as 1\"container\")": [
         "Shears for cutting clothing,",
         "Glucose level measuring,",
         "Medical drugs and narcan,",
@@ -712,7 +712,7 @@
         "Markers",
         "Contains Breathing equipment and",
         "Oxygen tank",
-        "AMBU [artificial manual breathing unit] masks (bagging someone),",
+        "AMBU \\[artificial manual breathing unit\\] masks (bagging someone),",
         "BVM (Bag, Valve, Mask)",
         "Pediatric breathing tubes",
         "Intubation tubes/air way tube",
@@ -735,82 +735,101 @@
     }
   },
   "Utility 62": {
-    "saved_at": "2026-07-27T14:17:30.978566+00:00",
+    "saved_at": "2026-09-22T12:08:36.883379+00:00",
     "compartments": {
-      "**Front Dash**": [
-        "Gray Microphone is DuCom",
-        "Black Microphone (lower left) is Ffireground",
-        "Black Microphone (upper right) is PA system"
+      "Front Dash": [
+        "Gray Microphone is DU-COMM",
+        "Black Microphone (lower left) is fireground",
+        "Black Microphone (upper right) is PA system",
+        "Passport Accountability System:  Used to track of assigned firefighters, driver puts name upside-down, white velcro goes to officer in command, red velcro stays with vehicle"
       ],
-      "**Glove Compartment**": [
-        "Maps:",
-        "Truck loading instruction paper:",
-        "Patient prepare reports (blank):",
-        "Vehicle Name Laminate (\u201cUtility 61\u201d):",
+      "Officers Side Comparment": [
+        "MDT - Mobile Data Terminal",
+        "Knox Box",
+        "Safety Vest"
+      ],
+      "Glove Compartment": [
+        "Car Manual",
+        "Insurance Card",
         "Spare tire lock key (In bag):",
-        "Road flares (2x): strike the cap to activate",
-        "Passport Accountability System:  Used to track of assigned firefighters, driver puts name upside-down, white velcro goes to officer in command, red velcro stays with vehicle",
-        "Emergency Response Handbook: <https://youtu.be/3v4QUaTAKY8?si=yfopmIU__iwqGh5E> \\_",
-        "Lists in numerical order 4-digit UN/NA identification identifies the appropriate guide number to reference in the Orange Section",
-        "Materials highlighted in green indicate they are Toxic Inhalation Hazard, Dangerous Water Reactive Materials that produce toxic gas upon contact with water[  ](https://bunkerfiresafety.com/product-category/respiratory/scba-respiratory/msa-scba/)",
-        "Lists in alphabetical order by name, identifies the appropriate guide number to reference in the Orange Section and the 4-digit UN/NA",
-        "Materials highlighted in green will have evacuation distances in the Green Section",
-        "Contains response guides, safety recommendations and directions on how to proceed during the initial response phase of the incident[ ](https://us.msasafety.com/Supplied-Air-Respirators-\\(SCBA\\)/SCBA-Parts-&-Accessories/c/11702?locale=en)",
-        "Provides information on potential hazards to health, risk of fire or explosion, emergency response procedures, personal protective equipment (PPE), evacuation procedures, first aid, and spill and fire control measures",
-        "Provides initial evacuation or shelter-in-place distances for spills of materials that are Toxic-by-Inhalation. Over 50 gal is a large spill",
-        "Distances vary based on the size of the spill (small or large) and whether the incident occurs during the day or at night"
+        "Public Relations Response Card"
       ],
-      "Front Passenger Side": [
-        "(Roadway Vest) (x1):"
+      "Drivers Door": [
+        "Safety Vest"
       ],
-      "Glove Box": [
-        "(Roadway Vest) (x1):"
+      "**Middle Console Compartment**": [
+        "2024 ERG - Emergency Response Guidebook: (https://youtu.be/3v4QUaTAKY8?si=yfopmIU__iwqGh5E \\_",
+        "PPE - mask, fire wipes, safety glasses",
+        "Gas Filling Instructions",
+        "Nitrile Gloves Size Large",
+        "N95 Masks",
+        "Ear Protection",
+        "Fire Line Tape"
       ],
       "Back Seat": [
         "Sterile Gloves and Masks",
         "2 Radios",
         "Vests",
-        "Ice Scraper"
+        "2 Ice Scrapers",
+        "Bottled Water"
       ],
-      "**Truck Bed**": [
-        "MSA Case",
+      "MSA Case": [
         "Air bottle",
         "SCBA",
-        "SCBA face piece size M",
-        "Milk Crate",
+        "SCBA face piece size M"
+      ],
+      "Milk Crate": [
         "Jumper Cables",
         "Wheel Chocks",
         "Caution Tape",
-        "Receiver and Hitch ball",
-        "Gray Bin with Black Top",
-        "4 Waders",
+        "Receiver with 2\u201d Hitch ball",
+        "Duct Tape",
+        "Hot Stick",
+        "Ratchet Straps",
+        "Bungee Cords",
+        "Measuring Wheel",
+        "Garbage Bags",
+        "2x Door Wedges",
+        "Parking Sign"
+      ],
+      "Gray Bin with Black Top": [
+        "4 Waders Sizes 10,10,12,13",
         "14\u201d inner tube",
-        "100 lb Lift Bag",
-        "Used for recovery of underwater items",
-        "250 Lift Bag",
-        "Used for recovery of underwater items",
-        "PFD",
-        "Orange Square bag",
-        "Blanket",
-        "Black Bag",
+        "100 lb Lift Bag (Used for recovery of underwater items)",
+        "250 Lift Bag (Used for recovery of underwater items)",
+        "PFD"
+      ],
+      "Orange Square Bag (Black Diamond Protective Equipment)": [
+        "2 Wool Blankets"
+      ],
+      "Black Bag - Gator Frameworks": [
         "Flood Light",
         "Flood Light Stand (yellow)",
-        "Dewalt Battery",
-        "Orange/Red Bag w/white Trim",
+        "Dewalt Battery"
+      ],
+      "Orange/Red Bag w/white Trim": [
         "1 PFD",
-        "Throw Bag 75 feet of rope",
-        "Rope Spool 600\u2019 feet",
-        "ABC Fire Extinguisher",
-        "Sked",
+        "Throw Bag 75 feet of rope"
+      ],
+      "Sked": [
         "Foldable stretcher",
-        "Tools",
+        "30' Utility Rope",
+        "15' of Webbing"
+      ],
+      "Truckbed Tools and Items": [
+        "600' Spool of Utility Rope",
+        "ABC Fire Extinguisher",
         "2 Pike Poles",
         "Haligan",
         "Flat Head Axe",
         "Umbrella",
-        "Snow Scraper",
-        "Water Bottles",
-        "Spare Dewalt Batteries"
+        "Clip Board",
+        "Bracket"
+      ],
+      "Black Square Bag - Dashboard Commander": [
+        "IC vest",
+        "White Board for Incident Tracking",
+        "Clipboard"
       ]
     }
   },
