@@ -1063,7 +1063,7 @@ VEHICLES['bt62'] = {
             "Fire Ground Radio (Black)",
             "Box Light (MISSING — report)",
             "MDT (Mobile Data Terminal)",
-            "Kill Switch (Under the Hood)",
+            "Kill Switch (Under the Hood) — check first if engine won't start",
             "Knox Box (Officer's Side)",
         ]),
         ("Glove Box", [
@@ -1082,6 +1082,7 @@ VEHICLES['bt62'] = {
         ]),
         ("Back Seat", [
             "PFD (Personal Flotation Device) — inspect",
+            "AED — ZOLL (status light ready, pads in date)",
             "AC HotStick Voltage Detector",
             "Box Light (MISSING — report)",
             "Towel (MISSING — report)",
