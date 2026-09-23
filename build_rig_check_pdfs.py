@@ -265,6 +265,7 @@ VEHICLES['e61'] = {
             "6× 1¾\" Connectors (2 F2F, 2 M2M, 2 CFD)",
             "4 Reducers 2½\"F to 1¾\"M",
             "Cap for 1¾\"",
+            "Hose Roller",
         ]),
         ("Comp 1 — Engineer's Compartment (Bottom Shelf)", [
             "Hydrant Bag (2 Wrenches, 2 Storz-Steamer, 2 Spanners, 2 Wedges, 1¾\" Gate Valve, Storz-1¾\"F, 3 Double Spanners, Mallet, Pipe Wrench, Rope)",

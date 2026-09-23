@@ -1,67 +1,7 @@
 {
-  "Utility 62": {
-    "Front Dash": [
-      "Gray Microphone is DU-COMM",
-      "Black Microphone (lower left) is fireground"
-    ],
-    "Officer's Side Compartment": [
-      "MDT \u2014 Mobile Data Terminal",
-      "Knox Box Key / Access",
-      "Safety Vest \u2014 Officer Side"
-    ],
-    "Drivers Door": [
-      "Safety Vest"
-    ],
-    "Glove Compartment": [
-      "Car Manual",
-      "Insurance Card",
-      "Public Relations Response Card"
-    ],
-    "Middle Console Compartment": [
-      "2024 ERG - Emergency Response Guidebook",
-      "PPE - mask, fire wipes, safety glasses",
-      "Gas Filling Instructions",
-      "Nitrile Gloves Size Large",
-      "N95 Masks",
-      "Ear Protection",
-      "Fire Line Tape"
-    ],
-    "Back Seat": [
-      "2 Ice Scrapers",
-      "Bottled Water"
-    ],
-    "Milk Crate": [
-      "Receiver with 2\" Hitch ball",
-      "Duct Tape",
-      "Hot Stick",
-      "Ratchet Straps",
-      "Bungee Cords",
-      "Measuring Wheel",
-      "Garbage Bags",
-      "2x Door Wedges",
-      "Parking Sign"
-    ],
-    "Gray Bin with Black Top": [
-      "4 Waders Sizes 10,10,12,13",
-      "100 lb Lift Bag (Used for recovery of underwater items)",
-      "250 lb Lift Bag (Used for recovery of underwater items)"
-    ],
-    "Orange Square Bag (Black Diamond Protective Equipment)": [
-      "2 Wool Blankets"
-    ],
-    "Sked": [
-      "30' Utility Rope",
-      "15' of Webbing"
-    ],
-    "Truckbed Tools and Items": [
-      "600' Spool of Utility Rope",
-      "Clip Board",
-      "Bracket"
-    ],
-    "Black Square Bag \u2014 Dashboard Commander": [
-      "IC vest",
-      "White Board for Incident Tracking",
-      "Clipboard"
+  "Engine 61": {
+    "Engineer's Compartment": [
+      "Hose Roller"
     ]
   }
 }
