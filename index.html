@@ -4021,17 +4021,53 @@ window.rigSearch = function(searchInputId, guideId) {
       var anyVisible = sec.querySelectorAll('.equip-card:not(.search-hidden)').length > 0;
       sec.style.display = (!q || anyVisible) ? '' : 'none';
     });
+    guide.querySelectorAll('.equip-card.search-hit').forEach(function(c){ c.classList.remove('search-hit'); });
     if (!q) {
       countEl.textContent = '';
+      countEl.classList.remove('rig-search-count-active', 'rig-search-count-none');
     } else if (shown === 0) {
       countEl.textContent = 'No matches';
+      countEl.classList.add('rig-search-count-active', 'rig-search-count-none');
     } else {
-      countEl.textContent = shown + ' of ' + total + ' shown';
+      countEl.textContent = shown + ' of ' + total + ' match';
+      countEl.classList.add('rig-search-count-active');
+      countEl.classList.remove('rig-search-count-none');
     }
   }
 
-  inp.addEventListener('input', runFilter);
+  // After the user pauses typing (or presses Enter), jump to the first match and flash it,
+  // so it's obvious the search worked even when matches are far down the page.
+  var jumpTimer = null;
+  function jumpToFirst() {
+    var q = (inp.value || '').trim();
+    if (!q) return;
+    var first = null;
+    guide.querySelectorAll('.equip-card:not(.search-hidden)').forEach(function(c){
+      if (!first && c.offsetParent !== null) first = c;
+    });
+    if (!first) return;
+    first.classList.remove('search-hit'); void first.offsetWidth;
+    first.classList.add('search-hit');
+    first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  inp.addEventListener('input', function() {
+    runFilter();
+    clearTimeout(jumpTimer);
+    jumpTimer = setTimeout(jumpToFirst, 700);
+  });
+  inp.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); clearTimeout(jumpTimer); jumpToFirst(); }
+  });
 };
+(function(){
+  var st = document.createElement('style');
+  st.textContent =
+    '.rig-search-count-active{color:#D4A017 !important;font-weight:700 !important;font-size:12px !important;}' +
+    '.rig-search-count-none{color:#E0604F !important;}' +
+    '.equip-card.search-hit{outline:3px solid #D4A017;outline-offset:2px;animation:rigSearchFlash 1.6s ease-out 1;}' +
+    '@keyframes rigSearchFlash{0%{box-shadow:0 0 0 0 rgba(212,160,23,.85);}100%{box-shadow:0 0 0 18px rgba(212,160,23,0);}}';
+  document.head.appendChild(st);
+})();
 </script>
 
 <!-- ═══════ UNIFIED NAV ═══════ -->
@@ -14273,9 +14309,6 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
   <div class="nav-section-label">Cab &amp; Top</div>
   <a class="nav-link" href="#e63-cab">Cab Compartment</a>
   <a class="nav-link" href="#e63-top">Top of Engine</a>
-  <hr class="nav-divider">
-  <div class="nav-section-label">Quick Reference</div>
-  <a class="nav-link" href="#e63-unique">E63 Unique Items ⭐</a>
 </nav>
 <main id="e63-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - var(--e63-sidebar-w)); overflow-x:hidden;">
   <div class="rig-hero-photo">
@@ -15491,49 +15524,7 @@ document.querySelectorAll('#e60-guide .comp-section').forEach((sec, i) => {
     </div>
   </section>
 
-  <details class="quick-ref-toggle">
-  <summary class="quick-ref-btn">📌 Quick Reference — Rig Check Checklist · E63 Unique Items</summary>
-  <div class="quick-ref-body">
-
-
-  <section class="comp-section" id="e63-unique">
-    <div class="section-header">
-      <div class="section-icon">⭐</div>
-      <div><h2>E63 Unique Items — What Makes This Rig Different</h2><div class="sub">Know this before your first shift on E63</div></div>
-    </div>
-    <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>If You've Been on Any Other Engine — Read This First</strong>E63 has several significant differences that affect how you'd respond in the first 60 seconds on scene. Memorize this list.</div></div>
-    <div class="equip-card">
-      <div class="card-header" onclick="e63ToggleCard(this)">
-        <div><div class="card-title">E63 vs. Fleet — Complete Differences at a Glance</div></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="table-scroll"><table class="hose-table">
-          <thead><tr><th>Item</th><th>E63</th><th>Other Engines (typical)</th></tr></thead>
-          <tbody>
-            <tr><td>Front LDH</td><td><strong>50 ft of 5" on FRONT BUMPER</strong></td><td>In eng. compartment or rear bay</td></tr>
-            <tr><td>Front bumper tools</td><td><strong>Gate valve + hydrant wrench ON TOP OF BUMPER</strong></td><td>In hydrant bag in compartment</td></tr>
-            <tr><td>Extension ladder</td><td><strong>28-foot extension ladder</strong></td><td>24-foot on E60, E61, E62</td></tr>
-            <tr><td>Extrication</td><td><strong>Hurst Combi Tool (cuts + spreads in one)</strong></td><td>Separate cutter + spreader on E61/E62</td></tr>
-            <tr><td>Foam system</td><td><strong>Dedicated Eco-Gel: 95 GPM nozzle + 95 GPM eductor + 5× 5-gal Eco-Gel + aeration tube</strong></td><td>Chief Eductor only (E60, E61)</td></tr>
-            <tr><td>Second foam system</td><td><strong>Chief Eductor 125 GPM (eng. bottom shelf) — TWO foam systems total</strong></td><td>One system on other engines</td></tr>
-            <tr><td>Chief Eductor pickup tube</td><td><strong>In MIDDLE CONTAINER — not with the eductor</strong></td><td>Stored with or near eductor</td></tr>
-            <tr><td>HCN detection</td><td><strong>Gas Trac (integrated) + standalone HCN meter</strong></td><td>HCN only in Gas Trac combo</td></tr>
-            <tr><td>SCBA in cab</td><td><strong>Full SCBA pack in the cab</strong></td><td>SCBA in compartment only on most rigs</td></tr>
-            <tr><td>Hose roller</td><td><strong>Hose roller for high-rise hose hauling</strong></td><td>Not on all engines</td></tr>
-            <tr><td>Akron hose hoist</td><td><strong>Akron Brass coping tool (officer first comp.)</strong></td><td>E60 also has this; not all engines</td></tr>
-            <tr><td>Right side rear</td><td><strong>NY Hooks: 6 ft, 8 ft, 10 ft</strong></td><td>Varies by rig</td></tr>
-            <tr><td>Left side rear</td><td><strong>Pike poles: 6 ft, 8 ft, 10 ft (all three)</strong></td><td>Varies by rig</td></tr>
-            <tr><td>Tools added post-photos</td><td><strong>K-tool, officer's tool, sledge, pick axe — confirm locations</strong></td><td>All tools documented in photos</td></tr>
-          </tbody>
-        </table></div>
-      </div>
-    </div>
-      <a class="back-link" href="#engine63-guide">↑ Back to top</a>
-  </section>
-
-  </div>
-  </details>
+  
 
 <footer style="background:#2C2825; color:#8A7F74; text-align:center; padding:24px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:1px; border-top:3px solid #1A7A40; margin-top:40px;">ENGINE 63 COMPARTMENT STUDY GUIDE &nbsp;·&nbsp; FOR TRAINING PURPOSES ONLY — ALWAYS VERIFY ON THE ACTUAL RIG</footer>
 </main>
