@@ -835,57 +835,73 @@
     }
   },
   "Brushtruck 62": {
-    "saved_at": "2026-09-18T12:20:45.933552+00:00",
+    "saved_at": "2026-09-23T20:21:21.881331+00:00",
     "compartments": {
       "Front Seat:": [
-        "Radios"
+        "2x Handheld Radios",
+        "Passport Velcro System",
+        "DU-COMM Radio (Grey)",
+        "Fire Ground Radio (Black)",
+        "Box Light (Missing)",
+        "MDT (Mobile Data Terminal)",
+        "Kill Switch (Under The Hood)",
+        "Knox Box (Officers Side)"
       ],
-      "GloveBox:": [
+      "Glove Box:": [
         "ERG book",
+        "Brushtruck Pumping/Drafting Manual",
+        "Spare Wire Harness",
+        "Spare Tire Lock Key",
+        "Ford Owners Manual",
         "Bug spray",
         "Fuel key",
-        "Water guides"
+        "Prairie Path Key",
+        "Water guides",
+        "Insurance Card",
+        "3x Hearing Protection Packs",
+        "Public Response Information"
       ],
       "Back Seat:": [
         "PFD",
-        "Hot stick",
-        "Box light - big flashlight",
-        "Hose bag with garden hose"
-      ],
-      "Container in back seat:": [
-        "Small 1\u201d hose",
-        "Strap",
-        "Towell",
-        "Safety Vest",
+        "AC Hot stick",
+        "Box light (Missing)",
+        "Towel (Missing)",
+        "Milk Crate",
         "Maps",
         "Duct Tape",
         "Caution tape",
         "Garbage bags",
-        "Pub Ed - public education stickers"
+        "Pub Ed - public education stickers",
+        "2x Safety Vest",
+        "Door Stop",
+        "Yellow Hose bag with garden hose",
+        "50 \u2018 of small 1\u201d hose",
+        "Webbing Strap"
       ],
-      "Rear of Vehicle:": [
+      "Rear of Vehicle Water Supply:": [
         "250 gallon water tank",
         "200\u2019 of 1\u201d hose on a hose reel -",
         "Handle for hose reel",
         "2 pieces 12\u2019 long Black hard suction hose to replenish water tank on site from natural sources",
-        "Metal filter for suction hose",
-        "1 metal wheel chock",
+        "Drafting Float Strainer for suction hose",
         "Plastic gas tank to provide fuel for pump",
         "2 1/2\u201d hose  - 50 feet long",
         "1 \u00bd\u201d hose roll on cross lay - 150 feet",
-        "Fog Nozzle"
+        "Fog Nozzle",
+        "Gas Powered Pump (can operate when moving)",
+        "2 \u00bd\u201d inlet",
+        "1 \u00bd outlet"
       ],
-      "Tools in back:": [
-        "3 brush paddles to put out brush fires",
-        "2 pike poles",
-        "1 New York pole",
-        "Bolt cutters",
-        "Hallagan tool",
-        "Plastic funnel"
+      "Truck Bed Tools:": [
+        "5 Brush Paddles",
+        "3x 6\u2019 Pike Poles",
+        "6\u2019 New York Pole",
+        "Bolt Cutter",
+        "Hallagan (MAXXIMUS REX)",
+        "Plastic funnel",
+        "Metal Wheel Chock"
       ],
-      "Water pump": [
-        "\\\\2 \u00bd\u201d inlet\\\\***",
-        "\\\\1 \u00bd outlet\\\\***",
+      "Hydrant Bag:": [
         "Gate valve - connects to hydrant",
         "1\u201d garden hose",
         "Hydrant wrench",
