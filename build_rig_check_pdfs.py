@@ -1040,7 +1040,7 @@ VEHICLES['u62'] = {
             "Flat Head Axe",
             "Umbrella",
             "Clip Board (Truck Bed)",
-            "Bracket",
+            "Suppressall FS2-MAX (Currently Missing)",
         ]),
         ("Black Square Bag — Dashboard Commander", [
             "IC Vest",
