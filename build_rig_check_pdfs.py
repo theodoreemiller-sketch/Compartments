@@ -240,7 +240,7 @@ VEHICLES['e61'] = {
             "Right Bay — 600' 3\" + Skid Load 1¾\" 150'",
             "Blitz Fire — 300' 3\" (Preconnected)",
             "High-Rise Pack — 150' 1¾\", Fog Nozzle, Gated Wye",
-            "High-Rise Bag (2½\" section, 90° connector, T w/gauge, Wye, Vise Grips)",
+            "High-Rise Bag (2½\" section, 90° connector, T w/gauge, Gated Wye Valve, Vise Grips)",
             "2 Backboards",
         ]),
         ("Comp 1 — Engineer's Compartment (Top Shelf)", [
@@ -254,7 +254,7 @@ VEHICLES['e61'] = {
         ("Comp 1 — Engineer's Compartment (Middle Shelf)", [
             "2 Double Ended Spanners",
             "2 Small Hose Spanners w/Gas Notch",
-            "2 Gated Wye Ball Valves (2½\" to 1½\")",
+            "2 Gated Wye Valves (2½\" to 1½\")",
             "2 Fog Nozzles",
             "2 Small Reducers",
             "Reducer 1¾\" to 1\"",
