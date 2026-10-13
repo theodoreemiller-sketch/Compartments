@@ -471,7 +471,7 @@ VEHICLES['e62'] = {
         ]),
         ("Comp 3 — Driver Side Rear", [
             "Top: RIT Pack (6ft Hose, Extra SCBA, UCA/Buddy Connectors, 60min 4500 psi; Outside Pocket: Cable Cutters, Webbing)",
-            "Mid: 2 Portable Work Lights",
+            "Mid: 2 Akron Portable Work Lights",
             "Mid: Cellar Nozzle on Cellar Pipe",
             "Bottom: Small Step Ladder",
             "Bottom: Ventilation Fan (confirm plugged in / charging)",
@@ -487,6 +487,8 @@ VEHICLES['e62'] = {
         ("Rear of Truck — Middle", [
             "Upper: 6 Batteries",
             "Upper: Battery-to-AC Connector",
+            "Upper: Hurst Battery Charger",
+            "Upper: Akron Battery Charger",
             "Mid: Hydraulic Ram",
             "Mid: Quick Kick Ram Support",
             "Mid: Battery-Powered Reciprocating Saw",
