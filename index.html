@@ -4104,7 +4104,7 @@ window.rigSearch = function(searchInputId, guideId) {
 <section id="home">
   <div class="home-dept">Glen Ellyn Fire Department · Probationary Training</div>
   <div class="home-title">UNOFFICIAL<br>APPARATUS<br><span>STUDY GUIDES</span></div>
-  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 10/20/2026</div>
+  <div class="home-date" style="font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:2px; color:#D4A017; text-align:center; margin:8px 0 16px; text-transform:uppercase;">📅 Last Updated = 10/22/2026</div>
   <p class="home-disclaimer" style="background:#7a0c0c; color:#fff; border:3px solid #D9291A; padding:18px 22px; border-radius:8px; font-size:18px; line-height:1.5; font-weight:700; text-align:center; max-width:900px; margin:18px auto;"><strong>"This document is not the source of truth and may contain inaccuracies, nothing can replace going over each compartment with a Fire Fighter or Officer. This guide is meant to help you understand and maintain the knowledge either before or after those meetings"</strong></p>
   <p class="home-sub">Eleven apparatus study guides. Every tool. Every shelf. Every location — explained the way a mentor would explain it, not the way a manual would.</p>
   <p class="home-contact" style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#d8dce8; text-align:center; margin:1.2rem auto 0; max-width:560px;">For errors contact — <a href="mailto:TMiller@glenellynfire.org" style="color:#f5a623; text-decoration:none; border-bottom:1px solid #f5a623;">TMiller@glenellynfire.org</a></p>
@@ -23120,27 +23120,29 @@ rigSearch('sq61-search', 'sq61-guide');
 </div>
 <div class="layout">
 <nav id="mp62-sidebar">
-  <div class="nav-section-label">Driver's Side Exterior</div>
-  <a class="nav-link" href="#mp62-ds-front">DS Front Compartment</a>
-  <a class="nav-link" href="#mp62-middle">Middle Cabinet</a>
-  <a class="nav-link" href="#mp62-ds-rear">DS Rear Cabinet — Turnout Gear</a>
-  <hr class="nav-divider">
-  <div class="nav-section-label">Officer's Side Exterior</div>
-  <a class="nav-link" href="#mp62-os-rear">OS Rear Compartment — Immobilization</a>
-  <a class="nav-link" href="#mp62-os-front">OS Front Cabinet — LUCAS</a>
-  <hr class="nav-divider">
-  <div class="nav-section-label">Patient Compartment — The Box</div>
-  <a class="nav-link" href="#mp62-trauma">Trauma &amp; Wound Care Cabinet</a>
-  <a class="nav-link" href="#mp62-airway">Airway &amp; Respiratory — Left Front</a>
-  <a class="nav-link" href="#mp62-ivmeds">IV &amp; Medication — Right Door</a>
-  <a class="nav-link" href="#mp62-right-bench">Right Bench Storage</a>
-  <a class="nav-link" href="#mp62-left-underseat">Left Bench — Under Seat</a>
-  <a class="nav-link" href="#mp62-biohazard">Infectious Waste Station</a>
-  <a class="nav-link" href="#mp62-cot">Ambulance Cot / Stretcher</a>
-  <a class="nav-link" href="#mp62-boxgeneral">Box — General Access Items</a>
-  <hr class="nav-divider">
   <div class="nav-section-label">Cab</div>
   <a class="nav-link" href="#mp62-cab">Inside The Cab</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Driver's Side Exterior</div>
+  <a class="nav-link" href="#mp62-ds-front">DS Front Compartment</a>
+  <a class="nav-link" href="#mp62-middle">DS Middle Cabinet</a>
+  <a class="nav-link" href="#mp62-ds-rear">DS Rear Cabinet</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Officer's Side Exterior</div>
+  <a class="nav-link" href="#mp62-os-rear">OS Rear Compartment</a>
+  <a class="nav-link" href="#mp62-os-front">OS Front Cabinet (Outside) — LUCAS</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Patient Compartment — The Box</div>
+  <a class="nav-link" href="#mp62-boxgeneral">Front Lower Cabinet</a>
+  <a class="nav-link" href="#mp62-ivmeds">Front Cabinet — IV &amp; Meds</a>
+  <a class="nav-link" href="#mp62-airway">OS Front Interior Cabinet — Airway</a>
+  <a class="nav-link" href="#mp62-trauma">OS Upper Cabinet — Trauma</a>
+  <a class="nav-link" href="#mp62-right-bench">OS Double Bench</a>
+  <a class="nav-link" href="#mp62-left-underseat">DS Under Single Seat</a>
+  <a class="nav-link" href="#mp62-biohazard">Inside OS Countertop</a>
+  <a class="nav-link" href="#mp62-cot">Ambulance Cot</a>
+  <hr class="nav-divider">
+  <div class="nav-section-label">Cab (cont.)</div>
   <a class="nav-link" href="#mp62-behindseat">Behind Passenger Seat</a>
 </nav>
 <main id="mp62-main" style="flex:1; padding:32px 48px; max-width:calc(1400px - 280px); overflow-x:hidden;">
@@ -23164,14 +23166,87 @@ rigSearch('sq61-search', 'sq61-guide');
     <p style="margin-top:12px; color:#F5F0E8;"><strong>Listen up, probie.</strong> Every other rig in this fleet exists to make the fire go out or the person get free. This one exists so the person keeps breathing. You do not get to "kind of" know where the airway bag is or "kind of" remember which drawer has the tourniquets. When you're elbow-deep in a code in the back of this box, your hands need to already know where everything lives — because your eyes are going to be on the patient, not the cabinets.</p>
   </div>
 
-  <!-- ══════════════ DS FRONT COMPARTMENT ══════════════ -->
+  <!-- ══════════════ INSIDE THE CAB ══════════════ -->
+  <section class="comp-section" id="mp62-cab">
+    <div class="section-header">
+      <div class="section-icon">🗺️</div>
+      <div><h2>Inside The Cab</h2><div class="sub">Maps &middot; Fuel Keys &middot; Knox Box &middot; Safety Vests</div></div>
+    </div>
+  <div class="compartment-photo">
+    <img src="images/medic62/mp62-cab.jpg" width="825" height="1100" alt="Medic 62 inside the cab, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Inside the cab, as installed</div>
+  </div>
+
+
+    <!-- MAPS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Maps</div><span class="card-aka">AKA: Hard-copy maps, paper maps, map book</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Backup paper maps of the response area kept in the cab. The MDT and phone GPS are your primary navigation, but both are electronics — and electronics fail, lose signal, or lock up at the worst possible time. The map is what you fall back on when that happens.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Know How to Read It Before You Need It</strong>Don't wait for a dead MDT on an unfamiliar street at 0300 to find out you don't know how the map book is organized. Look it over on a slow shift so you're not learning the index under pressure.</div></div>
+      </div>
+    </div>
+
+    <!-- FUEL KEYS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Fuel Keys</div><span class="card-aka">AKA: Fuel cards, gas keys, fuel fob</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The key or fob that unlocks the department's fuel pump so you can fill the rig. Kept in the cab so whoever's on the fuel run doesn't have to track one down.</p></div>
+        </div>
+        <div class="callout callout-danger"><span class="callout-icon">⛽</span><div class="callout-content"><strong>Rookie Mistake — Not Confirming It's There at Shift Check</strong>A rig that runs low on fuel mid-shift because the key walked off — or nobody checked for it — is a rig that's out of service when a call drops. Verify it's in the cab every shift, same as any other piece of equipment.</div></div>
+      </div>
+    </div>
+
+    <!-- KNOX BOX -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Knox Box</div><span class="card-aka">AKA: Knox key, KnoxBox, rapid entry key, "the Knox"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Knox access for the rig. Knox rapid-entry boxes are mounted on commercial buildings and hold the building's own keys, and the Knox key opens them so the crew gets in without forcing a door. On Medic 62 it rides in the cab. That matters, because a medic crew is often first through the door on a medical alarm or a fall at a locked business.</p></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Knox key, KnoxBox, rapid entry key, "the Knox."</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">🔑</span><div class="callout-content"><strong>Rookie Mistake — Treating the Knox Like Any Other Key</strong>That key opens every Knox box in the district. Losing it is a security problem for the whole community, not just this rig. It goes back where it lives the moment you're done with it, it never rides home in a pocket, and you follow your department's sign-out or release procedure every time.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">✅</span><div class="callout-content"><strong>Check It Every Shift</strong>Confirm the Knox is in the cab at shift check. Finding out it's missing while you're standing at a locked door with a patient down inside is the worst possible time.</div></div>
+      </div>
+    </div>
+
+    <!-- SAFETY VESTS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Safety Vests (In Door)</div><span class="card-aka">AKA: Hi-vis vest, ANSI vest, traffic vest, reflective vest</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>High-visibility reflective vests kept in the cab door so they're the first thing your hand finds when you step out. You wear one any time you're working in or near moving traffic: crashes, roadside patients, anything on the highway.</p></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Hi-vis vest, ANSI vest, traffic vest, road vest, reflective vest.</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">🚧</span><div class="callout-content"><strong>Rookie Mistake — "It's Just a Quick Roadside Call"</strong>Emergency responders get struck and killed on roadways every year, and plenty of them were on a "quick" call. The vest goes on before your boots touch the pavement, not after you've sized up the scene. Fluorescent and reflective is how the driver who isn't paying attention sees you.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ DRIVER'S SIDE FRONT COMPARTMENT ══════════════ -->
   <section class="comp-section" id="mp62-ds-front">
     <div class="section-header">
       <div class="section-icon">🚪</div>
       <div><h2>Driver's Side Front Compartment</h2><div class="sub">Stair Chair · Oxygen Tank</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-driverfront.jpg" width="825" height="1100" alt="Medic 62 driver's side front compartment with stair chair and oxygen tank" loading="lazy">
+    <img src="images/medic62/mp62-driverfront.jpg" width="825" height="1100" alt="Medic 62 driver's side front compartment, as installed" loading="lazy">
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Driver's side front compartment, as installed</div>
   </div>
 
@@ -23210,15 +23285,15 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ MIDDLE CABINET ══════════════ -->
+  <!-- ══════════════ DRIVER'S SIDE MIDDLE CABINET ══════════════ -->
   <section class="comp-section" id="mp62-middle">
     <div class="section-header">
       <div class="section-icon">🎒</div>
-      <div><h2>Middle Cabinet</h2><div class="sub">Hydrant Bag · Kevlar Vests</div></div>
+      <div><h2>Driver's Side Middle Cabinet</h2><div class="sub">Hydrant Bag · Kevlar Vests</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-middle.jpg" width="825" height="1100" alt="Medic 62 middle cabinet contents" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Middle cabinet, as installed</div>
+    <img src="images/medic62/mp62-middle.jpg" width="825" height="1100" alt="Medic 62 driver's side middle cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Driver's side middle cabinet, as installed</div>
   </div>
 
 
@@ -23255,15 +23330,15 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ DS REAR CABINET — TURNOUT GEAR ══════════════ -->
+  <!-- ══════════════ DRIVER'S SIDE REAR CABINET ══════════════ -->
   <section class="comp-section" id="mp62-ds-rear">
     <div class="section-header">
       <div class="section-icon">🧥</div>
-      <div><h2>Driver's Side Rear Cabinet — Turnout Gear</h2><div class="sub">Turnout Coat · Turnout Pants · Turnout Boots · Helmet</div></div>
+      <div><h2>Driver's Side Rear Cabinet</h2><div class="sub">Turnout Coat · Turnout Boots · Turnout Pants · Helmet</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-turnout.jpg" width="825" height="1100" alt="Medic 62 driver's side rear cabinet turnout gear" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Driver's side rear cabinet, turnout gear, as installed</div>
+    <img src="images/medic62/mp62-turnout.jpg" width="825" height="1100" alt="Medic 62 driver's side rear cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Driver's side rear cabinet, as installed</div>
   </div>
 
 
@@ -23284,20 +23359,20 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ OFFICER'S SIDE REAR — IMMOBILIZATION GEAR ══════════════ -->
+  <!-- ══════════════ OFFICER'S SIDE REAR COMPARTMENT ══════════════ -->
   <section class="comp-section" id="mp62-os-rear">
     <div class="section-header">
       <div class="section-icon">🩼</div>
-      <div><h2>Officer's Side Rear Compartment — Immobilization Gear</h2><div class="sub">Backboards · Scoop Stretcher · Head Beds · C-Collar Bag · Spider Straps · KED · Short Boards</div></div>
+      <div><h2>Officer's Side Rear Compartment</h2><div class="sub">Backboards · Scoop Stretcher · Head Beds · C-Collar Bag · Spider Straps · KED · Short Boards</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-immobilization.jpg" width="825" height="1100" alt="Medic 62 officer's side rear compartment immobilization gear" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side rear compartment, immobilization gear, as installed</div>
+    <img src="images/medic62/mp62-immobilization.jpg" width="825" height="1100" alt="Medic 62 officer's side rear compartment, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side rear compartment, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t01.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t01.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment — Immobilization Gear photo (1 of 3)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t02.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t02.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment — Immobilization Gear photo (2 of 3)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t03.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t03.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment — Immobilization Gear photo (3 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t01.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t01.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment photo (1 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t02.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t02.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment photo (2 of 3)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-immobilization-t03.jpg')"><img src="images/medic62/thumbs/mp62-immobilization-t03.jpg" width="600" height="800" alt="Additional Officer's Side Rear Compartment photo (3 of 3)" loading="lazy"></button>
   </div>
 
 
@@ -23407,15 +23482,15 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ OFFICER'S SIDE FRONT CABINET — LUCAS ══════════════ -->
+  <!-- ══════════════ OFFICER'S SIDE FRONT CABINET ══════════════ -->
   <section class="comp-section" id="mp62-os-front">
     <div class="section-header">
       <div class="section-icon">🫀</div>
       <div><h2>Officer's Side Front Cabinet</h2><div class="sub">LUCAS Mechanical CPR Device</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-officerfront.jpg" width="825" height="1100" alt="Medic 62 officer's side front cabinet Lucas device" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side front cabinet, Lucas device, as installed</div>
+    <img src="images/medic62/mp62-officerfront.jpg" width="825" height="1100" alt="Medic 62 officer's side front cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side front cabinet, as installed</div>
   </div>
 
 
@@ -23439,113 +23514,153 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ TRAUMA & WOUND CARE CABINET ══════════════ -->
-  <section class="comp-section" id="mp62-trauma">
+  <!-- ══════════════ FRONT LOWER CABINET ══════════════ -->
+  <section class="comp-section" id="mp62-boxgeneral">
     <div class="section-header">
-      <div class="section-icon">🩹</div>
-      <div><h2>Trauma &amp; Wound Care Cabinet</h2><div class="sub">Trauma Dressings · Tourniquets · Splints/Slings · Ice/Heat Packs · Saline · Bulb Syringe</div></div>
+      <div class="section-icon">🎒</div>
+      <div><h2>Front Lower Cabinet</h2><div class="sub">Breathing Bag · Access to LUCAS</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-trauma.jpg" width="1100" height="578" alt="Medic 62 trauma and wound care cabinet supplies" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Trauma &amp; wound care cabinet, as installed</div>
+    <img src="images/medic62/mp62-patientcompartment.jpg" width="825" height="1100" alt="Medic 62 front lower cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Front lower cabinet, as installed</div>
   </div>
 
 
-    <!-- TRAUMA DRESSINGS -->
+    <!-- BREATHING BAG -->
     <div class="equip-card">
       <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Trauma Dressings (Bulk Gauze, ACE Wraps)</div><span class="card-aka">AKA: Bulk dressings, trauma pads, kerlix, ACE bandages</span></div>
+        <div><div class="card-title">Breathing Bag</div><span class="card-aka">AKA: Spare BVM, secondary bag</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bulk sterile gauze and elastic wraps for direct wound packing, bleeding control, and securing dressings in place. The workhorse supply for any bleeding-control call — from a minor laceration to major hemorrhage control before a tourniquet goes on, or in addition to one.</p></div>
-        </div>
-        <div class="callout callout-warn"><span class="callout-icon">🩸</span><div class="callout-content"><strong>Restock Immediately After Every Call</strong>A bleeding-control call that uses your bulk gauze and nobody restocks it means the next crew opens this drawer to nothing on the next hemorrhage call. Restock before you clear the hospital, not "when you get back to quarters."</div></div>
-      </div>
-    </div>
-
-    <!-- TOURNIQUETS -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Tourniquets</div><span class="card-aka">AKA: TQ, CAT (Combat Application Tourniquet), windlass tourniquet</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A windlass-style tourniquet for controlling life-threatening extremity hemorrhage that direct pressure alone can't stop. Applied high and tight above the wound, tightened until bleeding stops and a distal pulse is absent — not just "until it feels tight."</p></div>
-          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Strap/band:</strong> Wraps around the limb.</li><li><strong>Windlass rod:</strong> Twists to tighten the band.</li><li><strong>Windlass clip:</strong> Locks the rod in place once tightened.</li><li><strong>Time strip:</strong> Write the application time — every tourniquet, every time.</li></ul></div>
-        </div>
-        <div class="callout callout-danger"><span class="callout-icon">⏱️</span><div class="callout-content"><strong>Rookie Mistake — Forgetting to Write the Time</strong>Hospital staff need to know exactly how long a tourniquet has been on. Write it on the strip the moment you apply it — in the field, under stress, you will not remember later. This isn't optional documentation, it changes patient care downstream.</div></div>
-        <div class="callout callout-warn"><span class="callout-icon">💪</span><div class="callout-content"><strong>Tight Enough Means Bleeding Stops</strong>A "loose enough to still see bleeding" tourniquet is worse than no tourniquet — it can restrict venous return while still letting arterial bleeding continue. Tighten until it stops completely.</div></div>
-      </div>
-    </div>
-
-    <!-- SPLINTS/SLINGS -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Arm Splints &amp; Slings</div><span class="card-aka">AKA: SAM splints, triangular bandages, cravats</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Malleable splints and fabric slings for stabilizing suspected fractures and dislocations, and for supporting an injured arm in a position of comfort during transport.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A spare bag-valve device staged inside the patient compartment itself, separate from the airway cabinet stock — so if you're already in the box working a patient, you don't have to leave the compartment to grab one.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- ICE/WARM PACKS -->
+    <!-- LUCAS ACCESS -->
     <div class="equip-card">
       <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Ice / Warm Packs</div><span class="card-aka">AKA: Instant cold packs, chemical heat packs</span></div>
+        <div><div class="card-title">LUCAS Access Point (From the Box)</div><span class="card-aka">AKA: Interior Lucas access</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Single-use chemical activation packs — cold packs for soft tissue injuries, swelling, and heat-related illness cooling; warm packs for hypothermic patients and comfort. Squeeze/flex to activate — no refrigeration or heating required.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The LUCAS device is stored in the officer's side front exterior cabinet, but it's also reachable from inside the patient compartment — so a crew member already in the box during a code doesn't have to exit and re-enter the rig to retrieve it.</p></div>
         </div>
-        <div class="callout callout-warn"><span class="callout-icon">🧊</span><div class="callout-content"><strong>Never Direct Skin Contact</strong>Both cold and hot chemical packs can cause tissue damage — frostbite-like injury from cold packs, burns from hot packs — with prolonged direct skin contact. Always wrap in a towel or dressing layer first.</div></div>
-      </div>
-    </div>
-
-    <!-- SALINE -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Saline</div><span class="card-aka">AKA: Normal saline, NS, irrigation saline</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Sterile saline solution used for wound irrigation, eye flushing, and moistening dressings. Kept separate from the IV fluid stock — this is the topical/irrigation supply, not the IV bag inventory.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BULB SYRINGE -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Bulb Syringe</div><span class="card-aka">AKA: Ear syringe, suction bulb, neonatal aspirator</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A simple squeeze-bulb suction device most commonly used for clearing a newborn's mouth and nose immediately after delivery — a core piece of OB kit support. Also useful for basic wound or oral irrigation.</p></div>
-        </div>
-        <div class="callout callout-tip"><span class="callout-icon">👶</span><div class="callout-content"><strong>Mouth Before Nose</strong>On a newborn, suction the mouth first, then the nose — clearing the nose first can trigger a reflex gasp that aspirates whatever's still in the mouth.</div></div>
+        <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Both Access Points</strong>Whichever way you learn the rig first, go back and confirm the other access point too. In a code, whoever's closest grabs it — that could be either side.</div></div>
       </div>
     </div>
 
   </section>
 
-  <!-- ══════════════ AIRWAY & RESPIRATORY — LEFT FRONT ══════════════ -->
+  <!-- ══════════════ FRONT CABINET ══════════════ -->
+  <section class="comp-section" id="mp62-ivmeds">
+    <div class="section-header">
+      <div class="section-icon">💉</div>
+      <div><h2>Front Cabinet</h2><div class="sub">Clear Cabinet · Top Drawer · Bottom Drawer · Mag · Dopamine</div></div>
+    </div>
+  <div class="compartment-photo">
+    <img src="images/medic62/mp62-ivmed.jpg" width="825" height="1100" alt="Medic 62 front cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Front cabinet, as installed</div>
+  </div>
+  <div class="photo-thumb-grid">
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t01.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t01.jpg" width="600" height="800" alt="Additional Front Cabinet photo (1 of 6)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t02.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t02.jpg" width="600" height="800" alt="Additional Front Cabinet photo (2 of 6)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t03.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t03.jpg" width="600" height="800" alt="Additional Front Cabinet photo (3 of 6)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t04.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t04.jpg" width="600" height="800" alt="Additional Front Cabinet photo (4 of 6)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t05.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t05.jpg" width="600" height="800" alt="Additional Front Cabinet photo (5 of 6)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ivmed-t06.jpg')"><img src="images/medic62/thumbs/mp62-ivmed-t06.jpg" width="600" height="800" alt="Additional Front Cabinet photo (6 of 6)" loading="lazy"></button>
+  </div>
+
+
+    <!-- CLEAR CABINET -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Clear Cabinet — IV Fluid Warmer, Portable Suction, Masks &amp; Gloves</div><span class="card-aka">AKA: "The clear cabinet"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The see-through cabinet on the right door groups three quick-grab items: an IV fluid warmer (prevents cold fluids from dropping an already-compromised patient's core temperature further), a portable suction unit (clears the airway of blood, vomit, or secretions fast), and masks/gloves for immediate BSI.</p></div>
+        </div>
+        <div class="callout callout-danger"><span class="callout-icon">🩸</span><div class="callout-content"><strong>Suction Before Anything Else on an Airway Full of Fluid</strong>You cannot bag or intubate through vomit or blood. Suction first, every time, before any other airway intervention on a soiled airway.</div></div>
+      </div>
+    </div>
+
+    <!-- TOP DRAWER -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Top Drawer — Syringes, IVs, Band-Aids, IV Tubing</div><span class="card-aka">AKA: "The top drawer"</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Day-to-day IV starting supplies — syringes, IV catheters, adhesive dressings, and tubing. This is the drawer you're in for the overwhelming majority of your IV starts and basic wound care on every call.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">🧤</span><div class="callout-content"><strong>Sharps Discipline Starts Here</strong>Every needle that comes out of this drawer goes straight into the sharps container after use — not set down on a seat, not recapped by hand. A needlestick from a sloppy habit can end your career before it starts.</div></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM DRAWER -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Bottom Drawer — IV Fluids, Cardiac Meds, Med Boxes</div><span class="card-aka">AKA: "The bottom drawer," med drawer</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>IV fluid bags, additional IV tubing, and locked med boxes containing ALS medications — including magnesium sulfate (Mag) and dopamine, both high-alert cardiac/critical care medications. This drawer is why Medic 62 is an ALS transport unit and not just a truck with a cot in it.</p></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Note</div><p>Dosing, indications, and administration of everything in the med boxes is governed by your department's protocols and medical director — that's ALS provider territory, not something to freelance from a study guide. As a probie, your job is knowing this drawer exists, knowing it's locked/secured, and knowing to hand it to the paramedic the second it's needed — not administering from it yourself.</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">🔒</span><div class="callout-content"><strong>Rookie Mistake — Treating the Med Drawer Casually</strong>High-alert medications get respect. Verify seals are intact at shift check, know immediately if something looks tampered with or missing, and never let this drawer sit open and unattended in a public area.</div></div>
+      </div>
+    </div>
+
+    <!-- MAG (MAGNESIUM SULFATE) -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Mag (Magnesium Sulfate)</div><span class="card-aka">AKA: Mag, mag sulfate, MgSO4</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An ALS medication stocked in the bottom drawer. Paramedics give it under protocol for specific emergencies (eclamptic seizures in pregnancy, certain cardiac rhythm problems, severe asthma). It's a high-alert drug: the right dose helps, and the wrong dose or the wrong rate can hurt the patient badly.</p></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Mag, mag sulfate, magnesium, MgSO4.</p></div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Note</div><p>When, how much and how fast is the paramedic's call under your protocols and medical director. Your job is knowing where it lives, checking it at shift check, and handing over the right vial when it's asked for.</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">💉</span><div class="callout-content"><strong>Rookie Mistake — Grabbing the Wrong Vial</strong>Look-alike vials are a real danger in a moving rig. When you hand a medication over, read the label out loud: name, concentration, expiration. Let the medic confirm it before it's drawn up. Closed-loop every time.</div></div>
+      </div>
+    </div>
+
+    <!-- DOPAMINE -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Dopamine</div><span class="card-aka">AKA: Dopamine drip, pressor, vasopressor</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block full"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>An ALS medication in the bottom drawer that raises blood pressure and heart rate, given as a carefully controlled drip under protocol for patients in shock or with a dangerously slow heart. It's a high-alert critical-care drug. It's powerful, it's run at a precise rate, and errors with it are dangerous.</p></div>
+        </div>
+        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Alternate names</div><p>Dopamine drip, pressor, vasopressor.</p></div>
+        <div class="callout callout-danger"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Rookie Mistake — Getting Casual With a Drip</strong>Once a dopamine drip is running, don't bump, kink, pinch or "fix" the line without the medic knowing, and watch the IV site. Tell the medic right away if you see swelling or blanching around it. Leaked dopamine damages tissue.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🔒</span><div class="callout-content"><strong>Shift Check</strong>Check the expiration date and that the packaging is intact. If anything is expired, opened or missing, report it before the rig goes back in service. Don't just make a mental note.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════ OFFICER'S SIDE FRONT INTERIOR CABINET ══════════════ -->
   <section class="comp-section" id="mp62-airway">
     <div class="section-header">
       <div class="section-icon">🫁</div>
-      <div><h2>Airway &amp; Respiratory Cabinet — Left Front</h2><div class="sub">CPAP · NRB · Capnography · Airway Adjuncts · BVM · ET Tubes · I-Gel · Nebulizer · Nasal Cannula · Cric Kit</div></div>
+      <div><h2>Officer's Side Front Interior Cabinet</h2><div class="sub">CPAP · NRB · Capnography · Airway Adjuncts · BVM · ET Tubes · I-Gel · Nebulizer · Nasal Cannula · Cric Kit</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-airway.jpg" width="1100" height="502" alt="Medic 62 airway and respiratory cabinet contents" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Airway &amp; respiratory cabinet, left front, as installed</div>
+    <img src="images/medic62/mp62-airway.jpg" width="1100" height="825" alt="Medic 62 officer's side front interior cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side front interior cabinet, as installed</div>
   </div>
 
 
@@ -23692,75 +23807,117 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ IV & MEDICATION — RIGHT DOOR ══════════════ -->
-  <section class="comp-section" id="mp62-ivmeds">
+  <!-- ══════════════ OFFICER'S SIDE UPPER CABINET ══════════════ -->
+  <section class="comp-section" id="mp62-trauma">
     <div class="section-header">
-      <div class="section-icon">💉</div>
-      <div><h2>IV &amp; Medication Cabinet — Right Door</h2><div class="sub">Clear Cabinet · Top Drawer · Bottom Drawer</div></div>
+      <div class="section-icon">🩹</div>
+      <div><h2>Officer's Side Upper Cabinet</h2><div class="sub">Trauma Dressings · Tourniquets · Splints/Slings · Ice/Heat Packs · Saline · Bulb Syringe</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-ivmed.jpg" width="1100" height="825" alt="Medic 62 IV and medication cabinet contents" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>IV &amp; medication cabinet, right door, as installed</div>
+    <img src="images/medic62/mp62-trauma.jpg" width="1100" height="825" alt="Medic 62 officer's side upper cabinet, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side upper cabinet, as installed</div>
   </div>
 
 
-    <!-- CLEAR CABINET -->
+    <!-- TRAUMA DRESSINGS -->
     <div class="equip-card">
       <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Clear Cabinet — IV Fluid Warmer, Portable Suction, Masks &amp; Gloves</div><span class="card-aka">AKA: "The clear cabinet"</span></div>
+        <div><div class="card-title">Trauma Dressings (Bulk Gauze, ACE Wraps)</div><span class="card-aka">AKA: Bulk dressings, trauma pads, kerlix, ACE bandages</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The see-through cabinet on the right door groups three quick-grab items: an IV fluid warmer (prevents cold fluids from dropping an already-compromised patient's core temperature further), a portable suction unit (clears the airway of blood, vomit, or secretions fast), and masks/gloves for immediate BSI.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Bulk sterile gauze and elastic wraps for direct wound packing, bleeding control, and securing dressings in place. The workhorse supply for any bleeding-control call — from a minor laceration to major hemorrhage control before a tourniquet goes on, or in addition to one.</p></div>
         </div>
-        <div class="callout callout-danger"><span class="callout-icon">🩸</span><div class="callout-content"><strong>Suction Before Anything Else on an Airway Full of Fluid</strong>You cannot bag or intubate through vomit or blood. Suction first, every time, before any other airway intervention on a soiled airway.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">🩸</span><div class="callout-content"><strong>Restock Immediately After Every Call</strong>A bleeding-control call that uses your bulk gauze and nobody restocks it means the next crew opens this drawer to nothing on the next hemorrhage call. Restock before you clear the hospital, not "when you get back to quarters."</div></div>
       </div>
     </div>
 
-    <!-- TOP DRAWER -->
+    <!-- TOURNIQUETS -->
     <div class="equip-card">
       <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Top Drawer — Syringes, IVs, Band-Aids, IV Tubing</div><span class="card-aka">AKA: "The top drawer"</span></div>
+        <div><div class="card-title">Tourniquets</div><span class="card-aka">AKA: TQ, CAT (Combat Application Tourniquet), windlass tourniquet</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Day-to-day IV starting supplies — syringes, IV catheters, adhesive dressings, and tubing. This is the drawer you're in for the overwhelming majority of your IV starts and basic wound care on every call.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A windlass-style tourniquet for controlling life-threatening extremity hemorrhage that direct pressure alone can't stop. Applied high and tight above the wound, tightened until bleeding stops and a distal pulse is absent — not just "until it feels tight."</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">🧩</span>Parts</div><ul><li><strong>Strap/band:</strong> Wraps around the limb.</li><li><strong>Windlass rod:</strong> Twists to tighten the band.</li><li><strong>Windlass clip:</strong> Locks the rod in place once tightened.</li><li><strong>Time strip:</strong> Write the application time — every tourniquet, every time.</li></ul></div>
         </div>
-        <div class="callout callout-warn"><span class="callout-icon">🧤</span><div class="callout-content"><strong>Sharps Discipline Starts Here</strong>Every needle that comes out of this drawer goes straight into the sharps container after use — not set down on a seat, not recapped by hand. A needlestick from a sloppy habit can end your career before it starts.</div></div>
+        <div class="callout callout-danger"><span class="callout-icon">⏱️</span><div class="callout-content"><strong>Rookie Mistake — Forgetting to Write the Time</strong>Hospital staff need to know exactly how long a tourniquet has been on. Write it on the strip the moment you apply it — in the field, under stress, you will not remember later. This isn't optional documentation, it changes patient care downstream.</div></div>
+        <div class="callout callout-warn"><span class="callout-icon">💪</span><div class="callout-content"><strong>Tight Enough Means Bleeding Stops</strong>A "loose enough to still see bleeding" tourniquet is worse than no tourniquet — it can restrict venous return while still letting arterial bleeding continue. Tighten until it stops completely.</div></div>
       </div>
     </div>
 
-    <!-- BOTTOM DRAWER -->
+    <!-- SPLINTS/SLINGS -->
     <div class="equip-card">
       <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Bottom Drawer — IV Fluids, Cardiac Meds, Med Boxes</div><span class="card-aka">AKA: "The bottom drawer," med drawer</span></div>
+        <div><div class="card-title">Arm Splints &amp; Slings</div><span class="card-aka">AKA: SAM splints, triangular bandages, cravats</span></div>
         <div class="toggle-btn">+</div>
       </div>
       <div class="card-body">
         <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>IV fluid bags, additional IV tubing, and locked med boxes containing ALS medications — including magnesium sulfate (Mag) and dopamine, both high-alert cardiac/critical care medications. This drawer is why Medic 62 is an ALS transport unit and not just a truck with a cot in it.</p></div>
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Malleable splints and fabric slings for stabilizing suspected fractures and dislocations, and for supporting an injured arm in a position of comfort during transport.</p></div>
         </div>
-        <div class="entry-block full"><div class="entry-label"><span class="icon">🏷️</span>Note</div><p>Dosing, indications, and administration of everything in the med boxes is governed by your department's protocols and medical director — that's ALS provider territory, not something to freelance from a study guide. As a probie, your job is knowing this drawer exists, knowing it's locked/secured, and knowing to hand it to the paramedic the second it's needed — not administering from it yourself.</p></div>
-        <div class="callout callout-danger"><span class="callout-icon">🔒</span><div class="callout-content"><strong>Rookie Mistake — Treating the Med Drawer Casually</strong>High-alert medications get respect. Verify seals are intact at shift check, know immediately if something looks tampered with or missing, and never let this drawer sit open and unattended in a public area.</div></div>
+      </div>
+    </div>
+
+    <!-- ICE/WARM PACKS -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Ice / Warm Packs</div><span class="card-aka">AKA: Instant cold packs, chemical heat packs</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Single-use chemical activation packs — cold packs for soft tissue injuries, swelling, and heat-related illness cooling; warm packs for hypothermic patients and comfort. Squeeze/flex to activate — no refrigeration or heating required.</p></div>
+        </div>
+        <div class="callout callout-warn"><span class="callout-icon">🧊</span><div class="callout-content"><strong>Never Direct Skin Contact</strong>Both cold and hot chemical packs can cause tissue damage — frostbite-like injury from cold packs, burns from hot packs — with prolonged direct skin contact. Always wrap in a towel or dressing layer first.</div></div>
+      </div>
+    </div>
+
+    <!-- SALINE -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Saline</div><span class="card-aka">AKA: Normal saline, NS, irrigation saline</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Sterile saline solution used for wound irrigation, eye flushing, and moistening dressings. Kept separate from the IV fluid stock — this is the topical/irrigation supply, not the IV bag inventory.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BULB SYRINGE -->
+    <div class="equip-card">
+      <div class="card-header" onclick="mp62Toggle(this)">
+        <div><div class="card-title">Bulb Syringe</div><span class="card-aka">AKA: Ear syringe, suction bulb, neonatal aspirator</span></div>
+        <div class="toggle-btn">+</div>
+      </div>
+      <div class="card-body">
+        <div class="entry-grid">
+          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A simple squeeze-bulb suction device most commonly used for clearing a newborn's mouth and nose immediately after delivery — a core piece of OB kit support. Also useful for basic wound or oral irrigation.</p></div>
+        </div>
+        <div class="callout callout-tip"><span class="callout-icon">👶</span><div class="callout-content"><strong>Mouth Before Nose</strong>On a newborn, suction the mouth first, then the nose — clearing the nose first can trigger a reflex gasp that aspirates whatever's still in the mouth.</div></div>
       </div>
     </div>
 
   </section>
 
-  <!-- ══════════════ RIGHT BENCH STORAGE ══════════════ -->
+  <!-- ══════════════ OFFICER'S SIDE DOUBLE BENCH ══════════════ -->
   <section class="comp-section" id="mp62-right-bench">
     <div class="section-header">
       <div class="section-icon">📦</div>
-      <div><h2>Right Bench Storage</h2><div class="sub">Triage Bag · Vacuum Splints · Extra Splints · Blankets</div></div>
+      <div><h2>Officer's Side Double Bench</h2><div class="sub">Triage Bag · Vacuum Splints · Extra Splints · Blankets</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-rightbench.jpg" width="1100" height="413" alt="Medic 62 right bench storage contents" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Right bench storage, as installed</div>
+    <img src="images/medic62/mp62-rightbench.jpg" width="1100" height="825" alt="Medic 62 officer's side double bench, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Officer's side double bench, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-rightbench-t01.jpg')"><img src="images/medic62/thumbs/mp62-rightbench-t01.jpg" width="800" height="202" alt="Additional Right Bench Storage photo (1 of 1)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-rightbench-t01.jpg')"><img src="images/medic62/thumbs/mp62-rightbench-t01.jpg" width="800" height="600" alt="Additional Officer's Side Double Bench photo (1 of 2)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-rightbench-t02.jpg')"><img src="images/medic62/thumbs/mp62-rightbench-t02.jpg" width="800" height="600" alt="Additional Officer's Side Double Bench photo (2 of 2)" loading="lazy"></button>
   </div>
 
 
@@ -23820,19 +23977,18 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ LEFT BENCH — UNDER SEAT ══════════════ -->
+  <!-- ══════════════ DRIVER'S SIDE UNDER SINGLE SEAT ══════════════ -->
   <section class="comp-section" id="mp62-left-underseat">
     <div class="section-header">
       <div class="section-icon">👶</div>
-      <div><h2>Left Bench — Under Seat Storage</h2><div class="sub">ACR (Child Restraint) · Psych Restraints · OB Pack</div></div>
+      <div><h2>Driver's Side Under Single Seat</h2><div class="sub">ACR (Child Restraint) · Psych Restraints · OB Pack</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-leftunderseat.jpg" width="1100" height="851" alt="Medic 62 left bench under seat storage contents" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Left bench, under seat storage, as installed</div>
+    <img src="images/medic62/mp62-leftunderseat.jpg" width="1100" height="825" alt="Medic 62 driver's side under single seat, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Driver's side under single seat, as installed</div>
   </div>
   <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-leftunderseat-t01.jpg')"><img src="images/medic62/thumbs/mp62-leftunderseat-t01.jpg" width="800" height="513" alt="Additional Left Bench — Under Seat Storage photo (1 of 2)" loading="lazy"></button>
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-leftunderseat-t02.jpg')"><img src="images/medic62/thumbs/mp62-leftunderseat-t02.jpg" width="800" height="304" alt="Additional Left Bench — Under Seat Storage photo (2 of 2)" loading="lazy"></button>
+    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-leftunderseat-t01.jpg')"><img src="images/medic62/thumbs/mp62-leftunderseat-t01.jpg" width="600" height="800" alt="Additional Driver's Side Under Single Seat photo (1 of 1)" loading="lazy"></button>
   </div>
 
 
@@ -23880,12 +24036,16 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ INFECTIOUS WASTE STATION ══════════════ -->
+  <!-- ══════════════ INSIDE OFFICER'S SIDE COUNTERTOP ══════════════ -->
   <section class="comp-section" id="mp62-biohazard">
     <div class="section-header">
       <div class="section-icon">☣️</div>
-      <div><h2>Infectious Waste Station</h2><div class="sub">Infectious Waste Bin · Sharps Container</div></div>
+      <div><h2>Inside Officer's Side Countertop</h2><div class="sub">Infectious Waste Bin · Sharps Container</div></div>
     </div>
+  <div class="compartment-photo">
+    <img src="images/medic62/mp62-countertop.jpg" width="825" height="1100" alt="Medic 62 inside officer's side countertop, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Inside officer's side countertop, as installed</div>
+  </div>
 
 
     <!-- INFECTIOUS WASTE BIN -->
@@ -23918,18 +24078,15 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ AMBULANCE COT / STRETCHER ══════════════ -->
+  <!-- ══════════════ AMBULANCE COT ══════════════ -->
   <section class="comp-section" id="mp62-cot">
     <div class="section-header">
       <div class="section-icon">🛏️</div>
-      <div><h2>Ambulance Cot / Stretcher</h2><div class="sub">Power Cot Operation · Loading &amp; Unloading</div></div>
+      <div><h2>Ambulance Cot</h2><div class="sub">Power Cot Operation · Loading &amp; Unloading</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-ambulancecot.jpg" width="719" height="770" alt="Medic 62 ambulance cot with cardiac monitor" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Ambulance cot / stretcher and cardiac monitor, as installed</div>
-  </div>
-  <div class="photo-thumb-grid">
-    <button type="button" class="photo-thumb" onclick="mp62OpenLightbox('images/medic62/thumbs/mp62-ambulancecot-t01.jpg')"><img src="images/medic62/thumbs/mp62-ambulancecot-t01.jpg" width="457" height="800" alt="Additional Ambulance Cot / Stretcher photo (1 of 1)" loading="lazy"></button>
+    <img src="images/medic62/mp62-ambulancecot.jpg" width="1100" height="825" alt="Medic 62 ambulance cot, as installed" loading="lazy">
+    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Ambulance cot, as installed</div>
   </div>
 
 
@@ -23954,85 +24111,6 @@ rigSearch('sq61-search', 'sq61-guide');
 
   </section>
 
-  <!-- ══════════════ BOX — GENERAL ACCESS ITEMS ══════════════ -->
-  <section class="comp-section" id="mp62-boxgeneral">
-    <div class="section-header">
-      <div class="section-icon">🎒</div>
-      <div><h2>Patient Compartment — General Access Items</h2><div class="sub">Breathing Bag · LUCAS Access Point</div></div>
-    </div>
-  <div class="compartment-photo">
-    <img src="images/medic62/mp62-patientcompartment.jpg" width="825" height="1100" alt="Medic 62 patient compartment general access items" loading="lazy">
-    <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Patient compartment, general access items, as installed</div>
-  </div>
-
-
-    <!-- BREATHING BAG -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Breathing Bag</div><span class="card-aka">AKA: Spare BVM, secondary bag</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>A spare bag-valve device staged inside the patient compartment itself, separate from the airway cabinet stock — so if you're already in the box working a patient, you don't have to leave the compartment to grab one.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LUCAS ACCESS -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">LUCAS Access Point (From the Box)</div><span class="card-aka">AKA: Interior Lucas access</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The LUCAS device is stored in the officer's side front exterior cabinet, but it's also reachable from inside the patient compartment — so a crew member already in the box during a code doesn't have to exit and re-enter the rig to retrieve it.</p></div>
-        </div>
-        <div class="callout callout-tip"><span class="callout-icon">💡</span><div class="callout-content"><strong>Know Both Access Points</strong>Whichever way you learn the rig first, go back and confirm the other access point too. In a code, whoever's closest grabs it — that could be either side.</div></div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════════ INSIDE THE CAB ══════════════ -->
-  <section class="comp-section" id="mp62-cab">
-    <div class="section-header">
-      <div class="section-icon">🗺️</div>
-      <div><h2>Inside The Cab</h2><div class="sub">Maps &middot; Fuel Keys</div></div>
-    </div>
-
-
-    <!-- MAPS -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Maps</div><span class="card-aka">AKA: Hard-copy maps, paper maps, map book</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>Backup paper maps of the response area kept in the cab. The MDT and phone GPS are your primary navigation, but both are electronics — and electronics fail, lose signal, or lock up at the worst possible time. The map is what you fall back on when that happens.</p></div>
-        </div>
-        <div class="callout callout-warn"><span class="callout-icon">⚠️</span><div class="callout-content"><strong>Know How to Read It Before You Need It</strong>Don't wait for a dead MDT on an unfamiliar street at 0300 to find out you don't know how the map book is organized. Look it over on a slow shift so you're not learning the index under pressure.</div></div>
-      </div>
-    </div>
-
-    <!-- FUEL KEYS -->
-    <div class="equip-card">
-      <div class="card-header" onclick="mp62Toggle(this)">
-        <div><div class="card-title">Fuel Keys</div><span class="card-aka">AKA: Fuel cards, gas keys, fuel fob</span></div>
-        <div class="toggle-btn">+</div>
-      </div>
-      <div class="card-body">
-        <div class="entry-grid">
-          <div class="entry-block"><div class="entry-label"><span class="icon">📖</span>What it is &amp; what it does</div><p>The key or fob that unlocks the department's fuel pump so you can fill the rig. Kept in the cab so whoever's on the fuel run doesn't have to track one down.</p></div>
-        </div>
-        <div class="callout callout-danger"><span class="callout-icon">⛽</span><div class="callout-content"><strong>Rookie Mistake — Not Confirming It's There at Shift Check</strong>A rig that runs low on fuel mid-shift because the key walked off — or nobody checked for it — is a rig that's out of service when a call drops. Verify it's in the cab every shift, same as any other piece of equipment.</div></div>
-      </div>
-    </div>
-
-  </section>
-
   <!-- ══════════════ BEHIND PASSENGER SEAT ══════════════ -->
   <section class="comp-section" id="mp62-behindseat">
     <div class="section-header">
@@ -24040,7 +24118,7 @@ rigSearch('sq61-search', 'sq61-guide');
       <div><h2>Behind Passenger Seat</h2><div class="sub">Extra Oxygen Tanks · ABC Extinguisher · Pediatric Bag</div></div>
     </div>
   <div class="compartment-photo">
-    <img src="images/medic62/mp62-behindseat.jpg" width="1100" height="1054" alt="Medic 62 behind passenger seat oxygen tanks and extinguisher" loading="lazy">
+    <img src="images/medic62/mp62-behindseat.jpg" width="1100" height="1054" alt="Medic 62 behind passenger seat, as installed" loading="lazy">
     <div class="compartment-photo-caption"><strong>📷 As Installed</strong>Behind passenger seat, as installed</div>
   </div>
 
