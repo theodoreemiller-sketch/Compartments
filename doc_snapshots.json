@@ -1414,13 +1414,19 @@
     }
   },
   "Medic 62": {
-    "saved_at": "2026-08-14T12:17:44.808999+00:00",
+    "saved_at": "2026-10-23T12:47:44.297251+00:00",
     "compartments": {
+      "Inside The Cab": [
+        "Maps",
+        "Fuel Keys",
+        "Knox Box",
+        "Safety Vests in door"
+      ],
       "Driver Side  Front Compartment": [
         "Stair Chair",
         "Oxygen Tank"
       ],
-      "Middle Cabinet": [
+      "Drivers Side Middle Cabinet": [
         "Hydrant Bag",
         "Kevlar Vests"
       ],
@@ -1428,7 +1434,9 @@
         "Turnout Coat",
         "Turnout Boots",
         "Turnout Pants",
-        "Helmut",
+        "Helmut"
+      ],
+      "Officers Side Rear Compartment": [
         "Backboards\u200b",
         "Scoop stretcher\u200b",
         "Head beds\u200b",
@@ -1440,36 +1448,11 @@
       "Officier Side Front Cabinet": [
         "Lucas"
       ],
-      "Inside The Cab": [
-        "Maps",
-        "Fuel Keys"
-      ],
-      "Inside The Ambulance": [
+      "Front Lower Cabinaet": [
         "Breathing Bag",
         "Access to Lucas"
       ],
-      "Inside": [
-        "Trauma dressing (bulk, gauze, ace",
-        "wraps)\u200b",
-        "Tourniquets\u200b",
-        "Arm splints, slings\u200b",
-        "Ice/Warm packs\u200b",
-        "Saline\u200b",
-        "Bulb syringe"
-      ],
-      "Inside Left Front": [
-        "CPAP (Continuous Positive Airway Pressure)\u200b",
-        "NRB (Non-ReBreather mask)\u200b",
-        "Capnography\u200b",
-        "Nasopharyngeal/oropharyngeal airway\u200b",
-        "BVM (Bag Valve Mask)\u200b",
-        "ET tubes (Endotracheal Tube)\u200b",
-        "I-Gel airways\u200b",
-        "Nebulizer\u200b",
-        "Nasal cannula\u200b",
-        "Cricothyrotomy kit"
-      ],
-      "Inside Right Door": [
+      "Front Cabinent": [
         "Clear Cabinet\u200b",
         "IV fluid warmer\u200b",
         "Portable suction\u200b",
@@ -1486,17 +1469,31 @@
         "IV tubing\u200b",
         "Med boxes\u200b"
       ],
-      "Inside Right Bench": [
+      "Officers Side Front Cabinent": [
+        "CPAP (Continuous Positive Airway Pressure)\u200b",
+        "NRB (Non-ReBreather mask)\u200b",
+        "Capnography\u200b",
+        "Nasopharyngeal/oropharyngeal airway\u200b",
+        "BVM (Bag Valve Mask)\u200b",
+        "ET tubes (Endotracheal Tube)\u200b",
+        "I-Gel airways\u200b",
+        "Nebulizer\u200b",
+        "Nasal cannula\u200b",
+        "Cricothyrotomy kit"
+      ],
+      "Officers Side Double Bench": [
         "Triage bag\u200b",
         "Vacuum splints\u200b",
         "Extra splints\u200b",
-        "Blankets (also above)\u200b",
+        "Blankets (also above)\u200b"
+      ],
+      "Drivers Side Under Single Seat": [
         "ACR (Ambulance Child Restraint, coded by",
         "weight)\u200b",
         "Restraints (psych)\u200b",
         "OB pack (obstetrical)\u200b"
       ],
-      "Inside Left Infectious Waste": [
+      "Inside Officers Side Countertop": [
         "Infectious waste bin\u200b",
         "Sharps container"
       ],

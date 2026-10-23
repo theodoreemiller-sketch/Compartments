@@ -1656,6 +1656,8 @@ VEHICLES['m62'] = {
         ("Inside the Cab", [
             "Maps",
             "Fuel Keys",
+            "Knox Box",
+            "Safety Vests (In Door)",
         ]),
         ("Inside the Ambulance — Overhead", [
             "Breathing Bag",
